@@ -1,0 +1,1330 @@
+
+%\def\remove#1{#1}
+%\def\remove#1{#1}
+\def\remove#1{}
+\fontsize{11}{12}\selectfont
+\section*{\underline{Project A1:} 
+Solids evolution in disks: observational constraints}
+
+\noindent{\bf Authors:}\\
+\begin{tabular}{ll}
+{\textsf{PI:}}                   & L.~Testi (ESO)\\
+{\textsf{Co-I:}}                & B.~Ercolano (LMU), T.~Preibisch (LMU), T.~Henning (MPIA),\\
+{\textsf{Collaborations:}}      & H.~Baobab~Liu (ESO), J.M.~Carpenter (ALMA), G.~Guidi (INAF/UniFi),\\
+&  I.~Pascucci (Arizona), A.~Natta (DIAS/INAF), M.~Tazzari (LMU/ESO),\\
+& J.P.~Williams (Hawaii), E. van Dishoeck (Leiden, MPE)\\
+\end{tabular}
+
+\noindent{\bf Requested positions: 1PhD student} \\
+
+\noindent{\bf Abstract:}\\
+This project aims at obtaining observational constraints on the dust and gas 
+properties of protoplanetary discs as a function of evolutionary stage (e.g. primordial to transition) and 
+the physical properties of the central star. We will analyse systematically
+the ALMA observations of young stars with discs in nearby star forming regions already collected as part of a series of programmes and we will complement these with additional 
+ALMA and EVLA observations. We will firmly characterize the level of grain growth in discs as a function of stellar mass, evolutionary stage and morphology of the disc, and we will search for evidence of disc-planet interaction in the discs structure and kinematics of transitions discs. We will provide direct observational tests of different planetesimal formation theories and how/if they apply in different environments. 
+
+
+\vspace{0.5em}
+\noindent {\bf Scientific background:}
+\\
+Grain growth is a stage of planet formation that can be directly observed due to the effects on particle emissivity. Planetesimals and early planetary cores formation are difficult to probe observationally, while growing planetary bodies can be studied through their influence on the disc structure or directly imaged in the outer disc, when sufficiently young and large.
+
+Submillimetre and centimetre wave observations over the last decade have established that grain growth occurs very early in the protoplanetary discs lifetime, large grains and pebbles are present in discs throughout their lifetime. This is at odds with simple grain evolution theories in gaseous discs, and several ideas have been put forward to explain this fact. Modern theoretical models require large grains confinement in specific regions of the disc associated with local pressure maxima in the gas phase transitions of abundant molecules (snowlines), or regions with very low gas to dust ratio. The new ALMA high angular resolution observations of the protoplanetary discs suggest that small rocky proto-planets may form early and help trapping millimetre and centimetre-size grains in discs (HL~Tau, ALMA Partnership 2015).  
+
+ALMA now offers for the first time the sensitivity and angular resolution to observationally constrain these processes in large samples of discs and as a function of stellar and disc parameters, and, critically for this project, understand the role and properties of TDs in the context of the evolution of the wider disc populations.
+
+
+\vspace{0.5em}
+\noindent{\bf Scientific objectives:}\\
+We plan to (i) derive dusty disc physical parameters (mass, radius, grain growth, morphology) as a function of the central star parameters (mass, age) and environment; and (ii) establish the fraction and properties of TDs, as members  of evolving disc populations.
+
+\vspace{0.5em}
+\noindent{\bf Strategy of the proposed project:}\\
+%
+\noindent 
+As part of the first four cycles of observations ALMA has observed or will soon observe a large fraction of the protoplanetary discs in the nearby star forming regions 850~$mu$m and/or 1.3~mm, both in the continuum dust and in the molecular line gas emission. These wavelengths are ideal to provide the maximum sensitivity to derive the structure of the dust and cold gas distribution. We are part of four large surveys that will provide sensitive and high angular resolution ($\le 30-40$~AU) observations for almost complete ($>$90\%) samples in the Cha~I (executed in Cycle~2), Lupus (executed in Cycle~2, followup at a second frequency to be executed in Cycle~3), $\sigma$-Ori (scheduled at high priority in Cycle~3) and R~CrA (scheduled for Cycle~3). Additional ALMA projects have already populated the ALMA Archive with observations for almost complete samples in Upper Sco and Taurus, and for a significant fraction of the Orion Nebula Cluster. Our role in these collaborations is to study the dust properties using multi-wavelength observations and analysis tools and we are responsible for the long wavelength and high angular resolution followups (proposals have been submitted for ALMA Cycle~4 with PIs: Tazzari, Testi and Guidi), in addition, the R~CrA survey is led by one of the ESO Fellows in our group (Baobab Liu). 
+
+As part of the PhD thesis of M.~Tazzari (supervisors L. Testi and B. Ercolano), we have developed a new Bayesian analysis toolkit for interferometric observations of discs (Tazzari et al.~2016). The toolkit is very efficient and allows fitting of the 
+disk structure at a single wavelength, also including complex prescriptions for the mass distribution in the disc (see e.g. the application in Guidi et al.~2016), as well as multiple wavelength disentangling the dust properties from the disc structure (Tazzari et al.~2016). The tool has been successfully tested with ALMA datasets (Testi et al. 2016, in press) and we will use it to extract disc morphological (e.g. disc radius, inner hole presence and properties) and physical parameters (e.g. mass, dust surface density distribution), which we will correlate with the properties of the central star and of the star forming region to derive evolutionary trends using statistically significant samples and uniform analysis tools. Some key results that we expect to extract are: the M$_{disk}$-M$_{star}$ and M$_{disk}$-M$_{acc}$ relationships, and the inner hole presence and size statistics in each of the star forming regions and their possible dependence with age. Ercolano et al. (2014) demonstrated that such relations may be driven by disc dispersal and hence from the emission properties of the central star. We will therefore closely collaborate with project A2 which can provide us with inputs and constraints with regards to stellar properties. 
+
+%The tool we developed for the analysis of the continuum has been upgraded to make full use of hybrid CPU/GPU architectures (Tazzari et al., in preparations) and has already successfully tested on the Hydra multi-CPU/multi-GPU cluster hosted in the Garching Max Planck Campus (as part of a collaboration between Testi and Caselli groups). This code is now mature to be extended to the effective analysis of the molecular line emission in discs.
+
+We will also extend the ALMA surveys to longer wavelengths, e.g. at 3~mm with ALMA or $\sim$10~mm with the EVLA, to systematically investigate the dust properties in discs. These studies have already started for some sub-samples in Taurus and Chamaeleon, but we have also submitted proposals to extend them in future ALMA cycles starting from Cycle 4 (2016/2017). 
+%The analysis technique that we will adopt is again the one described in Tazzari et al.~(2016). 
+We aim at establishing a relationship between the dust growth properties (level of growth and degree of concentration of the large grains) with the disc physical (eg. surface density profile) and evolutionary (age of the central star, disc morphology) parameters. These correlations are expected by global dust evolution models, but have never been observed, because of limited samples and noisy data, two limitations that our programme will remove. 
+%One initial proof of concept is the analysis of the dust emission across the CO snowline in the disc around HD163296 led by Greta Guidi (PhD student of Testi), who has published an initial study based on ALMA and EVLA data from our collaborations and has obtained followup ALMA observations which will be executed in the coming months.
+\\
+We will proceed in the following way:
+
+1. we will re-calibrate all the available datasets, including the application of non-standard self-calibration whenever possible; this will include about four-hundred protoplanetary disc sources in nearby star forming regions that will all be available to us either from our own programmes or through the ALMA Archive by the end of 2017;
+
+2. we will apply systematically our new analysis tool to derive disc physical parameters (mass, surface density distribution, disc morphology); we will correlate these properties with the properties of the central star and the age/environment of each star forming region;
+
+3. we will extend the ALMA surveys to longer wavelengths to constrain the grain growth process and derive its correlation with the discs properties and evolutionary stage.
+
+All these steps are feasible and we are equipped with the tools to execute them.
+% At ESO we do have the necessary hardware (ALMA pipeline-grade data computing cluster) to perform efficient ALMA data calibration as part of our science support facilities for staff, postdoc and students. The March 2016 version of the multi-CPU/multi-GPU code developed as part of Tazzari PhD thesis has already been tested and used on the Hydra cluster to analyse in detail over 30 discs in the Lupus and Ophiuchus star forming region (the results are being published in Testi et al. 2016 and Tazzari et al. 2016).
+Although the success of all observing proposal cannot be guaranteed, we have a good track record of obtaining observations for the study of grain growth in discs and for the Lupus cloud we will have dual frequency data by the end of 2016 (with a proposal for a third dataset submitted in Cycle 4).
+
+A key outcome of this effort will be the detailed characterization of the dust emission from the population of TDs in each region in comparison with the full disc populations. This information will be critical in understanding the role of TDs in these evolving populations. TDs appear to be a minority of each population, but the key question is whether their properties are similar in different environments and whether they represent a common, but brief phase of disc evolution.
+
+%Our group will not produce the analysis of the gas in the disc populations directly, but will use the results of the analysis done by collaborators. An example is that of the Lupus survey, where the results of the analysis of the CO emission (Ansdell et al. 2016; Miotello et al. 2016) will be used in the study of Tazzari et al. (2016) to try and relate the gaseous disc properties with the dust detailed structure analysis.
+
+As part of our project we will setup a database of ALMA observations of discs and their derived parameters that will be used by the whole collaboration and will be made available on the web in incremental releases as the data will be published.
+
+\vspace{0.5em}
+\noindent {\bf Links to the other projects:}
+
+We will strongly rely on the stellar properties derived as part of subproject A2. The theoretical interpretation of our observational results will rely on the models developed as part of subprojects B1, C1, C2, D1, D2.
+%Our observational programmes are carried out in collaboration with the groups headed by J.M. Carpenter (ALMA), C. Chandler (NRAO), Th. Henning (MPIA), I.~Pascucci (University of Arizona), E.~van Dishoeck (University of Leiden), J.P.~Williams (University of Hawaii).
+
+%Evidence of the recognised role of our groups in the ALMA and EVLA surveys is provided by the leading role that students and postdocs from the ESO group have in many papers from these programs. Tazzari (PhD student of Testi) developed his analysis tool and has carried out the multi-wavelength analysis for a sample of objects from the discs@EVLA survey, he is now responsible for the dust structure analysis for the Lupus and Chamaeleon I ALMA surveys. Guidi (PhD student of Testi) is in charge of the long wavelength high resolution followup of the Lupus survey to study large grains confinement. Manara (former PhD student of Testi) is in charge of the combination of XShooter spectroscopy and disc properties from ALMA for both the Lupus and Chamaeleon I surveys (data from the projects PI-ed by Alcala and Testi).
+
+
+\def\remove#1{}
+
+%*******************************************************************************
+%*******************************************************************************
+%*******************************************************************************
+%            Project A2-Preibisch
+%*******************************************************************************
+%*******************************************************************************
+%*******************************************************************************
+
+\pagebreak[4]
+
+\section*{\underline{Project A2:} 
+New constraints on disc-dissipation from the
+relation between accretion and  X-ray activity}
+
+\noindent{\bf Authors:}\\
+\begin{tabular}{ll}
+{\textsf{PI:}}                     & Thomas Preibisch (LMU)\\
+{\textsf{Co-PI:}}               & Barbara Ercolano (LMU), Leonardo Testi (ESO)\\
+{\textsf{Collaborations:}}      & C. Manara (ESA)\\
+
+\end{tabular}
+
+\noindent{\bf Requested positions: 1 PhD Student} \\
+
+\noindent{\bf Abstract:}\\
+We want to test models of X-ray driven disc photoevaporation leading
+to the formation of Type 1 TDs by using
+new observational data to study the relation between accretion rates of young stars and
+their X-ray emission.
+The aim is to combine
+the numerous available high-quality
+X-ray data of young stars  in different regions with new and highly reliable 
+accretion rates that can be derived from the new spectroscopic data on these stars.
+In this way, we will be able to study the relation between X-ray emission
+and accretion with much larger samples (hundreds of stars rather
+than just a few dozen) and for different regions spanning a range
+of ages, and to test the predictions of theoretical models of
+X-ray driven disc photoevaporation and the corresponding effects on
+the disc accretion rate. This is of fundamental importance to
+understand the formation and residual accretion rate distribution of
+Type 1 TDs. 
+
+\vspace{0.5em}
+\noindent{\bf Scientific objectives:}
+%\begin{enumerate}
+%\item blah blah
+%\item blah blah
+%\end{enumerate}
+
+
+In this project we want to investigate  the relation between the high-energy radiation 
+from young stars and the
+ evolution and dispersal of their circumstellar discs, via the
+ formation of Type 1 TDs.  
+According to theoretical models, the high energy radiation in the UV and X-ray 
+regime 
+plays a central role for the dissipation of the discs via the process
+of photoionization (Ercolano et al. 2008, 2009; Owen, Ercolano et
+al. 2010, 2011, 2012).
+On the other hand, the accretion of disc material from the disc to the star, which is
+thought to happen through magnetospheric  funnels, is expected to influence the 
+structure and properties of the stellar corona, where (most of) the stellar X-ray emission 
+comes from.
+
+Numerous X-ray observations obtained during the last decades have clearly 
+established that young stellar objects (YSOs) in all evolutionary stages from 
+protostars  to the ZAMS stars show highly elevated levels of X-ray  activity,
+typically 1000 times higher than seen in our Sun. 
+Several observations % of young stellar clusters  
+also provided indications that
+the X-ray luminosities of young stars might depend on the presence 
+and the properties of accretion discs. While these earlier studies suffered
+from  small sample sizes, incompleteness of the
+ X-ray detected samples, and ambiguities about the disc properties,
+the particularly deep X-ray observation of the Orion Nebula that was performed in the context of the
+Chandra Orion Ultradeep Project (COUP; see Preibisch et al. 2005)
+provided a fundamental clarification of these issues.
+ %
+The COUP data showed unambiguously
+and in a statistically significant way
+that the  absolute as well as the fractional X-ray luminosities
+of  accreting young stars  are systematically {\em lower} by a factor of
+ $\sim 2-3$ than the corresponding values for  non-accreting stars.
+%
+%
+The COUP data also suggested that the fractional X-ray luminosity 
+of the young stars may be anti-correlated
+with mass accretion rate, but this correlation could not be proved in a statistically
+significant way because the number of stars for which estimates of the 
+accretion rate were available at that time was too small.
+\smallskip
+
+Different theories predict different relations between X-ray activity 
+and mass accretion rate. 
+
+Theory 1: Accretion suppresses coronal X-ray activity.
+One possibility is that changes in the coronal magnetic field
+structure by the accretion process lead to lower X-ray emission.
+Another possibility is that the stripping of the coronal magnetic field 
+by the interaction with the disc reduce the coronal volume and thus the
+X-ray emission. A further suggestion was that the magnetospheric coupling between the disc and the stellar surface  might reduce the amount of differential
+rotation in the star, and thus reduce the efficiency of the dynamo action
+(and the magnetic activity).
+However, these kind of theories cannot make testable predictions: A putative
+reduction of the X-ray luminosity depends sensitively on the details
+of the interaction, thus essentially introducing scatter in the
+relations between X-ray and accretion properties. \\
+Theory 2: Coronal X-ray modulate accretion. 
+Drake, Ercolano, et al.~(2009) use the X-ray heated 
+disk models of Ercolano et al.~(2008a, 2009) to show that
+photoevaporative mass-loss rates
+are strongly dependent on stellar X-ray luminosity and sufficiently
+high to be competitive with accretion rates. Photoevaporation disrupts
+then accretion by lowering the surface density in the disc, causing a
+``Photoevaporation starved accretion phase'' before the formation of a
+Type 1 TD. This theory predicts an inverse linear relation between
+accretion rates and X-ray luminosities. \\
+Theory 3: The observed accretion rates depend on the final dispersal
+mechanism. Ercolano
+et al. (2014) suggest that
+the photoevaporation-starved accretion period is too short to be
+detected. What is most likely detected, instead, is the lowest
+possible accretion rate that a disc achieves before the
+formation of a Type 1 TD. Indeed viscous theory predicts a power law
+evolution with time of the accretion rates, meaning that discs spend
+most of their lives at the lowest possible accretion rate, which must
+then roughly equal the wind rate. This model then predicts that the
+observed accretion rates should be directly proportional to the X-ray
+luminosity, since the latter are directly proportional to the wind
+rates (Owen, Ercolano et al. 2010, 2011, 2012). 
+
+Theories 2 and 3 both imply that the stellar X-ray activity controls the evolution of the disc,
+and thus directly influences the formation
+and accretion demographics of Type 1 TDs. 
+\smallskip
+
+
+In recent years,  
+reliable accretion rate determinations  have become more readily availble,
+thanks to the advent of new powerful spectrographs like
+X-SHOOTER at the VLT, that combine high spectral resolution
+with a wide wavelength coverage (the entire optical and
+near-infrared range, in the case of X-SHOOTER).
+Several spectroscopic surveys have been performed in the last few years or are ongoing
+in different star forming regions.
+
+The main problem with most  previous accretion rate estimates was
+ that they were usually 
+based on color excesses or equivalent-width determinations of single tracer lines
+(such as H-alpha or Ca). The other important parameters, i.e. the  stellar effective
+temperature and the extinction, that are needed to convert color excesses or 
+equivalent-widths to accretion rates, had to be derived from separate observations,
+or (more usually) collected from the literature.
+This combination of different observational data could easily lead to
+substantial uncertainties in the derived accretion rate estimates and the stellar parameters.
+%
+The most important advantage of the new high-resolution wide-wavelength range 
+spectra is that they allow a self-consistent and simultaneous 
+determination of all the important parameters,  i.e. the
+stellar effective temperature, the extinction, and the accretion rate, at the same time and
+from one coherent data set.
+This results in a far more reliable determination of accretion rates (see Manara \& Testi 
+2014). 
+
+\vspace{0.5em}
+\noindent{\bf Strategy of the proposed project:}
+%
+
+ 
+
+In this project, we aim at combining the numerous available deep
+X-ray observations of young stars in the Chandra and XMM data
+archives with new measurements of the accretion rates.
+This will result in a much larger sample to perform a detailed statistical analysis
+of the relation between X-ray activity and accretion in mass- and age-stratified
+samples of young stars.
+%\smallskip
+
+First we will use the accretion rates  determined for $\sim 700$ young stars
+in Orion from Manara et al.~(2012) and compare them 
+with the available X-ray data from the COUP project.
+
+In the second part of the project we will use the existing X-SHOOTER spectra for 
+numerous young stars
+in various regions and derive new and self-consistent measurements of the
+stellar parameters and the accretion rates. These data will be combined with
+Chandra and XMM data. In the course of the project, we also plan to perform new
+observations with X-SHOOTER in order to extend the
+spectroscopic sample and to optimize the overlap with the X-ray observations.
+
+In oder to address the problem of the time variability of accretion rates,
+we will conduct photometric multi-color monitoring of selected regions
+(e.g., the Orion Nebula Cluster)
+with our (LMU) 2m Wendelstein Telescope. 
+Our new wide-angle camera WWFI (providing a $0.5^\circ$ field-of-view) is ideally suited
+for this. Taking 2--3 exposures in 3 filters
+every clear night will yield a comprehensive database for the characterization
+of the accretion variability of individual stars.
+
+
+
+This will finally allow us to perform
+ detailed statistical analysis
+of the relation between X-ray activity and accretion in mass- and age-stratified
+samples of young stars in different young clusters. The results will
+provide crucial new
+constraints for theoretical models of the X-ray-disk interaction and
+draw conclusions on the expected accretion rates distributions of TDs.
+
+
+
+\vspace{0.5em}
+\noindent {\bf Links to the other projects / collaborations:}
+The stellar properties are necessary for A1, B1 and C2. The accretion properties are needed to constrain the models in B1. 
+
+
+
+
+%\def\remove#1{#1}
+\def\remove#1{}
+
+
+%*******************************************************************************
+%*******************************************************************************
+%*******************************************************************************
+%            Project B1-Ercolano
+%*******************************************************************************
+%*******************************************************************************
+%*******************************************************************************
+
+
+\pagebreak[4]
+
+\section*{\underline{Project B1:} 
+Disc mass loss from quantitative spectroscopy
+of photoevaporative winds}
+
+\noindent{\bf Authors:}\\
+\begin{tabular}{ll}
+{\textsf{PI:}}                  & B.~Ercolano (LMU)\\
+{\textsf{Co-I:}}                &P.~Caselli (MPE), K.~Dullemond (Heidelberg), Kley (T\"ubingen)\\
+{\textsf{Collaborations:}}      & T.~Preibisch (LMU), L.~Testi (ESO), James Owen (Princeton), \\
+& E. van Dishoeck (Leiden, MPE), T. Henning (MPIA)  \\
+\end{tabular}
+
+\noindent{\bf Requested position: 1 Postdoc} \\
+%\begin{tabular}{lll}
+%{\textsf{Student 1:}}\hspace{2em}  & {\em Advisors:\hspace{0.7em}} B.~Ercolano \& W.~Kley \hspace{2em} & {\em Subtopic:\hspace{0.7em}} Wind models parameter study \\
+%{\textsf{Student 1:}}\hspace{2em}  & {\em Advisors:\hspace{0.7em}} B.~Ercolano, P.~Caselli, L.~Testi \& Dullemond \hspace{2em} & {\em Subtopic:\hspace{0.7em}} Molecular line tracers of disc winds \\
+%\end{tabular}
+
+\noindent{\bf Abstract:}\\
+Type 1 TDs are likely discs in an advanced stage of dispersal. The
+dispersal mechanism of discs is of fundamental importance to planet
+formation, yet the responsible mechanism is still largely
+unconstrained. Photoevaporation from the central star is currently a
+promising avenue to investigate. We aim at building the most
+up-to-date radiation-hydrodynamical calculations of irradiated discs
+coupled to photoionisation, chemistry and radiative transfer
+calculations to allow us for the first time to perform quantitative
+spectroscopy of disc winds. Comparison with existing observations will
+allow us to constrain mass loss rates and emission regions of the wind
+which will pin down the underlying driving disc dispersal mechanism.
+
+\vspace{0.5em}
+\noindent {\bf Scientific background:}
+
+%Disc dispersal is fundamental to planet formation as this sets the timescale over which planet formation must occur. Furthermore the similarity between the observed timescales over which Young Stellar Objects (YSOs) lose their disc and the theoretically estimated timescale for the formation of planets suggests (i) that the two process are probably coupled and feed back on each other; (ii) that the final bild up of planets occurs in discs on their last gasp, like TDs, making these objects all the more interesting to study. 
+
+Understanding disc dispersal is a key piece in the puzzle of planet
+formation. Type 1 TDs, which are considered to be objects on the
+verge of dispersal provide a tight constrain on the underlaying
+dispersal mechanism. One of the favourite models to drive disc
+dispersal is photoevaporation by radiation from the central star
+(e.g. Clarke et al. 2001, Alexander et al. 2006). The exact nature of
+the driving radiation is however still open to debate.  (Extreme and
+Far) Ultraviolet (UV) radiation as well as X-ray have been shown to be
+able to drive winds from the disc upper layers (Alexander et al. 2006;
+Gorti, Hollenbach \& Dullemond 2009; Ercolano et al. 2009; Owen et
+al. 2010) able to disperse the discs in the observed
+timescales. However both the location and intensity of the wind depend
+strongly on the driving radiation, with differences of more than two
+orders of magnitude for mass loss rates predicted by different
+models. This has profound implications for disc evolution and hence
+for the formation of planets and their subsequent evolution
+(e.g. Ercolano \& Rosotti 2015). 
+
+While the presence of disc winds has been confirmed via the
+observation of a few km/sec blue-shift in the line profiles of a
+number of tracers like [NeII]~12.8$\mu$m and [OI] 6300 (e.g. Pascucci
+et al 2007), these lines cannot be used to infer the underlying
+mass-loss-rate (e.g. Ercolano \& Owen 2010, Ercolano \& Owen 2016).
+Mid-infrared observations of molecular lines (e.g. CO) provide a new
+promising alternative to directly measure disc winds. Indeed recent
+observations suggest that these lines may be tracing a disc wind which
+is slow and partially molecular (e.g. Pontoppidan et al. 2011; Brown et al. 2013). 
+%The
+%spectro-astrometric survey of molecular gas in the inner regions of
+%protoplanetary discs using CRIRES, the high-resolution infrared
+%imaging spectrometer on the Very Large Telescope (Pontoppidan et
+%al. 2011), showed that for several sources the astrometric signatures
+%are dominated by gas with strong non-Keplerian (radial) motions. These
+%authors concluded that the non-Keplerian spectro-astrometric
+%signatures are likely indicative of the presence of wide-angle disc
+%winds. 
+More observations of this type are planned after the update of
+the CRIRES instrument, which is expected to be completed by
+2019. Observations with ALMA in molecular lines like e.g. CO J = 2-1
+and J = 3-2 emission are also able to trace the presence of a wind (e.g.Klaassen et al. 2013, 2016).  
+Molecular lines are sensitive to the mass loss rates since they
+sample a significant area of the wind launching regions. However the
+exploitation of molecular tracers is currently severely hampered by
+the lack of a suitable hydrodynamic wind model coupled to chemistry
+and to dust evolution models (which dominate the opacity in the wind)
+to interpret the observations. While a number of chemical models exist
+of the deeper, denser regions of discs, no model is currently
+available for the optically thinner disc winds. The work of Gorti \&
+Hollenbach (2009), while carrying out detailed chemical calculations
+extending to the disc atmosphere, used a hydrostatic disc model which
+was analysed in a 1+1D fashion. Without hydrodynamics no predictions
+on line profiles can be made.  
+
+% For example, the intensity and the profile of the [NeII]~12.8$\mu$m can be equally well fitted using an EUV (Alexander ???) or an X-ray photoevaporation model (Ercolano \& Owen 2010). The problem with the [NeII] line is that the Ne+ formation route can occur both via the removal of a valence electron in the fully-ionised winds driven by EUV radiation, but also by fast charge exchange of Ne++ with neutral H which is abundant in the quasi-neutral winds driven by X-ray. The problem with the [OI] 6300 line and all other ionic collisionally excited lines considered to date is the strong temperature dependence imposed by the Boltzmann term in the emissivity. This means that these lines are mostly just tracing the hot layer of the wind heated by the EUV radiation and not actually tracing the bulk of the wind where it matters (Ercolano, Owen \& Testi 2016, in preparation), hence they cannot be used to infer mass-loss-rates or to constrain the wind driving mechanism.  
+In this project we aim at searching for new reliable wind diagnostics.
+%from
+%transition in the low ionisation stages of common ions (e.g. OI) or
+%from simple molecules (e.g. CO), to sample the lower layers at
+%the base of the wind over a significant range of disc radii. 
+To this
+aim we will to perform chemical calculations of disc winds, 
+to determine ionic and molecular abundances. We will then execute
+radiative transfer calculations of the most promising
+transitions.  
+
+We have performed the only existing radiation hydrodynamic
+calculations of X-ray driven photoevaporative winds to date (Owen et
+al. 2010, 2011, 2012). We have used these grids to make predictions on
+the ionised phase of the wind spectra (Ercolano \& Owen 2010;
+Ercolano \& Owen 2016), however the parameter space
+available to date is very limited. In this project we will
+significantly expand on this by constructing a
+library of X-ray wind solutions for an extended grid of
+X-ray luminosities and stellar masses, covering all observed
+values. 
+%Our previous calculations could only account for
+%the ionised phase of the wind, hence restricting severely predictions
+%of interesting line diagnostic. 
+We will then 
+%lift this limitation by
+perform the first simultaneous chemical calculations in
+the wind and upper disc atmosphere.  
+
+Type 1 TDs, are particularly interesting as the streamline architecture of their winds
+and the profiles of the lines that are produced in the wind
+differ from those of primordial discs. (e.g. Ercolano \& Owen
+2010). Indeed the lines are expected to be broader and brighter for
+e.g. inner cavities of a few to 10 AUs. A quantitative
+spectroscopic comparison between TDs and primordial disc is also
+likely to provide important constraints on the wind architecture. 
+Finally, the recent suggestion (e.g. Marino et al. 2015, Montesino et al. 2016) that some Type 2 TDs may have a tilted inner disc is an interesting avenue to explore. A tilted inner disc may strongly influence photoevaporation by allowing radiation to reach outer disc regions and may produce the large inner holes of (some) Type 2 TDs. This is certainly a worthwhile new challenge requiring the development of 3D simulations.  
+
+%\\
+%For this project we will need the following tools: 
+%\begin{enumerate}
+%\item A 3D hydrodynamical code which we will modify to include the effects of X-ray irradiation as we did in Owen et al. (2010). For that we will use the Pluto code, for which extensive expertise exists in our team. 
+%\item A 3D photoionisation and chemical code to post-process the wind solutions obtained above. The PI is the author of the MOCASSIN code (Ercolano et al. 2003, 2005, 2008b), which has already been used to calculate the emission line spectra from the ionic phase of X-ray winds (Ercolano \& Owen 2010; Ercolano, Owen \& Testi 2016, in prep). The code has now been coupled and benchmarked to the KROME code to perform arbitrary chemical calculations (Ercolano \& Grassi 2016, in prep)  and needs now only the appropriate reduced chemical network, which we will obtain from project B2. 
+%\item A 3D radiative transfer code to post-post-process the hydrodynamical grids from step 1, with the appropriate temperatures and abundances obtained from step 2 to produce emission line intensities and profiles to compare with the existing observations and those gathered and reprocessed in project A1. We will make use of the RadMC code developed and maintained by Prof. Dullemond.  
+%\end{enumerate}
+
+
+
+
+\vspace{0.5em}
+\noindent{\bf Scientific objectives:}
+
+The main aim of this project is to identify new wind tracers and use them to constrain mass loss rates and hence disc dispersal models.
+
+\vspace{0.5em}
+\noindent{\bf Strategy of the proposed project:}
+
+We have divided the work load into two connected blocks which
+also have self-contained immediate objectives. Block 1 is already
+being executed by Dr Picogna, employed on a LMUExcellent initiative
+grant awarded to B. Ercolano in support of this project. \\
+\noindent{\bf Block 1: Parameter-space investigations of X-ray photoevaporation models.}\\
+%
+The 3D hydrodynamical code PLUTO is being modified to include the
+effects of X-ray irradiation (Owen et al. 2010) in order to produce a
+library of X-ray wind solutions that will be analysed in Block 2
+%to produce emission line and continuum spectra of the
+%wind. The obtained solutions will be first of all benchmarked against
+%those that are already available for a 0.7 and 0.1 M$_\odot$ central
+%stars (Owen et al. 2010, 2011, 2012). The parameter space will be then
+%significantly extended for the mass of the central star and its X-ray
+%luminosity. 
+%With the new models we will also test the theoretical relations for X-ray photoevaporation
+%predicted by means of semi-analytical models and ab-initio arguments
+%by Owen et al. (2012). While these relations are being widely used in
+%the literature, they have until now never been tested.\\
+As a further step we plan to perform a small set of 3D simulations to explore the effects of asymmetries in the inner disc. We expect to see dramatic effects in the photoevaporation profile and in the wind architecture, which may lead to the formation of large hole TDs. This avenue is never been explored before.\\
+\noindent{\bf Block 2: Spectral line energy distribution calculations of disc winds.}\\
+%
+The MOCASSIN code (Ercolano et al. 2003, 2005, 2008b), which has
+already been used to calculate the emission line spectra from the
+ionic phase of X-ray winds (Ercolano \& Owen 2010; Ercolano \& Owen
+2016). The code has now been coupled and benchmarked to 
+the KROME code (Grassi et al., 2014) to perform arbitrary chemical calculations (Ercolano \&
+Grassi 2016, in prep)  and needs now only the appropriate reduced
+chemical network, which we will obtain from B2. 
+
+The new KROME-coupled MOCASSIN code will be employed to perform
+photoionisation and chemical calculations disc wind solutions starting
+off from the available models of Owen et al. (2010, 2011, 2012) and
+then moving to the new data obtained in Block 1 (which is 
+already being executed). To this aim, under the guidance of Prof Caselli, an initially very
+simple network will be included in the MOCASSIN-KROME to perform
+initial test calculations, which will then be updated when project B2
+begins to provide results. As a final step 
+%in the post-processing with
+%the help of Prof Dullemond 
+we will perform 3D radiative
+transfer calculations to produce line intensities and profiles to
+compare with existing and new observations, which may become available
+at the time. 
+
+\noindent {\bf Risk Assessment:}
+As it is currently unknown which diagnostic may directly be related to
+wind rates and profiles, this is potentially risky
+project. However we have hints from MIR observations that such
+diagnostics exist, and our approach is unique in finding them. This is
+also a high gain part of the project, since the direct measurement of
+wind rates and profiles would solve the disc dispersal problem once
+and for all, bringing about a real breakthrough in this field.  If no
+suitable diagnostic can be found to directly invert emission lines to
+mass loss rates, we will calibrate the emission line measures using
+radio emission diagnostics (e.g. Owen, Scaife \& Ercolano 2013). With
+regards to its dependance on the delivery of a chemical network from
+B2, some of the aims of B1 could also be obtained with simple (toy)
+networks, which could be successively updated. 
+
+\vspace{0.5em}
+\noindent {\bf Links to the other projects / collaborations:}\\
+This project depends on project B2 for the reduced network and on
+project A2 for the observational input. Furthermore Dr
+James Owen (Princeton) will be heavily involved in the project.  
+
+
+\def\remove#1{}
+
+
+%*******************************************************************************
+%*******************************************************************************
+%*******************************************************************************
+%            Project B2-Caselli
+%*******************************************************************************
+%*******************************************************************************
+%*******************************************************************************
+
+
+\pagebreak[4]
+
+\section*{\underline{Project B2:} 
+Essential astrochemistry of disc winds}
+
+\noindent{\bf Authors:}\\
+\begin{tabular}{ll}
+{\textsf{PI:}}                  & P.~Caselli (MPE)\\
+{\textsf{Co-I:}}                &B.~Ercolano (LMU)\\
+{\textsf{Collaborations:}}      &W.-F. Thi, L. Szucs (MPE) \\
+\end{tabular}
+
+\vspace{0.5em}
+\noindent{\bf Requested positions: 1 Postdoc} \\
+
+\vspace{0.5em}
+\noindent{\bf Abstract:}\\
+Protoplanetary discs lose mass via a slow disc wind, probably driven by photoevaporation from the central star. A thermochemical study of this important component of young stellar object does not exist to date. The study of the chemistry in disc winds however relies on a knowledge of the opacities, which are largely dominated by small dust grains which are entrained in the wind from the underlying disc at the launch point. In this project we plan to develop a reduced chemical network appropriate for photoevaporative wind conditions and couple our chemical codes to space and time-varying dust distribution obtained in project C2. We will for the first time be able to draw detailed chemical profiles of photoevaporative winds, which is of fundamental importance to identify and interpret new spectral line diagnostics in existing and upcoming observations. 
+
+\vspace{0.5em}
+\noindent {\bf Scientific background:}
+
+Chemical models of gas in the protoplanetary and TDs are essential to pin down the initial conditions of the gas and dust from which planets form. Several sophisticated models have been and are continuously being developed to interpret the recent (e.g.) Herschel and ALMA observations of discs (e.g. Bruderer et al. 2015; Thi et al. 2013; Aresu et al. 2012; Meijerink et al. 2012; Woitke et al. 2010). 
+These models however deal only with the dense parts of the discs, in rare cases extending to the bound disc atmospheres. No chemical model of a photoeveaporative disc wind exists to date. This is a serious shortcoming for the identification of suitable wind tracers and more importantly wind diagnostics, to guide new observations and constrain disc dispersal models (see discussion in project B1). 
+
+The physical conditions valid for material in the bound disc itself are not appropriate at all for a disc wind. First of all winds are much less dense than the material in the bound discs. Even in the case of vigorous X-ray driven winds, the densities at the base of the wind are rarely above ten million hydrogen atoms per cubic centimetre, and they decrease roughly with the square of the distance (i.e. they behave roughly like Parker winds, see e.g. Owen et al. 2010; Font et al. 2004). The opacity in the wind is further reduced because of the decrease in dust content, as only a fraction of the grains contained in the underlying disc are entrained in the wind (see Owen et al. 2011b and discussion in project C2). For these reasons molecules may have a much shorter lifetime and indeed parts of the gas in the wind will be completely photodissociated. For such physical conditions processes like surface chemistry, freeze-out etc. are not important, yielding a simpler problem, which bears less uncertainties compared with chemical models for colder and more opaque material in the bulk of the disc. 
+
+
+\vspace{0.5em}
+\noindent{\bf Scientific objectives:}
+
+Devise a chemical model appropriate for photoevaporative wind conditions which takes into account of the varying dust properties in the wind. 
+
+\vspace{0.5em}
+\noindent{\bf Strategy of the proposed project:}\\
+%
+The project will develop along a three-stage path of growing complexity. It is possible that some of the tasks in stage three may be carried over to the next funding period. The three stages can be briefly described as follows: 
+\begin{enumerate}
+\item  A first task for this project is to simplify the gas-grain chemistry
+by reducing the chemical network to the minimum number of reactions
+needed to properly follow the formation/destruction of important
+species (in particular Hydrogen, Carbon, Oxygen as well as simple C-,
+O-bearing molecules) and the electron abundance or ionization
+fraction. The PI of this project has extensive experience in devising efficient but reliable reduced networks (see e.g.  Keto, Rawlings \& Caselli, 2014). 
+
+The reduced chemical network will be benchmarked against
+comprehensive chemical networks to make sure that the abundances of
+important (diagnostic) species such as C+, C, O, CO are well
+reproduced in the range of conditions appropriate for evolved and
+transitions discs. This will imply running the comprehensive and
+reduced networks in a grid of physical conditions by varying
+temperature, density, and UV/X-ray fluxes.  
+
+Once the reduced network
+is benchmarked and tested, it will be included in the MOCASSIN-KROME
+code in collaboration with the postdoc employed on project B2. 
+
+\item The chemical model assumes initially that dust grains can be
+approximated by one-size particles of 0.1$\mu$m in diameter and that
+the dust-to-gas mass ratio is fixed.  However, this assumption is
+completely inappropriate for disc winds. Indeed as explained in detail
+in project C2 of this proposal, the maximum grain size that can be
+entrained in the wind at a given radial distance from the star results
+from the local force balance between the drag force, gravity and the
+centrifugal force. A further complication is that the underlying
+distribution of grains is also not constant and varies as a function
+of disc radius and vertical distance from the midplane, due to the
+effects of grain growth, fragmentation, settling and drift. A detailed
+model of the spatially and time- varying grain abundances and size
+distributions in the wind is however essential for the chemical model,
+since grains provide the bulk of the opacity in the FUV. The second
+task of the Postdoc employed for this project will be to include
+spatially and time-varying grain abundances and size distributions
+provided by project C2 into the chemical code to properly account for
+dust opacities in the wind.  Also the effects of different dust grain
+properties on the chemical composition will be explored at this point.  
+
+This second step will be further decomposed into levels of increasing complexity. We will begin with decoupling the time and space evolution of the grains. We will then compare the timescales involved and asses whether the time-evolution of the dust must be treated self-consistently or if we can work with snapshots. 
+
+
+\item Furthermore, it is unclear at this stage if equilibrium chemistry is
+an appropriate approximation for disc winds. The material flows at a
+few km/sec and as it moves along the wind streamlines it is subject to
+changes in density and radiation field. It is likely that time
+dependent calculations will be necessary for this problem, where the
+dust properties in the chemical code will be provided by the time
+dependent calculation of the dust evolution described in C1. This will
+be the third task of the Postdoc employed for this project.
+
+After
+this, the whole team will work together to couple time-dependent
+gas-grain chemistry and dust evolution.  Depending
+on the level of complexity required part of this final step may be
+carried out in the second funding period.
+
+ A Postdoc with at least some experience of astrochemistry would be certainly desirable  to work on this complex  project. The Postdoc will receive scientific support form the PI, but also from the many experienced astrochemists (e.g. Dr Thi and Dr Szucs) at the Centre for Astrochemical Studies led by Prof. Caselli at the MPE. 
+
+\end{enumerate}
+
+The final science product will be for the first time a detailed
+chemical study of a disc wind for one standard case. The lessons
+learnt will be streamlined and approximated in order to be usable in
+the parameter space calculations planned for project B1.  
+
+\vspace{0.5em}
+\noindent {\bf Links to the other projects/ collaborations:}
+This project relies on inputs from project A2 for the stellar
+parameters and from project C2 for the dust model in the wind. The
+reduced network developed here will then be included in the
+MOCASSIN-KROME code in collaboration with the Postdoc from project
+B1.
+
+
+%\def\remove#1{#1}
+\def\remove#1{}
+
+%*******************************************************************************
+%*******************************************************************************
+%*******************************************************************************
+%            Project C1-Dullemond
+%*******************************************************************************
+%*******************************************************************************
+%*******************************************************************************
+
+
+%\pagebreak[4]
+\pagebreak[4]
+
+\section*{\underline{Project C1:} 
+Trapping the dust: Planet formation 'hotspots' in TDs}
+
+\noindent{\bf Authors:}\\
+\begin{tabular}{ll}
+{\textsf{PI:}}                  & C.P.~Dullemond (Heidelberg)\\
+{\textsf{Co-I:}}                & W.~Kley (Tuebingen), B.~Ercolano (LMU) \\
+{\textsf{Collaborations:}}      & P.~Caselli (MPE), L.~Testi (ESO), T. Henning (MPIA) \\
+& E. van Dishoeck (Leiden, MPE) \\
+\end{tabular}
+
+\vspace{0.5em}
+\noindent{\bf Requested positions: 1 PhD student} \\
+%\begin{tabular}{lll}
+%{\textsf{Student 1:}}\hspace{2em}  \& {\em Advisors:\hspace{0.7em}} B.~Ercolano \& W.~Kley \hspace{2em} \& {\em Subtopic:\hspace{0.7em}} Wind models parameter study \\
+%{\textsf{Student 1:}}\hspace{2em}  \& {\em Advisors:\hspace{0.7em}} B.~Ercolano, P.~Caselli, L.~Testi \& Dullemond \hspace{2em} \& {\em Subtopic:\hspace{0.7em}} Molecular line tracers of disc winds \\
+%\end{tabular}
+
+\vspace{0.5em}
+\noindent{\bf Abstract:}\\
+One of the most pressing unsolved problems in the field of planet formation
+is how Nature overcomes the ``radial drift barrier'' for dust aggregates in
+the size range between millimetre and several meters. Observations of
+TDs may hold the clue. They appear to have strong dust
+concentrations which suggest dust trapping by local pressure maxima to be
+the key. It was long suspected that this process plays a critical role in
+planet formation.  TDs may allow us to observe this process in
+real time. The goal of this project is to do detailed modelling of this
+process for TDs and compare the results to the
+observations. This will make a direct link between observations of
+protoplanetary discs and the process of planet formation.
+
+\vspace{0.5em}
+\noindent {\bf Scientific background:}
+\\
+Planet formation theories suffer from a major problem. The process starts
+when the dust in the protoplanetary disc around a young star coagulates to
+become ever bigger dust aggregates. These eventually grow by further mutual
+collisional mergings to the size of planets. However, as dust aggregates
+grow from micron size to millimetre-meter size, they start to drift rapidly
+toward the star. This is a result of the negative radial pressure gradient
+in the disc (Whipple 1972).
+% From Plasma to Planet, 211
+The planet formation process is thus aborted when bodies grow to
+millimetre-meter size. This problem is often called the "radial drift
+barrier". Already long ago (Whipple 1972; Barge \& Sommeria 1995;
+% A\&A, 295, L1
+Klahr \& Henning 1997)
+% Icarus, 128(1), 213
+proposed that local pressure maxima in the disc, if present, would trap dust
+particles of sufficiently large size and allow particles to grow through the
+drift barrier. 
+
+Recently such dust traps seem to have been discovered observationally in
+many Type 2 TDs. ALMA observations of these objects show that
+the dust continuum emission originates from a relatively narrow ring around
+the star, typically with a radius of several tens of AU. Analysis shows that
+this dust is likely to be made of millimetre to cm size pebbles. There are
+strong indications that what we see here are dust trapping pressure-maxima
+of the kind predicted to play a role in planet formation. 
+
+A number of these ring-like TDs in fact are strongly lopsided.
+The dust appears to be trapped on one side of the star. This appears to
+confirm an earlier prediction. Li et al.~(2000)
+% ApJ 533, 1023
+showed that radial pile-ups of gas can become unstable and produce huge
+one-sided arc-shaped vortices.  It was shown by Regaly et al.~(2012)
+% MNRAS 419, 1701
+that these vortices have strong resemblance with the observed
+lopsided arc-shaped TD shapes.  Such vortices are known to
+attract and trap dust (Barge \& Sommeria 1995; Klahr \& Henning 1997).
+
+TDs are therefore perhaps the best laboratories for observing
+the processes at work in planet formation, and will likely remain for the
+forseeable future.
+
+\vspace{0.5em}
+\noindent{\bf Scientific objectives:}\\
+The open questions we intend to address in this project are the following.
+Will dust grain growth be able to break through all the barriers inside the
+dust trap? Will it form a planet or planets? How much small dust will seep
+through the dust trap? Will grain growth be efficient enough to keep all
+dust in large pebbles, so that all the dust remains trapped, or will a
+substantial fraction of the dust remain in small grains which will get
+dragged along with the gas into the inner disc region? Can the
+high-accretion rate, low dust content of the inner disc ("optically thin
+accretion") be explained?  As more and more dust drifts into (and remains
+trapped inside) the ring/vortex, will the ring/vortex remain stable?
+
+
+\vspace{0.5em}
+\noindent{\bf Tools for the proposed project:}\\
+%
+For this project we will model dust growth and dynamics (and in a simplified
+way also the continued process of planet formation) in the dust traps
+thought to be seen in TDs. For this we need first of all a disc
+model that describes the dust traps well. As a zeroth order approach we will
+use simple 1-D viscous disc models. For asymmetric discs (with vortices
+and/or eccentricity) we will use the FARGO-3D hydrodynamics code, which can
+also do 2-D models. We will implement time-dependent heating-cooling as we
+did before (e.g.~Mueller \& Kley 2012, A\&A 539, 18; Pohl et al. 2015, MNRAS
+453, 1768). We will then implement a time-dependent dust coagulation model
+(e.g.~Birnstiel et al.~2012). Making this viable for 2-D disc models
+will be a major part of this project. Finally, we will use the RADMC-3D
+radiative transfer code for making observational predictions from our
+models. 
+
+
+\vspace{0.5em}
+\noindent{\bf Work Plan}\\
+%
+The work plan consists of several sub-projects that aim to answer the
+questions posed above. In each of them we will not only perform the modeling
+itself, but also compare their predicted appearances (using RADMC-3D) with
+the copious ALMA and VLT/SPHERE observations of these objects. The PI
+and collaborators Prof Henning and Prof 
+van Dishoeck have access to a wealth of new data from these observatories.  
+
+
+\begin{enumerate}
+\item First we will make 1-D viscous disc evolution models of discs with
+  dead zones, ice lines and/or photoevaporation. The appearance of a massive
+  planet or Brown Dwarf companion, and the gap it creates can be "simulated"
+  by empirical analytic gap structure formulae. We will couple this model to
+  the dust evolution code. Both disc and dust are evolved simultaneously,
+  and we will investigate how the formation of a pressure bump will affect
+  the radial dust distribution and the accretion history of the disc.
+\item To study the vortices and/or eccentric gap structures, we will inject
+  the 1-D disc structure (at some time $t$) into the 2-D hydrodynamics code
+  and model how these azimuthal asymmetries develop (collaboration with
+  project D2).
+\item We will develop a 2-D version of the dust drift and growth code and
+  let this run on top of the hydrodynamics models, initially without
+  feedback. We will eventually, if time and computational resources permit,
+  model the dust feedback onto the gas in the vortex in 3-D. The dust 
+  distributions will be compared with project A1 led by Prof. Testi.
+\item We will, in a simplified way, model the subsequent formation of
+  planetary embryos and planets from the dust concentrations in the dust
+  trap, and follow how these will, with their gravity, stir the dust and
+  thereby affect the growth, perhaps inhibiting it, and perhaps leading to
+  observable effects in the dust distribution.
+\item By combining our dust physics with chemistry models (in collaboration
+  with Prof.~Caselli) we will seek gas-chemical signatures of
+  the dust traps wich we could search for with ALMA.
+\item If the gap of the TD is caused by photoevaporation and
+  the gap increases in size (see e.g.~Owen, Ercolano et al. (2010, 2011, 2012), we will
+  investigate how the dust and possibly the planet formation happening in
+  the dust trap react to this outside-motion of the trap. Will there by
+  sufficient time to create planetesimals while the trap moves outward?
+  Collaboration with co-I Prof.~Ercolano is envisioned here.
+\end{enumerate}
+
+
+\vspace{0.2em}
+\noindent {\bf Links to the other projects / collaborations:}\\
+The dust distributions modeled here directly link to project A1.  The
+hydrodynamical models of projects D1 and D2 will be very useful
+for this project. Photoevaporation models of B1 are important for 
+modeling the time-dependent location of the dust trap (in the photoevaporation
+scenario).
+
+
+%*******************************************************************************
+%*******************************************************************************
+%*******************************************************************************
+%            Project C2-Ercolano
+%*******************************************************************************
+%*******************************************************************************
+%*******************************************************************************
+
+
+\pagebreak[4]
+
+\section*{\underline{Project C2:} 
+Gone with the wind: Dust entrainment in photoevaporative winds}
+
+\noindent{\bf Authors:}\\
+\begin{tabular}{ll}
+{\textsf{PI:}}                  & B.~Ercolano (LMU)\\
+{\textsf{Co-I:}}                & K.~Dullemond (Heidelberg)\\
+{\textsf{Collaborations:}}      & James Owen (Princeton, USA), P.~Caselli (MPE), G. Picogna (LMU) \\
+\end{tabular}
+
+\vspace{0.5em}
+\noindent{\bf Requested positions: 1 PhD student} \\
+%\begin{tabular}{lll}
+%{\textsf{Student 1:}}\hspace{2em}  & {\em Advisors:\hspace{0.7em}} B.~Ercolano \& W.~Kley \hspace{2em} & {\em Subtopic:\hspace{0.7em}} Wind models parameter study \\
+%{\textsf{Student 1:}}\hspace{2em}  & {\em Advisors:\hspace{0.7em}} B.~Ercolano, P.~Caselli, L.~Testi \& Dullemond \hspace{2em} & {\em Subtopic:\hspace{0.7em}} Molecular line tracers of disc winds \\
+%\end{tabular}
+
+\vspace{0.5em}
+\noindent{\bf Abstract:}\\
+The search for the smoking gun of disc dispersal via photoevaporative
+winds, which destroy discs via the formation of Type 1 TDs,  has until
+now failed to identify suitable tracers. Quantitative spectroscopy of
+YSOs to search for blue-shifted emission lines produced in the wind
+relies on an accurate characterisation of the thermochemical
+properties of the winds. A central ingredients for the chemical
+calculations is the dust content of the wind as micron sized grains
+provide the dominant opacity channel in the far-ultraviolet,
+furthermore small particles are important players in the temperature
+balance of the gas via the photoelectric process.  
+
+We will use realistic radiation-hydrodynamic models of
+photoevaporative winds coupled to dust evolution models for the
+underlying grain distribution in the disc, to calculate the dust
+entrainment in winds to feed to chemical models. The observability of
+the continuum emission due to the dust grains in winds from edge-on
+discs, a potential new diagnostic, will be estimated both for Herbig
+Ae stars and for their fainter T-Tauri counterparts.  
+
+\vspace{0.5em}
+\noindent {\bf Scientific background:}
+\\
+The dispersal of protoplanetary discs plays a crucial role in the
+planet formation process, and it is witnessed by the formation of Type
+1 TDs. While photoevaporation from the central star has been proposed
+as the dominant disc-dispersal mechanism around low-mass stars
+(e.g. Clarke et 2001), to date only tentative evidence exists of a
+wind detection, via blue-shifted forbidden line emission of mostly
+NeII and OI (e.g. Hartigan, Edwards \& Ghandour 1995; Alexander 2008;
+Pascucci \& Sterzik 2009; Schisano, Ercolano \& Guedel 2010; Ercolano
+\& Owen 2010). These lines can only probe the wind on very local
+scales and they cannot be inverted to obtain mass loss rates, which
+are crucial to pin down the driving dispersal wind mechanism
+(i.e. EUV, FUV or X-ray - or a combination). Different driving
+mechanism induce more or less vigorous mass loss at different disc
+radii, which  can have dramatic effect on planet formation, both at
+the times of planetesimal assembly and for the later dynamical
+evolution of planet(esimal)s (e.g. Ercolano \& Rosotti 2015).  
+
+Owen, Ercolano \& Clarke (2011b) demonstrated that in the case of
+Herbig Ae/Be stars an EUV-driven wind, the wind selectively entrains
+grains of different sizes at different radii resulting in a dust
+population that varies spatially and increases with height above the
+disc at radii larger than about 10~AU. At near infrared wavelengths
+this variable grain population produces a 'wingnut' morphology which
+may have already been observed in the case of PDS 144N (Perrin et
+al. 2006). The work of Owen et al. (2011b) could not however reproduce
+the colour gradient of the observations, which show redder emission at
+larger heights above the disc. Possibly, the problem was due to the
+fact that the synthetic images were dominated by emission from the
+smallest grains entrained in the flow. Grain growth, neglected in the
+Owen et al. (2011b) calculations in the disc is a natural solution to
+the colour problem, which needs to be taken into account in future
+simulations.  
+
+While it is currently not clear if the PDS 144N observation can be
+explained by dust entrainment in a photoevaporative wind, the work of
+Owen, Ercolano \& Clarke (2011b) has clearly demonstrated that a
+significant amount of small grains (which dominate the opacity in the
+FUV) do populate disc winds, hence playing an important part in the
+chemistry there and at the base of the flow. The Owen,
+Ercolano \& Clarke (2011b) calculation are limited to the EUV-case
+only and do not include dust-evolution in the underlying disc. In this project
+we aim to determine the dust content of photoevaporative winds for the
+EUV and X-ray case for a range of stellar, disc and wind parameters,
+using realistic descriptions for grain growth in the underlying
+disc. 
+
+The main science product of this project, i.e. the grain
+distributions, is needed by project B1, however as a by-product we
+will also use the results to predict the observational appearance of the wind in
+infrared continuum for the various cases. In the case of Herbig Ae
+stars these winds may be observable for edge-on discs as discussed in
+Owen et al. (2011b) and may provide an interesting wind diagnostic.  
+
+
+\vspace{0.5em}
+\noindent{\bf Scientific objectives:}\\
+\indent 1. Build a dust model for photoevaporative winds to be used in chemical calculations. \\
+\indent 2. Estimate the observability and observation characteristics of the dust phase in photoevaporative winds. 
+
+\vspace{0.5em}
+\noindent{\bf Strategy of the proposed project:}\\
+For this project we will need the following tools: \\
+\indent 1. Photoevaporative wind solutions for EUV and X-ray photoevaporated winds for T-Tauri and Herbig stars (the latter only for the EUV case)\\
+\indent 2. Parameterised dust growth models (e.g. Birnstiel, Klahr \&
+  Ercolano, 2012) and, successively, dust evolution results from project C1. \\
+\indent 3. A 3D radiative transfer code to post-postprocess the wind models with the calculated grain populations. We will make use of the RadMC code developed and maintained by Prof. Dullemond.  \\
+
+The student will start by producing wind solution for the EUV case
+from the work of Font et al. (2004), which may be applicable to Herbig
+stars. She/he will then proceed to calculate the dust distribution in
+the wind, under simplifying assumptions for the underlying dust
+distributions as in Owen et al (2011b). In brief, streamlines from the
+base of the flow to the edge of the grid will be computed and along
+each of them, the force balance between the drag force, gravity and
+the centrifugal force will be calculated. A positive net force on a
+grain along the streamline will indicate that the grain is
+entrained. This first models will be benchmarked against the solutions
+of Owen et al. (2011b). The student will then be in a position to
+significantly improve on this work by considering grain growth and
+settling in the disc, first of all using the simple prescriptions or Birnstiel,
+Klahr \& Ercolano (2012). At a later stage the models will use the
+results from the calculations of dust evolution carried out in project
+C1. For the X-ray case the student will at first make use of the
+existing wind solutions of Owen et al. (2010, 2011, 2012).This
+systematic approach will allow us to distinguish amongst the various
+effects and will also allow us to understand wether a more efficient,
+simplified approach may then be used. 
+
+The new wind models for the X-ray case are already being calculated by
+Dr Picogna, who is employed to do the preparatory work from project B1,
+and will be available to the student.  She/he will then be able to
+apply the constructed and benchmarked machinery to a wide parameter
+space, performing radiative transfer calculations of the obtained
+structures to compare with available observations or to make
+observability predictions which may guide future observing
+proposals. We will join forces with expert collaborators on scattered light
+observations (e.g. Prof. Henning) to plan new proposals, however we note
+that failure to obtain new observations does not preclude the main
+aims of this projects to be achieved. The most important science
+product from this project is in fact, the grain models developed for the 
+X-ray driven wind, which are needed by project B1 for the chemical
+calculations. This is crucial as the dust grains are not equally
+distributed in the wind (see e.g. Owen, Ercolano \& Clarke, 2012) and affect the chemistry of the wind
+differently in different part. We stress that a simple estimate from a
+non-detection is not sufficient to rule out the relevance of grains on
+the chemical calculations. 
+\noindent 
+
+If time allows, the student will collaborate with Dr Picogna (B1) to produce full hydrodynamical simulations of disc winds, where the component in the disc and wind is treated as particles (e.g. Picogna \& Kley 2016). These calculations, which are computationally expensive will be seful as a comparison to the simpler methods previously employed by the student in the project. 
+
+\vspace{0.5em}
+\noindent {\bf Links to the other projects / collaborations:}
+The project will use the wind models calculated in project B1 and then
+feed back the dust model to the same project (B1) and to the reduced
+chemical network tests of project B2. Dust evolution calculations from C1 will also be used. Observational constraints will
+be obtained in collaboration with experts working on project A1 and
+stellar properties to guide the models 
+from project A2. 
+
+
+
+%\def\remove#1{#1}
+\def\remove#1{}
+
+\section*{\underline{Project D1:} 
+TDs and planetary systems}
+                
+\noindent{\bf Authors:}\\
+\begin{tabular}{ll}
+{\textsf{PI:}}                & W.~Kley (T\"ubingen)\\
+{\textsf{Co-I:}}                  & C.P.~Dullemond (Heidelberg)\\
+{\textsf{Collaborations:}}      & L.~Testi (ESO), T. Henning (MPIA), E. van Dishoeck (Leiden, MPE) \\
+\end{tabular}
+
+\vspace{0.5em}
+\noindent{\bf Requested position: 1 Postdoc} \\
+%\begin{tabular}{lll}
+%{\textsf{Student 1:}}\hspace{2em}  \& {\em Advisors:\hspace{0.7em}} B.~Ercolano \& W.~Kley \hspace{2em} \& {\em Subtopic:\hspace{0.7em}} Wind models parameter study \\
+%{\textsf{Student 1:}}\hspace{2em}  \& {\em Advisors:\hspace{0.7em}} B.~Ercolano, P.~Caselli, L.~Testi \& Dullemond \hspace{2em} \& {\em Subtopic:\hspace{0.7em}} Molecular line tracers of disc winds \\
+%\end{tabular}
+
+\vspace{0.5em}
+\noindent{\bf Abstract:}\\
+As described in the general introduction, transitional discs (TDs) occur in the later phases of the evolution of
+protostellar discs around young stars and show a depletion of flux from the inner central parts of the disc.
+The second, Type 2 variety, of these discs contain larger inner holes with significant gas accretion from the inner
+region present. It has been suggested that for Type 2 TDs this inner cavity might be
+created by the presence of one or more planets that cleared out the inner disc region. 
+In this project we shall follow this line of thought and will perform multi-dimensional hydrodynamic studies
+to clarify the dynamical impact of planets on TDs in order to prove (or disprove) the existence of planets in such discs.
+The studies will include dust particles, planets, radiation transport and irradiation from the central star.
+
+\vspace{0.5em}
+\noindent {\bf Scientific background:}
+\\
+Observationally, TDs are characterised by a lack of
+flux in the few $\mu$-meter (near/mid IR) range as seen in the spectral energy distributions
+(SEDs) of young stars. This flux deficit is typically associated with 
+'missing' dust having temperatures of 200-1000 K (Calvet et al. 2002;
+%, ApJ, 568, 1008;  http://cdsads.u-strasbg.fr/abs/2002ApJ...568.1008C 
+D'Alessio et al. 2005)
+%, ApJ, 621, 461; http://cdsads.u-strasbg.fr/abs/2005ApJ...621..461D 
+corresponding to the inner regions of accretion discs. Despite this lack of dust,
+there are nevertheless still signatures of gas accretion in several systems with large the inner (dust) holes
+that are a few tens of AU wide.
+
+The origin of the inner disc clearing has been basically attributed to two different processes:
+either photoevaporation from inside out through high energy radiation from the central young
+protostar, or by embedded massive planets that carve deep gaps into the disc.
+While photevaporation is certainly at work in some systems (Type 1 TDs) it is believed that it can only
+operate for systems with a sufficiently low mass accretion rate below a few times $10^{-8} M_\odot/yr$
+and is otherwise quenched by the accretion flow.
+At the same time the persistence of gas accretion within the inner (dust) holes is taken as an additional
+indication that other mechanisms should operate that create these gaps (Manara et al. 2014). 
+%  http://cdsads.u-strasbg.fr/abs/2014A%26A...568A..18M
+The most likely mechnism for this second class of TDs is related to the growth of planets in the discs,
+because planet formation essentially depletes the dust and reduces the gas density.
+
+Consequently, it has been suggested early on that the presence of a massive
+(Jupiter-sized) planet might be responsible for the gap creation (Varniere et al. 2006,
+%, ApJ, 640, 1110; http://cdsads.u-strasbg.fr/abs/2006ApJ...640.1110V 
+Rice et al. 2006)
+%, MNRAS, 373,1619;  http://cdsads.u-strasbg.fr/abs/2006MNRAS.373.1619R 
+but at the same time it had been noticed that the gap created
+by a single embedded planet is way too narrow to be in agreement with the observations.
+Given the problems with a single planet and evaporation models it has been proposed that the main observational
+features can be created by the presence of a system (three to four) of massive planets, and indeed
+Zhu et al. (2011) and Dodson-Robinson \& Salyk (2011)
+%, ApJ, 729, 47; http://cdsads.u-strasbg.fr/abs/2011ApJ...729...47Z 
+%, ApJ, 738, 131; http://cdsads.u-strasbg.fr/abs/2011ApJ...738..131D
+argue that transitional discs are in fact {\itshape Signposts of young multiplanet systems}.
+Despite this strong belief that planets play an important role in shaping TDs, there
+is still a lack of theoretical modelling to be able to make detailed comparison with observations.
+The most advanced simulations are those of Zhu et al. (2011) who model a system of up to 4 massive planets embedded
+in a two-dimensional (2D) flat disc. Their studies suggest that the presence of the planets results in a
+strong depletion of the gas in the inner disc but there are several short-comings. The simulations treat the disc in the
+isothermal approximation, neglect the vertical structure, and no accretion luminosity of the
+planets was considered. Despite these limitations the most important constraints may be the omission of
+dust particles in the simulations, which is important as it is the dust emission that is actually observed.
+
+\vspace{0.5em}
+\noindent{\bf Scientific objectives:}
+In this project we plan to improve significantly on existing models for Type 2 TDs that contain a system of embedded planets.
+To this purpose we will perform a series of time-dependent multidimensional hydrodynamical simulations to study in detail the impact of
+a planetary system on the ambient disc. The new studies will first improve on the gas dynamics by adding radiative transport
+and including irradiation from the central star. Secondly, the motion of embedded dust particles will be followed
+which allows to study the dust and gas filtration process at the gap's outer edge.
+The results of the simulations will be used to calculate emission properties to be compared to the observations.
+
+\vspace{0.5em}
+\noindent{\bf Strategy of the proposed project:}\\
+%
+The hydrodynamical simulations will make use of the {PLUTO}-code.
+Using the spatial distribution of the dust and gas we will use the radiative transport
+code RADMC-3D for making observational predictions from our models.
+The project will contain the following steps, building up on
+complexity, while proving a solid groundwork to understand the new results:
+\begin{enumerate}
+ \item To connect to existing simulations of Zhu et al. (2011) and our own (M\"uller \& Kley, 2013)
+%% http://cdsads.u-strasbg.fr/abs/2013A%26A...560A..40M
+   the first hydrodynamical models will be performed for flat 2D locally isothermal discs that
+   contain several planets. In a parameter study the planetary masses will be varied systematically, 
+   and the resulting equilibrium density configurations will be analysed. The 2D isothermal models will
+   be extended by radiative cooling and transport similar to M\"uller \& Kley (2012).
+%%  http://cdsads.u-strasbg.fr/abs/2012A%26A...539A..18M
+\item Dust particles will then be added to these models whose motion (in particular the important stopping-time) 
+   is determined by the particle size and the gas density of the disc. In parameter studies 
+   the disc mass, the planet mass and the particle radii will be varied in order to
+   determine the dust depletion factor within the central cavity relative to the gas accretion rate as a
+   function of these parameter. For this work we shall be using the methods developed in Picogna \& Kley (2016)
+   and calculate emission maps (using the RADMC-3D code, see {\bf C1} and  {\bf D2})
+   that will then be directly compared to observations ({\bf A1}). We
+   note that the full treatment of dust grains as discrete particles
+   is a relatively new technique, for which our group has performed some of the
+   pioneering work. 
+%%  Picogna et al. 2016: http://cdsads.u-strasbg.fr/abs/2015A%26A...584A.110P
+\item From the 2D-runs the most promising parameter sets will be selected to perform full 3D time dependent
+   hydrodynamical simulations using the {PLUTO}-code.
+   Using the resulting gas and dust spatial density distribution
+   the RADMC-3D code will be applied for making observational predictions from our models.
+   This can be used for both, continuum and line emission. For these 3D simulations we plan to study
+   the influence of inclined planet(s) which relates closely to
+   project {\bf D2}. Our 3D simulations will push significantly
+   past the state-of-the-art of hydrodynamical modeling of
+   Type 2 TDs. 
+\item In the last part we will make the models more realistic and use an improved equation of state
+    and internal (viscosity) as well as external (stellar irradiation) heat sources in the simulations. 
+    Accretional heating from the mass accretion of planet will be
+    taken into account as well. This is basically uncharted territory,
+    but an urgent and necessary step, as our previous work (Bitsch et al. 2013ab, 2014ab) has shown
+    that forcing an isothermal approach may lead to large errors in
+    the description of planet-disc interactions. 
+\end{enumerate}
+
+\noindent 
+
+\noindent {\bf Personnel:}
+For the project 1 postdoc position is requested. The planned work, including 2D and 3D radiation hydrodynamical simulations,
+the dust motion and the generation of images is very demanding and requires a more experienced young researcher.
+%% creation of dust motion is very demanding first student (in T\"ubingen) will be dealing with the hydrodynamical
+%% aspects while the second student (in Heidelberg) will calculate the observational appearence and perform
+%% detailed comparisons with the observations. 
+%% Both students will interact frequently to improve on model fitting and the parameters.
+
+\noindent 
+
+\vspace{0.5em}
+\noindent {\bf Links to the other projects / collaborations:}
+There will be close collaboration with project {\bf D2} in Heidelberg concerning the 3D evolution of
+non-axisymmetric discs, and with {\bf C1} on non-axisymmetric disc features.
+The radiative transfer modelling will be done in close collaboration the Heidelberg team (C. Dullemond).
+For direct comparison with the observations a close collaboration with
+the Garching team (L. Testi), as well as with 
+Prof. Henning (MPIA) and Prof. van Dishoeck (Leiden, MPE) is
+anticipated.
+
+
+
+
+%\def\remove#1{#1}
+\def\remove#1{}
+
+
+\section*{\underline{Project D2:} 
+Origin of complex non-axisymmetric structures in TDs}
+                
+\noindent{\bf Authors:}\\
+\begin{tabular}{ll}
+{\textsf{PI:}}                 & C.P.~Dullemond (Heidelberg)\\
+{\textsf{Co-I:}}               & W.~Kley (T\"ubingen)\\
+{\textsf{Collaborations:}}     & L.~Testi (ESO), Ercolano (USM) , T. Henning (MPIA), E. van Dishoeck (Leiden, MPE) \\\\
+\end{tabular}
+
+\vspace{0.5em}
+\noindent{\bf Requested positions: 1 postdoc} \\
+
+\vspace{0.5em}
+\noindent{\bf Abstract:}\\
+Type 2 TDs have recently been shown to display spectacular structures
+such as large scale spirals, blobs, tilts etc. These features indicate that
+highly dynamic processes are going on in these discs, allowing us to test
+our understanding of the physics of protoplanetary discs. This project aims
+to understand these structures in terms of dynamic models of discs.
+
+\vspace{0.5em}
+\noindent {\bf Scientific background:}
+\\
+With the spectacular new capabilities of observatories in the millimetre
+wavelength range (ALMA) and at optical wavelengths (Subaru and VLT
+coronographic imagers, most recently: VLT-SPHERE), protoplanetary discs are
+found to be much more complex than previously thought. Until only a few
+years ago observations of protoplanetary discs were consistent with the idea
+of them being axi-symmetric rotating structures around young stars.  
+
+Recent observations have now shown this picture to be false, in particular
+for Type 2 TDs. Many such discs, while remarkable in their own right
+due to their large inner holes (see project D1), are even more
+remarkable due to their often-present strong deviations from axisymmetry. At
+millimetre wavelengths, spatially resolved with ALMA, all TDs
+show a strong dust emission ring just beyond the inner hole. Several of
+them, in particular the sources HD 142527 and Oph IRS 48, show this ring to
+be strongly lopsided: one side being clearly much brighter than the other
+side (Casassus et al.~2013; Van der Marel et al.~2013). These appear to be
+vortices created by the Rossby wave instability (Regaly et al.~2012). This
+raises the exciting possibility that these are {\em dust-trapping vortices},
+predicted to play an important role in planet formation (Barge \& Sommeria
+1995; Klahr \& Henning 1997).
+
+At optical and near infrared wavelengths many of these sources show another
+remarkable and unexpected feature: grand design spiral waves (e.g.~the
+sources HD 135344b, MWC 758, HD 100453). While $m=1$ spiral waves were
+expected as a result of newborn planets embedded in these discs, the spirals
+observed in many Type 2 TDs are symmetric $m=2$ modes, making
+them look like the galaxy M51. The origin of these spirals is still hotly
+debated and planetary/stellar companions and gravitational instabilities are
+often suggested to be at their origin, as is residual infall into the disc.
+Recently an even more bizarre and intriguing scenario was proposed: The
+bright ring of scattered light (the illuminated inner rim of the outer disc
+as seen with the Subaru and VLT telescopes) of HD 142527 has two conspicuous
+dark spots on almost opposite sides.  Marino et al.~(2015)
+% ApJL, 798(2), L44
+were able to show with 3-D radiative transfer modeling that these dark spots
+are most likely the shadows cast by an inclined small inner disc. If this
+scenario is confirmed, HD 142527 (and possibly other TDs) is an
+"inclined disc inside a disc" (a warped disc). According to Montesinos et
+al.~(2016) these two shadows on opposite sides of the bright
+rim may even be the origin of the $m=2$ spiral waves, caused by the brief
+loss of pressure in these shadows.
+%This is an intriguing possibility, as it would
+%indicate that Type II TDs may be related to warped discs, and
+%perhaps be the origin of the misalignment effects seen in many exoplanetary
+%systems with the Rossiter-Mclaughlin effect.
+
+But how can the inner disc have a different rotation axis as the outer one?
+Is this a result of an inclined planet or brown dwarf orbiting inside the
+gap? Or is this due to late accretion of different angular momentum
+molecular cloud material? Or could the Kozai-mechanism caused by a companion
+at large radii cause this?
+
+\vspace{0.5em}
+\noindent{\bf Scientific objectives:}
+This project aims to study the dynamics of non-axisymmetric and/or
+non-coplanar transition inner-and-outer discs with the goal of trying to
+learn from these spectacular "disk dynamics laboratories" of Nature. We
+expect that we will be forced to include new elements to our standard models
+(e.g. planets or brown dwarf companions on eccentric or even inclined
+orbits; external secondary gas infall; complex dust-gas dynamics;
+photoevaporation of warped discs etc), which would thus improve our
+understanding of the workings of protoplanetary discs and planet formation.
+
+\vspace{0.5em}
+\noindent{\bf Tools for the proposed project:}\\
+%
+For this project we will require three main tools.  First: A 3-D
+hydrodynamics modeling code that can deal with complex dynamics without any
+symmetry axis, yet can deal also with the large radial dynamic range (from a
+few AU to a few 100 AU) required for these objects. The PLUTO code is our
+current choice, since we have our own experience with this code.  Second: A
+3-D radiation-hydrodynamics module on top of the 3-D hydrodynamics code,
+that can deal with irradiation. The PIs of this proposal are the co-authors
+of such a module (Kuiper et al.~2010). 
+% Kuiper, R., Klahr, H., Dullemond, C., Kley, W., & Henning, T. (2010). Fast and accurate frequency-dependent radiation transport for hydrodynamics simulations in massive star formation. Astronomy and Astrophysics, 511, 81. http://doi.org/10.1051/0004-6361/200912355
+Finally: A powerful 3-D diagnostic radiative transfer code to allow us to
+make predictions for the observational appearance of the 3-D model
+results. We have in-house software: RADMC-3D
+
+\vspace{0.5em}
+\noindent{\bf Work Pan}\\
+%
+The work plan consists of several sub-projects that aim to explain the
+non-axisymmetric features mentioned above. In each of these sub-projects we
+will not only do the (radiation-)hydrodynamic modeling, but also compare
+their predicted appearances (using RADMC-3D) with the copious ALMA and
+VLT/SPHERE observations of these objects.
+\begin{enumerate}
+\item We will perform 3-D hydrodynamics (and possibly
+  radiation-hydrodynamics) simulations of the following scenarios in order
+  to test if they can explain (1) the huge gap between the inner and outer
+  discs and (2) the suspected inclination of the inner disc in some of these
+  sources:
+  \begin{enumerate}
+  \item A massive {\em inclined} planet or brown dwarf companion inside the
+    disc causing the warp. Strong collaboration with project D1 is
+    envisioned here.
+  \item A secondary outer disc accreted from a nearby cloud filament,
+    causing a randomly inclined outer disc.
+  \item Photoevaporation of a warped disc, perhaps being responsible for the
+    huge gap (as UV and X-ray photons can reach the intermediate disc
+    regions more easily for warped discs). Strong collaboration with
+    project B1 is envisioned here.
+  \end{enumerate}
+In the above models: what is the connection between the inner and outer disk?
+\item We will perform 2-D and 3-D radiation-hydrodynamic simulations of
+  the following scenarios to see if they explain the production of
+  $m=2$ spirals:
+  \begin{enumerate}
+    \item Shadow-spots by the inclined inner disc triggering spirals 
+    \item Spirals triggered by a companion and/or gravitational instability
+  \end{enumerate}
+  New compared to earlier work will be the use of our powerful
+  radiation-hydrodynamics module, which is critical to get the
+  thermodynamics (and thereby the crux of these models) right.
+  % 
+  % NOTE: Remove Spruit and Stehler paper in the references
+  % 
+\item Revisit the Rossby-wave instability origin of the observed vortices,
+  comparing the different scenarios of inner hole formation against each
+  other (planets, massive companion, inclined companion, photoevaporation):
+  do they all predict these vortices? And are vortices and spirals predicted
+  simultaneously or mutually exclusively? Project C1.
+\end{enumerate}
+
+
+\vspace{0.5em}
+\noindent {\bf Links to the other projects / collaborations:}\\
+The team (Dullemond, Kley, Testi, Ercolano) have all the necessary expertise
+to carry out the modeling and the comparison to observations. In addition
+collaboration with the groups of Th.~Henning (MPIA), E.~van Dishoeck
+(MPE/Leiden), M.~Benisty (Grenoble) and C.~Dominik (Amsterdam) is envisioned
+for the comparison to observational data with ALMA and SPHERE.
+
+
+
