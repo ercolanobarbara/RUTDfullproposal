@@ -1,0 +1,638 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTex Template for proposals within the              %
+% DFG Research Unit Program                            %         
+%Planet Formation Witnesses and Probes: Transition Discs
+% August 2016                                            %                           
+%                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 
+%
+% This template may be used to prepare proposals in latex.
+%
+%
+% The project description, including publication list, should be no more than 20 pages
+% in length. It should be self-explanatory and not require reviewers to read the 
+% literature that is quoted or enclosed.
+
+\documentclass[10pt,fleqn,twoside]{article}
+
+%%%% USE ARIAL FONT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{helvet}
+\renewcommand\familydefault{phv}
+
+%%%% INCLUDE NECESSARY PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{babel}
+\usepackage[UKenglish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{ae,aecompl}
+\usepackage{graphicx}
+\usepackage{palatino}
+\usepackage[T1]{fontenc}
+\usepackage{rotating}
+\usepackage{epsf}
+\usepackage{setspace}
+%\usepackage{sfmath}
+
+%%%% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\textheight}{22cm}
+\setlength{\topmargin}{-1.2cm}
+\setlength{\textwidth}{15.6cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+\setlength{\mathindent}{1.5cm}
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.08cm}
+
+%%%% PAGE HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhead[RE,RO]{}
+\fancyfoot[RO]{ \thepage}
+\fancyfoot[LE]{ \thepage}
+\fancyfoot[CE,CO]{}
+
+%%% FONTS FOR THE TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newfont{\tpfonta}{cmssbx10 scaled 1600}
+\newfont{\tpfontb}{cmssbx10 scaled 3200}
+
+%%%% EURO SIGN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\euro{{\sffamily C%
+\makebox[0pt][l]{\kern-.70em\mbox{--}}%
+\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
+\newcommand\keuro{k{\sffamily C%
+\makebox[0pt][l]{\kern-.70em\mbox{--}}%
+\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
+
+%%%% COLOR DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{blue} {rgb} {0.25,0.25,0.75}
+
+%%%% ADDITONAL EMPHASIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cem}{\color{blue}}
+\newcommand{\eem}{\sl\color{blue}}
+
+%%%% SET THE COLOR OF THE (SUB-) SECTION TITLES %%%%%%%%%%% 
+\newcommand{\Tcol}{\color{blue}}
+
+%%%% SET THE COLOR OF THE TITLE BOX BACKGROUND %%%%%%%%%%%%
+\definecolor{Background}{rgb} {0.62,0.75,0.5}
+
+%%%% REFERENCE SECTION NAME %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\refname{\Tcol 9. Bibliography}
+
+%%%% COLOR THE SECTION NUMBERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand\@seccntformat[1]{\color{blue} {\csname the#1\endcsname}\hspace{0.5em}}
+\makeatother
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+
+%%%% CHANGE THE APPEARANCE OF THE \PARAGRAPH COMMAND  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4}     % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}        % how many sectioning levels to show in ToC
+
+
+\fancyhead[LE,LO]{\slshape
+%%%%  Please edit
+%
+Ercolano: RU Transition Discs Project B1}
+%
+%
+%%%%%
+
+
+\begin{document}
+
+
+\newpage
+
+%%%% PROJECT DESCRIPTION STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{1}
+
+\centerline{\huge\bf\Tcol
+%
+%
+%
+%
+%%%%  Please edit
+%
+ Project B1:}
+
+\centerline{\huge\bf\Tcol Disc mass loss from quantitative spectroscopy
+of photoevaporative winds}
+
+%
+%%%%
+%
+%
+%
+%
+\vskip1.0cm
+
+%%%%  Please edit
+\noindent{\bf Authors:}\\
+\begin{tabular}{ll}
+{\textsf{PI:}}                  & B.~Ercolano (LMU)\\
+{\textsf{Co-I:}}                &P.~Caselli (MPE), K.~Dullemond (Heidelberg), Kley (T\"ubingen)\\
+{\textsf{Collaborations:}}      & T.~Preibisch (LMU), L.~Testi (ESO), James Owen (Princeton), \\
+& E. van Dishoeck (Leiden, MPE), T. Henning (MPIA)  \\
+\end{tabular}
+
+%%%%  Please edit
+
+\vspace{1em}
+\noindent{\bf Requested positions: 1 Postdoc} \\
+
+\vspace{1em}
+\noindent{\bf Abstract:}\\
+
+\noindent{\bf Abstract:}\\
+Type 1 TDs are likely discs in an advanced stage of dispersal. The
+dispersal mechanism of discs is of fundamental importance to planet
+formation, yet the responsible mechanism is still largely
+unconstrained. Photoevaporation from the central star is currently a
+promising avenue to investigate. We aim at building the most
+up-to-date radiation-hydrodynamical calculations of irradiated discs
+coupled to photoionisation, chemistry and radiative transfer
+calculations to allow us for the first time to perform quantitative
+spectroscopy of disc winds. Comparison with existing observations will
+allow us to constrain mass loss rates and emission regions of the wind
+which will pin down the underlying driving disc dispersal mechanism.
+
+
+\section{\Tcol State of the art and preliminary work}
+\renewcommand{\leftmark}{\sc State of the Art and preliminary work}
+
+\subsection{Scientific Background}
+
+Understanding disc dispersal is a key piece in the puzzle of planet
+formation. Type 1 TDs, which are considered to be objects on the
+verge of dispersal provide a tight constrain on the underlaying
+dispersal mechanism. One of the favourite models to drive disc
+dispersal is photoevaporation by radiation from the central star
+(e.g. Clarke et al. 2001, Alexander et al. 2006). The exact nature of
+the driving radiation is however still open to debate.  (Extreme and
+Far) Ultraviolet (UV) radiation as well as X-ray have been shown to be
+able to drive winds from the disc upper layers (Alexander et al. 2006;
+Gorti, Hollenbach \& Dullemond 2009; Ercolano et al. 2009; Owen et
+al. 2010) able to disperse the discs in the observed
+timescales. However both the location and intensity of the wind depend
+strongly on the driving radiation, with differences of more than two
+orders of magnitude for mass loss rates predicted by different
+models. This has profound implications for disc evolution and hence
+for the formation of planets and their subsequent evolution
+(e.g. Ercolano \& Rosotti 2015). 
+
+While the presence of disc winds has been confirmed via the
+observation of a few km/sec blue-shift in the line profiles of a
+number of tracers like [NeII]~12.8$\mu$m and [OI] 6300 (e.g. Pascucci
+et al 2007), these lines cannot be used to infer the underlying
+mass-loss-rate (e.g. Ercolano \& Owen 2010, Ercolano \& Owen 2016).
+ For example, the intensity and the profile of the [NeII]~12.8$\mu$m
+ can be equally well fitted using an EUV (Alexander ???) or an X-ray
+ photoevaporation model (Ercolano \& Owen 2010). The problem with the
+ [NeII] line is that the Ne+ formation route can occur both via the
+ removal of a valence electron in the fully-ionised winds driven by
+ EUV radiation, but also by charge exchange of Ne++ with neutral H
+ which is abundant in the quasi-neutral winds driven by X-ray. 
+The problem with the [OI] 6300 line and all other ionic collisionally
+excited lines considered to date is the strong temperature dependence
+imposed by the Boltzmann term in the emissivity. This means that these
+lines are mostly just tracing the hot layer of the wind heated by the
+EUV radiation and not actually tracing the bulk of the wind where it
+matters (Ercolano \& Owen 2016), hence they
+cannot be used to infer mass-loss-rates or to constrain the wind
+driving mechanism.   
+
+Mid-infrared observations of molecular lines (e.g. CO) provide a new
+promising alternative to directly measure disc winds. Indeed recent
+observations suggest that these lines may be tracing a disc wind which
+is slow and partially molecular (e.g. Pontoppidan et al. 2011; Brown et al. 2013). 
+
+The spectro-astrometric survey of molecular gas in the inner regions of
+protoplanetary discs using CRIRES, the high-resolution infrared
+imaging spectrometer on the Very Large Telescope (Pontoppidan et
+al. 2011), showed that for several sources the astrometric signatures
+are dominated by gas with strong non-Keplerian (radial) motions. These
+authors concluded that the non-Keplerian spectro-astrometric
+signatures are likely indicative of the presence of wide-angle disc
+winds. 
+More observations of this type are planned after the update of
+the CRIRES instrument, which is expected to be completed by
+2019. Observations with ALMA in molecular lines like e.g. CO J = 2-1
+and J = 3-2 emission are also able to trace the presence of a wind (e.g.Klaassen et al. 2013, 2016).  
+Molecular lines are sensitive to the mass loss rates since they
+sample a significant area of the wind launching regions. However the
+exploitation of molecular tracers is currently severely hampered by
+the lack of a suitable hydrodynamic wind model coupled to chemistry
+and to dust evolution models (which dominate the opacity in the wind)
+to interpret the observations.
+
+ While a number of chemical models exist
+of the deeper, denser regions of discs, no model is currently
+available for the optically thinner disc winds. The work of Gorti \&
+Hollenbach (2009), while carrying out detailed chemical calculations
+extending to the disc atmosphere, used a hydrostatic disc model which
+was analysed in a 1+1D fashion. Without hydrodynamics no predictions
+on line profiles can be made.  
+
+{\color{red} 
+
+here add something about why all models lack elements -
+
+  also perhaps mention something about the work on single streamlines
+  for magnetic outflows  -- ewine --
+}
+
+\subsection{Preliminary work}
+We have performed the only existing radiation hydrodynamic
+calculations of X-ray driven photoevaporative winds to date (Owen et
+al. 2010, 2011, 2012). We have used these grids to make predictions on
+the ionised phase of the wind spectra (Ercolano \& Owen 2010;
+Ercolano \& Owen 2016), however the parameter space
+available to date is very limited. 
+
+In this project we will
+significantly expand on this by constructing a
+library of X-ray wind solutions for an extended grid of
+X-ray luminosities and stellar masses, covering all observed
+values. 
+Our previous calculations could only account for
+the ionised phase of the wind, hence restricting severely predictions
+of interesting line diagnostic. 
+We will then lift this limitation by
+perform the first simultaneous chemical calculations in
+the wind and upper disc atmosphere.  
+
+
+\subsection{\Tcol Project-related publications}
+
+% Please list your own publications related to the proposed project, 
+% adhering to the rules of the DFG guidelines 1.91. In brief, please note: 
+% - Up to 10 publications
+% - The work must be published or accepted.
+% - Publications on astro-ph (arXive, SPIRES or articles with a DOI) count as published. 
+% - Any work that is only in the status ``accepted'' MUST be attached to the proposal
+%    together with the acceptance letter.
+% - All publications in this section CAN be attached to the proposal. Please limit these
+%    attachments to a minimum and please note that the reviewers may not read the attachments -
+%    the proposal has to speak for itself.
+% - The number of allowed publications refers to the sum of the publications listed
+%    in ``1.1.1 Articles published or officially accepted by publication outlets...'' and 
+%    in ``1.1.2 Other publications''. Publications which only exist on public repositories 
+%    belong into the category ``Other Publications''.
+[Text]
+
+\subsubsection{\Tcol 
+Articles published or officially accepted by publication outlets with scientific quality assurance;
+book publications}
+
+[Text]
+
+\subsubsection{\Tcol Other publications}
+
+[Text]
+
+\subsubsection{\Tcol Patents}
+
+\paragraph{\Tcol Pending}
+
+[Text]
+
+\paragraph{\Tcol Issued}
+
+[Text]
+
+\section{\Tcol Objectives and work programme}
+\renewcommand{\leftmark}{\sc Objectives and work programme}
+
+
+\subsection{\Tcol Anticipated total duration of the project}
+
+[Text]
+
+\subsection{\Tcol Objectives}
+
+
+The main aim of this project is together with project B2 to identify
+new wind tracers and use them to constrain mass loss rates and hence
+disc dispersal models.
+
+{\color{red} Furthermore an intermediate objective test the X-ray 
+photoevaporation theory by performing a higher parameter space grid blahblah}
+
+{\color{red} is this really true? or should this be the aim of B2??
+  Perhaps look at how this was described in the ERC program?}
+
+Perform a quantitative spectroscopic comparison between TDs and
+primordial disc to provide important constraints on the wind architecture. 
+Type 1 TDs, are particularly interesting as the streamline architecture of their winds
+and the profiles of the lines that are produced in the wind
+differ from those of primordial discs. (e.g. Ercolano \& Owen
+2010). Indeed the lines are expected to be broader and brighter for
+e.g. inner cavities of a few to 10 AUs. 
+
+Test whether Type 2 TDs (large holes, large accretion rates) may
+result from radiative transfer effects on a tilted inner disc. This
+idea stems from  the recent suggestion (e.g. Marino et al. 2015, Montesino et
+al. 2016) that some Type 2 TDs may have a tilted inner disc. 
+A tilted inner disc may strongly influence photoevaporation by
+allowing radiation to reach outer disc regions and may produce the
+large inner holes of (some) Type 2 TDs. This is certainly a worthwhile
+new challenge requiring the development of 3D simulations.  
+
+{\color{red} the marino and montesino idea must also be included in
+  the intro and also in the background section of this proposal}
+
+\subsection{\Tcol Work programme including proposed research methods}
+% for each applicant
+
+\subsection{Research Tools}
+
+For this project we will need the following tools: 
+\begin{enumerate}
+\item A 3D hydrodynamical code which we will modify to include the
+  effects of X-ray irradiation as we did in Owen et al. (2010). For
+  that we will use the Pluto code, for which extensive expertise
+  exists in our team. 
+\item A 3D photoionisation and chemical code to post-process the wind solutions obtained above. The PI is the author of the MOCASSIN code (Ercolano et al. 2003, 2005, 2008b), which has already been used to calculate the emission line spectra from the ionic phase of X-ray winds (Ercolano \& Owen 2010; Ercolano, Owen \& Testi 2016, in prep). The code has now been coupled and benchmarked to the KROME code to perform arbitrary chemical calculations (Ercolano \& Grassi 2016, in prep)  and needs now only the appropriate reduced chemical network, which we will obtain from project B2. 
+\item A 3D radiative transfer code to post-post-process the hydrodynamical grids from step 1, with the appropriate temperatures and abundances obtained from step 2 to produce emission line intensities and profiles to compare with the existing observations and those gathered and reprocessed in project A1. We will make use of the RadMC code developed and maintained by Prof. Dullemond.  
+\end{enumerate}
+
+\subsection{Research Plan} 
+
+We have divided the work load into two connected blocks which
+also have self-contained immediate objectives. Block 1 is already
+being executed by Dr Picogna, employed on a LMUExcellent initiative
+grant awarded to B. Ercolano in support of this project (End date
+November 2017). 
+
+{\color{red} quickly describe the blocks}
+
+\subsubsection{Block 1: Parameter-space investigations of X-ray
+  photoevaporation models.}
+
+The 3D hydrodynamical code PLUTO is being modified to include the
+effects of X-ray irradiation (Owen et al. 2010) in order to produce a
+library of X-ray wind solutions that will be analysed in Block 2
+to produce emission line and continuum spectra of the
+wind. The obtained solutions will be first of all benchmarked against
+those that are already available for a 0.7 and 0.1 M$_\odot$ central
+stars (Owen et al. 2010, 2011, 2012). The parameter space will be then
+significantly extended for the mass of the central star and its X-ray
+luminosity. 
+With the new models we will also test the theoretical relations for X-ray photoevaporation
+predicted by means of semi-analytical models and ab-initio arguments
+by Owen et al. (2012). While these relations are being widely used in
+the literature, they have until now never been tested.\\
+As a further step we plan to perform a small set of 3D simulations to explore the effects of asymmetries in the inner disc. We expect to see dramatic effects in the photoevaporation profile and in the wind architecture, which may lead to the formation of large hole TDs. This avenue is never been explored before.\\
+
+\subsubsection{Block 2: Spectral line energy distribution calculations of disc winds.}
+The MOCASSIN code (Ercolano et al. 2003, 2005, 2008b), which has
+already been used to calculate the emission line spectra from the
+ionic phase of X-ray winds (Ercolano \& Owen 2010; Ercolano \& Owen
+2016). The code has now been coupled and benchmarked to 
+the KROME code (Grassi et al., 2014) to perform arbitrary chemical calculations (Ercolano \&
+Grassi 2016, in prep)  and needs now only the appropriate reduced
+chemical network, which we will obtain from B2. 
+
+The new KROME-coupled MOCASSIN code will be employed to perform
+photoionisation and chemical calculations disc wind solutions starting
+off from the available models of Owen et al. (2010, 2011, 2012) and
+then moving to the new data obtained in Block 1 (which is 
+already being executed). To this aim, under the guidance of Prof Caselli, an initially very
+simple network will be included in the MOCASSIN-KROME to perform
+initial test calculations, which will then be updated when project B2
+begins to provide results. As a final step in the post-processing with
+the help of Prof Dullemond 
+we will perform 3D radiative
+transfer calculations to produce line intensities and profiles to
+compare with existing and new observations, which may become available
+at the time. 
+
+{\color{red} all of the above needs to be reviewed - see also if some
+  of it should go into B2 - and also give approximate timelines}
+
+
+\subsection{\Tcol Data handling}
+
+A library of models with corresponding profiles for interesting
+emission lines will be made available online on the public partition
+of the Research Unit server. This will help the community with the
+interpretation of upcoming observational datasets. 
+
+\subsection{\Tcol Other information}
+% Please use this section for any additional information you feel is
+% relevant which has not been provided elsewhere.
+
+Not Relevant
+
+\subsection{\Tcol Information on scientific and financial involvement of international cooperation partners}
+
+Not Relevant
+
+\section{\Tcol Bibliography}
+
+[Text]
+
+\section{\Tcol Requested modules/funds}
+\renewcommand{\leftmark}{\sc  Requested modules/funds}
+% Explain each item for each applicant (stating last name, first name).
+
+\subsection{\Tcol Basic Module}
+
+\subsubsection{\Tcol Funding for Staff}
+% Please note that funds for your own temporary position (â€œEigene Stelleâ€)
+% are not to be included here; this belongs to the separate â€œModule Temporary Positionâ€.
+
+We require funding for one Postdoc to work at the LMU in the group of Prof. Ercolano.
+
+\subsubsection{\Tcol Direct Project Costs}
+
+
+\paragraph{\Tcol Equipment up to EUR 10,000, Software and Consumables}
+
+Will be provided by the host institution
+
+\paragraph{\Tcol Travel Expenses}
+
+Total: 9900 Euro Justification : Each year one national trip (meeting of Astronomical Society, national
+meetings) and one international trip (conference, visit
+collaborators). 
+During the course of the PhD 2 one week long visits to our main
+international collaborator, Dr J. Owen (currently at Princeton
+University, will move to Imperial College London in 2017). 
+
+Cost estimate: 
+\begin{itemize}
+\item National trip: 5 overnight stays, train/airfare,
+conference fee; 1000 Euro (3000 over 3 years).
+\item International trip: 6 overnight stays, airfare, conference fee;
+  1500 Euro (4500 over 3 years).
+\item Visit to/from J. Oweni: airfare, 6 overnight stay 1200 Euro (2400
+  for 2 visits)
+\end{itemize}
+
+\paragraph{\Tcol Visiting Researchers (excluding Mercator Fellows)}
+
+Not Relevant 
+
+\paragraph{\Tcol Other Costs}
+
+None
+
+\paragraph{\Tcol Project-related publication expenses}
+
+We request 770 Euro py (total 2250 Euro) for publication expenses.
+
+\subsubsection{\Tcol Instrumentation}
+
+None 
+
+\paragraph{\Tcol Equipment exceeding EUR 10,000} 
+
+None
+
+\paragraph{\Tcol Major Instrumentation exceeding EUR 100,000} 
+
+None 
+
+\subsection{\Tcol Module Temporary Position}
+
+Not Relevant
+
+\subsection{\Tcol Module Replacement Funding}
+
+Not Relevant
+
+\subsection{\Tcol Module Mercator Fellows}
+
+Not Relevant
+
+\subsection{\Tcol Module Public Relations Funding}
+
+Not Relevant
+
+\section{\Tcol Project requirements}
+\renewcommand{\leftmark}{\sc Project requirements}
+
+\subsection{\Tcol Employment status information}
+% For each applicant, state the last name, first name, and employment
+% status (including duration of contract and funding body, if on a
+% fixed-term contract).
+
+Barbara Ercolano, Professor at the Ludwig-Maximilians-Universit\"at
+M\"unchen  (permanent)
+
+\subsection{\Tcol First-time proposal data}
+% Only if applicable: Last name, first name of first-time applicant.
+
+Not Relevant
+
+\subsection{\Tcol Composition of the project group}
+% List only those individuals who will work on the project but will not
+% be paid out of the project funds. State each personâ€™s name, academic
+% title, employment status, and type of funding.
+
+[Text]
+
+\subsection{\Tcol Cooperation with other researchers}
+
+\subsubsection{\Tcol Planned cooperation on this project}
+
+\paragraph{\Tcol Collaborating researchers for this project within the
+  Research Unit}
+%Each proposal must be accompanied by a description of how the project
+%is integral to the Research Unit, %both in terms of subject matter
+%and organisation. This includes a description of the cooperation with
+%%others participating within the Research Unit. 
+
+This project depends on project B2 for the reduced network and on
+project A2 for the observational input. Furthermore Dr
+James Owen (Princeton) will be heavily involved in the project.  
+
+{\color{red} expand}
+
+
+\paragraph{\Tcol Collaborating researchers for this project outside of
+  the Research Unit}
+
+Dr. James Owen, currently at Princeton University, from 2017 at
+Imperial College London. 
+
+
+{\color{red} Expand above - mention James' contributions to the state
+  of the art and his likely contribution to the project - mention visits}
+
+\subsubsection{\Tcol Researchers with whom you have collaborated scientifically within the past three years}
+% This information is important for DFG to exclude possible conflicts of interest.
+% Please mention not only the names of the cooperation partners but also their institution and city.
+% Scientists already mentioned in the previous two subsubsections do not have to be mentioned
+% again.
+
+
+F. Niederhofer (STSci, USA); M. Hilker (ESO, Garching); N. Bastian (U. Liverpool,
+UK); M. Guarcello (U. Palermo, Italy); M. Tazzari (U. Cambridge, UK);
+A. Natta (Florence, Italy); R. Alexander (U. Leicester); D. Hubber
+(LMU); J. Dale (U. Hertfordshire, UK); C. Koepferl (LMU); I. Bonnell
+(U. St. Andrews, UK); A. McLeod (ESO, Garching); D. Boneberg
+(U. Cambridge, UK); R. Parker (U. Liverpool, UK); R. Wesson (UCL,
+London, UK); M. Barlow (UCL, London, UK); A. Glassgold (u. Berkeley,
+USA); C. Manara (ESA, Noordwjik, Netherlands); A. Danekhar (CfA,
+Harward, USA); Q. Parker (Sidney, Australia); S. Casassus
+(U. de Chile, Santiago, Chile); I. Pascucci (U. Arizona, USA);
+A. Bevan (UCL, London, UK).
+
+\subsection{\Tcol Scientific equipment}
+% List larger instruments that will be available to you for the
+% project. These may include large computer facilities if computing
+% capacity will be needed. 
+
+The group of Prof. Ercolano has two own computer clusters comprising 
+
+\begin{itemize}
+\item 2 CPU Intel Xeon X5650 (Westmere, beginning
+2010, 2.66 GHz) 6 cores each 12 cores total (24 virtual) 74 GB ram.
+
+\item 4 CPU Intel Xeon E7-4850 (Ivy Bridge, beginning 2014, 2.30 GHz)
+12 cores each 48 cores total (96 virtual) 660 GB ram.
+
+\end{itemize}
+
+Further computational power is provided through the C2PAP facility of the Excellence Cluster to which
+the group has guaranteed time. This comprises 126 nodes, each node with 2 CPU Intel Xeon E5-2680 (Sandy
+Bridge, beginning 2012, 2.7 GHz) 8 cores each 16 cores total (32
+virtual) 64 GB ram. Note that while the future of the Excellence
+Cluster Universe is uncertain, the C2PAP facilities will be in any
+case supported by the LMU. 
+
+The Leibniz Rechnung Zentrum (LRZ) is also available to us, where still
+larger facilities are available with somewhat more constrained and longer queues.
+
+\subsection{\Tcol Project-relevant interests in commercial enterprises}
+% Information on connections between the project and the production
+% branch of the enterprise.
+
+Not Relevant
+
+
+\subsection{\Tcol Additional information}
+% If applicable, please list proposals requesting major
+% instrumentation and/or those previously submitted to a third party
+% here.
+
+Not Relevant
+
+
+\end{document}
