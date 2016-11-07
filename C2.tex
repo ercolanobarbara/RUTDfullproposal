@@ -82,6 +82,15 @@
 %%%% SET THE COLOR OF THE TITLE BOX BACKGROUND %%%%%%%%%%%%
 \definecolor{Background}{rgb} {0.62,0.75,0.5}
 
+% ========= hyperref & Colors & Links ===========
+\usepackage[breaklinks,colorlinks,linkcolor=Maroon,citecolor=Blue]{hyperref}%removed backref
+\usepackage[all]{hypcap} % fixes links to floats
+%\usepackage[capitalise,nameinlink]{cleveref} %
+\usepackage{aas_macros} %
+\setlength{\bibsep}{-0.5pt}
+
+% ========= highlighting important parts of the proposal ===========
+\newenvironment{highlight}{\Tcol\itshape}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%% COMMENT BOXES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[colorinlistoftodos,textsize=scriptsize,textwidth=2cm]{todonotes}
@@ -92,6 +101,10 @@
 
 \usepackage{enumitem}
 \setlist{nosep}
+
+%%%%%%%%%%%%%%%%%%%%%%% NICER REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[capitalise,nameinlink]{cleveref}
 
 %%%% REFERENCE SECTION NAME %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\refname{\Tcol 9. Bibliography}
@@ -240,7 +253,7 @@ chemistry there and at the base of the flow.
 
 \subsection{Dust-entrainment in winds: modelling strategies}
 
-\subsubsection{Analytical approach}
+\subsubsection{Analytical approach}\label{sec:analytical_approach}
 
 {\color{red}Describe approach used in Owen, Ercolano \& Clarke 2011b
 
@@ -362,10 +375,10 @@ the dust phase in photoevaporative winds.
 % for each applicant
 
 In this project we will use the analytical approach described in
-Section 1.1.1 coupled to models for the evolution of dust grains in
-the disc in order to efficiently produce dust entrainment models for the
-complete set of X-ray photoevaporation wind solutions calculated in
-project B1. 
+\cref{sec:analytical_approach} coupled to models for the
+evolution of dust grains in the disc in order to efficiently produce
+dust entrainment models for the complete set of X-ray photoevaporation
+wind solutions calculated in project B1.
 
 The work will be carried out by a PhD student co-supervised by
 Prof. Ercolano (LMU) and Prof. Birnstiel (LMU), who will provide
@@ -378,11 +391,13 @@ For this project we will need the following tools:
 \begin{enumerate}
 \item Photoevaporative wind solutions for EUV-driven
 models for T-Tauri and Herbig stars. These are
-available in the literature (e.g. Font et al. ???).
+available in the literature \citep[e.g.,][]{2004ApJ...607..890F}.
 \item Photoevaporative wind solutions for X-ray photoevaporated
 models. These will be provided from project B1.
-\item Parameterised dust growth models in one dimension. These
-are available in the literature (Birnstiel, Klahr \& Ercolano, 2012) 
+\item One-dimensional dust growth models. These codes are published
+and available within the group: simulation code of 
+ \citet{2010A&A...513A..79B} and the parameterized model of
+ \citet{2012A&A...539A.148B}.
 \item Two-dimensional dust evolution results from project C1.
 \item A 3D radiative transfer code to post-postprocess the wind
 models with the calculated grain populations. We will make use  of the
@@ -504,7 +519,11 @@ Not Relevant
 
 \section{\Tcol Bibliography}
 
-[Text]
+\begingroup
+\renewcommand{\section}[2]{}%
+\bibliographystyle{aa}
+\bibliography{bibliography}
+\endgroup
 
 \section{\Tcol Requested modules/funds}
 \renewcommand{\leftmark}{\sc  Requested modules/funds}
