@@ -29,7 +29,7 @@
 \usepackage{amssymb}
 \usepackage{fancyhdr}
 \usepackage{natbib}
-\usepackage{xcolor}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{ae,aecompl}
 \usepackage{graphicx}
 \usepackage{palatino}
@@ -37,7 +37,7 @@
 \usepackage{rotating}
 \usepackage{epsf}
 \usepackage{setspace}
-%\usepackage{sfmath}
+\usepackage{sfmath}
 
 %%%% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\textheight}{22cm}
@@ -80,6 +80,17 @@
 
 %%%% SET THE COLOR OF THE TITLE BOX BACKGROUND %%%%%%%%%%%%
 \definecolor{Background}{rgb} {0.62,0.75,0.5}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% COMMENT BOXES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[colorinlistoftodos,textsize=scriptsize,textwidth=2cm]{todonotes}
+\newcommand{\til}[1]{\todo[color=LimeGreen,inline]{Til: #1}}
+\newcommand{\barbara}[1]{\todo[inline]{Barbara: #1}}
+
+%%%%%%%%%%%%%%%%%%%%%%% REMOVE SPACE IN LISTS %%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{enumitem}
+\setlist{nosep}
 
 %%%% REFERENCE SECTION NAME %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\refname{\Tcol 9. Bibliography}
@@ -205,15 +216,19 @@ grains of different sizes at different radii resulting in a dust
 population that varies spatially and increases with height above the
 disc at radii larger than about 10~AU. At near infrared wavelengths
 this variable grain population produces a 'wingnut' morphology which
-may have already been observed in the case of PDS 144N (Perrin et
-al. 2006). The work of Owen et al. (2011b) could not however reproduce
-the colour gradient of the observations, which show redder emission at
+may have already been observed in the case of PDS 144N (Perrin et al.
+2006). The work of Owen et al. (2011b) could not however reproduce the
+colour gradient of the observations, which show redder emission at
 larger heights above the disc. Possibly, the problem was due to the
 fact that the synthetic images were dominated by emission from the
 smallest grains entrained in the flow. Grain growth, neglected in the
 Owen et al. (2011b) calculations in the disc is a natural solution to
 the colour problem, which needs to be taken into account in future
-simulations.  
+simulations. \til{There are two ways in which coagulation could affect
+this: either by changing the initial size distribution on which the
+flow ``feeds'', or by chagning the dust size/dynamics during the
+flow. Which one do you mean and should we discuss this here (or
+later)?}
 
 While it is currently not clear if the PDS 144N observation can be
 explained by dust entrainment in a photoevaporative wind, the work of
@@ -335,9 +350,12 @@ using realistic descriptions for grain growth in the underlying
 disc. 
 
 This will allow us to : 
-
-\indent 1. Build a dust model for photoevaporative winds to be used in chemical calculations. \\
-\indent 2. Estimate the observability and observation characteristics of the dust phase in photoevaporative winds. 
+\begin{enumerate}
+\item Build a dust model for photoevaporative winds to be used in
+chemical calculations.
+\item Estimate the observability and observation characteristics of
+the dust phase in photoevaporative winds.
+\end{enumerate}
 
 \subsection{\Tcol Work programme including proposed research methods}
 % for each applicant
@@ -355,24 +373,20 @@ coupling with the dust evolution models for the underlying disc.
 
 \subsection{Research Tools}
 
-For this project we will need the following tools: \\
-
-\indent 1. Photoevaporative wind solutions for EUV-driven
+For this project we will need the following tools:
+\begin{enumerate}
+\item Photoevaporative wind solutions for EUV-driven
 models for T-Tauri and Herbig stars. These are
-available in the literature (e.g. Font et al. ???) . \\
-
-\indent 2. Photoevaporative wind solutions for X-ray photoevaporated
-models. These will be provided from project B1. \\
-
-\indent 3. Parameterised dust growth models in one dimension. These
-are available in the literature (Birnstiel, Klahr \&
-  Ercolano, 2012) 
-
-\indent 4. Two-dimensional dust evolution results from project C1. \\
-
-\indent 5. A 3D radiative transfer code to post-postprocess the wind
+available in the literature (e.g. Font et al. ???).
+\item Photoevaporative wind solutions for X-ray photoevaporated
+models. These will be provided from project B1.
+\item Parameterised dust growth models in one dimension. These
+are available in the literature (Birnstiel, Klahr \& Ercolano, 2012) 
+\item Two-dimensional dust evolution results from project C1.
+\item A 3D radiative transfer code to post-postprocess the wind
 models with the calculated grain populations. We will make use  of the
-RadMC code developed and maintained by Prof. Dullemond (e.g. REF?????).   \\
+RadMC code developed and maintained by Prof. Dullemond (e.g. REF?????).
+\end{enumerate}
 
 \subsection{Research Plan} 
 
@@ -466,15 +480,16 @@ developed by the student in the project.
 
 \subsection{\Tcol Data handling}
 
-The model data-grids will be made available on the Research Unit dedicated
-server for use within the team. 
-
-Furthermore we will provide a set of
-diagnostic models to guide observers in the wider community on the
-public partition of the server. 
-
-\color{green}{Til can we also provide perhaps other useful data from
-  the dust models?}
+The model data-grids will be made available on the Research Unit
+dedicated server for use within the team. Furthermore we will provide
+a set of diagnostic models to guide observers in the wider community
+on the public partition of the server.
+\barbara{Til can we also provide perhaps other useful data from the
+dust models?}
+\til{Not sure what things observers would like to use. I think we
+could provide anything from the full size distribution at every 2D
+point to mean grain sizes (averaged in different ways) to calculated
+images.}
 
 \subsection{\Tcol Other information}
 % Please use this section for any additional information you feel is
@@ -524,7 +539,7 @@ Cost estimate:
 conference fee; 1000 Euro (3000 over 3 years).
 \item International trip: 6 overnight stays, airfare, conference fee;
   1500 Euro (4500 over 3 years).
-\item Visit to/from J. Oweni: airfare, 6 overnight stay 1200 Euro (2400
+\item Visit to/from J. Owen: airfare, 6 overnight stay 1200 Euro (2400
   for 2 visits)
 \end{itemize}
 
