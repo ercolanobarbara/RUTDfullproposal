@@ -1,0 +1,18 @@
+cp ../VERSION_4/haupt.tex ./
+cp ../VERSION_4/main.tex ./
+cp ../VERSION_4/references.tex ./
+cp ../VERSION_4/a1.tex ./
+cp ../VERSION_4/a2.tex ./
+cp ../VERSION_4/b1.tex ./
+cp ../VERSION_4/b2.tex ./
+cp ../VERSION_4/b3.tex ./
+cp ../VERSION_4/b4.tex ./
+cp ../VERSION_4/c1.tex ./
+cp ../VERSION_4/c2.tex ./
+cp ../VERSION_4/d1.tex ./
+cp ../VERSION_4/d2.tex ./
+cp ../VERSION_4/p.tex ./
+cp ../VERSION_4/z.tex ./
+cp ../VERSION_4/cv.tex ./
+cp ../VERSION_4/*.eps ./
+

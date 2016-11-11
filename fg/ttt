@@ -1,0 +1,17 @@
+mv a1.tex a1_before_kleyspell.tex        
+mv a2.tex a2_before_kleyspell.tex        
+mv b1.tex b1_before_kleyspell.tex        
+mv b2.tex b2_before_kleyspell.tex        
+mv b3.tex b3_before_kleyspell.tex        
+mv b4.tex b4_before_kleyspell.tex        
+mv c2.tex c2_before_kleyspell.tex        
+mv d1.tex d1_before_kleyspell.tex        
+
+cp a1_kleyspell.tex  a1.tex       
+cp a2_kleyspell.tex  a2.tex       
+cp b1_kleyspell.tex  b1.tex       
+cp b2_kleyspell.tex  b2.tex       
+cp b3_kleyspell.tex  b3.tex       
+cp b4_kleyspell.tex  b4.tex       
+cp c2_kleyspell.tex  c2.tex       
+cp d1_kleyspell.tex  d1.tex       

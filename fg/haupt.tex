@@ -1,0 +1,571 @@
+\documentclass[12pt,a4paper,twoside]{article}
+%\usepackage{vmargin}
+%\setpapersize{A5}
+%
+% PACKAGES:
+%
+\usepackage{times}
+\usepackage{amssymb,amsmath}
+\usepackage[german,english]{babel}
+\usepackage{fancyheadings}
+\usepackage{epsfig,graphicx,color,wrapfig,float,here,psboxit,supertabular}
+\usepackage{curves,rotating,textcomp}
+\usepackage{alltt}
+\usepackage{ifthen}
+\usepackage{xspace}
+%
+% BEGIN OF PAGE SETUP
+%
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\setlength{\parindent}{3em}
+%
+\setlength{\oddsidemargin}{0em}
+\setlength{\evensidemargin}{0em}
+\setlength{\textwidth}{460pt}
+\setlength{\textheight}{680pt}
+\setlength{\topmargin}{1em}
+\setlength{\voffset}{-25pt}
+%
+\setlength{\intextsep}{1ex}
+\setlength{\textfloatsep}{1ex}
+%
+% END OF PAGE SETUP
+%
+% BEGIN OF STYLE DEFINITIONS
+%
+\makeatletter
+%
+% ...Section
+%
+\renewcommand{\section}{\@startsection
+   {section}%
+   {1}%
+   {0em}%
+   {-\baselineskip}%
+   {0.01\baselineskip}
+   {\normalfont\large\bfseries}}
+%
+% ...Subsection
+%
+\renewcommand{\subsection}{\@startsection
+   {subsection}%
+   {2}%
+   {0.01em}%
+   {-\baselineskip}%
+   {0.01\baselineskip}
+   {\normalfont\normalsize\bfseries}}
+%
+% ...Subsubsection
+%
+\renewcommand{\subsubsection}{\@startsection
+   {subsubsection}%
+   {3}%
+   {0em}%
+%%%   {-0.01\baselineskip}%
+   {0.5\baselineskip}%
+   {-2\fontdimen2\font
+      plus -2\fontdimen3\font
+      minus -2\fontdimen4\font}
+   {\normalfont\normalsize\bfseries\itshape}}
+%
+% ...Standard lay-out for the CV part
+%
+\newenvironment{cvlayout}%
+  {\begin{list}{}{%
+    \setlength{\topsep}{0em}%
+    \setlength{\parskip}{0em}%
+    \setlength{\parsep}{0em}%
+    \setlength{\itemsep}{0.5em}%
+    \setlength{\rightmargin}{0em}%
+    \setlength{\leftmargin}{11.em}%
+    \setlength{\labelsep}{1em}%
+    \setlength{\labelwidth}{10em}%
+}}
+  {\end{list}}
+%
+% ...Figure,table etc captions
+%
+\renewcommand{\@makecaption}[2]{%
+    \vspace{0.6em}\begin{center}{\parbox{0.9\linewidth}%
+        {\small\textbf{#1.} #2}}\end{center}%
+}
+%
+% ...List of co-Is
+%
+\newenvironment{coilist}%
+  {\begin{list}{$\bullet$}{%
+    \setlength{\topsep}{0em}%
+    \setlength{\parskip}{1em}%
+    \setlength{\parsep}{0em}%
+    \setlength{\itemsep}{0em}%
+    \setlength{\rightmargin}{0em}%
+    \setlength{\leftmargin}{1.0em}%
+    \setlength{\labelsep}{0.5em}%
+    \setlength{\labelwidth}{1em}%
+}}
+  {\end{list}}
+%
+% ...List of external/international collaborations
+%
+\newcommand{\collablabel}[1]{\mbox{{\em #1:}}\hfil}
+\newenvironment{collablist}%
+  {\begin{list}{}{%
+    \renewcommand{\makelabel}{\collablabel}%
+    \setlength{\topsep}{0em}%
+    \setlength{\parskip}{0em}%
+    \setlength{\parsep}{0em}%
+    \setlength{\itemsep}{0em}%
+    \setlength{\rightmargin}{0em}%
+    \setlength{\leftmargin}{6em}%
+    \setlength{\labelsep}{1em}%
+    \setlength{\labelwidth}{5em}%
+}}
+  {\end{list}}
+%
+% ...List of team members
+%
+\newcommand{\teamlabel}[1]{\mbox{{\em #1:}}\hfil}
+\newenvironment{teamlist}%
+  {\begin{list}{}{%
+    \renewcommand{\makelabel}{\teamlabel}%
+    \setlength{\topsep}{0em}%
+    \setlength{\parskip}{0em}%
+    \setlength{\parsep}{0em}%
+    \setlength{\itemsep}{0em}%
+    \setlength{\rightmargin}{0em}%
+    \setlength{\leftmargin}{2em}%
+    \setlength{\labelsep}{1em}%
+    \setlength{\labelwidth}{1em}%
+}}
+  {\end{list}}
+%
+% ...List of own publications
+%
+\newenvironment{ownpubl}%
+  {\begin{list}{}{%
+    \setlength{\topsep}{0em}%
+    \setlength{\parskip}{0em}%
+    \setlength{\parsep}{0em}%
+    \setlength{\itemsep}{0em}%
+    \setlength{\rightmargin}{0em}%
+    \setlength{\leftmargin}{2em}%
+    \setlength{\itemindent}{-2em}}\normalfont\footnotesize}%
+  {\end{list}}
+%
+% ...Literature list
+%
+\newenvironment{literature}%
+  {\begin{list}{}{%
+    \setlength{\topsep}{0em}%
+    \setlength{\parskip}{0em}%
+    \setlength{\parsep}{0em}%
+    \setlength{\itemsep}{0em}%
+    \setlength{\rightmargin}{0em}%
+    \setlength{\leftmargin}{2em}%
+    \setlength{\itemindent}{-2em}}\normalfont\footnotesize}%
+  {\end{list}}
+%
+% ...New itemize environment
+%
+\renewenvironment{itemize}%
+  {\begin{list}{$\bullet$}{%
+    \setlength{\topsep}{1em}%
+    \setlength{\parskip}{0em}%
+    \setlength{\parsep}{0em}%
+    \setlength{\itemsep}{0.5\baselineskip}%
+    \setlength{\rightmargin}{0em}%
+    \setlength{\leftmargin}{2.0em}%
+    \setlength{\labelsep}{0.5em}%
+    \setlength{\labelwidth}{1em}%
+}}
+  {\end{list}}
+%
+% ...A compact itemize environment
+%
+\newenvironment{compactitemize}%
+  {\begin{list}{$\bullet$}{%
+    \setlength{\topsep}{0em}%
+    \setlength{\parskip}{0em}%
+    \setlength{\parsep}{0em}%
+    \setlength{\itemsep}{0.0\baselineskip}%
+    \setlength{\rightmargin}{0em}%
+    \setlength{\leftmargin}{2.0em}%
+    \setlength{\labelsep}{0.5em}%
+    \setlength{\labelwidth}{1em}%
+}}
+  {\end{list}}
+%
+% ...List of links to other projects
+%
+\newenvironment{linkproj}%
+  {\begin{list}{}{%
+    \setlength{\topsep}{0em}%
+    \setlength{\parskip}{0em}%
+    \setlength{\parsep}{0em}%
+    \setlength{\itemsep}{0em}%
+    \setlength{\rightmargin}{0em}%
+    \setlength{\leftmargin}{2.3em}%
+    \setlength{\labelsep}{1em}%
+    \setlength{\labelwidth}{2em}%
+}}
+  {\end{list}}
+%
+% ...A table of expenses
+%
+\newenvironment{expenseslistnarrow}%
+  {\begin{tabular}{p{27.5em}@{\hspace{2.0em}}p{1.7em}p{3.0em}}}
+  {\end{tabular}}
+\newenvironment{expenseslist}%
+  {\begin{tabular}{p{30.0em}@{\hspace{2.0em}}p{1.7em}p{3.0em}}}
+  {\end{tabular}}
+%
+% ...Title for literature list
+%
+%\newcommand{\ownpubltitle}[1]{{\noindent\normalfont\footnotesize\bfseries\itshape #1}}
+\newcommand{\ownpubltitle}[1]{{\vspace{0.5\baselineskip}\noindent\normalfont\bfseries\itshape #1}}
+%
+% END OF STYLE DEFINITIONS
+%
+\makeatother
+%
+% Rest of definitions
+%
+\newcommand{\degr}{\ensuremath{^\circ}}
+%
+% Journal definitions
+%
+\def\araa{\textit{AnnRevA\& A}\xspace}
+\def\aap{\textit{Astron.\ \& Astrophys.}\xspace}
+\def\aapl{\textit{Astron.\ \& Astrophys.\ Letters}\xspace}
+\def\aapr{\textit{Astron.\ \& Astrophys.\ Rev.}\xspace}
+\def\aaps{\textit{Astron.\ \& Astrophys.\ Suppl.}\xspace}
+\def\adsr{\textit{Adv.~Space~Research}\xspace}
+\def\aj{\textit{Astronomical~J.}\xspace}
+\def\apj{\textit{Astrophysical~J.}\xspace}
+\def\apjl{\textit{Astrophysical J.\ Letters}\xspace}
+\def\apjs{\textit{Astrophysical J.\ Suppl.}\xspace}
+\def\aspc{\textit{Astronomical Soc.\ Pacific Conf.\ Ser.}\xspace}
+\def\ass{\textit{Astrophys. \& Space Sci.}\xspace}
+\def\apss{\textit{Astrophys. \& Space Sci.}\xspace}
+\def\bala{\textit{Baltic Astronomy}\xspace}
+\def\cmp{\textit{Contr. Mineralogy \& Petrology}\xspace}
+\def\cpc{\textit{Computer Physics Comm.}\xspace}
+\def\epsl{\textit{Earth \& Planetary Sci.\ Lett.}\xspace}
+\def\gca{\textit{Geochimica \& Cosmochimica Acta}\xspace}
+\def\ica{\textit{Icarus}\xspace}
+\def\jp{\textit{J. Petrol.}\xspace}
+\def\jqsrt{\textit{JQSRT}\xspace}
+\def\mn{\textit{Monthly Notices Roy.\ Astr.\ Soc.}\xspace}
+\def\mnras{\textit{Monthly Notices Roy.\ Astr.\ Soc.}\xspace}
+\def\mps{\textit{Meteoritics \& Planetary Sci.}\xspace}
+\def\nat{\textit{Nature}\xspace}
+\def\phre{\textit{Physical Rev.~E}\xspace}
+\def\prl{\textit{Physical Rev.\ Lett.}\xspace}
+\def\pss{\textit{Planetary \& Space Sci.}\xspace}
+\def\rmf{\textit{Rev.Mod.Phys}\xspace}
+\def\sci{\textit{Science}\xspace}
+\def\ssr{\textit{Space Science Rev.}\xspace}
+\def\jgr{\textit{J.~Geophys.Research}\xspace}
+%
+% Project definitions
+%
+\def\projlattard{{A1}}
+\def\projtscharn{{A2}}
+\def\projblum{{B1}}
+\def\projwurm{{B2}}
+\def\projblumtrie{{B3}}
+\def\projkley{{B4}}
+\def\projklahr{{C1}}
+\def\projdul{{C2}}
+\def\projtrie{{D1}}
+\def\projwolf{{D2}}
+\def\blockmineral{{A}}
+\def\blockimpact{{B}}
+\def\blockglobal{{C}}
+\def\blockobserv{{D}}
+%
+%\newcommand{\cit}[1]{{\bf #1}}
+\newcommand{\cit}[1]{{#1}}
+\newcommand{\titl}[1]{{#1}}
+\def\team#1{{#1\/}}
+\def\coll#1{{#1\/}}
+\def\degr{$^\circ$}
+%\def\remark#1{{\bf [#1]}}
+\def\remark#1{}
+\newcommand{\EUR}{\ensuremath{\mathrm{EUR}}\xspace}
+\newcommand{\EURBF}{\textbf{EUR}\xspace}
+%
+\begin{document}
+\pagestyle{fancy}
+%
+% Headers and footers for title page
+%
+\makeatletter
+\lhead[]{}
+\rhead[]{}
+\lfoot[]{}
+\rfoot[]{}
+\cfoot[]{}
+\setlength{\headrulewidth}{0pt}
+\makeatother
+%
+% Cover
+%
+\noindent\includegraphics[width=16cm]{cover.eps}
+\clearpage
+\mbox{}
+\vfill
+\noindent{\it {\bf Front page image:} ``Beyond the Realm of
+the Giants'' by Mark Garlick. This painting gives an artist's impression of
+Kuiper belt objects in our solar system, which are left-overs from the
+planet formation era. These icy objects are examples of the
+``planetesimals'' at the center of this Forschergruppe. Since the painting
+also shows some amounts of dust, this painting also symbolizes the process
+of formation from dust to planetesimals.}
+\clearpage
+%
+% Title page
+%
+\mbox{}
+\vspace{4cm}\\
+\centerline{\huge \bf The Formation of Planets:}
+
+\vspace{1cm}
+
+\centerline{\huge \bf The Critical First Growth Phase}
+
+\vspace{3cm}
+
+\centerline{\Large \bf Proposal for Funding of a Forschergruppe}
+
+\vspace{3cm}
+
+\centerline{\Large Speaker: W.~Kley}
+
+\vspace{0.5cm}
+
+\centerline{\Large Co-speakers: C.~P.~Dullemond, M.~Trieloff}
+
+\vfill
+\mbox{}
+%\pagebreak[4]
+\cleardoublepage
+\mbox{}
+\centerline{\Large \bf Table of Contents}
+\vspace{3em}\\
+
+\newcounter{pgcntr}
+%\begin{tabular}{p{5em}l}
+%5   & Summary, Introduction and motivation
+%
+%\end{tabular}
+
+\setcounter{pgcntr}{6}
+\contentsline{section}{Overview over the Forschergruppe}{\arabic{pgcntr}}
+\contentsline{subsection}{Participating institutes and principle investigators}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{1}
+\contentsline{subsection}{Summary}{\arabic{pgcntr}}
+\contentsline{subsection}{Introduction}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{3}
+\contentsline{subsection}{Scientific background and own contributions}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{6}
+\contentsline{subsection}{Scientific objectives}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{1}
+\contentsline{subsection}{Work plan of the proposed Forschergruppe}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{8}
+\contentsline{subsection}{Forschergruppe Professur}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{1}
+\contentsline{subsection}{Financial overview}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{3}
+\contentsline{subsection}{Signatures}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{1}
+\contentsline{subsection}{References}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{8}
+\contentsline{section}{Project descriptions}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{1}
+\contentsline{subsection}{Project A1: ``Thermal annealing, evaporation, condensation''}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{22}
+\contentsline{subsection}{Project A2: ``Mineralogical and chemical composition''}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{22}
+\contentsline{subsection}{Project B1: ``Charge transfer''}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{16}
+\contentsline{subsection}{Project B2: ``Influence of multiple collisions''}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{12}
+\contentsline{subsection}{Project B3: ``High-temperature dust collision experiments''}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{16}
+\contentsline{subsection}{Project B4: ``Simulating collisions with SPH''}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{12}
+\contentsline{subsection}{Project C1: ``Planetesimal precursors in turbulent disks''}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{20}
+\contentsline{subsection}{Project C2: ``Modeling dust coagulation''}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{20}
+\contentsline{subsection}{Project D1: ``Radioisotope chronometry''}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{20}
+\contentsline{subsection}{Project D2: ``Prediction of observable quantities''}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{20}
+\contentsline{subsection}{Project P\hspace{0.7em}: Forschergruppe Professur}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{4}
+\contentsline{subsection}{Project Z\hspace{0.7em}: Coordination}{\arabic{pgcntr}}
+\addtocounter{pgcntr}{4}
+\contentsline{section}{Curricula Vitae}{\arabic{pgcntr}}
+
+\vfill
+
+\clearpage
+%
+% Headers and footers for main text
+%
+\makeatletter
+\newcommand{\hdrtitle}{Forschergruppe Formation of Planets: The Critical
+  First Growth Phase}
+%\newcommand{\hdrtitle}{XXXX}
+\lhead[{\bfseries \hdrtitle}]{}
+\rhead[]{{\bfseries \hdrtitle}}
+\lfoot[\thepage]{}
+\rfoot[]{\thepage}
+\cfoot[]{}
+%\setlength{\headrulewidth}{0.5pt}
+\makeatother
+%
+% The main text
+%
+\include{main}
+\clearpage
+\include{references}
+%
+% Headers and footers for intermediate page
+%
+\makeatletter
+\lhead[]{}
+\rhead[]{}
+\lfoot[]{}
+\rfoot[]{}
+\cfoot[]{}
+\setlength{\headrulewidth}{0pt}
+\makeatother
+%
+% A page in between 
+%
+\pagebreak[4]
+
+\mbox{}
+
+\vspace{10cm}
+
+\mbox{}
+
+\pagebreak[4]
+
+\mbox{}
+
+\vspace{10cm}
+
+\centerline{\bf\Huge Project Descriptions}
+
+\cleardoublepage
+%
+% Headers and footers for the project descriptions
+%
+\makeatletter
+\newcommand{\projnr}{XX}
+\newcommand{\projauth}{XX}
+\newcommand{\projtitleshort}{XX}
+\lhead[{\Large\bfseries\projnr{}}\hspace{0.5em}--\hspace{.5em}\projtitleshort{}]{}
+\rhead[]{\projtitleshort{}\hspace{0.5em}--\hspace{.5em}{\Large\textbf{\projnr{}}}}
+\lfoot[\thepage]{}
+\rfoot[]{\thepage}
+\cfoot[]{}
+\setlength{\headrulewidth}{0pt}
+\makeatother
+%
+% The project descriptions...
+%
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{a1}
+\cleardoublepage
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{a2}
+\cleardoublepage
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{b1}
+\cleardoublepage
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{b2}
+\cleardoublepage
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{b3}
+\cleardoublepage
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{b4}
+\cleardoublepage
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{c1}
+\cleardoublepage
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{c2}
+\cleardoublepage
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{d1}
+\cleardoublepage
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{d2}
+\cleardoublepage
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{p}
+\cleardoublepage
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{z}
+\cleardoublepage
+
+%
+% Headers and footers for intermediate page
+%
+\makeatletter
+\lhead[]{}
+\rhead[]{}
+\lfoot[]{}
+\rfoot[]{}
+\cfoot[]{}
+\setlength{\headrulewidth}{0pt}
+\makeatother
+
+\mbox{}
+
+\vspace{10cm}
+
+\centerline{\bf\Huge Curricula Vitae}
+
+\cleardoublepage
+
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\include{cv}
+\cleardoublepage
+
+
+\end{document}
