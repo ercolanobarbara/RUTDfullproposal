@@ -1,0 +1,1831 @@
+%----------------------------------------------------------------------
+%                        PROJECT DEFINITION
+%----------------------------------------------------------------------
+\renewcommand{\projnr}{A2}
+\renewcommand{\projtitleshort}{Mineralogical and chemical composition}
+\renewcommand{\projauth}{Tscharnuter, Gail}
+%
+\setcounter{section}{0}
+\noindent{\normalfont\sffamily\Large\bfseries Project \projnr: \projtitleshort}
+%
+\section{Full title:}
+\hspace{1\baselineskip}\\
+\centerline{\large ``Evolution of the mineralogical and}\\
+\centerline{\large chemical composition of pre-planetary disks''}
+%
+\section{General information}\mbox{}
+
+\subsection{Principle investigators:}
+\hspace{-\baselineskip}\\\noindent
+%
+{\bfseries\itshape Tscharnuter}, Werner~M., Prof.~Dr.\\
+C4, tenure\\
+03.06.1945, \"osterreichisch\\
+DFG Code number of latest application: SFB 439 - 05\\
+Zentrum f\"ur Astronomie der Universit\"at Heidelberg\\
+Institut f\"ur Theoretische Astrophysik\\
+Albert-\"Uberle Str. 2\\
+69120 Heidelberg\\
+Tel: 06221-544815\\
+Fax: 06221-544221\\
+Email: wmt@ita.uni-heidelberg.de\\
+Private address:\\
+Langgewann 38/3\\
+69121 Heidelberg\\
+Tel.: 06221-475954\\
+%
+\vspace{1em}\\\noindent
+{\bfseries\itshape Gail}, Hans-Peter, Prof.~Dr.\\
+Wiss. Ang.\\
+23.07.41, deutsch\\
+DFG Code number of latest application: SFB 439 - 05\\
+Zentrum f\"ur Astronomie der Universit\"at Heidelberg\\
+Institut f\"ur Theoretische Astrophysik\\
+Albert-\"Uberle Str. 2\\
+69120 Heidelberg\\
+Tel: 06221-548982\\
+Fax: 06221-544221\\
+Email: gail@ita.uni-heidelberg.de\\
+Private address:\\
+Werderstr. 25\\
+69120 Heidelberg\\
+Tel.: 06221-401936\\
+%
+\vspace{1em}\\\noindent
+{\bfseries\itshape Henning}, Thomas, Prof.~Dr.\\
+Direktor MPIA\\
+09.04.56, deutsch\\
+DFG Code number of latest application: He 1953/21-2\\
+Max-Planck-Institut f\"ur Astronomie\\
+K\"onigstuhl 17\\
+69117 Heidelberg\\
+Tel: 06221-528200\\
+Fax: 06221-528339\\
+Email: henning@mpia.de\\
+Private address:\\
+Philosophenweg 3\\
+69120 Heidelberg\\
+Tel.: 06221-589129\\
+
+\subsection{Co-investigators within this Forschergruppe:}
+\begin{coilist}
+%\item Th.~Henning (MPIA Heidelberg)
+\item D.~Lattard (Mineralogisches Institut, Uni Heidelberg)
+\item M.~Trieloff (Mineralogisches Institut, Uni Heidelberg)
+\end{coilist}
+
+%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+\section{Summary (Zusammenfassung)}
+\subsubsection{Summary:}
+The project aims at developing comprehensive models based on
+numerical simulations for the early mineralogical and chemical
+evolution of the material in pre-planetary disks. This includes,
+on the one hand, modeling of the disk structure and evolution, and
+of processes of matter transport within the disk, and, on the
+other hand, the modeling of the chemical and physical alteration
+processes to which the pristine interstellar matter is subjected
+until its incorporation into large bodies of a planetary system.
+The required input data for the mineralogical processes, e.\,g.,
+annealing, evaporation, and growth processes, will be retrieved by
+mineralogical experiments in \projlattard. The results will allow
+to predict the composition of the precursor material from which
+planetesimals and later planets are formed and to compare this
+with the observational material from bodies in our Solar System,
+e.\,g., cometary and meteoritic material, and with observations of
+protoplanetary accretion disks.
+
+\subsubsection{Zusammenfassung:}
+In dem Projekt sollen theoretische Modelle und numerische Simulationen
+f\"ur die fr\"uhe mineralogische und chemische Entwicklung des Materials in den
+pr\"a\-planetaren Akkretionsscheiben entwickelt werden. Es sollen sowohl der
+Aufbau und die Ent\-wicklung der Akkretionsscheiben einschlie\ss lich des
+Stofftransports in der Scheibe, als auch die chemischen und physikalischen
+Ver\"anderungen des interstellaren Ausgangsmaterials, z.B. durch Tempern,
+Verdampfung und Wachstum, bis zum Einbau des Materials in die K\"orper eines
+Plane\-tensystems m\"oglichst vollst\"andig modelliert werden. Die ben\"otigten
+Daten f\"ur die Eigenschaften der Minerale sollen durch Laborexperimente im
+Projekt \projlattard\ bestimmt werden. Die Resultate werden es erlauben, die
+Zusammensetzung des Materials, aus dem Planetesimale und sp\"ater Planeten
+gebildet werden, vorherzusagen, und dies mit Beobachtungsdaten f\"ur K\"orper
+aus unserem Sonnensystem, z.B.\ Kometen und meteoritisches Material, und mit
+Beobachtungsdaten f\"ur protostellare Akkretionsscheiben zu vergleichen.
+
+%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+\section{State of the art (Stand der Forschung)}
+
+Since planetesimals form very rapidly, their composition is a snapshot of
+the composition of the disk material at the time and location of their
+formation. Hence, variable chemical compositions are expected for small bodies at this stage, and indeed the compositional variety of chondrite parent bodies (Palme 2001) demonstrates the validity of this argument. Afterwards, the material locked in planetesimals is essentially isolated from
+further evolution processes in the accretion disk and mixing of material locked
+in planetesimals and protoplanets between different zones is of limited
+efficiency. It is therefore essential to study both the chemistry of the
+gas phase and that of the solid phases during the early disk evolution up to
+the instant of planetesimal formation in order to understand the composition
+of the present planets and smaller bodies and of composition gradients in
+our Solar System and to get an insight into the variety of compositions
+which can be expected for extrasolar planetary systems to occur.
+
+\subsubsection{Structure and evolution of protoplanetary disks:} Model
+calculations for the structure and evolution of protoplanetary
+disks in the one zone and the (1+1)-D approximation have become
+standard by now. They are based on the $\alpha$- or
+$\beta$-approximation for disk viscosity or some receipt to the
+magneto-rotational instability. Dust opacities usually are
+calculated by simple analytic approximations or from tabulations.
+The application of such models to observations of accretion disks
+around young stellar objects have also arrived at a high degree of
+sophistication (cf.\ the review of D'Alessio et al.~2005) and
+provided a wealth of information on disk properties and their
+mineral content.  A number of theoretical studies of chemistry and
+mineralogy in protoplanetary disks are based on such models (cf.
+the review by Bergin et al.~2005). Hydrodynamic 2-D and 3-D models
+of protoplanetary disks which allow to study the importance of
+flows and mixing on the chemistry in the disk are just becoming
+available (e.\,g., Klahr et al.~1999; Boss 2004; Tscharnuter \&
+Gail 2006; Turner et al.~2006). Also sophisticated models based on
+MHD simulations start to become available (cf.\ Bouvier et al.
+2006).
+
+\subsubsection{Dust opacity:}
+Recent millimeter observations of protoplanetary disks around
+young stars have revealed that in some of these disks a
+substantial fraction of dust grains has grown up to cm-sized
+particles within only a few Myr of the evolution (see, e.\,g.,
+Dent et al.~2006; Rodmann et al.~2006; Natta et al.~2006). Dust
+particles in accretion disks are porous aggregates of a large
+number of small ($\leq0.1\mu$m) sub-units with different
+compositions. In cold outer regions of the disk, the pores are filled at least
+in part with ice. The extinction properties of such composite
+particles are difficult to determine and, in the past, opacities
+have usually be calculated from Mie theory for single grains.
+Recently there has been considerable progress in this field and
+receipts for calculating opacities for dust aggregates have been
+worked out (e.\,g., Henning \& Stognienko 1996; Voshchinnikov \&
+Mathis 1999; Voshchinnikov et al.~2005, 2006; Semenov et al.~2003;
+Min et al.~2006; Kimura et al.~2006). It is found that there are
+strong differences between opacities of aggregates and of single
+particles in certain cases. Since the disk temperature structure
+is determined to a large extent by the dust opacity, better
+implementations of dust opacity in disk models are required than
+those presently used in model calculations.
+
+\subsubsection{Mixing processes:}
+Observations of crystalline material in the outer parts of
+accretion disks and in comets raised the question of the origin of
+this high temperature material in cold disk regions and mixing has
+been considered one likely process for this (cf.\ the discussions
+in Wooden et al.~2005, 2006; Alexander et al.~2006; Bergin et al.
+2006). The importance of mixing processes in accretion disks was
+first discussed by Morfill \& V\"olk (1984). Theoretical models for
+mixing of dust based on simple disk models were developed by Gail
+(2001, 2004) and Bockel{\'e}e-Morvan (2002), which showed that
+mixing may account for the observations of crystalline material in
+comets. Particle transport during the formation phase of the disk
+was discussed by Dullemond et al.~(2006). Mixing processes based
+on hydrodynamic disk models have been studied, e.\,g., by Boss
+(2004), Tscharnuter \& Gail (2006), Turner et al.~(2006). Mixing
+processes of the gas-phase species and their implications were
+studied, e.\,g., by Ilgner et al.~(2004), Ilgner \& Nelson (2006),
+Ciesla \& Cuzzi (2006), Semenov et al.~(2006).
+
+\subsubsection{Annealing:}
+Annealing of amorphous dust is considered as one of the main
+sources of crystalline dust seen in cometary nuclei (e.\,g.,
+Wooden et al.~2000, 2005, 2006; Gail 2001, 2004) and
+interplanetary dust particles (e.\,g., Alexander \& Keller 2006).
+This crystalline dust may either be mixed from hot inner disk
+regions into the cold comet formation zone (e.\,g., Gail 2001,
+2004 Bockel{\'e}e-Morvan 2002) or may be produced in situ by
+shocks (e.\,g., Harker \& Desh 2002). The annealing process has
+been studied in the laboratory for magnesium rich silicates
+(e.\,g., Hallenbeck et al.~1998, Rietmeijer et al.~2002, Fabian et
+al.~2000) and the data have been used in model calculations for
+dust annealing in protoplanetary disks (e.\,g., Gail 2001, 2004,
+Wehrstedt \& Gail 2002, 2003, 2006, Bockel{\'e}e-Morvan et al.
+2002). Since the amorphous ISM silicates are partially iron rich,
+data for iron bearing silicates are required, but presently not
+available (except for the very preliminary results of Brucato et
+al.~2002). The same holds for Ca-Al compounds.
+%\\[1ex]
+
+The predictions of preliminary models for annealing and mixing
+(e.\,g., Gail 2004) seem to be roughly in accord with the observed
+distribution of crystalline silicate material in disks around
+young stellar objects (e.\,g., van Boekel et al.~2004) or with the
+results of the Deep Impact experiment (e.\,g., Harker et al.~2005)
+and the Stardust mission%
+\footnote{cf.\ \texttt{http://www.nasa.gov/stardust}}.
+
+\subsubsection{Dust evaporation and growth:}
+In the hot inner part of accretion disks the mineral dust is
+driven by evaporation/condensation into the chemical equilibrium
+mineral mixture (Grossman \& Larimer 1974, Petaev \& Wood 1998, 2004). 
+These processes are discussed e.\,g., by Gail
+(2004) and Wooden et al.~(2005). Laboratory experiments on
+evaporation and condensation have been conducted for some
+substances of interest during the last decade, e.\,g., for
+forsterite (e.\,g., Nagahara \& Ozawa 1996) and pyroxene (e.\,g.,
+Tachibana et al.~2002). For many mineral substances, in particular
+for the highly refractory Ca-Al-compounds, and Fe-bearing olivine and pyroxene, the data necessary for a
+quantitative modeling of the composition of protoplanetary disks
+are not yet available.
+
+\subsubsection{Chemistry of gas phase and ices:}
+There are two reasons why the chemistry of molecular species in
+pre-planetary accretion disks is one of the most important
+processes to be studied. On the one hand, observations of
+molecular lines from the gas phase belong to the most important
+tools for studying the properties of accretion disks (e.\,g.,
+Dutrey et al.~2006). On the other hand, molecules and ices form
+the volatile component of the disk material. The ices form a major
+fraction of the material of the icy bodies in the outer regions of
+the accretion disk and a knowledge of the ice composition
+therefore is crucial for determining the composition of such
+bodies. In big planetesimals and protoplanets subject to
+%\marginpar[\hspace*{4em}\tiny
+%\parbox{6em}{D. Lattard\\ (03.05.06):\\ Dieser Absatz\\
+%ist zu lang\hfill\rule[-4mm]{1mm}{20mm}}]%
+%{\hspace*{4em}\tiny\parbox{6em}%
+%{D. Lattard\\ (03.05.06):\\ Dieser Absatz\\ ist zu lang}}%
+radioactive heating, the initial supply with volatiles is
+responsible for the presence of fluid water which triggers a rich
+chemistry which in turn is responsible for the existence (or
+non-existence) of atmospheres and oceans on the terrestrial
+planets in our Solar System and on possible earth like planets in
+extrasolar planetary systems. In our Solar System the comets
+preserve in their ice component a record of the composition of the
+gaseous component of the Solar Nebula at the time and place of
+their formation which allows to reconstruct many of the processes
+operating in the disk during the early stages of the planetary
+formation process. Considerable effort therefore has been gone
+already in observations and modeling.%
+%\marginpar[\hspace*{4em}\tiny\parbox{6em}{of what?\\comets?}]%
+%{\hspace*{4em}\tiny\parbox{6em}{of what?\\comets?}}
+
+The present status of the subject is described, e.\,g., in the
+review articles by Langer et al.~(2000) and Bergin et al.~(2006).
+Importantly, with Spitzer it now becomes possible to
+resolve the inner regions of protoplanetary disks and
+study their gas-phase chemistry by observations of
+vibration-rotation bands (Lahuis et al.~2006). This is also now
+done from the ground (Rettig et al.~2005). Such investigations
+will help to constrain future disk models much better than this is
+possible from IR dust feature observations alone.
+%\\[1ex]
+
+%General discussions on the relevant processes and early attempts to model the
+%accretion disk chemistry are described e.\,g., in Prinn \& Fegley (1989), Fegley \%&
+%Prinn (1989), Prinn (1993). These considerations are largely based on
+%equilibrium chemistry and did not consider the coupling with the disk structure
+%and evolution and did not include the typical interstellar ion-molecule
+%chemistry operating in the outer parts of the disk. Attempts to model the
+%chemistry in pre-planetary disks coupled with models for the disk structure and
+%evolution started about 15 years ago. Finocchi et al. (1997a,b) studied the
+%chemistry by solving the reaction kinetics in a gas parcel accreting onto the
+%star, including mineral dust evaporation and condensation and the chemistry
+%of carbon dust combustion.
+%\\[1ex]
+
+\subsubsection{Chemical gradients in the Solar System:}
+It is observed that volatile rock-forming elements (in particular,
+the alkaline elements) are depleted in the inner Solar System.
+Potassium, for instance, is definitely depleted on Venus, Earth,
+Moon, Mars and many differentiated and also chondritic meteorite parent bodies
+(Taylor 1988). Present studies indicate an early loss of volatile
+elements in the inner Solar System (Palme 2001; see also Humayun and Clayton 1995).
+Furthermore, a systematically increasing depletion of volatile elements
+in the sequence of carbonaceous chondrites CI (about solar
+abundances, Asplund et al.~2005), CM, CV is well documented. The
+terrestrial abundances are very similar to CV chondrites (All\`egre et al.
+2001; Palme 2001). On the other hand, in the sequence CI-CM-CV-Earth the
+abundance ratio of Al/Si systematically increases. The
+origin of the abundance variations of the volatile and the main
+rock-forming elements in the inner solar system are presently not well understood.
+%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+%\\[1ex]
+
+\section{Preliminary work (Eigene Vorarbeiten)}
+Some work has already been done with respect to modeling the growth-
+and destruction processes of the dust, modeling of the gas phase
+chemistry, the structure and evolution of pre-planetary accretion
+disks, and for modeling the radiative transfer in accretion disks.
+%\\[1ex]
+
+\subsubsection{Modeling of disks:}
+From our previous work there exist a number of computer programs for the
+structure and evolution of accretion disks in the one zone approximation, the
+(1+1)-D approximation, and a 2-D hydrodynamic code. These codes are already
+coupled with detailed routines for computing the chemical composition of the
+disk material (gas phase and solids) and for computing mixing processes and
+radiative transfer in the disk:
+\begin{compactitemize}
+\item For stationary disks in one-zone approximation with $\alpha$-viscosity
+(Gail 1997, 2001, 2004; Willacy et al.~1998).
+\item For the time evolution of one-zone models with $\alpha$- and
+$\beta$-viscosity (Wehrstedt \& Gail 2002, 2003).
+\item For stationary disks in (1+1)-D approximation with $\alpha$-
+and $\beta$-viscosity, coupled with a complete radiative transfer
+model analogue to plane parallel stellar atmospheres (Gail 2001;
+Bell et al.~1997).
+\item For time-dependent evolution of disks in the (1+1)-D
+approximation for $\alpha$- and $\beta$-viscosity (Wehrstedt \&
+Gail 2006 )
+\item For time-dependent 2-D radiative hydrodynamics with
+$\beta$-viscosity (Gail \& Tscharnuter 2006, Tscharnuter \& Gail
+2006).
+\item For time dependent 3-D radiative hydrodynamics with $\alpha$-viscosity
+(Klahr et al.~1999)
+\end{compactitemize}
+\noindent The programs 1,2,3 can be used as tools for testing methods 
+and studying simple processes, while 4 to 6 will serve as basis for future
+developments.
+
+
+\subsubsection{Radiative transfer:} For stationary (1+1)-D models a code
+package has been developed which solves the radiative transfer
+problem self-consistently with the disk structure. Preliminary
+results are published in Gail (2001). 2-D time dependent radiative
+transfer in the Eddington approximation has been self-consistently
+coupled with 2-D hydrodynamics (Tscharnuter \& Gail 2006).
+Furthermore, we have a lot of experience with multi-dimensional
+radiative transfer codes (e.\,g., Wolf et al.~1999, Manske \&
+Henning 1999, Steinacker et al.~2003)
+%\\[1ex]
+
+\subsubsection{Growth and destruction of dust:} Extensive experience from
+other projects is available for modeling dust-related processes.
+Dust vaporization and condensation has been modeled for instance
+for stellar winds. Theoretical models have been developed for the
+condensation of the silicates olivine
+(Mg$_{2x}$Fe$_{2(1-x)}$SiO$_4$), pyroxene (Mg$_x$Fe$_{1-x
+}$SiO$_3$), and also quartz (SiO$_2$), which consider variable Mg-
+and Fe contents and consider diffusion of the cations Mg$^{2+}$
+and Fe$^{2+}$ in the silicates (Gail \& Sedlmayr 1999). They were
+extended to other dust species (Ferrarotti \& Gail 2001, 2002,
+2003). These models have been applied to carrying out numerical
+simulations of dust formation in circumstellar dust shell with
+different element mixtures (Ferrarotti \& Gail 2001, 2002, 2003,
+2006).
+%\\[1ex]
+
+Thermo-chemical data have been collected for numerous compounds and
+subroutines have been developed to calculate such heterogeneous
+chemical equilibria in solid-gas mixtures. These subroutines were
+applied in the previous model computations (Gail 1997, 2001, 2003;
+Ferrarotti \& Gail 2001, 2002, 2003; Wehrstedt \& Gail 2002, 2003)
+and will also be used in this project.
+%\\[1ex]
+
+\subsubsection{Dust processing:} The processing of silicate dust by
+annealing in pre-planetary disks was studied theoretically and a
+numerical model for calculating the degree of crystallization was
+developed for the first time and used in a number of model
+calculations (Lenzuni et al.~1995; Duschl et al.~1996, Gail 2001,
+2003, 2004; Wehrstedt \& Gail 2002, 2003, 2006). The numerical
+experience from these calculations and the codes can also be used
+for the present project.
+%\\[1ex]
+
+\subsubsection{Mixing processes in accretion disks:} Mixing and transport of
+dust and gas phase species between the warm inner and hot outer
+parts in accretion disks by turbulent diffusion have been studied
+for the first time in Gail (2001, 2002, 2003, 2004), Wehrstedt \&
+Gail (2002, 2003, 2006), Ilgner et al.~(2004), Schr\"apler \&
+Henning (2004). The necessary codes for treating such processes
+simultaneously with model calculations for the disk structure and
+evolution have been developed for one-zone models, (1+1)-D models
+and for 2-D hydrodynamic models. Numerical experience and codes
+from these calculations can be used for the present project.
+%\\[1ex]
+
+In a theoretical study the influence of large scale flows in accretion disks
+was studied (Keller \& Gail 2005) which showed its importance for mixing
+material between widely disparate disk regions. Such flow structures have been
+implemented in a (1+1)-D evolution model for accretion disks to study mixing
+processes (Wehrstedt \& Gail 2006).
+%\\[1ex]
+
+\subsubsection{Hydrodynamics of accretion disks:} A rich experience is
+available at the ITA and MPIA for modeling astrophysically
+relevant flows, where in particular self-gravity and energy
+transport by radiation in moving media are important. As examples,
+we may mention collapse flows during star formation and giant
+planet formation (Tscharnuter 1987; Wuchterl 1990, 1991a,b;
+Wuchterl \& Tscharnuter 2003), flow structures in accretion disks
+(Klahr et al.~1999; Klahr \& Kley 2006), or non-linear
+hydrodynamic instabilities in cold accretion disks, that probably
+explain the small-scale structures in Saturn's B-ring (Schmit and
+Tscharnuter 1995, 1999). For these hydrodynamical simulations,
+implicit (collapse flows in spherical and axial symmetry) as well
+as explicit (cylindrically symmetric instabilities in cold
+accretion disk) methods have been used.
+%\\[1ex]
+
+For the simulation of axially symmetric pre-planetary disks for which energy
+transport by radiation and in particular chemical reactions (including
+sublimation and condensation processes) and diffusive matter transport are
+of outstanding importance, the (explicit) operator splitting method seems most
+appropriate (a description can be found in Norman \& Winkler 1986). The
+essential advantage of this method is that source and advection terms in the
+hydrodynamic equations can be updated separately within a given time step,
+which allows to solve the usually very large system of reaction equations
+separately for each cell of the grid. This opens the possibility of massive
+parallelization.
+%\\[1ex]
+
+The present status of the code development is as follows: An
+explicit 2-D hydrodynamics code, coupled with both an implicit
+radiative transfer solver based on the diffusion approximation and
+a system of advection-diffusion-reaction equations for the
+chemistry of the gas phase and dust species, is ready for use.
+Viscous processes in the disk are presently implemented in the
+approximation of the $\beta$-viscosity (Duschl et al.~2000).
+Because of the restrictions by the Courant-condition this code
+can, however, only be used for investigation of processes which
+operate on shorter timescales than the global disk evolution.
+%
+%
+%\\[1ex]
+
+\subsubsection{Modeling of gas phase chemistry:} We have studied the
+chemistry in accretion disks in a number of model calculations
+(Finocchi et al.~1997a, 1997b; Markwick et al.~2002; Ilgner et al.
+2004; Gail \& Tscharnuter 2006; Tscharnuter \& Gail 2006),
+including gas-grain interactions (Willacy et al.~1998) and surface
+processes (Semenov et al.~2004), and even turbulent mixing (Ilgner
+et al.~2004). A wide range of temperatures, densities, and
+high-energy X-ray and UV radiation fluxes encountered in
+protoplanetary disks leads to complicated chemistry, with
+different chemical processes controlling the evolution of
+molecular species in different disk locations. Thus, it is of
+particular importance to take all relevant reactions and gas-grain
+processes into account in the numerical modeling of the
+protoplanetary disk chemical evolution, and, which is even more
+crucial, to understand when, where, and why these processes are so
+important.
+
+The MPIA group has solid experience in sophisticated modeling of
+the outer disk chemistry in a variety of young low-mass objects
+surrounding low-mass, Sun-like T~Tau stars as well as more massive
+and luminous Herbig Ae and Be stars (e.\,g., Markwick et al.
+2002). Semenov et al.~(2004) have studied the evolution of the
+fractional ionization in various regions of a T Tau disk subject
+to stellar and interstellar UV and X-ray radiation in detail,
+using a special reduction technique that allows for any
+pre-selected molecule a set of most chemically important reactions
+to be isolated (Wiebe et al.~2003). They found that the stellar
+X-ray radiation may trigger very peculiar chemistry in the inner
+disk zone, leading to the formation of complex carbon and
+cyanopolyine chains (e.\,g., HC$_{11}$N). Semenov et al.~(2005)
+have consistently modelled for the first time the millimeter
+interferometric and single-dish observations of the AB Aur disk
+and envelope, using a gas-grain chemical model with surface
+chemistry, deuterium fractionation, and self-shielding of CO and
+H$_2$.
+
+Presently, our chemical models range from a simple static
+gas-grain model with surface chemistry to a complicated
+non-stationary model with 2-D turbulent mixing included. All the
+models are based on the UMIST\,95 database of reactions
+(Millar et al.~1997) and take into account ionization and dissociation
+by stellar and interstellar UV and X-ray radiation as well as
+cosmic rays and decaying short-lived radionuclides. Gas-grain
+interactions include accretion of gas-phase molecules onto and
+desorption of frozen species from dust surfaces, and dissociative
+recombinations of ions with charged grains. A set of surface
+chemical reactions was adopted from Hasegawa et al.~(1992) and
+Hasegawa \& Herbst (1993). A unique numerical integration scheme is
+used to solve the arising sets of non-linear stiff differential
+equations (either with only chemical terms or also with turbulent
+transport), which is based on the Backward Differentiation Formula
+variable-order solver DVODPK with iterative preconditioned Krylov
+methods and sparse Jacobian representation (see, e.\,g., Nejad 2005).
+%\\[1ex]
+
+\subsubsection{Opacity of dust:}
+%
+The dust opacity modeling constitutes a problem of its own for
+everybody who aims at studying the disk physics and evolution in
+detail. The major problem here is the lack of detailed knowledge
+on the composition, mineralogy, size distribution, topology,
+degree of porosity, etc. of dust grains in distinct disk regions.
+While the numerical recipes to model the optical properties of
+porous inhomogeneous aggregate, composite, and layered particles
+already are available to us (Semenov et al.~2003; Voshchinnikov et
+al.~2006), the dust compositional model of Pollack et al.~(1994)
+is outdated and has to be revised in order to achieve further
+progress in this field. In Henning \& Stognienko (1996) and Semenov
+et al.~(2003), we have compiled opacity tables designed for
+hydrodynamical simulations of protoplanetary accretion disks by
+unifying the dust-dominated opacity model for cold and warm disk
+regions with gas-dominated opacities of Helling et al.~(2000) for
+the hot disk interior. A similar strategy for the opacity modeling
+and the numerical codes can also be utilized in the proposed
+project.
+%\\[1ex]
+
+%
+\subsubsection{Elemental compositions of planetary systems:} Will be
+determined in cooperation with projects A8, B11 of SFB\,439. From
+the model calculations of the chemo-dynamical evolution of the
+Milky Way the required data on element abundances and dust input
+from the ISM into protostellar accretion disks will be taken.
+
+
+%-------------------------------------------------------------------------------
+%
+% Here follows the own refereed publications by the PIs in relation to
+% the project proposed here.
+%
+\ownpubltitle{Own publications related to the Forschergruppe:}
+%
+% BELOW IS ONLY AN EXAMPLE OF TWO ENTRIES. SEE THE ADDITIONAL FILES
+% SENT TO YOU WITH ALL THE REFERENCES FROM THE VORANTRAG
+%
+\begin{ownpubl}
+
+\item
+Bell, K.~R., Cassen, P.~M., Klahr, H.~H. and Henning, Th. (1997)
+The Structure and Appearance of Protostellar Accretion Disks: Limits on Disk
+Flaring. \apj, \textbf{486}, 372--387
+
+\item
+Duschl, W.~J., Gail, H.-P. and Tscharnuter, W.~M. (1996) Destruction
+processes for dust in protoplanetary accretion disks, \aap, \textbf{312},
+624--642
+
+\item
+Dutrey, A., Henning, Th., Guilloteau et al.~(2006) CID-chemistry in disks. I. Deep search for N$_2$H$^+$ in protoplanetary disks around LMCa 15, MWC 480, and DM
+Tau. \aap, (submitted)
+
+\item
+Ferrarotti, A.~S. and Gail, H.-P. (2000) Mineral formation in stellar winds. II.
+Effects of Mg/Si abundance variations on dust composition in AGB stars. \aap,
+\textbf{371}, 133--151
+
+\item
+Ferrarotti, A.~S. and Gail, H.-P. (2002) Mineral formation in stellar winds.
+III. Dust formation in S stars. \aap, \textbf{382}, 256--281
+
+
+\item
+Ferrarotti, A.~S. and Gail, H.-P. (2003) Mineral formation in stellar winds. IV.
+Formation of magnesiow{\"u}stite. \aap, \textbf{398}, 1029--1039
+
+\item
+Ferrarotti, A.~S. and Gail, H.-P. (2006) Composition and quantities of dust
+produced by AGB-stars and returned to the interstellar medium. \aap,
+\textbf{447}, 553--576
+
+\item
+Finocchi, F., Gail, H.-P. and Duschl, W.~J. (1997) Chemical reactions in
+protoplanetary disks II. Carbon dust oxidation. \aap, \textbf{325}, 1264--1279
+
+\item
+Finocchi, F. and Gail, H.-P. (1997) Chemical reactions in protoplanetary
+accretion disks III. The role of ionisation processes. \aap, \textbf{327}, 825--844
+
+\item
+Gail, H.-P. (1997) Chemical reactions in protoplanetary disks IV. Multi
+component dust mixture. \aap,\textbf{332}, 1099--1122
+
+\item
+Gail, H.-P. (2001) Radial mixing in protoplanetary accretion disks. I.
+Stationary disk models with annealing and carbon combustion. \aap, \textbf{378},
+192--213
+
+\item
+Gail, H.-P. (2002)
+Radial mixing in protoplanetary accretion disks. III. Carbon dust oxidation and
+abundance of hydrocarbons in comets. \aap, \textbf{390}, 253--265
+
+\item
+Gail, H.-P. (2003) Formation and Evolution of Minerals in Accretion Disks and
+Stellar Outflows. In: \textit{Astromineralogy}, ed. Th. Henning. \textit{Lecture
+Notes in Physics}, \textbf{609}. Springer, Heidelberg. p. 55--120
+
+\item
+Gail, H.-P. (2004) Radial mixing in protoplanetary accretion disks. IV.
+Metamorphosis of the silicate dust complex. \aap, \textbf{413}, 571--591
+
+\item
+Gail, H.~P. and Sedlmayr, E. (1999) Mineral formation in stellar winds I.
+Condensation sequence of silicate and iron grains in oxygen rich outflows.
+\aap, \textbf{347}, 594--616
+
+\item
+Gail, H.-P. and Tscharnuter, W.~M. (2006) Evolution of protoplanetary disks
+including detailed chemistry and mineralogy. In: \textit{Reactive Flow,
+Diffusion and Transport}, ed. R. Rannacher et al.~(Springer, Berlin-Heidelberg)
+(in press)
+
+\item Grossman, L. \& Larimer, J.~W. 1974 Early chemical history of the
+Solar System. Rev. Geophys Space Phys. \textbf{12}, 71-101
+
+
+\item
+Henning, T. and Stognienko, R. (1996) Dust opacities for protoplanetary accretion
+disks: influence of dust aggregates. \aap, \textbf{311}, 291--303
+
+\item
+Henning, Th., Dullemond, C.P., Wolf, S. and Dominik, C. (2006) Dust Coagulation
+in Protoplanetary Disks. In:  Planet Formation. Theory, Observation and
+Experiments, eds. H. Klahr and W. Brandner (Cambridge: Cambridge University
+press) (in press)
+
+\item
+Ilgner, M., Henning, Th., Markwick, A.~J. and Millar, T.~J. (2004) Transport
+processes and chemical evolution in steady accretion disk flows. \aap,
+\textbf{415}, 643--659
+
+\item
+Keller, Ch. and Gail, H.-P. (2004) Radial mixing in protoplanetary accretion
+disks. VI. Mixing by large-scale radial flows. \aap, \textbf{415}, 1177--1185
+
+\item
+Klahr, H.~H., Henning, Th. and Kley, W. (1999) On the Azimuthal Structure of
+Thermal Convection in Circumstellar Disks. \apj, \textbf{514}, 325--343
+
+\item
+Klahr, H. and Kley, W. (2006) 3D-radiation hydro simulations of disk-planet
+interactions. I. Numerical algorithm and test cases. \aap, \textbf{445},
+747--758
+
+\item
+Lenzuni, P., Gail, H.-P. and Henning, Th. (1995) Dust evaporation in
+protostellar cores, \apj, \textbf{447}, 848--862
+
+\item
+Manske, V. and Henning, Th. (1999) 2D radiative transfer with transiently heated
+particles for the circumstellar environment of Herbig Ae/Be stars. \aap,
+\textbf{349}, 907--911
+
+\item
+Markwick, A.~J., Ilgner, M., Millar, T.~J. and Henning, Th. (2002) Molecular
+distributions in the inner regions of protostellar disks. \aap, \textbf{385},
+632--646
+
+\item Palme, H. (2001).  Chemical and isotopic heterogeneity in protosolar matter.  \textit{Phil. Trans. R. Soc. Lond.} \textbf{A 359}, 2061.   
+
+\item Petaev, M. I. and J. A. Wood (1998) The Condensation with Partial
+Isolation (CWPI) model of nebular condensation in the Solar Nebula.
+\textit{Meteorit. Planet. Sci.}
+\textbf{33}, 1123-1137.
+
+\item Petaev, M. I. and  Wood, J. A. (2004) Meteoritic constraints on
+temperatures, pressures, cooling rates, chemical compositions, and modes of
+condensation in the solar nebula. In Chondrites and the Protoplanetary Disk
+(Eds. A.~N.  Krot, E.~R.~D. Scott, and B. Reipurth), Vol. 341.
+
+
+\item
+Rodmann, J., Henning, T., Chandler, C.~J., Mundy, L.~G.
+and Wilner, D.~J.\ (2006) Large dust particles in disks around T Tauri stars.
+\aap, \textbf{446}, 211--221
+
+\item
+Schr\"apler, R., Henning, Th. (2004) Dust Diffusion, Sedimentation, and
+Gravitational Instabilities in Protoplanetary Disks. \apj, \textbf{614}, 960--978
+
+\item
+Schmit, U. and Tscharnuter, W.~M. (1995) A fluid dynamical treatment of the
+common action of self-gravitation, collisions, and rotation in Saturn's B Ring.
+\ica, \textbf{115}, 304--319
+
+\item
+Schmit, U. and Tscharnuter, W.~M. (1999) On the Formation of the Fine-Scale
+Structure in Saturn's B Ring. \ica, \textbf{138}, 173--187
+
+\item
+Semenov, D., Henning, Th., Helling, C., Ilgner, M. and Sedlmayr, E.
+(2003) Rosseland and Planck mean opacities for protoplanetary discs. \aap,
+\textbf{410}, 611--621
+
+\item
+Semenov, D., Wiebe, D. and Henning, T. (2004) Reduction of chemical networks.
+II. Analysis of the fractional ionisation in protoplanetary discs. \aap,
+\textbf{417}, 93--106
+
+\item
+Semenov, D., Wiebe, D. and Henning, Th. (2006) Gas-phase CO in protoplanetary
+disks: A challenge for turbulent mixing. \apjl, (submitted)
+
+\item
+Semenov, D., Pavlyuchenkov, Y., Schreyer, K., Henning, T., Dullemond, C., and
+Bacmann, A.\ (2005) Millimeter Observations and Modeling of the AB Aurigae
+System.  \apj, \textbf{621}, 853--874
+
+\item
+Steinacker, J., Henning, Th., Bacmann, A. and Semenov, D. (2003) 3D continuum
+radiative transfer in complex dust configurations around stellar objects and
+active galactic nuclei. I. Computational methods and capabilities. \aap,
+\textbf{401}, 405--418
+
+\item
+Tscharnuter, W.~M. (1987) A collapse model of the turbulent presolar nebula.
+\aap, \textbf{188}, 55
+
+\item
+Tscharnuter, W.~M and Gail, H.-P. (2006) 2-D protoplanetary accretion disks. I.
+Hydrodynamics, chemistry, and mixing processes. (in preparation)
+
+\item
+van Boekel, R., Min, M.,Leinert, C. and  20 coauthors (2004) The building blocks
+of planets within the `terrestrial' region of protoplanetary disks. \nat,
+\textbf{432}, 479--482
+
+
+\item Voshchinnikov, N.~V., Il'in, V.~B. and Henning,Th. (2005) Modeling the
+optical properties of composite and porous interstellar grains. \aap,
+\textbf{429}, 371--381
+
+\item Voshchinnikov, N.~V., Il'in, V.~B., Henning, Th. and Dubkova, D.~N.
+(2006) Dust extinction and absorption: the challenge of porous grains.
+\aap, \textbf{445}, 167--177
+
+\item
+Wehrstedt, M. and Gail, H.-P. (2002) Radial mixing in protoplanetary accretion
+disks. II. Time dependent disk models with annealing and carbon combustion.
+\aap, \textbf{385}, 181--204
+
+\item
+Wehrstedt, M. and Gail, H.-P. (2003) Radial mixing in protoplanetary accretion
+disks. V. Models with different element mixtures. \aap, \textbf{410}, 917--935
+
+\item
+Wehrstedt, M. and Gail, H.-P. (2006) Radial mixing in protoplanetary accretion
+disks. VII. 2-dimensional transport of tracers. (in preparation)
+
+\item
+Wiebe, D., Semenov, D., \& Henning, T.\ (2003) Reduction of chemical networks.
+I. The case of molecular cloud. \aap, \textbf{399}, 197--210
+
+\item
+Willacy, K., Klahr, H. H., Millar, T. J. and Henning, Th. (1998)
+Gas and grain chemistry in a protoplanetary disk. \aap, \textbf{338}, 995--1005
+
+\item
+Wolf, S., Henning, Th. and Stecklum, B. (1999) Multidimensional self-consistent
+radiative transfer simulations based on the Monte-Carlo method. \aap,
+\textbf{349}, 839--850
+
+\item
+Wuchterl, G. and Tscharnuter, W.~M. (2003) From clouds to stars.  Protostellar
+collapse and the evolution to the pre-main sequence I. Equations and evolution
+in the Hertzsprung-Russell diagram. \aap, \textbf{398}, 1081--1090
+
+\end{ownpubl}
+%
+%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+\section{Goals (Ziele)}
+%
+The present project is part of a larger one consisting of a
+theoretical, astrophysical part which will be conducted at the
+Institute for Theoretical Astrophysics (ITA) belonging to the
+recently founded Center of Astronomy (ZAH) of the Heidelberg
+University, and a complementary experimental, mineralogical part (the project
+\projlattard), which will be conducted at the Mineralogical
+Institute and at KIP (University of Heidelberg) in cooperation
+with the MPIA. One of the main goals is to bring together the
+expertise of astrophysics on pre-planetary accretion disks, their
+physics and their modeling at one hand, with the expertise of
+mineralogy and meteoritics on the formation of the Solar System
+and the expertise on phase transformation and solid state
+reactions on the other hand. The resulting synergy effects are
+expected to result in a significant acceleration of our
+understanding of the formation of the Solar System and other
+planetary systems.
+
+\subsubsection{First part: Modeling of 2-D disk structure.} (Principle
+investigator: W.~M. Tscharnuter)
+%\\[1ex]
+
+\noindent The codes existing at the Institute for Theoretical Astrophysics
+for modeling protoplanetary accretion disks in the 1-D (one-zone)
+and (1+1)-D approximation, respectively, and the 2-D radiation
+hydrodynamics code for accretion disks with axial symmetry will be
+continued to be developed to incorporate the important chemical
+and mineralogical processes parallel to the experimental progress
+in project \projlattard, which supplies the necessary input data
+for quantitative model calculations. In turn, the model
+calculations will show which type of materials and processes are
+important for accretion disks and for which ones, for this reason,
+high quality data are required to enable their realistic
+incorporation into model calculations.
+%\\[1ex]
+
+The  1-D and (1+1)-D codes are required for investigating the
+disk's evolution and its composition over periods of time of the
+order of at least $10^6$\,yrs or more. They will be used to study
+in detail the evolution of accretion disks and the chemical and
+mineralogical composition of the disk material. The models will
+cover the period from the end of the protostellar collapse phase
+till the onset of planetesimal formation. For the time being, such
+large periods cannot be covered with the available computer power
+by explicit 2-D (and the less by 3-D) codes. The existing explicit
+2-D code presently can cover periods at most of the order of
+$10^4$\,yr. This explicit 2-D code is required to study particular
+problems, for instance, to determine detailed flow structures and
+to study their implications on transport processes. The 1-D and
+(1+1)-D codes will be the working horses for modeling the long
+term evolution of pre-planetary disks over periods of the Myr scale
+and for providing initial and boundary conditions for studying
+particular problems in 2-D models.
+%\\[1ex]
+
+The first million years of evolution of pre-planetary disks are of
+particular interest since after planetesimals have formed the
+solid material is locked in these bodies and is shut off from
+further chemical and mixing processes in the disk. The
+evolutionary phase up to the formation of the planetesimals
+therefore pre-determines the compositions of the planets which in turn are
+formed from planetesimals. The subsequent evolution through the planetesimal
+phase will be considered in project \projdul, for which the present
+model calculations will provide the required information on their
+composition. However, in close cooperation with \projdul, early
+coagulation of the sub-micron dust particles up to the cm-size region
+will already be taken into account both in the (1+1)-D and 2-D models. 
+Here, it is of particular interest to model the effect of fractional condensation (Petaev \& Wood 1998, 2004), i.e. that coagulated mineral grains become isolated against solid-gas chemistry, thereby changing the abundance and composition of further condensing minerals.
+%\\[1ex]
+
+Model calculations will be performed which cover the domain
+of interest of stellar masses and total initial disk angular
+momentums, and in particular cover a wide region of
+metallicities. On this issue, detailed information will be
+available from ongoing projects (A8, B11) in SFB\,439. This will
+enable us to study the multitude of planetary systems which can be
+formed in the galaxy and their various compositions.
+%\\[1ex]
+
+An important goal of the project will be to model the composition
+of the primitive matrix material and the bulk composition of chondrites 
+and the dust material in cometary nuclei. This will bridge the gap between the
+copious information gained from laboratory analysis of the
+mineralogical and chemical composition of meteorites on the early
+processes in the Solar Nebula, and the ideas developed in
+astrophysics on protostellar and pre-planetary accretion disks. It
+will further enable to compare predictions from model calculations
+for the composition of planetesimals with observations of the ice
+and dust composition of cometary nuclei (cooperation with D. Wooden
+from NASA-Ames is planned for this comparison). Both types of comparison
+will provide important checks on the validity of the model
+calculations and the underlying concepts, since only for material
+from our own Solar System we have relics from the formation time
+of the system which can be analyzed in the laboratory.
+%\\[1ex]
+
+The results of the project will also provide information on the
+dust composition expected to exist in pre-planetary disks, that can
+be used as input for radiative transfer models in project \projwolf\ and
+the coagulation experiment \projblumtrie.
+%\\[1ex]
+
+In order to develop realistic models for the evolution of the dust
+component it is necessary to extend and improve the models for
+treating the growth and evaporation of dust and its chemical and
+thermal processing in the accretion disk. For many materials
+important for the pre-planetary disk only scarce or no information
+is available on their properties and on the processes responsible
+for their growth, evaporation, and interaction with the gas phase.
+This holds in particular for the Ca-Al-compounds and the iron
+bearing Mg-silicates. It is planned to close this gap in
+cooperation with project \projlattard\ which will study by
+laboratory experiments the vaporization, condensation, and
+annealing properties,
+%and the interaction with the gas phase of the materials
+for which presently no or only insufficient data are available for
+their incorporation into model calculations.
+%\\[1ex]
+
+The very final goal, that is, constructing fully 3-D models of
+pre-planetary accretion disks, is certainly beyond the first
+funding period of three years. With regard to the apparently
+ever-increasing computer power it is intended, however, to start
+with prelimininary, explorative 3-D studies. A cooperation with
+project C1 is planned. 3-D models could well be one of the main
+topics already for the second funding period.
+
+%\vspace{1em}
+%-------------------------------------------------------------------------------
+\subsubsection{Second part: Modeling of chemistry and dust.}
+(Principle investigators: H.-P. Gail and Th. Henning)
+%\\[1ex]
+
+\noindent In this part it is planned to study in detail the gas-phase
+chemistry, the related chemical reactions on dust grain surfaces,
+and the formation of ices of mixed composition. These processes
+determine the composition of the volatile materials contained in
+planetesimals beyond the snow line in accretion disks and will,
+for instance, allow to predict, and to compare with observations,
+the composition of the material in cometary nuclei, and the
+volatile input in asteroid bodies. But also the long term mineral
+evolution in the disk will be studied, for instance to determine
+whether chemical gradients develop as they are observed in Solar
+System material.
+%\\[1ex]
+
+A detailed hydrocarbon chemistry will be implemented to study this
+particular chemistry in the warm inner parts of the disk. The
+ion-molecule chemistry will be extended to allow for charging of
+dust grains.
+%\\[1ex]
+
+The calculations will be done by a self-consistent coupling
+between disk evolution, chemistry, and transport processes for
+time dependent disk models in the (1+1)-D approximation and for
+fully 2-D hydrodynamic models. The (1+1)-D models will allow
+to to construct spatially extended models covering the full
+region of planetary formation (for instance from 0.1 to 50 AU)
+and evolution periods of at least $10^6$ years, at the
+price of some simplifications for the transport processes which
+are unavoidable in this approximation. The 2-D hydrodynamic models
+of the first part, on the other hand, will allow to study more
+realistically the hydrodynamic phenomena and the transport and
+mixing process, but the modeling will be limited to periods of the
+order of at most $10^4$ yrs and to moderately extended zones of
+the disk because of high computational demands. Experience with
+such type of calculations is available from previous work
+(Gail \& Tscharnuter~2006, Tscharnuter \& Gail~2006).
+%\\[1ex]
+
+Models for the formation and destruction of dirty ice grains
+consisting of an icy body with inclusions of dust particles will
+be developed in analogy to corresponding models in aerosol
+physics. This includes the modeling of the early phases of the
+aggregation process, which will be done in close cooperation with
+project \projdul. A model for calculating the opacity of such
+mixed grains will be developed. The mixture of condensed phases
+contained in the dust aggregates will be determined in close
+cooperation with the first part of the project.
+%\\[1ex]
+
+The focus in this project will be on the early {\em actively
+accreting} phase of protoplanetary disks, and on dust grains
+smaller than about 1\,cm. This is the phase where the essential
+processes operate which determine the composition of the material
+of the planetesimals. Because of limited mixing of planetesimals
+between different zones in the accretion disk and since nearly all
+solid material of an accretion disk is locked in the planetesimals
+after their formation, the composition of the planets is already
+pre-determined by the composition of the planetesimals and the
+radial variation of planetesimal compositions across the accretion
+disk.
+%\\[1ex]
+
+Models will be calculated not only for Solar System elemental
+compositions but also for the spectrum of metallicities
+encountered in different regions of the galaxy and different
+stages of the galactic chemical evolution.
+
+
+%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+\section{Work schedule (Arbeitsprogramm)}
+
+\subsection{Methods}
+
+%...............................................................................
+\subsubsection{Basic modeling tools:}
+%
+Both parts of this project will start from \emph{existing}
+numerical codes for solving the (1+1)-D and/or 2-D radiative
+hydrodynamic structure and evolution of protoplanetary accretion
+disks, including diffusion and transport processes (Gail 2001,
+2004; Wehrstedt \& Gail~2003, 2006; Tscharnuter \& Gail 2006). The
+project will focus on the development of detailed and as realistic
+as possible solid-state and gas-phase chemistry within these disk
+models coupled with transport processes and radiative transfer.
+%\\[1ex]
+
+Our model programs will be extended to construct time dependent
+evolutionary models of accretion disks in the 1-D, (1+1)-D, and
+2-D approximation. The equations for the disk structure are
+coupled with the system of advection-diffusion-reaction equations
+for the chemistry of the gas phase and the chemical and physical
+processes for all dust components.  Since dust grains formed from
+the same material, but with different radii, have to be treated as
+separate components, we have already in the one-zone approximation
+to deal with a system of several hundred nonlinear coupled
+parabolic differential equations. Their solution offered no
+particular problems in the model calculations performed up to now.
+Therefore, there is an excellent prospect that an extension to
+even bigger systems for the more realistic modeling of the
+chemistry and of transport processes in pre-planetary disks
+intended for the present project will be almost straightforward.
+%\\[1ex]
+
+Agglomeration processes will be implemented by applying methods
+which have proven efficient and stable in aerosol science. It will
+also be tested if a simplified treatment of coagulation on the
+basis of the method of Deuflhard and Wulkow (1989), the discrete
+Garkin approximation, is of sufficient accuracy to treat the
+initial agglomeration process up to the point where cm-sized
+aggregates are formed. This would be less time consuming than a
+direct solution of the set of equations for agglomeration.
+%\\[1ex]
+
+In case self-gravity of the disk is to be taken into account
+we shall use an efficient Poisson solver which is based on an
+appropriate multi-grid algorithm. As far as the numerical solution
+of the 2-D hydrodynamical equations is concerned, standard
+explicit methods with operator splitting will be applied; the
+energy equation together with the moment equations for the
+radiation field demands an implicit solver because of the
+prohibitively low Courant timesteps forced by optically thin
+regions in the disk. The solution is obtained by a straightforward
+Newton-Raphson procedure in combination with the GMRES algorithm
+for solving the adjoint linearized equations iteratively. The
+closure of the moment equations will be achieved by using the
+Eddington factors (e.\,g., Stone et al.~1992) which are known
+quantities as soon as the 2-D radiative transfer problem is
+solved, e.\,g., by the method of short characteristics (e.\,g.,
+Dullemond \& Turolla \cit{2000};
+van Noort et al.~2002; Kor{\v c}{\'a}kov{\'a} \& {Kub{\'a}t}
+2005).
+%\\[1ex]
+
+With increasing complexity of the processes to be modeled and the
+increasing number of species the computational time requirements
+will become serious. For this reason the 1-D model program will be
+further developed parallel to the (1+1)-D program for the purpose
+of testing models and algorithms before they are implemented in
+the (1+1)-D or finally transferred to the fully 2-D hydrodynamic
+model. The 1-D model calculations and, at least during the first
+phase of the project, the (1+1)-D model calculations can be done
+with the local computer resources of the ITA. Later it will
+certainly become necessary to perform the (1+1)-D and, \emph{a
+fortiori}, 2-D calculations on parallel computers. This can and
+will be done, e.\,g., at the parallel clusters which are available
+at institutions of the University of Heidelberg (ZAH, IWR) and at
+the MPIA.
+
+%*******************************************************************************
+\medskip
+\subsection{Schedule}
+%  Zu 7.2  Schedule
+
+\medskip\noindent%
+\textbf{First part: Modeling of 2-D disk structure}
+
+%\bigskip
+\subsubsection{First year:}
+To put the project on firm grounds, first of all, several, partly
+substantial extensions of the existing (1+1)-D and 2-D radiation
+hydrodynamical code must be worked
+out. They will comprise the following items:\\
+%
+(i) \emph{Self-gravity} of the disk material has already a
+noticeable influence on the vertical pressure structure if the mass of the
+disk exceeds only a few percent of the central star's mass. We
+plan to implement an appropriate multi-grid algorithm to solve the
+Poisson equation.\\
+%
+(ii) \emph{Radiative transfer} has been dealt with exclusively by using the
+Eddington approximation with flux limiter. We plan to implement the
+short-characteristics method to solve the 2-D radiation transport
+problem. We will use the method described in Dullemond \& Turolla
+(\cit{2000}). The code for this will be provided by C.\ P.\ Dullemond (PI of
+project C2). The resulting Eddington factors will then be used to close the
+moment equations describing the coupling between matter and radiation.\\
+%
+(iii) \emph{Coagulation} processes which change the size
+distribution of the dust particles are the key to form meso- and
+macroscopic solid objects out of initially sub-micron dust grains.
+To implement a suitable algorithm for solving the coagulation
+equations into the 2-D code as efficiently as possible will make
+use of the results and the experience to be compiled in project
+\projdul.\\
+%
+(iv) \emph{Sedimentation and general drift motions} of larger dust
+grains relative to the gas will be allowed for by using the
+concept of the ``asymptotic terminal grain velocity''. The basic
+assumption here is that the exchange of momentum between the
+various gas and dust components of the disk material is in a
+stationary state at every instant of time. Within this approach
+the velocities of all components relative to each other are
+constant. As an important consequence, we need only deal with the
+total momentum of the system. Hence, no extension of the equations
+of motion is necessary.
+\\
+%
+The corresponding program units for the 2-D model program will be
+developed in part by the PIs of the project, and only in part by the
+PhD student. This holds for all parts of the project A2.
+%\\[1ex]
+
+%
+\subsubsection{Second year:}
+We will continue to work on the implementation of chemical and
+mineralogical processes, since new relevant results of the
+experiments carried out in project A1 will become available
+presumably not until the end of the first year. The topics will
+be:\\
+%
+(v) Detailed modeling of condensation and evaporation mechanisms
+of Mg-Fe-silicates.\\
+%
+(vi) Combustion (oxidation) of soot/graphite particles and the
+ensuing gas-phase chemistry of hydrocarbons.\\
+%
+(vii) Growth of enstatite layers on forsterite grains.
+\\
+(viii) Chemistry and mineralogy of iron and iron-compounds,
+e.\,g., troilite (FeS).
+%\\[1ex]
+
+\subsubsection{Third year:}
+This last period will be mainly devoted to build up more
+sophisticated models of the ice mantles covering the refractory
+grains at low temperatures. In case new experimental data will be
+available, we will be able to model Ca-Al-minerals in more detail.
+We also plan to step into the isotope chemistry of
+hydrogen/deuterium, carbon and oxygen. However, we will focus our
+efforts mainly on the investigation of ice-coated grains:
+\\
+(ix) ``Pure'' ice layers of H$_2$O, CO, etc.\ are as such
+relatively easy to deal with. However, there is the important
+complication that, in the course of the condensation of H$_2$O, a
+certain amount of still more volatile species, like CO, will be
+built into the growing water-ice layer to form so-called
+clathrates.
+
+\bigskip
+%-------------------------------------------------------------------------------
+\medskip\noindent{\bf Second part: Modeling of chemistry and dust}
+
+%...............................................................................
+%\bigskip
+\subsubsection{First year}
+The existing 1-D and (1+1)-D codes will be extended to handle an
+as complete as possible gas phase chemistry, in particular with
+respect to the chemistry of hydrocarbons, appropriate for the
+inner disk regions inside $\approx20$\,AU, and excluding the disks
+upper photospheric layer. Freezing of ices on dust grain surfaces
+and dust charging will be included. The development of the gas
+phase chemistry modeling will be mainly concentrated on the first
+year, since a lot of testing and explorative calculations have to
+be done for preparing the implementation of a realistic but not
+too large chemistry in the more complex 2-D hydro-code.
+%\\[1ex]
+
+The chemistry of the upper photospheric layers of accretion disks
+will be modelled in detail by accurate computation of the
+penetration of high-energy stellar and interstellar radiation (UV,
+X-rays) fields into the disk by mean of multi-dimensional line and
+continuum radiative transfer. The calculated 2-D distributions of
+the impinging radiation fields will be used to compute accurate
+photo-dissociation rates of various molecules by spectral averaging
+of the corresponding frequency-dependent photo-rates, which likely
+will affect the resulting isotopic fractionation. A special
+emphasis will be given to the feasible description of the X-ray
+chemical reactions in the inner disk zone, using new observational
+data on the X-ray activity and variability of the young low-mass
+stars. Another important goal will be to take adequate grain size
+distribution -- especially PAH-like tiny grains -- into account in
+the chemical code.
+%\\[1ex]
+
+The development of complex dust extinction models for agglomerate
+particles and their integration into the codes will be started.
+This work requires a gradual development from simple to complex
+models and will probably extend over the whole three year period.
+A close cooperation with  N.~V. Voshchinnikov from St. Petersburg
+is planned for this part of the project.
+%\\[1ex]
+
+Methods for numerical calculation of dust growth and evaporation
+processes including growth of surface layers, e.\,g., enstatite
+layers on olivine cores, and cation diffusion in mineral grains,
+e.\,g., for treating conversion of iron bearing silicates into
+magnesium rich silicates, will be tested and implemented in
+cooperation with the first part of the project. These developments
+serve as test cases for the corresponding developments in the
+first part, where limitations of computational time requirements
+do not allow extensive tests of different methods to find the most
+efficient ones. Such tests will be performed in this second part
+of the project.
+%\\[1ex]
+
+During the first year the work will concentrate on dust from the
+important Si-Mg-Fe system, since part of the required data on
+mineral properties for such minerals are already available from
+the literature. These data will suffice for our work during the
+initial start-up phase.
+%\\[1ex]
+
+At the same time the codes will be used to provide first
+meaningful results for the mineral processing in the disk. This
+will allow to define more definitely which type of silicate dust
+mixtures exist in different parts of protoplanetary disks and
+which types of experimental data on minerals are needed from
+project \projlattard\ for further progress with disk modeling.
+%\\[1ex]
+
+%...............................................................................
+\subsubsection{Second year}
+During the second year first results from the laboratory
+experiments in project \projlattard\ are expected to become
+available. The development of models for calculating the mineral
+composition in the accretion disk will be continued and extended
+on the basis of these data. It will be possible to pin down more
+exactly which type of experimental data are precisely needed for
+further progress in dust modeling.
+%\\[1ex]
+
+Also the modeling of the dust species from the Ca-Al-silicate
+group will be started during this period, since it is expected
+that first results for the data required for modeling these dust
+components of protoplanetary disk become available after the first
+year.
+%\\[1ex]
+
+The results of the modeling of disk structure and evolution in
+this part and the first part of the project will allow to make
+realistic predictions for the dust mixture in the disk. The
+results obtained in the first part of the project from 2-D
+hydrodynamic models will also give insight into the global
+hydrodynamic mixing and transport processes in the disk, which
+determine the spatial and temporal distribution of different dust
+components in the disk. This will serve as basis for the further
+development of dust extinction models for the accretion disk.
+%\\[1ex]
+
+It is expected that, after the first year, the first detailed
+results from project \projdul\ also become available which can
+serve to determine the degree of agglomeration of dust in
+accretion disks. They will be used as a guideline to implement
+dust coagulation also in the (1+1)-D models used in this project,
+since this is required for the further evolution of the dust
+extinction models.
+%\\[1ex]
+
+%...............................................................................
+\subsubsection{Third year}
+In the third year the interactive improvement of models for the
+dust evolution between theoretical model calculations in this
+project and the laboratory experiments done in \projlattard\  will
+be continued and extended. It is expected  that it will be
+possible in cooperation with the first part of this project, with
+project \projdul, and the other projects to get realistic models
+for the dust+ice composition in accretion disks. These models will
+be confronted to comparison with observations and laboratory
+investigations of dust composition in comets and meteorites.
+%\\[1ex]
+
+It is expected that the codes for the calculation of disk
+structures and evolution will be sufficiently developed to enable
+first comparisons with observations of the early Solar System
+formation as derived from analysis of meteorites. The model
+calculations will be compared to timings of processes in the early
+Solar System as derived for instance in project \projtrie, or to
+results for compositional variations of meteoritic parent bodies
+in different zone of the early Solar System. This will allow
+further constraining of the models for disk evolution.
+%\\[1ex]
+
+Models for protoplanetary disks with the full spectrum of dust
+processing and the initial stage of coagulation will be calculated
+for the range of metallicities and abundances of the rock forming
+elements encountered during the chemical evolution of the Milky
+Way in order to constrain when and where planetary systems can be
+formed in the Milky Way.
+
+%*******************************************************************************
+\subsection{Literature}
+%
+% Here follows a general literature list related to the topic of the
+% proposal, just like a literature list for a scientific paper.
+%
+% AGAIN ONLY EXAMPLES ARE LISTED NOW
+%
+\begin{literature}
+
+\item
+Aikawa, Y., van Zadelhoff, G.~J., van Dishoeck, E.~F., and Herbst, E.\ (2002)
+Warm molecular layers in protoplanetary disks. \aap, \textbf{386}, 622--632
+
+
+\item
+Alexander, C.~M.~O., and Keller, L.~P. (2006) Are There Clues to the Dust
+'Annealing' Process in Protoplanetary Disks in IDPs? \textit{37th Annual Lunar and Planetary Science Conference}, 2325
+
+\item
+Alexander, C.~M.~O., Boss, A.~P., Keller, L.~P., Nuth, J.~A. and Weinberger
+(2006) Astronomical and Meteoritic Evidence for the Nature of Interstellar Dust
+and its Processing in Protoplanetary Disks. in: \textit{Protostars and
+Planets~V\/}, eds. B. Reipurth, D. Jewitt and K. Keil.\\ 
+  {\tt http://ifa.hawaii.edu/UHNAI/ppv.htm}
+%\\{\tt http://pasp.byu.edu/FTP\%5FSite/E\%2Dbook\%5F2005/341/}
+
+\item
+All\`egre, C.~J., Manh\`es, G. and Lewin, E. (2001) Chemical composition of the
+Earth and the volatility control on planetary genetics. \epsl, \textbf{185},
+49--69
+
+\item
+Asplund, M., Grevesse, N. and Sauval, A.~J. (2005) The Solar Chemical
+Composition. \textit{ASP Conf. Ser. 336: Cosmic Abundances as Records of Stellar
+Evolution and Nucleosynthesis}, eds. T.~G. Barnes and F.~N. Bash, F.~N.
+(San Francisco: Astronomical Society of the Pacific), 25--38
+
+\item
+Bergin, E.~A., Aikawa, Y., Blake, G.~A. and van Dishoeck, E.~F. (2006) The
+Chemical Evolution of Protoplanetary Disks.  in: \textit{Protostars and
+Planets~V\/}, eds. B. Reipurth, D. Jewitt and K. Keil.\\ 
+  {\tt http://ifa.hawaii.edu/UHNAI/ppv.htm}
+%ArXiv Astrophysics e-prints, arXiv:astro-ph/0603358
+
+\item
+Bockel{\'e}e-Morvan, D., Gautier, D., Hersant, F., Hur{\'e}, J.-M. and Robert,
+F. (2002) Turbulent radial mixing in the solar nebula as the source of
+crystalline silicates in comets. \aap, \textbf{384}, 1107--1118
+
+\item
+Boss, A.~P. (2004) Evolution of the Solar Nebula. VI. Mixing and Transport of
+Isotopic Heterogeneity. \apj, \textbf{616}, 1265-1277
+
+\item
+Bouvier, J., Alencar, S.~H.~P., Harries, T.~J., Johns-Krull C.~M. and Romanova, M.~M. (2006) Magnetospheric accretion in classical T Tauri stars.  In:
+Protostars and Planets V, eds. B. Reipurth, D. Jewitt and K. Keil.\\ 
+  {\tt http://ifa.hawaii.edu/UHNAI/ppv.htm}
+
+\item
+Ciesla, F.~J. and Cuzzi, J.~N. (2006) The Evolution of the Water Distribution in
+a Viscous Protoplanetary Disk. \textit{ArXiv Astrophysics e-prints},
+arXiv:astro-ph/0511372
+
+\item
+D'Alessio, P., Calvet, N. and Woolum, D.~S. (2005) Thermal Structure of
+Protoplanetary Disks. In:\textit{ASP Conf. Ser. 341: Chondrites and the
+Protoplanetary Disk}, eds. A.~N. Krot,  E.~R.~D. Scott and B. Reipurth, p.
+353--372
+{\tt http://pasp.byu.edu/FTP\%5FSite/E\%2Dbook\%5F2005/341/}
+
+\item
+Dent, W.~R.~F., Torrelles, J.~M., Osorio, M., Calvet, N., \& Anglada, G.\ (2006)
+The circumstellar disc around the Herbig AeBe star HD169142.
+\mnras, \textbf{365}, 1283--1287
+
+\item
+Deuflhard, P. and M. Wulkow (1989) Computational Treatment of Polyreaction
+Kinetics. \textit{IMPACT Comput. Sci. Eng.}, \textbf{1}, 269
+
+\item
+{Dullemond}, C.\ P. and {Turolla}, R. (2000) An efficient algorithm for 
+two-dimensional radiative transfer in axisymmetric circumstellar 
+envelopes and disks. \aap, \textbf{360}, 1187
+
+\item
+Dullemond, C.~P., Apai, D. and {Walch}, S. (2006) Crystalline Silicates as a
+Probe of Disk Formation History. \apjl, \textbf{640}, L67-L70
+
+\item
+Duschl, W.~J., Strittmatter, P.~A. and Biermann, P.~L. (2000) A note on
+hydrodynamic viscosity and selfgravitation in accretion discs. \aap,
+\textbf{312}, 1123--1132
+
+\item
+Fegley Jr., B. and Prinn, R.~G. (1989) Solar nebula chemistry:
+Implications volatiles in the solar system. In: \textit{The Formation and Evolution of Planetary Systems}, eds. H. Weaver and L. Danley (Cambridge University
+Press, Cambridge), 171--211
+
+\item
+Harker, D.~E. and Desch, S.~J. (2002) Annealing of Silicate Dust by Nebular
+Shocks at 10 AU. \apjl, \textbf{565}, L109--L112
+
+\item
+Harker, D.~E., Woodward, C.~E., Wooden, D.~H. (2005) The Dust Grains from
+9P/Tempel 1 Before and After the Encounter with Deep Impact. \sci, \textbf{310},
+278--280
+
+\item
+Hasegawa, T.~I., and Herbst, E.\ (1993) Three-Phase Chemical Models of Dense
+Interstellar Clouds - Gas Dust Particle Mantles and Dust Particle Surfaces.
+\mnras, \textbf{263}, 589--606
+
+\item
+Hasegawa, T.~I., Herbst, E., and Leung, C.~M.\ (1992) Models of gas-grain
+chemistry in dense interstellar clouds with complex organic molecules.
+\apjs, \textbf{82}, 167--195
+
+\item
+Helling, C., Winters, J.~M., and Sedlmayr, E.\ (2000) Circumstellar dust shells
+around long-period variables. VII. The role of molecular opacities.
+\aap, \textbf{358}, 651--664
+
+\item
+Humayun, M. and Clayton, R.~N. (1995) Potassium isotope geochemistry: Genetic
+implications of volatile element depletion. \gca, \textbf{59}, 2131--2148
+
+\item
+Ilgner, M. and Nelson, R.~P. (2006) On the ionisation fraction in protoplanetary
+disks. II. The effect of turbulent mixing on gas-phase chemistry. \aap,
+\textbf{445}, 223--232
+
+\item
+Kimura, H., Kolokolova, L. and Mann, I. (2006) Light scattering by cometary dust
+numerically simulated with aggregate particles consisting of identical spheres.
+\aap, \textbf{449} 1243--1254
+
+\item
+Kor{\v c}{\'a}kov{\'a}, D. and Kub{\'a}t, J. (2005) Radiative transfer in
+moving media. II. Solution of the radiative transfer equation in axial symmetry.
+\aap, \textbf{440}, 715--725
+
+\item
+Lahuis, F., van Dishoeck, E.~F., Boogert, A.~C.~A. and 8 coauthors (2006) Hot
+Organic Molecules toward a Young Low-Mass Star: A Look at Inner Disk Chemistry.
+\apjl, \textbf{636}, L145-L148
+
+\item
+Langer, W.~D., van Dishoeck, E.~F., Bergin, E.~A. and 4 coauthors (2000)
+Chemical Evolution of Protostellar Matter. In: 
+\textit{Protostars and Planets IV}, eds. V. Mannings, A.~P. Boss, S.~S. Russell (Tucson: University of Arizona
+Press) p. 29--58
+
+\item
+Millar, T.~J., Farquhar, P.~R.~A., and Willacy, K.\ (1997) The UMIST Database
+for Astrochemistry 1995. \aaps, \textbf{121}, 139--185
+
+\item
+Morfill, G.~E. and V\"olk, H.~J. (1984) Transport of dust and vapor and chemical
+fractionation in the early protosolar cloud.  \apj, \textbf{287}, 371--395
+
+\item
+Min, M., Dominik, C., Hovenier, J.~W., de Koter, A. and Waters,
+L.~B.~F.~M. (2006) The 10\,$\mu$m amorphous silicate feature of fractal
+aggregates and compact particles with complex shapes. \aap, \textbf{445},
+1005--1014
+
+\item
+Nagahara, H. and Ozawa,  K. (1996) Evaporation of forsterite in H$_2$ gas.
+\gca, \textbf{60}, 1445--1459
+
+\item
+Natta, A., Testi, L., Calvet, N., Henning, Th., Waters, R. and Wilner, D. (2006)
+Dust in Proto-Planetary Disks: Properties and Evolution. In: Protostars and
+Planets V, eds. B. Reipurth, D. Jewitt and K. Keil.\\ 
+  {\tt http://ifa.hawaii.edu/UHNAI/ppv.htm}
+
+\item
+Nejad, L.~A.~M.\ (2005) A Comparison of Stiff ODE Solvers for Astrochemical
+Kinetics Problems. \apss, \textbf{299}, 1--29
+
+\item
+Norman, M.~L. and Winkler K.-H.~A. (1986) 2-D Eulerian Hydrodynamics with Fluid
+Interfaces, Self-Gravity and Rotation. In: \textit{NATO Advanced Study Research Workshop on Astrophysical Radiation Hydrodynamics}, eds.  K.-H.~A. Winkler and
+M.~L. Norman (Reidel, Dordrecht), 187--221
+
+\item
+Pollack, J.~B., Hollenbach, D., Beckwith, S., Simonelli, D.~P., Roush, T.
+and Fong, W. (1994) Composition and radiative properties of grains in molecular
+clouds and accretion disks. \apj, \textbf{421}, 615--639
+
+\item
+Prinn, R.~G. (1993) Chemistry and evolution of gaseous circumstellar
+disks. In \textit{Protostars and Planets III}, Ed. E.~H. Levy, J.~I. Lunine
+(University of Arizona Press, Tucson), 1005--1028
+
+\item
+Prinn, R.~G. and Fegley Jr., B. (1989) Solar nebula chemistry: Origin of
+planetary, satellite, and cometary volatiles. In: \textit{Origin and Evolution
+of Planetary and Satellite Atmospheres}, eds. S.~K. Atreya, J.~B. Pollack and
+M.~S. Matthews (University of Arizona Press, Tucson),  78--136
+
+\item
+Rettig, T.~W., Brittain, S.~D., Gibb, E.~L., Simon, T. and Kulesa, C.(2005)
+CO Emission and Absorption toward V1647 Orionis (McNeil's Nebula). \apj,
+\textbf{626}, 245--252
+
+\item
+Rietmeijer, F.~J.~M., Hallenbeck, S.~L., Nuth, J.~A. and Karner, J.~M. (2002),
+Amorphous Magnesiosilicate Smokes Annealed in Vacuum: The Evolution of Magnesium
+Silicates in Circumstellar and Cometary Dust. \ica, \textbf{156},  269--286
+
+\item
+Stone, J.~M., Mihalas, D. and Norman, M.~L. (1992) ZEUS-2D: A radiation
+magnetohydrodynamics code for astrophysical flows in two space dimensions.
+III - The radiation hydrodynamic algorithms and tests. \apjs, \textbf{80}, 819--845
+
+\item
+Tachibana, S., Tsuchiyama, A. and Nagahara, H. (2002) Experimental study of
+incongruent evaporation kinetics of enstatite in vacuum and in hydrogen gas.
+\gca, \textbf{66}, 713--728.
+
+\item
+Taylor, S.~R. (1988) Planetary compositions. In: \textit{Meteorites and the
+Early Solar System}, eds. M.~S. Matthews and J.~F. Kerridge (University of Arizona press, Tucson), p. 512.
+
+\item
+Turner, N.~J., Willacy, K., Bryden, G. and Yorke, H.~W. (2006) Turbulent Mixing
+in the Outer Solar Nebula. \apj, \textbf{639}, 1218--1226
+
+\item
+van Noort, M., Hubeny, I. and Lanz, T. (2002) Multidimensional Non-LTE Radiative
+Transfer. I. A Universal Two-dimensional Short-Characteristics Scheme for
+Cartesian, Spherical, and Cylindrical Coordinate Systems. \apj, \textbf{568},
+1066--1094
+
+\item
+Voshchinnikov, N.~V. and Mathis, J.~S. (1999) Calculating cross sections
+of composite interstellar grains. \apj, \textbf{526}, 257--264
+
+\item
+Willacy, K. and Langer, W.~D.\ (2000) The Importance of Photoprocessing in
+Protoplanetary Disks. \apj, \textbf{544}, 903--920
+
+\item
+Wooden, D.~H., Butner, H.~M., Harker, D.~E. and Woodward, C.~E. (2000) Mg-Rich
+Silicate Crystals in Comet Hale-Bopp: ISM Relics or Solar Nebula Condensates?
+\ica, \textbf{143}, 126--137
+
+\item
+Wooden, D.~H., Harker, D.~E. and Brearley, A.~J. (2005) Thermal Processing and
+Radial Mixing of Dust: Evidence from Comets and Primitive Chondrites.
+In: \textit{ASP Conf. Ser. 341: Chondrites and the Protoplanetary Disk},
+eds. A.~N. Krot,  E.~R.~D. Scott and B. Reipurth, p. 774--810
+\\{\tt  http://pasp.byu.edu/FTP\%5FSite/E\%2Dbook\%5F2005/341/}
+
+\item
+Wooden, D.~H., Desch, S., Harker, D., Gail, H.-P. and Keller, L. (2006) Comet
+grains and Implications for Heating and Radial Mixing in the Protoplanetary Disk.
+In: \textit{Protostars and Planets V}, eds. B. Reipurth, D. Jewitt and K. Keil.\\
+ {\tt http://www.ifa.hawaii.edu/UHNAI/ppv.htm}
+
+\item
+Wuchterl, G. (1990) Hydrodynamics of Giant Planet Formation I: Overviewing the
+$\kappa$-Mechanism. \aap, \textbf{238}, 83--94
+
+\item
+Wuchterl, G. (1991) Hydrodynamics of Giant Formation II: Model Equations and
+Critical Mass. \ica, \textbf{91}, 39--52
+
+\item
+Wuchterl, G., 1991b, Hydrodynamics of Giant Planet Formation III: Jupiter's
+Nucleated Instability. \ica, \textbf{91}, 53--64
+
+\end{literature}
+
+%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+\section{External/International collaborations}
+\begin{collablist}
+\item[D.~Wooden (NASA-Ames)] It is planned to cooperate with
+respect to observations of dust from comets. Dr. Wooden is one of
+the leading experts in modeling the emission from cometary dust
+and analyzing the structure and composition of cometary dust by
+remote sensing.
+
+\item[N.~V. Voshchinnikov (Astronomical Institute of St.~Petersburg University)]
+It is planned to cooperate with respect to developing models for the opacity of
+particle agglomerates. Dr. Voshchinnikov is one of the leading experts in this
+field.
+
+\item[E. Herbst (Ohio State University)] A cooperation is planned to develop
+models for the formation of complex organic compounds in protoplanetary disks.
+
+\item[H. Mutschke (Uni Jena)] A cooperation is planned for laboratory determination of optical constants and investigations of extinction by complex particles.
+
+\end{collablist}
+
+
+\section{Link to other projects of the Forschergruppe}
+\begin{linkproj}
+
+\item[\projlattard] A strong cooperation is planned between
+\projlattard\ and the present project to identify the main
+processes responsible for the chemical and mineralogical evolution
+of the disk material, to apply the data on mineral properties
+determined by laboratory experiments in project \projlattard\ to
+evolutionary models for the protoplanetary disk, and to determine
+which kind of laboratory input data are most urgently required for
+a realistic disk modeling and should be determined by experiments.
+
+\item[\projwolf{}] The results from the models can be used in project
+\projwolf{} to predict mineral emission features in the spectra of
+protoplanetary disks.
+\item[\projtrie{}] Chronometry of planetesimal formation
+(project~\projtrie{}) places constraints on the time scales to establish
+differences in chemical compositions of the solids.
+\item[\projblumtrie{}] The abundances of minerals computed in this
+project can be used in project \projblumtrie{} to construct realistic
+multi-phase agglomerates for collision experiments.
+\item[\projklahr{}] With \projklahr{} we will collaborate on 
+the numerical treatment of energy transport through radiation.
+\item[\projdul{}] A collaboration with the
+coagulation project \projdul{} is envisioned, because coagulation limits the
+gas-solid reactions, and because the coagulation modeled in project
+\projdul{} depends on properties and abundances of minerals.
+\end{linkproj}
+
+\section{Team members (Zusammensetzung der Arbeitsgruppe)}
+%
+% NOTE: Only list non-DFG-funded team members.
+% NOTE: Also list technical assistants, students etc involved in the project
+%
+\begin{teamlist}
+\item[Tscharnuter, W.~M., Prof.~Dr. (ITA, C4)] principal investigator\\
+Numerical hydrodynamics, radiative transfer, modeling of accretion disks,
+modeling of chemistry.
+
+\item[Gail, H.-P., Prof.~Dr. (ITA, Wiss. Ang.)] principal investigator\\
+Modeling of mineralogical processes and of gas phase chemistry, modeling of
+accretion disks and radiative transfer
+
+\item[Henning, Prof.~Dr. (MPIA, C4)] principal investigator\\
+Modeling of dust extinction, modeling of chemistry in accretion disks,
+analysis of observations of accretion disks
+
+\item[Lattard, D.., Prof.~Dr. (Min. Inst., C3)] co-investigator\\
+Laboratory investigations of annealing of amorphous materials and
+of vaporization/condensation processes of interstellar mineral
+analogues.
+
+\item[Trieloff, M., Dr.~habil (Min. Inst, Wiss. Ang.)] co-investigator, \mbox{}\\
+Laboratory investigations of vaporization/condensation processes of
+interstellar mineral analogues, and of annealing of amorphous materials.
+
+\item[Semenov, D., Dr. (MPIA, Wiss. Ang)] cooperating scientist\\
+Cooperation with respect to extinction models for composite dust particles and
+with respect to modeling the gas phase chemistry in accretion disks.
+
+\item[J\"ager, C., Dr. (MPIA, Wiss. Ang)] cooperating scientist\\
+Investigations of annealing, nanoparticles.
+
+% \item[N.N., PhD-Student 1 (ITA, E13/2)]\mbox{}\\
+% This PhD student is one of the two new students for this project. The
+% student is financed by DFG.
+% 
+% \item[N.N., PhD-Student 2 (ITA, E13/2)]\mbox{}\\
+% This PhD student is one of the two new students for this project. The
+% student is financed by the ITA.
+
+\end{teamlist}
+\vspace{1em}
+
+
+
+\section{Funding requested}
+We request funding for only {\em one} of the two PhD student positions for
+this project. The second one will be financed by the host institution. 
+%The following table gives an overview of requested
+%funding:
+Overview over requested funding:
+\vspace{1\baselineskip}\\
+%
+% The table that follows is the overview over the full requested
+% funding, including the positions, travel, consumables and ``other
+% costs'' (which might include transportation costs of radioactive
+% material or the rent of a drop tower or such).
+%
+\centerline{\begin{tabular}{||l|r|r|r||} \hline \hline & Year 1 & Year 2 &
+Year 3 \\ \hline %
+Personnel (1 PhD-students: E13/2)   & \hfil24\,000 & 24\,000 & 24\,000 \\
+Consumables                        & \hfil 400 & \hfil 400 &\hfil 400 \\
+Travel                             & \hfil3\,000 & \hfil3\,000 &\hfil3\,000 \\
+Other costs                        & \hfil 0 & \hfil 0 & \hfil 0 \\
+\hline
+{\bf Total:}                       & \hfil27\,400& \hfil27\,400& \hfil27\,400\\
+\hline
+\hline
+\end{tabular}
+}
+\vspace{1em}\\
+Below these costs are explained in more detail:
+
+\subsection{Personnel (Personalbedarf)}
+\begin{teamlist}
+\item[PhD-Student 1 (E13/2)]\mbox{}\\
+The student will implement into the 2-D hydro-code the processes
+for the evolution of the dust components in the accretion disk:
+evaporation, condensation, annealing, gas-solid chemical reactions
+and -- in cooperation with project \projdul\ -- dust agglomeration
+and particle drift. Parallel to this work model calculations for
+the evolution of disks and their chemical and mineralogical
+composition will be performed. The work will be based in part on
+existing 1-D and (1+1)-D codes for the evolution of accretion
+disks including chemistry and mineralogical processes. Since a lot
+of know-how and software has already been developed in previous
+studies the work can be performed within the frame of a PhD
+thesis.
+
+\item[PhD-Student 2 (E13/2)]\mbox{}\\
+The student will study in detail the gas-phase chemical processes
+including the surface reaction on dust particles and the
+condensation of ice mixtures in protoplanetary accretion disks. At
+the same time, in cooperation with the team members of the
+project, models for the extinction by complex dust-ice
+agglomerates will be developed. These studies will be combined
+with model calculations based on existing 1-D and (1+1)-D codes
+and the 2 D hydro-code developed in the first part of the project.
+Since a lot of know how and software has already been developed in
+previous studies the work can be performed within the frame of a
+PhD thesis.
+
+\end{teamlist}
+
+\subsection{Consumables (Verbrauchsmaterial)}
+Running costs for computing (supply for inkjet, laser and other printers;
+storage media like DVD$\pm$R(W)s, minor software updates and licenses)
+on average 400 EUR/year.
+%\\[1ex]
+\\
+
+%
+%Estimated cost per year:\vspace{1\baselineskip}\\
+\centerline{\begin{tabular}{||l|r|r|r||}
+\hline \hline & Year 1 & Year 2 & Year 3 \\
+\hline
+%
+running costs   & \hfil 400 & 400 & 400 \\
+\hline
+\hline
+\end{tabular}
+}
+
+\subsection{Travel expenses in addition to Project Z (Reisekosten)}
+%
+% Here only travel expenses not related to usual regular Forschergruppe
+% meetings and the overall per capita budget for conferences.
+%
+The PhD students and PIs have to travel for cooperation with other projects
+to other nodes. In particular the cooperation with the projects in
+T\"ubingen and M\"unster will be important. Estimated expenses per travel
+will be about 500 EUR per week (hotel), plus 70 EUR for travel to T\"ubingen
+and 150 EUR to M\"unster.  About 2 week-long travels to partner institutes
+are planned for each of
+the two students per, and totally 2
+travels per year for the three PIs.
+%\\[1ex]
+\\
+
+%
+%Estimated cost per year:\vspace{1\baselineskip}\\
+\centerline{\begin{tabular}{||l|r|r|r||}
+\hline \hline & Year 1 & Year 2 & Year 3 \\
+\hline %
+Travel between cooperating institutes (students)  &
+ \hfil2\,000 & 2\,000 & 2\,000 \\
+Travel between cooperating institutes (PIs)  &
+ \hfil1\,000 & 1\,000 & 1\,000 \\
+\hline
+{\bf Total:}& \hfil3\,000& \hfil3\,000& \hfil3\,000\\
+\hline
+\hline
+\end{tabular}
+}
+
+\subsection{Other costs (Sonstige Kosten)}
+None\\
+
+
+\section{Preconditions for carrying out the project at home institution}
+%
+% This is one of the main subsections of a DFG Normalverfahren proposal.
+% Several of the subsubsections in this subsection we have placed in their
+% own subsections above (like team members, collaborations). What remains
+% are the following three subsections. For those not familiar with these,
+% we refer to the DFG Merkblatt on Normalverfahren-proposals.
+%
+\subsection{Scientific equipment available (Apparative Ausstattung)}
+%
+% Please list those larger instruments available to you for the project (if
+% applicable also larger computer equipment in case you need substantial
+% amounts of computer time).
+%
+\begin{itemize}
+\item For the model calculations we will use in part the PIA cluster at the
+MPIA Heidelberg.  PIA is a Cluster with 128 x 2,6 GHz Dual-Opteron-Processors
+by SUN (V20z), with a fast Intercommunication by a 144-port Infiniband-Switch
+by Mellanox (MTS14400). Each knot has 4 GB memory and 2 x 73 GB disks.
+For storing simulation results totally 10 TeraByte storage on two fibre channel
+RAID-systems are available.
+
+\end{itemize}
+
+
+\subsection{Institution's general contribution (Laufende Mittel f\"ur Sachausgaben)}
+%
+% Please state the annual fund for consumables which comes from the
+% institution's budget or any other third party  (please list separately) to
+% pay for the research for which your project is part of.  Use estimates where
+% applicable.
+%
+We estimate that the running costs per year of our equipment
+are:\vspace{1\baselineskip}\\
+%
+\centerline{\begin{tabular}{||l|r|r|r||} \hline \hline & Year 1 & Year 2 &
+Year 3 \\ \hline %
+running costs   & \hfil4\,000 & 4\,000 & 4\,000 \\
+\hline
+\hline
+\end{tabular}
+}
+
+
+
+
