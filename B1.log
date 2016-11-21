@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.22)  5 NOV 2016 18:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.22)  20 NOV 2016 23:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -323,13 +323,13 @@ e
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 144.
-LaTeX Font Info:    Try loading font information for U+msa on input line 145.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 145.
+LaTeX Font Info:    Try loading font information for U+msa on input line 146.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 145.
+LaTeX Font Info:    Try loading font information for U+msb on input line 146.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -344,36 +344,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--159
  []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 174.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 180.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 177.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 183.
 [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
 [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 386--400
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 419.
+ [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 629--644
 
  []
 
-[4] [5] [6] [7] (./B1.aux) ) 
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 728--735
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 745--750
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 751--758
+
+ []
+
+[8] [9] [10]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 912.
+
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 912.
+
+[11] [12] [13] (./B1.aux) ) 
 Here is how much of TeX's memory you used:
- 4260 strings out of 493014
- 54466 string characters out of 6133351
- 129237 words of memory out of 5000000
- 7702 multiletter control sequences out of 15000+600000
- 29456 words of font info for 40 fonts, out of 8000000 for 9000
+ 4281 strings out of 493014
+ 54808 string characters out of 6133351
+ 130237 words of memory out of 5000000
+ 7718 multiletter control sequences out of 15000+600000
+ 34624 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,11n,43p,607b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips
-/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.p
-fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on B1.pdf (7 pages, 60175 bytes).
+ 38i,11n,43p,233b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/
+base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on B1.pdf (13 pages, 119040 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
