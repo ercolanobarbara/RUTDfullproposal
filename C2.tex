@@ -39,6 +39,8 @@
 \usepackage{epsf}
 \usepackage{setspace}
 \usepackage{sfmath}
+\usepackage{multicol}
+\usepackage{siunitx}
 
 %%%% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\textheight}{22cm}
@@ -101,6 +103,19 @@
 
 \usepackage{enumitem}
 \setlist{nosep}
+
+%%%%%%%%%%%%%%%%%%%%%%% NICER REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{literature}%
+ {\begin{multicols}{2}\begin{small}\begin{list}{}{%
+   \setlength{\topsep}{0em}%
+   \setlength{\parskip}{0em}%
+   \setlength{\parsep}{0em}%
+   \setlength{\itemsep}{0em}%
+   \setlength{\rightmargin}{0em}%
+   \setlength{\leftmargin}{2em}%
+   \setlength{\itemindent}{-2em}}}%
+ {\end{list}\end{small}\end{multicols}}
 
 %%%%%%%%%%%%%%%%%%%%%%% NICER REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -419,22 +434,45 @@ be used for the purposes of our project.
 
 \subsection*{Grain sizes and abundances at the base of the wind}
 
-{\color{green}There are basically two approaches - to zeroth order one
-  can use 1d dust evolution models to set the abundance and size
-  distribution at the base of the flow. For that it is enough to use
-  Birnstiel, Klahr \& Ercolano 2012. 
+One key element of this project is to investigate the impact of the
+underlying grain population on the observability of photoevaporative
+winds. To this end we will use the state of the art coagulation code
+from \citet{2010A&A...513A..79B} which solves for the evolution of the
+particle distribution due to coagulation, fragmentation, and erosion,
+as well as radial transport by drift, mixing, and gas advection. The
+resulting particle size distribution $\Sigma_\mathrm{d}(t,r,a)$ is
+then a function of distance to the star $r$, particle size $a$, and
+time $t$. Treating the growth in a vertically averaged way (i.e.
+using surface densities instead of volume densities) is generally a
+good approximation since vertical settling and mixing time scales are
+short for growing particles. However, for this project, the vertical
+distribution of particle sizes is important as it determines the sizes
+and abundances of particles at the base of the photoevaporative flow.
 
--- describe what this paper does 
+At the beginning of the project, we will use vertical distributions of
+particles that are in a steady state between mixing and settling, such
+as derived by \citet{2009A&A...496..597F}. These are simple analytical
+equations, which need to be numerically integrated for each particle
+size. This technique is already available and has been used for
+calculating the observational appearance of simulated disks e.g.
+in \citet{2015ApJ...813L..14B} and many other works. This should give
+a good first representation of the particles that are present at the
+base of the flow.
 
-A more sofisticated approach is to use 2d models which resolve the
-vertical abundance and size distribution of the grains. 
-
--- describe such a model -- what is the state of the art on this? -- 
-
--- how likely it is that one could also find some kind of
-parameterisation that could be easily coupled to the grian entrainment calculations?
-}
-
+At a later point, these prescriptions can be updated with a more
+sophisticated treatment of coagulation and transport processes: at
+high dust-to-gas ratios small grains can be ``trapped'' closer to the
+mid-plane due to frequent collisions with other particles
+\citep{2016ApJ...822..111K}. When photoevaporation has preferentially
+depleted the gas, thus raising the dust-to-gas ratio in the disk, this
+effect could potentially affect the amount of small dust grains that
+are mixed up to the base of the photoevaporative flow. The results of
+\citet{2016ApJ...822..111K} can be used to estimate this effect.
+Some time during the second  year of this project, we expect the ERC
+group of T. Birnstiel to have a working 2D dust coagulation and
+transport model which will allow us to check for differences between
+the earlier approaches (steady state distributions) and models that
+take the time evolution and collisional processes into account.
 
 \subsection{\Tcol Project-related publications}
 
@@ -457,16 +495,32 @@ parameterisation that could be easily coupled to the grian entrainment calculati
 Articles published or officially accepted by publication outlets with scientific quality assurance;
 book publications}
 
-Birnstiel et al. 2010
-Birnstiel, Klahr \& Ercolano, 2012
-{\color{green} TIL to add two more relevant papers} 
-
-Ercolano et al. 2008
-Ercolano et al. 2009
-Owen, Ercolano, Clarke \& Alexander, 2010
-Owen, Ercolano, Clarke  2011a
-Owen, Ercolano \& Clarke, 2011b
-Owen, Ercolano, Clarke , 2012 
+\begin{literature}
+\item Birnstiel, T.; Dullemond, C.P. \& Brauer, F.: \textit{Gas and
+dust evolution in protoplanetary disks}, 2010, A\&A 513, 79. In this paper we
+  present the basic code for the evolution of the disk and the dust. The
+  latter follows the dust coagulation, fragmentation, settling and radial
+  drift of the dust.
+  
+\item Birnstiel, T.; Klahr, H. \& Ercolano, B.: \textit{A simple model
+for the evolution of the dust population in protoplanetary disks}, 
+  2012, A\&A 539, 148. In this model the flow of pebbles from the outer
+  disk regions into the inner planet forming disk regions is studied,
+  and an easy to use model derived.
+  
+\item Birnstiel, T.; Andrews, S.; Pinilla, P. \& Kama, M.:
+\textit{Dust Evolution Can Produce Scattered Light Gaps in Protoplanetary Disks},
+2015, ApJL 813, L14. Here we applied the vertical steady state
+settling mixing distribution to calculate the observational appearance
+of simulated disks.
+  
+\item Ercolano et al. 2008
+\item Ercolano et al. 2009
+\item Owen, Ercolano, Clarke \& Alexander, 2010
+\item Owen, Ercolano, Clarke  2011a
+\item Owen, Ercolano \& Clarke, 2011b
+\item Owen, Ercolano, Clarke , 2012 
+\end{literature}
 
 
 \subsubsection{\Tcol Other publications}
@@ -510,7 +564,7 @@ the dust phase in photoevaporative winds.
 % for each applicant
 
 In this project we will first use the semi-analytical approach described in
-\ref{sec:analytical_approach} coupled to models for the
+\cref{sec:analytical_approach} coupled to models for the
 evolution of dust grains in the disc in order to efficiently produce
 dust entrainment models for the complete set of X-ray photoevaporation
 wind solutions calculated in project B1. The dust models will then be
@@ -603,8 +657,9 @@ to Herbig stars. For that she will use the standard version of he PLUTO code (??
 two-dimensional mode. Note that no additional column density/Stroemgren radius
 calculations need to be used in order to implement the Font et
 al. (2004) solutions for EUV winds. This solution simply treats the
-wind as an isothermal gas with sound speed, $c_s = 10km s^{-1}$. The
-number density at the base of the wind is also fixed and is a simple
+wind as an isothermal gas with sound speed, $c_s =
+\SI{10}{km.s^{-1}}$.
+The number density at the base of the wind is also fixed and is a simple
 function of radius, mass of the central star, gas sound speed and
 ionising stellar flux (Font et al. 2008, Alexander 2009, Hollenbach et
 al. 2004). We will be able to validate our solutions with those in the
