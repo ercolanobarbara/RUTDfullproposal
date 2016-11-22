@@ -6,3 +6,4 @@
 .texlipse
 *.aux
 *.out
+*.log
