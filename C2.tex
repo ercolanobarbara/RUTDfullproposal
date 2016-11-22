@@ -173,7 +173,7 @@ Birnstiel: RU Transition Discs project C2}
 {\textsf{PI:}}                   & B.~Ercolano (LMU) \\
 {\textsf{Co-I:}}                & T.~Birnstiel (LMU)\\
 {\textsf{Collaborations:}}      &  James Owen (Princeton, USA),
-                                   G. Picogna (LMU),  C.~Dullemond
+                                    C.~Dullemond
                                   (Heidelberg), T. Henning (MPIA)\\
 
 \end{tabular}
@@ -201,7 +201,8 @@ We will use realistic radiation-hydrodynamic models of
 photoevaporative winds coupled to dust evolution models for the
 underlying grain distribution in the disc, to calculate the dust
 entrainment in winds to feed to chemical models. The observability of
-the continuum emission due to the dust grains in winds from edge-on
+the emission and scattering {\color{green} TIL SHOULD WE SAY WHAT
+  INSTRUMENTS AND WHAT TYPE OF OBSERVATIONS?} due to the dust grains in winds from edge-on
 discs, a potential new diagnostic, will be estimated both for Herbig
 Ae stars and for their fainter T-Tauri counterparts.  
 
@@ -224,7 +225,20 @@ photoevaporative wind
 mechanism induce more or less vigorous mass loss at different disc
 radii, which  can have dramatic effect on planet formation, both at
 the times of planetesimal assembly and for the later dynamical
-evolution of planet(esimal)s (e.g. Ercolano \& Rosotti 2015).  
+evolution of planet(esimal)s (e.g. Alexander \& Pascucci 2012;
+Ercolano \& Rosotti 2015).   
+
+Projects B1 \& B2 aim at identifying and using new spectroscopic
+diagnostics to qualitatively measure mass loss rate and profile in disc 
+winds. n order to achieve these aims a chemical model of the wind will
+be constructed in B2 using the wind structures from
+radiation-hydrodynamic calculations performed in B1. Chemistry is
+sensitively affected by the dust distribution in the wind and
+underlying disc atmosphere. To date only rough estimates exist
+(e.g. Owen, Ercolano \& Clarke 2011b; Hutchison et al. 2016ab), which
+are inappropriate to use in the chemical model, but they demonstrate
+that a non-negligible population of small grains, which dominate the
+opacity in the FUV, are to be expected in the winds. 
 
 Owen, Ercolano \& Clarke (2011b) demonstrated that in the case of
 Herbig Ae/Be stars an EUV-driven wind, the wind selectively entrains
@@ -239,11 +253,11 @@ larger heights above the disc. Possibly, the problem was due to the
 fact that the synthetic images were dominated by emission from the
 smallest grains entrained in the flow. Grain growth in the underlying
 disc, neglected in the
-Owen et al. (2011b) calculations in the disc is a natural solution to
+Owen et al. (2011b) calculations, is a natural solution to
 the colour problem, which needs to be taken into account in future
 simulations. 
 
-While it is currently not clear if the PDS 144N observation can be
+While it is currently not clear if the PDS 144N observations can be
 explained by dust entrainment in a photoevaporative wind, the work of
 Owen, Ercolano \& Clarke (2011b) has clearly demonstrated that a
 significant amount of small grains (which dominate the opacity in the
@@ -252,31 +266,19 @@ chemistry there and at the base of the flow.
 
 More recently Hutchison et al. (2016ab) investigated the question of
 dust entrainment in protoplanetary discs using smoothed particle
-hydrdynamics. While their models are very idealised (non-rotating,
+hydrodynamics (SPH). While their models are very idealised (non-rotating,
 plane-parallel discs), their simulations seem to support most of the
 conclusions reported in the analytical work of Owen, Ercolano \&
-Clarke (2011b). These models also focus on a EUV-driven wind.  
-
+Clarke (2011b). These models also only consider an a EUV-driven wind.  
 
 \subsection*{Dust-entrainment in winds: modelling strategies}
 
-In this section the two main approaches to model dust-entrainment in
+In this section two main approaches to model dust-entrainment in
 winds are described in more detail. The limitations of both approaches
 will also be discussed, thus highlighting the knowledge gap that our
 project is aiming to fill. 
 
 \subsubsection*{Analytical approach}\label{sec:analytical_approach}
-
-{\color{red}Describe approach used in Owen, Ercolano \& Clarke 2011b
-
---why can we decouple photoevaporation calculations from dust
-entrainment calculation and why is it necessary to do so for our aims
-
--- discuss shortcomings of current models: The Owen, Ercolano \& Clarke (2011b) calculation are limited to the EUV-case
-only and do not include dust-evolution in the underlying disc, for
-these reasons their applicability to models aiming at quantitative
-spectroscopy of disc winds is rather limited. 
-}
 
 Owen, Ercolano \& Clarke (2011b) post-processed
 radiation-hydrodynamical simulations of photoevaporating disc winds
@@ -296,13 +298,13 @@ authors focussed in step (i)  on EUV-driven winds (e.g. Hollenbach et al. 1994;
 Font et al. 2004; Alexander, Clarke \& Pringle 2006a,b). Indeed Herbig
 stars have generally a much lower X-ray luminosity relative to their
 bolometric luminosity, compared to T-Tauri stars, raising questions on
-what the driving radiation may be for intermediate mass stars. For
+what the driving radiation may be for these intermediate mass stars. For
 that reason Owen, Ercolano \& Clarke (2011b) chose to adopt the
 hydrodynamic solution of Font et al. (2004), which is simple and
 scalable, hence allowing them to investigate a wider range of
 parameter space. As we will see in Section 2, this option is not
-available for us, as we are interested in X-ray driven
-photoevaporative winds, which are more likely to occur around T-Tauri
+available to us, as we are interested in X-ray driven
+photoevaporative winds, since they are more likely to occur around T-Tauri
 stars. 
 
 In step (ii) Owen, Ercolano \& Clarke (2011b) calculate streamlines
@@ -313,29 +315,34 @@ calculated for a given grain size: a positive net force is interpreted
 as grains of that size being entrained in the flow from that
 location. 
 
-From step (ii) the density distribution of dust grains in the wind is
+The density distribution of dust grains in the wind is
 then calculated and post-processed by means of radiative
-transfer in step (iii) . Figure ??? shows the synthetic images they
-obtained from their models in L,K \& H band and composite which they used to compare
+transfer in step (iii) . Figure ??? shows the synthetic images 
+obtained from the models of Owen, Ercolano \& Clarke (2011b) in L,K \&
+H band and composite, which were then compared 
 with the observations of Perrin et al. (2006). 
 
 
 %INCLUDE FIGURE HERE!!!!%%
 %\paragraph{Limitations of current models}
-The calculations of Owen, Ercolano \& Clarke (2011b) present however
+While the calculations of Owen, Ercolano \& Clarke show that indeed a
+significant amount of small grains can be expected in photoevaporative
+winds, they present however
 some serious limitations that make them unsuitable for application to our Research
 Unit tasks. 
 
-First of all these calculations are limited to the EUV-case only. The
+First of all, these calculations are limited to the EUV-case only. The
 X-ray photoevaporation case, which is likely dominant amongst T-Tauri
-stars, is much more complex as the temperatures
-of an X-ray ionised gas vary from a few hundred to a few thousand
-Kelvin, the hydrogen gas is in a quasi-neutral state of ionisation, with the
-exact ionisation level also influencing the efficiency of the X-ray
+stars, is more complex than the EUV case. An EUV heated gas, where
+hydrogen is almost fully ionised, is roughly isothermal
+($\sim$10$^4$K), while the temperatures of a quasi-neutral X-ray
+heated gas generally vary from a few hundred to a few thousand 
+Kelvin. Here the hydrogen gas is in a quasi-neutral state of ionisation, with the
+exact ionisation level influencing the efficiency of the X-ray
 heating. While the EUV-photoionisation process occurs of via the removal
-of a single valence electron, X-rays generally remove an inner shell
-electron, with the ejected suprathermal electron producing secondary
-ionisation. A further complication is that multiple electrons may be
+of a single valence electron, X-rays generally remove an inner-shell
+electron. The ejected supra-thermal electron produces then secondary
+ionisations. A further complication is that multiple electrons may be
 ejected as a consequence of inner shell ionisations, linking together
 non-adjacent ionisation levels.
 
@@ -350,35 +357,62 @@ on a temperature scheme obtained by the PI with the MOCASSIN code.
 
 Another important shortcoming of Owen, Ercolano \& Clarke (2011b) is
 that they do not account for dust evolution in the underlying disc. An
-MRN size distribution with standard gas-to-dust ratio of 100 is
+MRN (Mathis, Rumpl, Nordsieck 1977) size distribution with standard gas-to-dust ratio of 100 is
 assumed everywhere in the disc. The resulting dust density and size
 distribution in the wind is thus necessarily incorrect. Given the
 central role played by dust grains for the chemistry, our project will
 couple dust evolution in the underlying disc to the wind entrainment
-problem. 
+problem for the X-ray driven winds around T-Tauri stars.  
 
 \subsubsection*{Numerical approaches}
 
-The dynamics of dust grains in protoplanetary discs can be studied either by directly integrating the orbits of a large number of dust 'super-particles' (that sample the local properties of the dust population) or by solving the collisionless Boltzmann equation for the particle distribution function. For a population of very small (tightly coupled with the gas) dust particles, the Boltzmann equation can be reduced to the zero pressure fluid equation (Cuzzi et al. 1993, Garaud et al. 2004). This 'two-fluid' approach has been used to study planet-disc interactions (Paardekooper \& Mellema 2004, 2006; Zhu et al. 2012), however it is limited to a single population of small particles, it cannot account for the full velocity distribution of the grains at a single location, and it is not able to capture strong density gradients. The particle approach has the great advantage to follow the evolution of solid particles with different physical properties recovering perfectly the dust dynamics in the limit where the grains are decoupled from the gas (Youdin \& Johansen 2007; Miniati 2010; Bai \& Stone 2010). This method has also been applied successfully to the study of planet disc interaction adopting both SPH and grid-based codes (Fouchet et al. 2007, 2010; Ayliffe et al. 2012; Lyra et al. 2009; Zhu et al. 2014). The grid codes are preferred because they do not introduce a large artificial viscosity that can affect the evolution of low-mass planets. Moreover, the accuracy needed to properly model the evolution of the gas and dust component in a protoplanetary discs is strongly dependent on the choice of the grid geometry (Lyra et al. 2009; de Val-Borro et al. 2007), requiring more computational effort in a cartesian grid than in a cylindrical or spherical one.
+The dynamics of dust grains in protoplanetary discs can be studied
+either by directly integrating the orbits of a large number of dust
+'super-particles' (that sample the local properties of the dust
+population) or by solving the collisionless Boltzmann equation for the
+particle distribution function. For a population of very small
+(tightly coupled with the gas) dust particles, the Boltzmann equation
+can be reduced to the zero pressure fluid equation (Cuzzi et al. 1993,
+Garaud et al. 2004). This 'two-fluid' approach has been used to study
+planet-disc interactions (Paardekooper \& Mellema 2004, 2006; Zhu et
+al. 2012). This is however limited to a single population of
+small particles, it cannot account for the full velocity distribution
+of the grains at a single location, and it is not able to capture
+strong density gradients. The particle approach has the great
+advantage to follow the evolution of solid particles with different
+physical properties, perfectly recovering the dust dynamics in the
+limit where the grains are decoupled from the gas (Youdin \& Johansen
+2007; Miniati 2010; Bai \& Stone 2010). This method has also been
+applied successfully to the study of planet disc interaction adopting
+both SPH and grid-based codes (Fouchet et al. 2007, 2010; Ayliffe et
+al. 2012; Lyra et al. 2009; Zhu et al. 2014). The grid codes are
+preferred because they do not introduce a large artificial viscosity
+that can affect the evolution of low-mass planets. Moreover, the
+accuracy needed to properly model the evolution of the gas and dust
+component in a protoplanetary discs is strongly dependent on the
+choice of the grid geometry (Lyra et al. 2009; de Val-Borro et
+al. 2007), requiring more computational effort in a cartesian grid
+than in a cylindrical or spherical one. 
 
 Dr. Picogna (project B1) has implemented a population of dust
 particles in the modern grid-based code PLUTO (Mignone et al. 2012)
 that can evolve both in a cylindrical and spherical coordinate system
 (Picogna, Stoll \& Kley, in prep.). This approach is thus ideal to
 study the evolution of different dust particle populations in
-protoplanetary discs. As detailed in the next section, this method
-coupled with the photoevaporation model implemented in PLUTO will be
+protoplanetary discs. As detailed in the next section, this method,
+coupled with the photoevaporation model implemented in PLUTO, will be
 adopted to self-consistently model dust particles entrained into the
 wind from the disc atmosphere for a number of selected cases.
 
 The recent work Hutchison et al. (2016a,b) used a new algorithm to
-treat a wind in a smooth particle hydrodynamics (SPH) code. The wind is
+treat a wind in an SPH code. The wind is
 treated using unequal-mass, one-fluid SPH. Using new techniques
 developed by these authors they attempt to simulate two-fluid dynamics
-in highly stratified atmospheres. The work represents currently still
-only a proof of concept, showing that these novel techniques may be in
+in highly stratified atmospheres. The work currently represents 
+only a proof of concept, suggesting however that these novel
+techniques may be in 
 the future applied to study interesting aspects of gas and dust
-dynamics in the wind. At present however the models are very
+dynamics in the wind. At present, however, the models are very
 idealised, approximating discs and winds by a thin, non-rotating,
 plane-parallel atmosphere.  This technique is thus not yet mature to
 be used for the purposes of our project.
@@ -418,31 +452,41 @@ parameterisation that could be easily coupled to the grian entrainment calculati
 %    in ``1.1.1 Articles published or officially accepted by publication outlets...'' and 
 %    in ``1.1.2 Other publications''. Publications which only exist on public repositories 
 %    belong into the category ``Other Publications''.
-[Text]
 
 \subsubsection{\Tcol 
 Articles published or officially accepted by publication outlets with scientific quality assurance;
 book publications}
 
-[Text]
+Birnstiel et al. 2010
+Birnstiel, Klahr \& Ercolano, 2012
+{\color{green} TIL to add two more relevant papers} 
+
+Ercolano et al. 2008
+Ercolano et al. 2009
+Owen, Ercolano, Clarke \& Alexander, 2010
+Owen, Ercolano, Clarke  2011a
+Owen, Ercolano \& Clarke, 2011b
+Owen, Ercolano, Clarke , 2012 
+
 
 \subsubsection{\Tcol Other publications}
 
-[Text]
+None
 
-%\subsubsection{\Tcol Patents}
+\subsubsection{\Tcol Patents}
 
-%\paragraph{\Tcol Pending}
+None
 
-%[Text]
+\paragraph{\Tcol Pending}
 
-%\paragraph{\Tcol Issued}
+None
 
-%[Text]
+\paragraph{\Tcol Issued}
+
+None
 
 \section{\Tcol Objectives and work programme}
 \renewcommand{\leftmark}{\sc Objectives and work programme}
-
 
 \subsection{\Tcol Anticipated total duration of the project}
 
@@ -450,7 +494,7 @@ book publications}
 
 \subsection{\Tcol Objectives}
 In this project
-we aim to determine the dust content of photoevaporative winds for a range of stellar, disc and wind parameters,
+we aim to determine the dust content and size distribution of photoevaporative winds for a range of stellar, disc and wind parameters,
 using realistic descriptions for grain evolution in the underlying
 disc. 
 
@@ -465,28 +509,33 @@ the dust phase in photoevaporative winds.
 \subsection{\Tcol Work programme including proposed research methods}
 % for each applicant
 
-In this project we will use the semi-analytical approach described in
-\cref{sec:analytical_approach} coupled to models for the
+In this project we will first use the semi-analytical approach described in
+\ref{sec:analytical_approach} coupled to models for the
 evolution of dust grains in the disc in order to efficiently produce
 dust entrainment models for the complete set of X-ray photoevaporation
-wind solutions calculated in project B1.
+wind solutions calculated in project B1. The dust models will then be
+passed on to project B2 (chemical models), incrementally as they are
+calculated. 
 
 There are several reasons for choosing the semi-analytical approach
-over fully numerical approaches (SPH or grid-based). Semi-analytical
-approaches are much more efficient for our aims. While we will make
-use of hydrodynamical calculations, the 
-grain entrainment problem from the photoevaporation problem. Indeed
+over fully numerical approaches (SPH or grid-based). First of all,
+semi-analytical 
+approaches are much more efficient for our aims. We will make
+use snapshots from the hydrodynamical calculations, since, to first
+order, the grain entrainment problem can be decoupled from the photoevaporation 
+problem. Indeed 
 dust grains entrained in the wind do now provide tangible extinction
 at X-ray frequencies, hence the wind structure and rate are
 not sensitive to the dust distribution in the wind. The dust
-entrainment calculation can thus be performed as a sort of
-post-processing of the radiation-hydrodynamic calculations, allowing
+entrainment calculation can thus be performed by
+post-processing snapshots of the radiation-hydrodynamic calculations,
+allowing us
 to use the same wind solution and changing (e.g.) the underlying dust
 distribution in the disc, according to different models and
 prescriptions. 
 
 It is perhaps worth mentioning that the dust evolution in the
-underlying disc is however strongly couple to the evolution of the gas
+underlying disc is however strongly coupled to the evolution of the gas
 in the disc. A full radiation-hydrodynamic simulation of the gas and
 dust which also simultaneously solves the dust coagulation and drift
 is however beyond what is currently feasible. It is however possible
@@ -494,16 +543,20 @@ to perform a gas radiation hydrodynamics calculation which includes
 dust particles, not accounting for coagulation (e.g. ????REF
 Picogna???). If time allows, we will perform a number of such
 (expensive) calculations to compare with the semi-analytical
-ones. However, a more comprehensive set, will probably be performed
-during the second funding period of the Research Unit. 
+ones. This is particularly important for transition disc models, where
+the dust may be pushed back away from the inner edge of the disc due
+to the pressure gradients in the gas, thus resulting in a  lower dust
+content in TD winds, compared to full discs.  In any case, a more
+comprehensive set of these simulations will be performed during the
+second funding period of the Research Unit.  
 
 
-The work will be carried out by a PhD student co-supervised by
-Prof. Ercolano (LMU) and Prof. Birnstiel (LMU), who will provide
-guidance, respectively, on the dust entrainment calculations and the
+The work proposed here will be carried out by a PhD student supervised by
+Prof. Ercolano (LMU) with the help of Prof. Birnstiel (LMU), who will
+advice, respectively, on the dust entrainment calculations and the 
 coupling with the dust evolution models for the underlying disc. 
 
-\subsection{Research Tools}
+\subsubsection{Research Tools}
 
 For this project we will need the following tools:
 \begin{enumerate}
@@ -524,7 +577,7 @@ models with the calculated grain populations. We will make use  of the
 RadMC code developed and maintained by Prof. Dullemond (e.g. REF?????).
 \end{enumerate}
 
-\subsection{Research Plan} 
+\subsubsection{Research Plan} 
 
 The project will proceed in stages of increasing complexity. We will start
 by setting up a framework that can be benchmarked against available
@@ -546,7 +599,7 @@ differently in different parts.
 \subsubsection{Months 1-12}
 The student will start by producing wind solution for the EUV case
 from the work of \citet{2004ApJ...607..890F}, which may be applicable
-to Herbig stars. For that she will use the standard version PLUTO code (???REF) in
+to Herbig stars. For that she will use the standard version of he PLUTO code (???REF) in
 two-dimensional mode. Note that no additional column density/Stroemgren radius
 calculations need to be used in order to implement the Font et
 al. (2004) solutions for EUV winds. This solution simply treats the
@@ -554,7 +607,7 @@ wind as an isothermal gas with sound speed, $c_s = 10km s^{-1}$. The
 number density at the base of the wind is also fixed and is a simple
 function of radius, mass of the central star, gas sound speed and
 ionising stellar flux (Font et al. 2008, Alexander 2009, Hollenbach et
-al. 2004). Ww will be able to validate our solutions with those in the
+al. 2004). We will be able to validate our solutions with those in the
 literature, which is an important step, particularly in a project led
 by a PhD student. 
 
@@ -582,8 +635,8 @@ available and they could provide a starting point, until new
 wind solutions become available form sub-project B1. This may however
 not be necessary as the new wind models for the X-ray case
 are already being calculated by Dr. Picogna, who is employed to do the
-preparatory work from project B1. It is therefore likely that an
-initial set of high resolution new X-ray wind solution may already be
+preparatory work for project B1. It is therefore likely that an
+initial set of high resolutions new X-ray wind solution may already be
 available to the student right from the start of project C2.
  
 As the first dust models for the X-ray driven wind become available
@@ -597,10 +650,10 @@ X-ray driven wind to produce synthetic continuum observations and
 provide a first estimate of the observability of such winds with
 current/future instrumentations. Our results may motivate
 observational campaigns led by collaborators (e.g. the group of
-Prof. Henning), the outcome of which however does not influence the
+Prof. Henning), the outcome of which, however does not influence the
 success of the research aims of our projects. 
 
- {\color{red} this is very vague what
+ {\color{green} this is very vague what
   instrumentations? in what mode? have such observations already been
   attempted?}
 
@@ -643,7 +696,7 @@ future observing proposals. We will join forces with expert
 collaborators on scattered light observations (e.g. Prof. Henning) to
 plan new proposals, however we stress that failure to obtain new
 observations as well as eventual non-detections do not preclude the
-main aims of this projects to be achieved. These are the development
+main aim of this project to be achieved, i.e. the development
 of dust models and dust distributions in photoevaporative winds. 
 
 If time allows, the student will collaborate with Dr Picogna (B1) to
@@ -653,6 +706,13 @@ component in the disc and wind is treated as particles (e.g. Picogna
 will be useful as a piecewise comparison to the simpler methods previously
 developed by the student in the project.  
 
+Furthermore, as detailed in Section????, we plan compare and contrast
+the efficiency of dust entrainment for discs at different evolutionary
+stages. A more comprehensive set of simulations, which may also include
+photoevaporating discs with gaps opened by giant planets
+(e.g. Rosotti, Ercolano et al. 2013, 2015), is expected to be
+performed in the second funding period. 
+
 \vspace{0.5em}
 
 
@@ -660,14 +720,14 @@ developed by the student in the project.
 
 The model data-grids will be made available on the Research Unit
 dedicated server for use within the team. Furthermore we will provide
-a set of diagnostic models to guide observers in the wider community
+a set of diagnostic models to guide observers in the wider community,
+which will be placed 
 on the public partition of the server.
-\barbara{Til can we also provide perhaps other useful data from the
-dust models?}
-\til{Not sure what things observers would like to use. I think we
-could provide anything from the full size distribution at every 2D
-point to mean grain sizes (averaged in different ways) to calculated
-images.}
+This public data will include sets containing the full size
+distribution at every 2D point, as well as sets of the
+mean/minimum/maximum grain sizes (the mean averaged in different
+ways), as well as synthesised images in different bands which can be
+directly compared to observations. 
 
 \subsection{\Tcol Other information}
 % Please use this section for any additional information you feel is
@@ -698,7 +758,7 @@ Not Relevant
 % are not to be included here; this belongs to the separate â€œModule Temporary Positionâ€.
 
 We require funding for one PhD student to be supervised at the LMU
-jointly by Prof. Birnstiel and Prof. Ercolano.
+by Prof. Ercolano.
 
 \subsubsection{\Tcol Direct Project Costs}
 
@@ -726,8 +786,7 @@ conference fee; 1000 Euro (3000 over 3 years).
 \item Visit to/from J. Owen: airfare, 6 overnight stay 1200 Euro (2400
   for 2 visits)
 \end{itemize}
-\til{Should we increase the international trip? Seems a bit cheap to
-me if it's in the US at least.}
+
 
 \paragraph{\Tcol Visiting Researchers (excluding Mercator Fellows)}
 
@@ -780,7 +839,7 @@ Not Relevant
 Barbara Ercolano, Professor at the Ludwig-Maximilians-Universit\"at
 M\"unchen  (permanent)
 
-Tilman Birnstiel, Professor at the Ludwig-Maximilians-Universit\"at M\"unchen starting 02/2017  (tenure-track)
+
 
 \subsection{\Tcol First-time proposal data}
 % Only if applicable: Last name, first name of first-time applicant.
@@ -792,7 +851,6 @@ Not Relevant
 % be paid out of the project funds. State each personâ€™s name, academic
 % title, employment status, and type of funding.
 
-\textcolor{red}{[Text]}
 
 \subsection{\Tcol Cooperation with other researchers}
 
@@ -805,25 +863,35 @@ Not Relevant
 %and organisation. This includes a description of the cooperation with
 %%others participating within the Research Unit. 
 
-{\color{red} Expand below - include the researchers that are linked to
-  the various projects}
-
-The project will use the wind models calculated in project B1 and then
-feed back the dust model to the same project (B1) and to the reduced
-chemical network tests of project B2. Dust evolution calculations from C1 will also be used. Observational constraints will
-be obtained in collaboration with experts working on project A1 and
-stellar properties to guide the models 
-from project A2. 
+The project will use the wind models calculated in project B1 (PI
+Ercolano) and then
+feed back the results to project C2 (PI Caselli, Ercolano), where a
+chemical model of the wind and atmosphere will be developed.
+Prof. Birnstiel will provide guidance on the implementation of
+existing and new dust evolution models and, in the one-dimensional
+case, also helping us to link them to vertical mixing prescriptions. 
+Stellar properties to guide the models will be obtained with the help
+of the team from project A2 (PI Preibisch). Observational constraints will
+be obtained in collaboration with experts working on project A1 (PI
+Testi) and our external collaborators Prof. Henning and Prof. van
+Dishoeck. 
 
 
 \paragraph{\Tcol Collaborating researchers for this project outside of
   the Research Unit}
 
-Dr. James Owen, currently at Princeton University, from 2017 at
-Imperial College London. 
 
-{\color{red} Expand above - mention James' contributions to the state
-  of the art and his likely contribution to the project - mention visits}
+Dr. James Owen, currently at Princeton University, from 2017 at
+Imperial College London, has performed the original semi-analytical
+calculations of dust-entrainment in the wind together with the PI of
+this project (Owen, Ercolano \& Clarke, 2011b). He is also an expert
+in radiation-hydrodynamics models of photoevaporating winds
+(e.g. Owen, Ercolano et al. 2010, 2011a, 2012) and is expected to pay
+frequent visit to Munich to actively participate in our project. 
+
+We also plan to use the 2D dust evolution models which will be
+constructed within the ERC- funded group of Prof. Birnstiel, which
+will run parallel to the Research Unit. 
 
 \subsubsection{\Tcol Researchers with whom you have collaborated scientifically within the past three years}
 % This information is important for DFG to exclude possible conflicts of interest.
