@@ -1,0 +1,597 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTex Template for proposals within the              %
+% DFG Research Unit Program                            %         
+%Planet Formation Witnesses and Probes: Transition Discs
+% August 2016                                            %                           
+%                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 
+%
+% This template may be used to prepare proposals in latex.
+%
+%
+% The project description, including publication list, should be no more than 20 pages
+% in length. It should be self-explanatory and not require reviewers to read the 
+% literature that is quoted or enclosed.
+
+\documentclass[10pt,fleqn,twoside]{article}
+
+%%%% USE ARIAL FONT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{helvet}
+\renewcommand\familydefault{phv}
+
+%%%% INCLUDE NECESSARY PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{babel}
+\usepackage[UKenglish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{ae,aecompl}
+\usepackage{graphicx}
+\usepackage{palatino}
+\usepackage[T1]{fontenc}
+\usepackage{rotating}
+\usepackage{epsf}
+\usepackage{setspace}
+%\usepackage{sfmath}
+
+%%%% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\textheight}{22cm}
+\setlength{\topmargin}{-1.2cm}
+\setlength{\textwidth}{15.6cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+\setlength{\mathindent}{1.5cm}
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.08cm}
+
+%%%% PAGE HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhead[RE,RO]{}
+\fancyfoot[RO]{ \thepage}
+\fancyfoot[LE]{ \thepage}
+\fancyfoot[CE,CO]{}
+
+%%% FONTS FOR THE TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newfont{\tpfonta}{cmssbx10 scaled 1600}
+\newfont{\tpfontb}{cmssbx10 scaled 3200}
+
+%%%% EURO SIGN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\euro{{\sffamily C%
+\makebox[0pt][l]{\kern-.70em\mbox{--}}%
+\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
+\newcommand\keuro{k{\sffamily C%
+\makebox[0pt][l]{\kern-.70em\mbox{--}}%
+\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
+
+%%%% COLOR DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{blue} {rgb} {0.25,0.25,0.75}
+
+%%%% ADDITONAL EMPHASIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cem}{\color{blue}}
+\newcommand{\eem}{\sl\color{blue}}
+
+%%%% SET THE COLOR OF THE (SUB-) SECTION TITLES %%%%%%%%%%% 
+\newcommand{\Tcol}{\color{blue}}
+
+%%%% SET THE COLOR OF THE TITLE BOX BACKGROUND %%%%%%%%%%%%
+\definecolor{Background}{rgb} {0.62,0.75,0.5}
+
+%%%% REFERENCE SECTION NAME %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\refname{\Tcol 9. Bibliography}
+
+%%%% COLOR THE SECTION NUMBERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand\@seccntformat[1]{\color{blue} {\csname the#1\endcsname}\hspace{0.5em}}
+\makeatother
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+
+%%%% CHANGE THE APPEARANCE OF THE \PARAGRAPH COMMAND  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4}     % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}        % how many sectioning levels to show in ToC
+
+
+\fancyhead[LE,LO]{\slshape
+%%%%  Please edit
+%
+Caselli: RU Transition Discs project B2}
+%
+%
+%%%%%
+
+
+\begin{document}
+
+
+\newpage
+
+%%%% PROJECT DESCRIPTION STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{1}
+
+\centerline{\huge\bf\Tcol
+%
+%
+%
+%
+%%%%  Please edit
+%
+ Project B2:}
+
+\centerline{\huge\bf\Tcol Astrochemistry in the atmosphere} 
+\centerline{\huge\bf\Tcol and winds of photoevaporating discs}
+
+%
+%%%%
+%
+%
+%
+%
+\vskip1.0cm
+
+%%%%  Please edit
+
+\noindent{\bf Authors:}\\
+\begin{tabular}{ll}
+{\textsf{PI:}}                   & Paola Caselli (MPE), Barbara Ercolano (LMU) \\
+{\textsf{Co-I:}}                & Alexei Ivlev (MPE)\\
+{\textsf{Collaborations:}}      &Wing-Fai Thi (MPE), Ewine van Dishoeck (MPE/Leiden), T. Grassi (STARPLAN, Copenhagen) \\
+
+\end{tabular}
+
+%%%%  Please edit
+
+\vspace{1em}
+\noindent{\bf Requested positions: 1 Postdoc} \\
+
+\vspace{1em}
+\noindent{\bf Abstract:}\\
+
+Protoplanetary discs lose mass via a slow disc wind, probably driven by photoevaporation from the central star, which eventually creates a cavity, leading to the formation of a Type 1 TD (see discussion in the Introduction to the Research Unit). A thermochemical study of this important component of evolved discs does not exist to date. The study of the chemistry in disc winds however relies on a knowledge of the opacities, which are largely dominated by small dust grains which are entrained in the wind from the underlying disc at the launch point. In this project we plan to develop a reduced chemical network appropriate for photoevaporative wind conditions and couple our chemical codes to space and time-varying dust distribution obtained in project C2. Using state-of-the-art radiation-hydrodynamic models of photoevaporating primordial and TDs, we will for the first time be able to draw detailed chemical profiles of these winds and provide predictions by using radiative transfer codes. This is of fundamental importance to identify and interpret new spectral line diagnostics in existing and upcoming observations. 
+
+\section{\Tcol State of the art and preliminary work}
+\renewcommand{\leftmark}{\sc State of the Art and preliminary work}
+
+Chemical models of gas in the protoplanetary and transition discs (TDs) are essential to pin down the initial conditions of the gas and dust from which planets form. Several sophisticated models have been and are continuously being developed to interpret the recent (e.g.) Herschel and ALMA observations of discs (e.g. Bruderer et al. 2015; Thi et al. 2013; Aresu et al. 2012; Meijerink et al. 2012; Woitke et al. 2010). These models however deal only with the dense parts of the discs, in rare cases extending to the bound disc atmospheres. Panoglou et al. (2012) have followed ionisation, chemical and thermal evolution within a steady state magneto-hydrodynamic disc wind solution and investigated various stages of young stellar objects (from Class 0 to Class II).  No chemical model of a photoeveaporative TD wind as well as no time-dependent chemical model coupled with the dynamical evolution of a disc exist to date. This is a serious shortcoming for the identification of suitable wind tracers and more importantly wind diagnostics, to guide new observations and constrain disc dispersal models (see discussion in the introduction to the Research Unit and in project B1). 
+
+The physical conditions valid for material in the bound disc itself are not appropriate at all for a disc wind. First of all winds are much less dense than the material in the bound discs. Even in the case of vigorous X-ray driven winds, the densities at the base of the wind are rarely above ten million hydrogen atoms per cubic centimetre, and they decrease roughly with the square of the distance (i.e. they behave roughly like Parker winds, see e.g. Owen et al. 2010; Font et al. 2004). The opacity in the wind is further reduced because of the decrease in dust content, as only a fraction of the grains contained in the underlying disc are entrained in the wind (see Owen et al. 2011b, Hutschison et al. 2016ab and discussion in project C2). For these reasons molecules may have a much shorter lifetime and indeed parts of the gas in the wind will be completely photodissociated. For such physical conditions processes like surface chemistry, freeze-out etc. are not important, yielding a simpler problem, which bears less uncertainties compared with chemical models for colder and more opaque material in the bulk of the disc. 
+
+The chemical structure of the bound disc is however important to provide the initial conditions for the chemistry in the wind. Furthermore, the ionisation level in the upper layers as well as the deep layers of the disc has recently been shown to be of outmost importance to the evolution and perhaps dispersal of discs, due to the role it plays in coupling the gas to magnetic fields. A minimum amount of coupling is indeed necessary for magnetic turbulence to take hold. 
+
+The current state-of-the-art in  terms of observations and interpretations of wind tracers form ionised/atomic species has already been described in project B1. Here we will mention only that molecular tracers of outflow activity are common in the protostellar phase, they also probe a low velocity ($<$10\,km/s) component whose intensity decreases while the opening angle increases going from the Class~0 through to the Class~II phase (e.g. Frank et al. 2014 for a recent review). This slow wide-angle component, around a much faster jet, is naturally produced in MHD disc winds launched out to several AU (e.g. Pudritz et al. 2007, Panoglou et al. 2012). ALMA maps of outflow activity are corroborating this picture by providing the sensitivity to study in detail the faint Class~II sources, see e.g. the CO disk wind surrounding the fast jet from the $\sim$4\,Myr-old Herbig~Ae star HD~163296 (Klaassen et al. 2013). Interestingly, the mass loss rate from the molecular wind is inferred to be similar to the mass accretion rate onto HD~163296 suggesting that winds contribute significantly to disc dispersal. Like optical forbidden lines, M-band CO ro-vibrational lines also show a broad and a narrow line emitting region (e.g. Banzatti et al. 2015) with FWHMs typically larger than the [OI] 6300\,\AA{} lines suggesting emitting gas closer to the central star (Simon et al. 2016). Blueshifts of $\sim$5\,km/s are reported in 4 out of  7 single-peaked CO lines (Bast et al. 2011) while clear evidence of non-Keplerian motion is found in 2 out of the 16 sources observed with the spectro-astrometry technique (RU~Lup and AS~205N, Pontoppidan et al. 2011). In the case of AS~205N, followup high-resolution ALMA observations also show deviations from Keplerian rotation in mm CO emission which could be due to a low velocity disk wind or tidal stripping by its companion AS~205S.
+
+It is thus of outmost importance to understand how to distinguish the outflow signatures of a photoevaporating wind from those of a wide angle magnetically driven wind. Spectral line profiles are in this case helpful to determine the spatial location of the outflow, or of the region where the line originates. Comparison of profiles from transition discs and primordial discs are very helpful to shed light of the wind driving mechanism at different times. Indeed Ercolano \& Owen (2010, 2016) and Simon et al. (2016) both discuss the expected and observed differences in the two cases. In general, a profile which shows a large component coming from unbound material at small disc radii ($<0.5$AU), for example is difficult to explain in terms of photoevaporation, where mass loss is only expected outside the so-called gravitational radius ($>$0.5AU), while, classically, magnetically driven wide angle winds are expected to come from the regions closer to the star. Bai et al. (2016), based on an extrapolation of the local calculations of Bai \& Stone (2013) have recently suggested, however that non-ideal MHD effects, may also cause a disc wind which may be launched from a much extended region of the disc, overlapping/supporting/competing with photoevaporation to the dispersal of the disc. While these models are at present very uncertain, these authors suggest that these magnetically-launched disc winds, if they exist, may be so vigorous as to compete with photoevaporation for the dispersal of the disc. It is suggested that they may even provide an efficient channel to remove angular momentum from the material in the disc, hence driving the accretion process. If confirmed this would lead to a paradigm shift about what we know about how PPDs accrete (i.e. angular momentum transport), which is a fundamental input to planet formation models. 
+
+Until very recently the accepted scenario for accretion in protoplanetary discs was based on a magnetic turbulence process (MRI, magnetorotational instability, Balbus \& Hawley, 1998) to transport angular momentum radially outward. However recent calculation (Bai \& Stone 2013) suggest that non ideal magneto hydrodynamic effects (MHD), in particular ambipolar diffusion, may suppress MRI in the upper layers of the disc, and propose that angular momentum transport may occur via a magnetocentrifugally launched wind. The magnetic driving models are, however, highly uncertain as they are based on a number of assumptions that still need to be verified. In particular, the models require a minimum level of ionisation for the gas to be coupled to the magnetic field and assume that this may be delivered from far ultra-violet (FUV: ~122-200nm) radiation ionising the atmosphere of a disc. The level of ionisation in the upper layer is currently estimated rather crudely as a fixed ionisation fraction of f = 2 × 10−5 in the form of carbon in the FUV layer, whose column density is chosen by default as ΣFUV = 0.03 g cm−2. This is based on results from Perez-Becker \& Chiang (2011), who however also consider an approximated disc model. Crucially, these models do not include the contribution of the wind which itself may shield the disc atmosphere from the more energetic FUV photons, meaning that the currently used ionisation fractions may be overestimated.
+
+\subsection{Contributions of the team to the study of disc chemistry and ionisation}
+The study of chemistry in disc winds self-consistently with their atmospheres is pretty much uncharted territory, this also contributes to the fact that the determination of the ionisation level in discs is still based on simple models (e.g. Perez-Becker \& Chiang, 2011). The team members have large expertise in chemical and ionisation calculations of the discs interiors, which puts them in a prime position to be able to pioneer this work. In what follows, we briefly describe the state-of-the-art in the field of disc chemistry and ionisation, where team members of Project B2 have played a crucial role. 
+
+\noindent{\bf Chemical models of protoplanetary discs}
+
+Gas and solid chemistry play a key role in the evolution of planet-forming discs and in planet formation theories, and determine the original composition of (exo)-planets (Henning \& Semenov 2013).  Planets are formed in protoplanetary discs that evolve over typical lifetimes of a few millions years (Fedele et al. 2010) by viscous spreading (e.g., Hueso \& Guillot 2005; Bailli$\acute{\textsf e}$ \& Charnoz 2014) combined with photoevaporation (Alexander et al. 2013). During that time, the dust grains coagulate to each other to reach the size of meter- then kilometre- sized bodies (Birnstiel et al. 2010, 2012). Those bodies can agglomerate into planets or participate to the late episodes of heavy bombardments, bringing material onto planetary atmospheres and surfaces. Detection of the main belt asteroids reinforces the idea that asteroids may have brought most of the water on Earth (Jewitt 2012). Another key role played by chemistry is to set the location of the disc region where water is frozen onto solids, the so-called ice zone. Beyond the water ice zone, giant gas planets like Jupiter can form after the rapid accumulation of solid cores of 10 Earth masses by the core-accretion model (Helled et al. 2014, $\ddot{\textsf O}$berg et al. 2015a, Helling et al. 2014).
+
+Contrary to their young counterpart 'hot-corinos' (Cazaux et al. 2003), a much limited amount of molecules have been detected in protoplanetary discs. The outer disc molecular inventory includes CO, CN, HCN, formaldehyde, C$_2$H, CS, CH$_3$CN, HCO$^+$ and after a lot of effort CH$_3$OH (e.g. Dutrey et al. 2014;  $\ddot{\textsf O}$berg et al. 2015b; Walsh et al. 2016). The low abundance of many of the molecules has been ascribed to a combination of photodissociation at the disc surfaces and freeze-out onto grain surfaces towards the disc mid-plane. Simple molecules such as H$_2$, HD, CO, CO$_2$, H$_2$O, C$_2$H$_2$, HCN, N$_2$H$^+$, and potentially CH$_3$OH, have been detected from the terrestrial planet-forming region of protoplanetary discs by high-resolution spectrometers from ground-telescopes and by the Spitzer Space Telescopes (Pontoppidan et al. 2014). The gas is sufficiently warm such that many molecules are formed by neutral-neutral reactions with activation barrier. The ro-vibrational transitions in the mid-infrared have the advantage that homonuclear species such as CO$_2$ or C$_2$H$_2$ can emit contrary to pure rotational transitions. In addition to those small species, Polycyclic Aromatic Hydrocarbons (PAHs) infrared emissions are prominently seen from discs around the UV-luminous Herbig Ae stars. 
+
+Carbonaceous compounds such as tholins may have been detected in an evolved disc (Debes et al. 2008, K$\ddot{\textsf o}$hler et al. 2008). The detected lines in both the inner and outer disc are emitted well above the mid-plane. Although the amount of detected species may be low, the chemical paths are not because of the large range of density, temperature, and UV field strength. Thermo-chemical disc models use a common unique network to model the entire disc. Many questions remain on the origin and survivability of complex organic molecules in protoplanetary discs in general and in the Solar Nebula in particular. We expect that grain surface thermal- and photoreactions (UV and X-ray) and high-energy particles play an important role in the formation of complex species in the disc regions where water can be frozen onto grains (Throop 2011, Ciesla \& Sandford 2012, Walsh et al. 2014). The energetic radiation break molecular bonds producing reactive radicals and ions but stellar wind can inhibit the propagation of cosmic rays (Cleeves et al. 2013). Grain surfaces enhance considerably the probability for two species to meet and form other species. Throop (2011) and Ciesla \& Sandford (2012) models do quantify neither the specific species that are synthesised nor their amount, but have demonstrated that complex organics can indeed form on the Solar Nebula grain surfaces. In addition Ciesla \& Sandford (2012) results suggest that gas and dust transport in the Solar Nebula (and in discs) will interconnect disc regions with dissimilar physical and chemical environments.
+
+Members of the PI group are active collaborators within the ProDiMo\footnote{http://homepage.univie.ac.at/peter.woitke/ProDiMo.html} consortium (see e.g. Thi et al. 2014; Woitke et al. 2016).  ProDiMo is a software package to model static protoplanetary discs including gas phase, X-ray and UV-photo-chemistry, gas heating and cooling balance, disk structure and (dust \& line) radiative transfer. Surface chemistry has been recently included (Thi et al., in preparation).
+%Understanding protoplanetary disc evolution is one of the major endeavours in astrophysics. All studies are based on the alpha viscous-disc theory, which drives the disc spreading (Lynden-Bell \& Pringle 1974). The main contender to explain the viscosity is the Magneto-Rotational Instability (MRI), which efficiency alpha depends on the ionisation of the gas (Armitage 2011). Previous studies did assume a temporarily and spatially constant value for the efficiency alpha, although recent works already include the effect of gas heating by absorption of the stellar radiation (Bailli$\acute{\textsf e}$ \& Charnoz 2014). A realistic disc evolutionary model would require the detailed computation of the chemistry and hence of the gas ionisation at each location of the disc over the discﾕs lifetime. The efficiency of the MRI is strongly related to the strength of the different couplings between the charge carriers and the neutral gas in the discs (Ohm resistivity), or between the ions and the electrons (Ambipolar diffusion). Knowledge of the disc chemistry in general, and of the ionisation fraction in particular is paramount (Bai 2011). The charge carriers in discs are either electrons, atomic and molecular ions, polycyclic aromatic hydrocarbons (PAHs) or dust grains. The abundances of the carriers vary throughout the disc due to ionisation processes (photoionisation by UV and X-ray photons, cosmic-rays), recombination with electron, and charge exchanges. The rates of these processes are functions of the gas composition, the gas and dust temperatures, and the UV and X-ray fluxes inside the discs. Therefore the computations of the abundances require a detailed gas and dust physics and chemistry modelling together with continuum and line radiative-transfer. The ionisation fraction will affect the viscous evolution of the disc density structure, which in turn will affect the chemistry. Discs can also lose mass by photoevaporation at its surfaces due to illumination by the central star or by nearby OB stars (Alexander et al. 2014).
+
+\noindent{\bf Ionisation in discs}
+
+An accurate calculation of ionisation-recombination balance in dense protoplanetary conditions is essential for
+understanding various fundamental problems, such as coupling of the gas with magnetic field (Li et al. 2014), accretion
+processes (Turner et al. 2014), chemistry (Semenov et al. 2004; Larsson et al. 2012) and dust evolution (Okuzumi et al. 2011b; Akimkin 2015). The charging of grains in such environments affects their interaction of surrounding ions and electrons
+(Okuzumi 2009; Weingartner \& Draine 1999) and hence modifies the chemistry at the grain surface.
+
+Both the ionisation and recombination processes can arise from several sources. Primary agents of ionisation in dense gas
+(at visual extinctions above $A_{\rm V}\sim 10-30$\,mag, where interstellar UV photons are absorbed) are X-rays, cosmic-rays (CRs), and the decay of radionuclides, leading to the ionisation fraction that decreases with density (Oppenheimer \& Dalgarno 1974; Caselli et al. 2002; Maret et al. 2006). In discs around young, active stars the situation is complicated due to the presence of stellar X-rays (Glassgold et al. 1997) and the possible exclusion of low-energy CRs by protostellar winds (Cleeves et al. 2013b). Efficiency of stellar X-rays to ionize the circumstellar gas depends on the total fluxes and the hardness of the spectra (Igea \& Glassgold 1999; Ercolano \& Glassold 2013). Near the disc midplane, where X-rays and CRs are strongly attenuated, radioactive elements may substantially contribute to the electron fraction. In this case the ionisation rate is proportional to the abundance of the radioactive element and its decay rate (Umebayashi \& Nakano 2009; Cleeves et al. 2013a): Short-lived radionuclides (SLR, mostly $^{26}$Al with half-life $7.4\times 10^5$~yr) contribute comparatively more than long-lived radionuclides (LLR, mostly $^{40}$K with half-life $1.3\times 10^9$~yr), but decay faster.
+
+While the treatment of ionisation, despite the variety of ionisation sources, could be reduced to a single (total)
+ionisation rate, the description of recombination is less straightforward. At sufficiently high densities, where the
+dominant sink of free electrons and ions are dust grains, the recombination rate non-trivially depends on properties of the
+grains (Okuzumi et al. 2011a,b; Ivlev et al. 2016).
+
+The grain charges are determined by different mechanisms operating in different regions of discs: In the disc atmosphere, the
+photoelectric emission from grains is a prominent charging mechanism, leading to positive charges (Weingartner \& Draine 2001; Weingartner et al. 2006; Akimkin 2015). Not only stellar radiation, but also H$_2$ fluorescence induced by CRs can contribute to this (Ivlev et al. 2015). In the inner, midplane disc regions the photoemission becomes negligible, and the grain charges are determined by collection of electrons and ions from the surrounding weakly ionized gas, leading on average to negative grain charges.
+
+Depletion of electrons in dense disc regions, caused by the presence of negatively charged grains, significantly reduces the
+degree of ionisation (Umebayashi 1983; Umebayashi \& Nakano 1990; Nishi et al. 1991). As the ionisation controls the coupling of the gas to the magnetic field, and hence the development of the magnetorotational instability (MRI, e.g. Velikhov 1959, Balbus \& Hawley 1991; Armitage 2015), dust is the essential ingredient for any MRI model. It has been shown that the grain size critically affects the size of a disc's ``dead zone'' (Sano et al. 2000; Salmeron \& Wardle 2008; Bai 2011a,b; Dudorov \& Khaibrakhmanov 2014).
+
+Recently we have developed an exact analytical model which describes ionisation and dust charging in dense disc conditions,
+for arbitrary grain-size distribution (Ivlev et al. 2016). Unlike previously developed approaches (Ilgner \& Nelson 2006; Okuzumi 2009; Fujii et al. 2011; Dzyurkevich et al. 2013; Mori \& Okuzumi 2016), our model does not make assumptions on the form of the grain charge distribution, and enables convenient analysis of results in a general form, in terms of a few dimensionless numbers, which allows us to identify universality in the behavior of the charged species.
+
+\subsection{\Tcol Project-related publications}
+
+% Please list your own publications related to the proposed project, 
+% adhering to the rules of the DFG guidelines 1.91. In brief, please note: 
+% - Up to 10 publications
+% - The work must be published or accepted.
+% - Publications on astro-ph (arXive, SPIRES or articles with a DOI) count as published. 
+% - Any work that is only in the status ``accepted'' MUST be attached to the proposal
+%    together with the acceptance letter.
+% - All publications in this section CAN be attached to the proposal. Please limit these
+%    attachments to a minimum and please note that the reviewers may not read the attachments -
+%    the proposal has to speak for itself.
+% - The number of allowed publications refers to the sum of the publications listed
+%    in ``1.1.1 Articles published or officially accepted by publication outlets...'' and 
+%    in ``1.1.2 Other publications''. Publications which only exist on public repositories 
+%    belong into the category ``Other Publications''.
+Carmona, A. et al. 2014, A\&A, 567, 51 \\
+Caselli et al. 1998, ApJ, 499, 234 \\
+Caselli et al. 2002, ApJ, 565, 344 \\
+Ercolano \& Glassgold, 2013 \\
+Ercolano et al. 2009 \\
+Ivlev, A. et al. 2015, ApJ, 812, 135 \\
+Ivlev, A. et al. 2016, ApJ, in press (arXiv:1607.03701) \\
+Keto, E. et al. 2015, MNRAS, 446, 3731 \\
+%Sz$\ddot{\textsf u}$cs, L. et al. 2010, ApJ, 720, 1668 \\
+%Sz$\ddot{\textsf u}$cs, L. et al. 2016, MNRAS, 460, 82 \\
+Thi, W.-F. et al. 2014, A\&A, 561, 50 \\
+Woitke, P. et al. 2016, A\&A, 586, 103 \\
+
+\subsubsection{\Tcol 
+Articles published or officially accepted by publication outlets with scientific quality assurance;
+book publications}
+
+\subsubsection{\Tcol Other publications}
+
+None
+
+\subsubsection{\Tcol Patents}
+
+\paragraph{\Tcol Pending}
+
+None 
+
+\paragraph{\Tcol Issued}
+
+None 
+
+\section{\Tcol Objectives and work programme}
+\renewcommand{\leftmark}{\sc Objectives and work programme}
+
+\subsection{\Tcol Anticipated total duration of the project}
+
+36 months
+
+\subsection{\Tcol Objectives}
+
+The overarching aim of this project is together with projects B1 and C2 to quantitatively characterise the dispersal mechanism of protoplanetary discs, leading to the formation of Type 1 Transition Discs. This will constrain the physical and chemical properties in the disc at the time of planet formation and provide case-specific limits to the timescales of formation and migration of gas giants, which must occur in a gaseous discs. 
+
+The intermediate goals that will lead to the achievement of the project main aim are: 
+
+\begin{enumerate}
+
+\item Devise a chemical model appropriate for photoevaporative wind conditions which takes into account of the varying dust properties in the wind. 
+\item Directly measure the wind mass-loss-rates and profiles by comparing synthetic line profiles from the models to new and upcoming observations.
+\item Devise a chemical/ionisation model appropriate for protoplanetary disc atmospheres that self-consistently accounts for the shielding of stellar radiation from the wind. 
+\item Assess the role of magnetic fields for launching a wind.
+\end{enumerate}
+
+\subsection{\Tcol Work programme including proposed research methods}
+% for each applicant
+
+
+The project will develop along a path of growing complexity. It is possible that some of the tasks in the last stage (time-dependance) may be carried over to the next funding period. While this complex project will be led by the postdoc, the PIs and collaborators who will take an active part in the work. One of the PIs of this project has extensive experience in devising efficient and reliable reduced networks (see e.g.  Keto \& Caselli 2008, 2010; Keto, Rawlings \& Caselli, 2014), while one of the collaborators and the other PI are leading effort in the ionisation structure and radiative transfer of discs (e.g. Ivlev et al. 2016, Glassgold \& Ercolano 2013, Ercolano et a. 2008,2009).  
+
+\paragraph{Months 1-12}
+
+\noindent {\bf The reduced network.} A first task for this project is to simplify the gas-grain chemistry by reducing the chemical network to the minimum number of reactions needed to properly follow the formation/destruction of important species (in particular Hydrogen, Carbon, Oxygen as well as simple C-, O-bearing molecules) and the electron abundance or ionisation fraction. 
+The reduced chemical network will be benchmarked against comprehensive chemical networks to make sure that the abundances of  important (diagnostic) species such as C$^+$, C, O, CO are well reproduced in the range of conditions appropriate for evolved and
+transitions discs. This will imply running the comprehensive and reduced networks in a grid of physical conditions by varying temperature, density, and UV/X-ray fluxes.  As lines of Ne ([NeII], [NeIII]) and Ar ([ArII]) are good tracers of disc winds (e.g. Pascucci 2007, Szul$\acute{\textsf a}$gyi et al. 2012), Ne and Ar will be included in the chemical code. 
+
+Particular attention will be dedicated to the inclusion of X-rays and the identification of the regions within the disc where X-rays, FUV photons and cosmic-rays (CRs) dominate the chemical and thermal properties. Typical assumption is that the X-ray spectrum is given by the bremsstrahlung spectrum ($I_{\nu} \simeq 1/E \times exp(-E/kT)$ on the 0.1 - 10\,keV energy range (e.g. Glassgold et al. 2007, Aresu et al. 2011, Meijerink et al. 2012). The observed luminosity ranges are L$_X$ = 10$^{29} - 10^{31}$\,erg/s (based on the Taurus survey, G$\ddot{\textsf u}$del et al. 2007). The X-rays heat up the gas with 10-40\% efficiency (UV heating has only a few per cent efficiency). 
+
+Impinging X-rays may ionise the disk or wind material via primary or secondary ionisation. Primary ionisation may produce a single or multiple electrons due to the Auger effect. Their energy range depends on the shell from which  the Auger electron originates. The rate coefficient is given by the integral of the product of the X-ray energy spectrum and the ionisation cross section of the element (see e.g. Meijerink 2012, equation A.13). Secondary electrons might have keV energies, capable of $\sim$20-30 hydrogen ionisation. In fact the secondary electron ionisation rate per H nucleus is higher than the primary by an order of a magnitude, thus often only the secondary ionisations are considered in chemical models (e.g. $\acute{\textsf A}$d$\acute{\textsf a}$mkovics et al. 2011, Bruderer 2012).
+The exact expressions and the peak electronic ionisation cross sections are given in $\acute{\textsf A}$d$\acute{\textsf a}$mkovics et al. (2011). 
+
+Chemical models in the literature deal differently with X-ray reactions. The Semenov et al. (2010) and associated papers (Akimkin et al. 2013) model these reactions as an additional contribution to cosmic ray ionisation reactions (i.e. the rate is given by $R = \alpha \times (\zeta_{CR} + \zeta_X)$). Bruderer et al. (2012) accounts for only the secondary ionisation. Finally, Meijerink et al. (2012) take both the primary and secondary ionisation into account, as described above (see also Table 3 in Henning \& Semenov 2013).
+
+X-rays affect the chemistry in various ways: (i) X-rays might directly ionise H (while FUV radiation does not), initiating H$_2$ formation via the H-path. In high temperature regions, where the grain surface H$_2$ formation is less efficient, this reaction might contribute significantly to the total H$_2$ formation rate. (ii) Secondary electrons interacting with H$_2$ produce H$_2^+$ that quickly reacts with a further H$_2$ to form H$_3^+$ or reforms H$_2$ via charge transfer with neutral H. This can lead to H$_3^+$ abundances as high as 10$^{-8}$. This then initiates efficient ion-neutral reactions which e.g. result in efficient H$_2$O production (see e.g. Meijerink et al. 2012). Furthermore, the heating effect might also increase the rate of neutral-neutral reactions with reaction barriers. (iii) H$_3^+$ initiates ion-molecular reactions which keep molecular abundances high even at high temperatures (if X-rays are present, compares to only FUV). (iv)
+Ne, Ne+, Ar and Ar+ have ionisation potentials 21.56, 40.96, 15.76 and 27.63\,eV respectively. They are only ionised due to X-rays or X-ray induced fast electrons. Therefore, their ionisation is an indicator for X-rays and, as already mentioned, these species will be included in our chemical models. (v) Enhanced CO destruction through reaction with He$^+$, which has an ionisation energy of 24.6 eV (CRs can also ionize it). (vi) Other observational tracers (suggested by Meijerink 2012) are: H$_2$O, Ne$^+$, C/C$^+$ ratio,O$^+$.
+
+Finally, while X-rays are unlikely to interact with at the low column densities of the wind they are crucial for the chemistry in the underlying disc material, which feeds the wind. 
+
+\paragraph{Months 13-18}
+
+\noindent {\bf Line diagnostics from chemical models.} Once the reduced network is benchmarked and tested, it will be included in the MOCASSIN-KROME code by the co-PI Ercolano. The MOCASSIN-KROME code will be used to obtain the chemical abundances, while, radiative transfer codes available at the PI Institute (RADMC-3D\footnote{http://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/} and LIME\footnote{http://www.nbi.dk/~brinch/index.php?page=lime}) will be used to obtain fluxes in dust continuum and lines to then perform simulated observations and compare with available data and/or make predictions for future observations. We note that at this stage the chemical models will still use an unrealisticly simple dust model. However this step is important to guide us towards interesting diagnostics and to help us refine our chemical model. This step to obtain synthetic observations will be repeated every time a significant update is performed on the model. 
+
+In this second part of the project, we will also explore the effect of varying initial conditions, taking into account effects of accretion, vertical mixing and magnetic disk wind on chemistry following prescriptions by Heinzeller et al. (2011). Often low metal elemental abundances are assumed (H$_2$ molecular, C$^+$ ionised) or the chemical network is initially evolved to simulate the conditions of the parent cloud.  Depending on what kind of disk wind model is considered, the wind starts to dominate the mass loss rate at different times. For example, EUV winds tend to be efficient at late times, thus the initial chemical composition might not matter, while the X-ray winds might dominate the mass loss over accretion in early times, and thus the initial chemical abundances might matter (see review of Alexander et al. 2014, page 483 end of section 2.3). Furthermore, several papers shows that the radial movement of material and the vertical mixing affect the chemistry in disks, i.e. by lowering concentration gradients and enhancing abundances of NH$_3$, CH$_3$OH, C$_2$H$_2$ and sulphur-containing species (e.g. Ilger et al. 2004, Semenov et al. 2010, Heinzeller et al. 2011). If the chemical timescales are long compared to the disk wind dynamic time, then the disk composition will affect the wind as well. Thus, we will model the effects of the radial accretion flow and vertical mixing (although the later is more important, see Semenov 2010) on the disk chemistry (even if these motions are not included in the original simulation). As the MOCASSIN simulations start from an alpha-disk model, we will take this disc structure to model the vertical mixing and accretion similarly as was done in the Heinzeller et al. (2011) paper.
+
+\paragraph{Months 19-24}
+
+\noindent {\bf Dust evolution.} The chemical model assumes initially that dust grains can be approximated by one-size particles of 0.1${\mu}$m in diameter and that the dust-to-gas mass ratio is fixed.  However, this assumption is completely inappropriate for disc winds. Indeed as explained in detail in project C2 of this proposal, the maximum grain size that can be entrained in the wind at a given radial distance from the star results from the local force balance between the drag force, gravity and the centrifugal force. A further complication is that the underlying distribution of grains is also not constant and varies as a function of disc radius and vertical distance from the mid-plane, due to the effects of grain growth, fragmentation, settling and drift. A detailed model of the spatially and time-varying grain abundances and size distributions in the wind is however essential for the chemical model, since grains provide the bulk of the opacity in the FUV. The third task of the Postdoc employed for this project will be to include spatially-varying grain abundances and size distributions
+provided by project C2 into the chemical code, at different evolutionary times, to properly account for dust opacities in the wind.  Also the effects of different dust grain properties on the chemical composition will be explored at this point.  At MPE, we are already studying the effect of varying grain-size distribution on the ionisation structure of discs (Ivlev et al. 2016). 
+
+This step will be further decomposed into levels of increasing complexity. We will begin with decoupling the time and space evolution of the grains. We will then compare the timescales involved and asses whether the time-evolution of the dust must be treated self-consistently or if we can work with snapshots. 
+
+An important {\bf milestone} at the end of this step will be a case specific assessment o the ionisation level in the atmospheres of discs We will make this immediately available to the international community as this is a crucial ingredient for the development of MHD calculations. This will also help us assess under what conditions, if any, one can expect that a significant component of observed outflow emission may be indeed magnetically driven. 
+
+\paragraph{Months 25-36}
+
+\noindent {\bf Time-dependent chemistry.} It is unclear at this stage if equilibrium chemistry is an appropriate approximation for disc winds. The material flows at a few km/sec and as it moves along the wind streamlines it is subject to changes in density and radiation field. It is likely that time  dependent calculations will be necessary for this problem, where the dust properties in the chemical code will be provided by the time-dependent calculation of the dust evolution described in C1. This will be the final task of the Postdoc employed for this project, who will first study the time scales of the various physical/chemical processes (e.g. photochemistry, accretion, mixing, wind) and quantify the validity of equilibrium chemistry.
+
+After this, the whole team will work together with the B1 and the C2 teams to couple time-dependent gas-grain chemistry and dust evolution.  Depending on the level of complexity required, part of this final step may be carried out in the second funding period.
+
+
+The Gannt chart below summarises the approximate time-line of the B2 project: 
+ \begin{figure*}[ht]
+   \centering
+   \includegraphics[width=\hsize]{GanntB2.pdf}
+  
+   \caption{Gannt chart for B2. More details have been outlined in the previous section.}
+              \label{FigGam}%
+    \end{figure*}
+
+{\bf Year 1}: (i) focus on the chemical network update, to make sure that all the most recent reaction rates will be included. This will be done by comparing our code with KIDA\footnote{http://kida.obs.u-bordeaux1.fr}, the kinematic database for astrochemistry, as well as with comprehensive literature research.  (ii) Include detailed ionisation processes, taking into account the effects of ionisation-recombination from FUV and CRs. (iii) Include X-ray chemistry based on the extensive literature work available as well work done within the ProDiMo code. (iv) Finalise the reduced chemical network, including Ne and Ar, and test/benchmark it. 
+
+{\bf Year 2}: (i) inclusion of reduced chemical network in MOCASSIN-KROME. (ii) Calculation of the chemical-physical model, which will then be used as input in radiative transfer code to produce dust continuum emission and line fluxes. (iii) Comparison with observations and further update of chemical code based on observational constraints. (iv) Study of the effect of changing the grain size from mono-disperse (0.1 $\mu$m) to MRN grain-size distribution (Mathis et al. 1977) or evolved-MRN distributions (e.g. Zhao et al. 2016; Ivlev et al. 2016). (v) ionisation level calculations. (vi)  Calculation of an updated chemical-physical model, which will then be used as input in radiative transfer code to produce dust continuum emission and line fluxes. Comparison with observations.
+
+{\bf Year 3}: (i) study of time scales of various processes in chemical and dynamical model. (ii) Benchmark of time-dependent reduced chemical code. (iii) Inclusion of time-dependent chemistry in dynamical model. (iv)  Calculation of an updated chemical-physical model, which will then be used as input in radiative transfer code to produce dust continuum emission and line fluxes. Comparison with observations.
+
+{\bf Continuous Assessment of New Diagnostics} Jointly with the B1, C2 and A1 team members as well as with our external collaborators Prof. Henning and Prof. van Dishoeck, we will regularly compare our models to the observations via the production of synthetic spectra. This will allow us to promptly identify and characterise new wind diagnostics and allow us to use the observations to measure the crucial wind properties of mass loss rate and wind profile, which have a large impact on the formation and evolution of planetary systems. 
+
+\subsection{\Tcol Data handling}
+We will make the sets of line profiles for the different wind and disc characteristics publicly available in electronic format on the public partition of the Research Unit server. The reduced and full networks will also be made available at the end of the first funding period, when they will have reach their final form. 
+
+\subsection{\Tcol Other information}
+% Please use this section for any additional information you feel is
+% relevant which has not been provided elsewhere.
+
+Not Applicable 
+
+\subsection{\Tcol Information on scientific and financial involvement of international cooperation partners}
+
+Not applicable 
+
+\section{\Tcol Bibliography}
+
+\noindent
+Akimkin, V. V. 2015, ARep, 59, 747 \\
+Akimkin, V. V. 2015, ARep, 59, 747 \\
+Bai, X.-N. 2011a, ApJ, 739, 50 \\
+Bai, X.-N. 2011b, ApJ, 739, 51 \\
+Balbus, S. A., \& Hawley, J. F. 1991, ApJ, 376, 214 \\
+Caselli, P., et al. 2002, ApJ, 572, 238 \\
+Cleeves, L. I. et al. 2013a, ApJ, 772, 5 \\
+Cleeves, L. I. et al. 2013b, ApJ, 777, 28 \\
+Dudorov, A. E., \& Khaibrakhmanov, S. A. 2014, Ap\&SS, 352, 103 \\
+Dzyurkevich, N. et al. 2013, ApJ, 765, 114 \\
+Ercolano, B. et al. 2008, ApJ 688, 398 \\
+Ercolano, B. et al. 2009, ApJ 699, 1639\\
+Fujii, Y. I. et al. 2011, ApJ, 743, 53 \\
+Glassgold, A. E. et al. 1997, ApJ, 480, 344 \\
+Heinzeller et al. 2011, ApJ, 731, 115 \\
+Hutschison et al. 2016a, MNRAS, 461, 742\\
+Hutschison et al. 2016b, MNRAS, 463, 272\\ 
+Igea, J., \& Glassgold, A. E. 1999, ApJ, 518, 848 \\
+Ilgner, M., \& Nelson, R. P. 2006, A\&A, 445, 205 \\
+Ivlev, A. V. et al. 2016, ArXiv e-prints, arXiv:1607.03701ﾊ\\ 
+Ivlev, A. V. et al.  2015, ApJ, 812, 135 \\
+Larsson, M. et al. 2012, RPPh, 75, 066901ﾊ\\  
+Li, H.-B. et al. 2014, in Protostars and Planets VI, ed. H. Beuther, R. Klessen, C. Dullemond, \& T. Henning (Tucson, AZ: Univ. Arizona Press), 101-123 \\
+Maret, S. et al. 2006, Nature, 442, 425 \\ 
+Mathis, J. S. et al. 1977, ApJ, 217, 425 \\
+Mori, S., \& Okuzumi, S. 2016, ApJ, 817, 52 \\ 
+Nishi, R. et al. 1991, ApJ, 368, 181 \\
+Okuzumi, S. 2009, ApJ, 698, 1122 \\
+Okuzumi, S. et al. 2011a, ApJ, 731, 95 \\
+Okuzumi, S. et al. 2011b, ApJ, 731, 96 \\
+Oppenheimer, M., \& Dalgarno, A. 1974, ApJ, 192, 29 \\
+Panoglou, D. et al. 2012, A\&A, 538, 2 \\
+Salmeron, R., \& Wardle, M. 2008, MNRAS, 388, 1223 \\
+Sano, T., Miyama, S. M. et al. 2000, ApJ, 543, 486 \\
+Semenov, D. et al. 2004, A\&A, 417, 93 \\
+Turner, N. J. et al. 2014, in Protostars and Planets VI, ed. H. Beuther, R. Klessen, C. Dullemond, \& T. Henning (Tucson, AZ: Univ. Arizona Press), 411-432 \\
+Umebayashi, T. 1983, PThPh, 69, 480 \\
+Umebayashi, T., \& Nakano, T. 1990, MNRAS, 243, 103 \\
+Umebayashi, T., \& Nakano, T. 2009, ApJ, 690, 69 \\
+Velikhov, E. P. 1959, JETP, 36, 1398 \\
+Weingartner, J. C., \& Draine, B. T. 1999, ApJ, 517, 292 \\
+Weingartner, J. C., \& Draine, B. T. 2001, ApJS, 134, 263 \\
+Weingartner, J. C. et al. 2006, ApJ, 645, 1188
+Zhao, B. et al. 2016, MNRAS, 460, 2015ﾊ\\
+
+\section{\Tcol Requested modules/funds}
+\renewcommand{\leftmark}{\sc  Requested modules/funds}
+% Explain each item for each applicant (stating last name, first name).
+
+\subsection{\Tcol Basic Module}
+
+\subsubsection{\Tcol Funding for Staff}
+% Please note that funds for your own temporary position (ﾃ｢竄ｬﾅ摘igene Stelleﾃ｢竄ｬ)
+% are not to be included here; this belongs to the separate ﾃ｢竄ｬﾅ溺odule Temporary Positionﾃ｢竄ｬ.
+We require funding for one Postdoc to work jointly at the MPE with Prof. Caselli and at the LMU in the group of
+Prof. Ercolano.
+A Postdoc with at least some experience of astrochemistry would be certainly desirable  to work on this complex  project. The Postdoc will receive scientific support form the PIs, but also from experienced astrochemists and plasma physicists (e.g. Dr Ivlev, Dr Thi) at the Centre for Astrochemical Studies led by Prof. Caselli at the MPE. 
+
+In case of an award Dr Sz$\ddot{\textsf u}$cs has expressed interest in taking on the position. His expertise in this field would be very beneficial to the achievement of the aims of this project.
+
+\subsubsection{\Tcol Direct Project Costs}
+
+
+\paragraph{\Tcol Equipment up to EUR 10,000, Software and Consumables}
+
+Will be provided by the host institution
+
+\paragraph{\Tcol Travel Expenses}
+
+Total: 9900 Euro Justification : Each year one national trip (meeting of Astronomical Society, national
+meetings) and one international trip (conference, visit
+collaborators). 
+During the course of the postdoc one week long visits to our main
+international collaborator, Dr T. Grassi. 
+
+Cost estimate: 
+\begin{itemize}
+\item National trip: 5 overnight stays, train/airfare,
+conference fee; 1000 Euro (3000 over 3 years).
+\item International trip: 6 overnight stays, airfare, conference fee;
+  1500 Euro (4500 over 3 years).
+\item Visit to/from T. Grassi: airfare, 6 overnight stay 1200 Euro (2400
+  for 2 visits)
+\end{itemize}
+
+\paragraph{\Tcol Visiting Researchers (excluding Mercator Fellows)}
+
+Not Relevant 
+
+
+\paragraph{\Tcol Other Costs}
+
+None
+
+\paragraph{\Tcol Project-related publication expenses}
+
+We request 770 Euro py (total 2250 Euro) for publication expenses.
+
+\subsubsection{\Tcol Instrumentation}
+
+None 
+
+\paragraph{\Tcol Equipment exceeding EUR 10,000} 
+
+None
+
+\paragraph{\Tcol Major Instrumentation exceeding EUR 100,000} 
+
+None
+
+\subsection{\Tcol Module Temporary Position}
+
+Not Relevant
+
+\subsection{\Tcol Module Replacement Funding}
+
+Not Relevant
+
+\subsection{\Tcol Module Mercator Fellows}
+
+Not Relevant
+
+\subsection{\Tcol Module Public Relations Funding}
+
+Not Relevant
+
+\section{\Tcol Project requirements}
+\renewcommand{\leftmark}{\sc Project requirements}
+
+\subsection{\Tcol Employment status information}
+% For each applicant, state the last name, first name, and employment
+% status (including duration of contract and funding body, if on a
+% fixed-term contract).
+
+Paola Caselli, Director at the Max Planck Institute for Extraterrestrial Physics (MPE) -- permanent 
+
+Barbara Ercolano, Professor at the Ludwig-Maximilians-Universit\"at
+M\"unchen -- permanent
+
+\subsection{\Tcol First-time proposal data}
+% Only if applicable: Last name, first name of first-time applicant.
+
+Not Relevant
+
+\subsection{\Tcol Composition of the project group}
+% List only those individuals who will work on the project but will not
+% be paid out of the project funds. State each personﾃ｢竄ｬ邃｢s name, academic
+% title, employment status, and type of funding.
+
+Alexei Ivlev, Dr, permanent scientist at the MPE 
+Wing Fai, Thi, Dr, postdoctoral assistant at the MPE
+
+\subsection{\Tcol Cooperation with other researchers}
+
+\subsubsection{\Tcol Planned cooperation on this project}
+
+\paragraph{\Tcol Collaborating researchers for this project within the
+  Research Unit}
+%Each proposal must be accompanied by a description of how the project
+%is integral to the Research Unit, %both in terms of subject matter
+%and organisation. This includes a description of the cooperation with
+%%others participating within the Research Unit. 
+
+This project is intimately linked to project B1 (PI Ercolano) and to project C2 (PI Ercolano). 
+It requires the input from the radiation-hydrodynamic models from B1 as well as the MOCASSIN-KROME code which is developed by the PI Ercolano for B1 and B2 (with different immediate objectives). It also requires input from project C2 (PI Ercolano) and will work closely with T. Birnstiel (C1, C2) for help in the implementation of the dust models. The synthetic spectra will be compared with observations with the help of the A1 team (PI Testi) and our external collaborators Prof. Henning and Prof. van Dishoeck. 
+
+\paragraph{\Tcol Collaborating researchers for this project outside of
+  the Research Unit}
+
+Dr T. Grassi, the author of the KROME package has already helped Prof. Ercolano with the implementation of KROME into MOCASSIN and is expected to help further in implementing the new networks and optimising the chemistry routine (inclusion, for example, of a better equilibrium chemistry option. 
+It is envisioned that Dr Grassi will play regular visits to our group.    
+
+\subsubsection{\Tcol Researchers with whom you have collaborated scientifically within the past three years}
+% This information is important for DFG to exclude possible conflicts of interest.
+% Please mention not only the names of the cooperation partners but also their institution and city.
+% Scientists already mentioned in the previous two subsubsections do not have to be mentioned
+% again.
+
+Maite Bertran (INAF-Osservatorio Astrofisico di Arcetri), Aaron Boley (University of British Columbia), Sandra Brünken (University of Cologne), Stephanie Cazaux (University of Groningen), Cecilia Ceccarelli (Univ. Grenoble Alpes), Francesco Fontani (INAF-Osservatorio Astrofisico di Arcetri), Thomas Hartquist (University of Leeds), Izaskun Jimenez-Serra (Queen Mary University London), Eric Keto (Harvard-Smithsonian Center for Astrophysics), Marco Spaans (University of Groningen), Jonathan Tan (University of Florida), Stephan Schlemmer (University of Cologne), Charlotte Vastel (Université de Tulouse), Malcolm Walmsley (INAF-Osservatorio Astrofisico di Arcetri)
+ Niederhofer (STSci, USA); M. Hilker (ESO, Garching); N. Bastian (U. Liverpool,
+UK); M. Guarcello (U. Palermo, Italy); M. Tazzari (U. Cambridge, UK);
+A. Natta (Florence, Italy); R. Alexander (U. Leicester); D. Hubber
+(LMU); J. Dale (U. Hertfordshire, UK); C. Koepferl (LMU); I. Bonnell
+(U. St. Andrews, UK); A. McLeod (ESO, Garching); D. Boneberg
+(U. Cambridge, UK); R. Parker (U. Liverpool, UK); R. Wesson (UCL,
+London, UK); M. Barlow (UCL, London, UK); A. Glassgold (u. Berkeley,
+USA); C. Manara (ESA, Noordwjik, Netherlands); A. Danekhar (CfA,
+Harward, USA); Q. Parker (Sidney, Australia); S. Casassus
+(U. de Chile, Santiago, Chile); I. Pascucci (U. Arizona, USA);
+A. Bevan (UCL, London, UK).
+
+\subsection{\Tcol Scientific equipment}
+% List larger instruments that will be available to you for the
+% project. These may include large computer facilities if computing
+% capacity will be needed. 
+
+The group of Prof. Ercolano has two own computer clusters comprising 
+
+\begin{itemize}
+\item 2 CPU Intel Xeon X5650 (Westmere, beginning
+2010, 2.66 GHz) 6 cores each 12 cores total (24 virtual) 74 GB ram.
+
+\item 4 CPU Intel Xeon E7-4850 (Ivy Bridge, beginning 2014, 2.30 GHz)
+12 cores each 48 cores total (96 virtual) 660 GB ram.
+
+\end{itemize}
+
+Further computational power is provided through the C2PAP facility of the Excellence Cluster to which
+the group has guaranteed time. This comprises 126 nodes, each node with 2 CPU Intel Xeon E5-2680 (Sandy
+Bridge, beginning 2012, 2.7 GHz) 8 cores each 16 cores total (32
+virtual) 64 GB ram. Note that while the future of the Excellence
+Cluster Universe is uncertain, the C2PAP facilities will be in any
+case supported by the LMU. 
+
+The Leibniz Rechnung Zentrum (LRZ) is also available to us, where still
+larger facilities are available with somewhat more constrained and longer queues.
+
+
+
+\subsection{\Tcol Project-relevant interests in commercial enterprises}
+% Information on connections between the project and the production
+% branch of the enterprise.
+
+Not Relevant
+
+
+\subsection{\Tcol Additional information}
+% If applicable, please list proposals requesting major
+% instrumentation and/or those previously submitted to a third party
+% here.
+
+Not Relevant
+
+
+\end{document}
