@@ -1,0 +1,32 @@
+\begin{thebibliography}{7}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Birnstiel} {et~al.}(2015){Birnstiel}, {Andrews}, {Pinilla}, \&
+  {Kama}}]{2015ApJ...813L..14B}
+{Birnstiel}, T., {Andrews}, S.~M., {Pinilla}, P., \& {Kama}, M. 2015, \apjl,
+  813, L14
+
+\bibitem[{{Birnstiel} {et~al.}(2010){Birnstiel}, {Dullemond}, \&
+  {Brauer}}]{2010A&A...513A..79B}
+{Birnstiel}, T., {Dullemond}, C.~P., \& {Brauer}, F. 2010, \aap, 513, A79
+
+\bibitem[{{Birnstiel} {et~al.}(2012){Birnstiel}, {Klahr}, \&
+  {Ercolano}}]{2012A&A...539A.148B}
+{Birnstiel}, T., {Klahr}, H., \& {Ercolano}, B. 2012, \aap, 539, A148
+
+\bibitem[{{Font} {et~al.}(2004){Font}, {McCarthy}, {Johnstone}, \&
+  {Ballantyne}}]{2004ApJ...607..890F}
+{Font}, A.~S., {McCarthy}, I.~G., {Johnstone}, D., \& {Ballantyne}, D.~R. 2004,
+  \apj, 607, 890
+
+\bibitem[{{Fromang} \& {Nelson}(2009)}]{2009A&A...496..597F}
+{Fromang}, S. \& {Nelson}, R.~P. 2009, \aap, 496, 597
+
+\bibitem[{{Krijt} \& {Ciesla}(2016)}]{2016ApJ...822..111K}
+{Krijt}, S. \& {Ciesla}, F.~J. 2016, \apj, 822, 111
+
+\bibitem[{{Owen} {et~al.}(2011){Owen}, {Ercolano}, \&
+  {Clarke}}]{2011MNRAS.411.1104O}
+{Owen}, J.~E., {Ercolano}, B., \& {Clarke}, C.~J. 2011, \mnras, 411, 1104
+
+\end{thebibliography}
