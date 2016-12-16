@@ -1,0 +1,4 @@
+setenv DIR /Users/cornelisdullemond/business/grants/dfg_for_trap/dfg_rutd_c1
+cp $DIR/Beschreibung_des_Vorhabens.tex ./C1.tex
+cp $DIR/bibliography.bib ./
+cp $DIR/figure/* ./figure/

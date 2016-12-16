@@ -1,0 +1,1155 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTex Template for proposals within the              %
+% DFG Research Unit Program                            %         
+%Planet Formation Witnesses and Probes: Transition Discs
+% August 2016                                            %                           
+%                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 
+%
+% This template may be used to prepare proposals in latex.
+%
+%
+% The project description, including publication list, should be no more than 20 pages
+% in length. It should be self-explanatory and not require reviewers to read the 
+% literature that is quoted or enclosed.
+
+\documentclass[10pt,fleqn,twoside]{article}
+
+%%%% USE ARIAL FONT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{helvet}
+\renewcommand\familydefault{phv}
+
+%%%% INCLUDE NECESSARY PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{babel}
+\usepackage[UKenglish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{ae,aecompl}
+\usepackage{graphicx}
+\usepackage{palatino}
+\usepackage[T1]{fontenc}
+\usepackage{rotating}
+\usepackage{epsf}
+\usepackage{setspace}
+\usepackage{xspace}
+\usepackage{multicol}
+\usepackage{siunitx}
+%\usepackage{caption}
+
+\usepackage{sfmath}
+
+\setlength{\bibsep}{-0.5pt}
+\newcommand{\todo}[1]{\textcolor{red}{\bf #1}}
+\newcommand\connect[1]{{\color{OliveGreen} #1}}
+
+%%%% CAPTION LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[font={small}]{caption}
+
+%%%% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\textheight}{22cm}
+\setlength{\topmargin}{-1.2cm}
+\setlength{\textwidth}{15.6cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+\setlength{\mathindent}{1.5cm}
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.08cm}
+
+%%%% PAGE HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhead[RE,RO]{}
+\fancyfoot[RO]{ \thepage}
+\fancyfoot[LE]{ \thepage}
+\fancyfoot[CE,CO]{}
+
+%%% FONTS FOR THE TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newfont{\tpfonta}{cmssbx10 scaled 1600}
+\newfont{\tpfontb}{cmssbx10 scaled 3200}
+
+%%%% EURO SIGN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\euro{{\sffamily C%
+\makebox[0pt][l]{\kern-.70em\mbox{--}}%
+\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
+\newcommand\keuro{k{\sffamily C%
+\makebox[0pt][l]{\kern-.70em\mbox{--}}%
+\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
+
+%%%% COLOR DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{blue} {rgb} {0.25,0.25,0.75}
+%%%%%%%%%%%%%% NICER PROJECT REFERENCES %%%%%%%%%%%%%%%%%%%
+
+\newenvironment{literature}%
+ {\begin{multicols}{2}\begin{scriptsize}\begin{list}{}{%
+   \setlength{\topsep}{0em}%
+   \setlength{\parskip}{0em}%
+   \setlength{\parsep}{0em}%
+   \setlength{\itemsep}{0em}%
+   \setlength{\rightmargin}{0em}%
+   \setlength{\leftmargin}{2em}%
+   \setlength{\itemindent}{-2em}}}%
+ {\end{list}\end{scriptsize}\end{multicols}}
+
+%%%% ADDITONAL EMPHASIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cem}{\color{blue}}
+\newcommand{\eem}{\sl\color{blue}}
+
+%%%% SET THE COLOR OF THE (SUB-) SECTION TITLES %%%%%%%%%%% 
+\newcommand{\Tcol}{\color{blue}}
+
+%%%% SET THE COLOR OF THE TITLE BOX BACKGROUND %%%%%%%%%%%%
+\definecolor{Background}{rgb} {0.62,0.75,0.5}
+
+%%%% REFERENCE SECTION NAME %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\refname{\Tcol 9. Bibliography}
+
+%%%% COLOR THE SECTION NUMBERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand\@seccntformat[1]{\color{blue} {\csname the#1\endcsname}\hspace{0.5em}}
+\makeatother
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+
+%%%% CHANGE THE APPEARANCE OF THE \PARAGRAPH COMMAND  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4}     % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}        % how many sectioning levels to show in ToC
+
+
+\fancyhead[LE,LO]{\slshape
+%%%%  Please edit
+%
+Ercolano: RU Transition Discs Project B1}
+%
+%
+%%%%%
+
+
+\begin{document}
+
+
+\newpage
+
+%%%% PROJECT DESCRIPTION STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{1}
+
+\centerline{\huge\bf\Tcol
+%
+%
+%
+%
+%%%%  Please edit
+%
+ Project B1:}
+\vspace{1em}
+
+\centerline{\LARGE\bf\Tcol The radiation-hydrodynamics of}
+
+\centerline{\LARGE\bf\Tcol photoevaporative winds with chemistry}
+
+%
+%%%%
+%
+%
+%
+%
+\vskip1.0cm
+
+%%%%  Please edit
+\noindent{\bf Authors:}\\
+\begin{tabular}{ll}
+{\textsf{PI:}}                  & B.~Ercolano (LMU)\\
+{\textsf{Co-I:}}                &P.~Caselli (MPE)\\
+{\textsf{Collaborations:}}      & J. Owen (Princeton, USA), T. Grassi (STARPLAN, Copenhagen)  \
+\end{tabular}
+
+%%%%  Please edit
+
+\vspace{1em}
+\noindent{\bf Requested positions: 1 Postdoc} \\
+
+\vspace{1em}
+\noindent{\bf Abstract:}\\
+Type 1 Transition discs (TDs) are most likely discs in an advanced stage of dispersal
+(see introduction to the Research Unit). The
+dispersal mechanism of discs has been shown to be of fundamental importance to planet
+formation, yet the responsible mechanism is still largely
+unconstrained. Photoevaporation from the central star is currently a
+promising avenue to investigate, but the models developed to date do
+not yet have enough predictive power for a piecewise comparison with
+the observations. In this subproject we aim at building the most
+up-to-date radiation-hydrodynamical calculations of irradiated discs, 
+coupled to photoionisation, chemistry and radiative transfer
+calculations. This will constitute the backbone for the work carried
+out in several sub-projects of this proposal (B2, C2), which together
+aim at performing quantitative
+spectroscopy of disc winds. Comparison with existing and upcoming
+observations will allow us to constrain the mass loss rates and the
+launching regions of the wind and thus pin down the underlying driving disc
+dispersal mechanism. 
+The models developed in this project will also the able to tackle
+important outstanding questions about the formation and evolution of
+Type I TDs, as discussed in more detail below. 
+
+\section{\Tcol State of the art and preliminary work}
+\renewcommand{\leftmark}{\sc State of the Art and preliminary work}
+
+\subsection{\Tcol Scientific Background}
+
+Understanding disc dispersal is a key piece in the puzzle of planet
+formation. Type 1 TDs, which are considered to be objects caught in
+the act of dispersal provide a tight constraints on the underlaying
+dispersal mechanism. For example, their (low) frequency, in relation
+to the global disc population in a given cluster, implies dispersal
+timescales of order 10\% of the global disc timescale, and their
+evolution on the colour-colour plane (e.g. K-[8] versus K-[24]) points
+to an inside-out mode of 
+dispersal (e.g. Ercolano, Clarke \& Hall, 2011; Koepferl, Ercolano et
+al. 2013; Ercolano et al. 2015). 
+
+The most successful of the various disc dispersal mechanisms proposed
+because it
+matches many of the observational constraints, 
+is photoevaporation by radiation from the central star
+(e.g. Clarke et al. 2001). As described in more details below, in this
+model the disc is dispersed because
+the mass loss rate due to photoevaporation eventually exceeds the mass accretion
+rate through disc, the wind can quickly destroy the disc, eroding from the inside-out.
+
+Recent work suggests that magnetohydrodynamic (MHD) turbulence may also
+drive disc winds (e.g. Bai \& Stone, 2013), which may lead to disc
+dispersal and at the same time remove angular momentum from the
+system, thus allowing the inward flow of material, i.e. accretion. What is certain, however, is that if MHD winds are indeed
+as vigorous as some authors claim, they would change the
+way we understand disc evolution and dispersal, raising questions
+about models that  rely on alpha-type discs. However, these models are still in their infancy and the
+mass loss and accretion rates from MHD winds are at present highly
+uncertain. Some of the main
+sources of uncertainty include the strong dependence of the wind and
+accretion rates on the completely unknown magnetic flux distribution
+through the disc and, most importantly, magnetic flux evolution as a
+function of surface density of the disc (e.g. discussion in Armitage
+et al. 2013). Another key ingredient is the level of ionisation in the
+atmosphere of discs, which determines the nature of the gas coupling to
+this unknown magnetic field. While details of the magnetic field
+structure and evolution are difficult to determine at present, the
+joint efforts of sub-projects B1, B2 and C2 can deliver the most
+detailed case-specific assessment to date of the ionisation structure in disc
+atmospheres. This is indeed one of the aims, which is described in
+subproject B2 (PIs Caselli \& Ercolano).  
+
+In this subproject we focus solely on photoevaporative winds.
+In the following two sections the state-of-the art for photoevaporation
+models, to which the PI and collaborators have made significant contributions, will be discussed.
+ 
+\subsubsection{\Tcol Photoevaporation models} 
+
+All models of photoevaporation show that radiation from the central
+star heats the disc atmosphere, where a thermal  wind is established.
+The wind is centrifugally launched from the location where the thermal
+energy of the heated gas exceeds the local gravitational binding
+energy. 
+Disc dispersal then sets in as a consequence of the wind when the mass
+loss rate exceeds the accretion rates in the disc. According to
+viscous theory, young discs accrete
+at a vigorous rate, which naturally decreases as time goes by
+(e.g. Hartmann 2008), until,
+after a few million years, accretion rates fall to values smaller than
+the wind rates, allowing photoevaporation to take over the further
+evolution of the disc. Once the dispersal sets in the disc is then
+quickly eroded from the inside out (see e.g. Alexander et al. 2014 and
+Armitage 2011, for recent reviews of this process).  
+
+
+\begin{figure}
+  \includegraphics[width=0.75\linewidth, angle = 270]{profiles.pdf}
+  \caption{From Armitage (2011). Different photoevaporation profiles
+    corresponding to the EUV-only model of Alexander et al. (2006),
+    the EUV+X-ray of Owen et al. (2010) and FUV model estimates of
+    Gorti, Dullemond \& Hollenbach (2009). The profiles have been
+    normalised, where the total mass loss rates can differ by over two
+    orders of magnitude. }
+  \label{fig:profiles}
+\end{figure}
+
+
+While the community now agrees on this broad brush picture,
+quantitatively speaking, the dispersal mechanism is still largely
+unconstrained. There is currently a hot debate in the literature as to
+what type of radiation may be the main driver of the wind: Extreme-,
+Far-UV or X-ray. This is a fundamental question as the mass-loss-rates
+implied by the different models can differ by orders of
+magnitudes. Mass loss rates determine the timescales of dispersal for
+given initial disc conditions. The wind profile, i.e. the region of
+the disc that is most affected by photoevaporation, is also very
+different in each scenario (e.g. see Armitage 2011, Alexander et
+al. 2014). Figure~\ref{fig:profiles} shows the mass loss profile for the X-ray+EUV
+(Owen, Ercolano et al. 2010), EUV -only (Font et al. 2004) and FUV
+(Gorti, Dullemond \& Hollenbach 2009) profiles. The X-ray profile is
+more extended than the EUV profile, which predicts mass loss only from
+a vary narrow range of disc radii. The FUV model is again very
+different, showing mass loss from the outer regions of the disc, hence
+predicting in some cases an outside-in mode of dispersal. These
+differences have important implications for the planet formation
+process. For example, the total
+mass loss rates in the disc sets the timescales for the formation of
+gas giants, and together with the wind
+profiles it sculpts the disc density distributions, profoundly affecting
+the evolution of all planetary systems, by putting a stop to migration via
+the formation of gaps in the gas. As an example, we have shown that
+the photoevaporation profile strongly influences the final semi-major
+axis distribution of exo-planets (Ercolano \& Rosotti, 2015) 
+
+While the importance of the final stages
+of disc evolution to understand planet formation and explain the
+diversity of exoplanets is largely recognised, a quantitative model describing this phase is
+still lacking. The reason for that is that all current models are
+incomplete. Some models focus on hydrodynamics and 
+assume isothermal gas (e.g. the EUV-olny model of Font et al. 2004), others focus on
+chemistry but do not perform hydrodynamical calculations (e.g. the FUV
+model of Gorti,
+Dullemond \& Hollenbach 2009). None of the existing models take into
+account dust evolution in the underlying disc and entrainment of
+grains in the wind. Together with a PhD student I co-supervised
+at the Institute of Astronomy in Cambridge, I performed
+the only existing radiation hydrodynamic calculations of X-ray  + EUV driven
+winds to date (Owen, Ercolano et al. 2010, 2011a, 2012), using realistic gas
+temperatures obtained from X-ray photoionisation calculations
+(Ercolano et al. 2008, 2009). This led to a fundamental re-think to the
+whole problem, as previous isothermal calculations had yielded much
+lower mass loss rates (by two orders of magnitude). However, our
+models, which still represents the state-of-the-art, also have
+important limitations, since, most importantly, they do not include
+chemistry and ignore the dust phase. Furthermore the resolution at
+which the simulations were performed is insufficient to study lines with
+emission regions extending close to the disc inner edge. These
+limitations make the application of current models to observations
+impossible.  
+
+As well as the uncertainties on mass loss rates and wind profiles,
+which directly affect planet formation, there are also a number of
+open questions regarding photoevaporation and the formation of the
+observed TDs. A recent review by Owen (2016) provides a discussion of
+the current successes and problems of theoretical models in
+explaining the origin and evolution of TDs. Here we will just list a
+few issues that we think should have priority in the development of a
+quantitative theory which can be used to interpret observations. 
+
+\begin{enumerate}
+\item The observations of TDs have yet to reveal objects with large
+  holes that do not accrete. Photoevaporation, however, predicts a
+  significant population, unless the final removal is dominated by a
+  process called ``thermal sweeping'' (Owen et al. 2012). The
+  efficiency of  ``thermal sweeping'' has however recently been called
+  into question (Haworth et al. 2016). 
+\item The role played by FUV heating in the removal of the outer disc
+  is unclear, due to the lack of hydrodynamical calculations that
+  include this channel. FUV heating may provide a solution to the
+ previous item, at least in some cases.
+\item Current estimates of the TD populations predicted by the X-ray
+  model are based on extrapolations of the results with stellar mass
+  and stellar emission properties. The validity of these
+  extrapolations has yet to be proved. 
+\end{enumerate}
+
+\paragraph{\Tcol Contribution of this team to the current state-of-the-art}
+
+The first photoevaporation models to be developed were based on EUV
+irradiation only. This was mainly due to the need of simplifying the
+hydrodynamics by assuming the gas is isothermal. 
+An EUV heated gas, where
+hydrogen is almost fully ionised, is indeed roughly isothermal
+($\sim$10$^4$K), while the temperatures of a quasi-neutral X-ray
+heated gas generally vary from a few hundred to a few thousand 
+Kelvin. Here the hydrogen gas is in a quasi-neutral state of ionisation, with the
+exact ionisation level influencing the efficiency of the X-ray
+heating. While the EUV-photoionisation process occurs of via the removal
+of a single valence electron, X-rays generally remove an inner-shell
+electron. The ejected supra-thermal electron produces then secondary
+ionisations. A further complication is that multiple electrons may be
+ejected as a consequence of inner shell ionisations, linking together
+non-adjacent ionisation levels.
+
+ The host of microphysics regulating
+X-ray ionisation and heating is self-consistently included in the
+three-dimensional photoionisation code MOCASSIN (Ercolano et al. 2003,
+2005, 2008a) and has been applied to the X-ray photoionisation and
+photoevaporation process of protoplanetary discs (Ercolano et
+al. 2008b, 2009, 2010, 2016; Owen et al. 2010, 2011, 2012). 
+
+In Ercolano et al. (2008b,2009) the relevance of the photoevaporation process
+to the dispersal of discs was proven for the first time. Indeed the mass
+loss rates calculated were approximately two order of magnitude larger
+than those previously obtained by the EUV-only model, able to compete
+with observed accretion rates from T-Tauri stars. These early results
+were based on hydrostatic calculations, which were later improved by
+our 2D radiation-hydrodynamic calculations (Owen, Ercolano et
+al. 2010, 2011, 2012), which still represent the state-of-the-art in
+this field. This work also provided detailed mass-loss radial profiles
+that have been used by us and others to study the photoevaporation
+process in combination with planet formation in 1D and 2D
+(e.g. Rosotti, Ercolano et al. 2013, 2015; Ercolano et al. 2015). 
+
+We explored several possibilities to test and refine our
+models against observations. In Ercolano \& Owen (2010, 2016) and in
+Schisano, Ercolano \& G\"udel (2010) we
+produced synthetic line profiles of forbidden transitions of heavy
+metals observed in the optical and in the mid-infrared. We came to the
+conclusion, however that the strong temperature dependance of these
+lines makes them unsuitable for use as wind diagnostics. 
+
+In Ercolano
+\& Clarke (2010) we explored the metallicity dependance of the mass
+loss rates, hoping for hints from disc statistics in several
+regions. While available data support our predictions (Yasui
+et al. 2009, 2010), these observations are challenging and have
+remained sparse. The importance of the effects we noted in this
+work for planet formation have however been widely recognised
+(e.g. Lopez 2016). 
+
+In Owen, Scaife \& Ercolano (2013) we tested the models using
+predictions in the radio. We were able to show in that work that our
+observations of the famous transition disc around GM Aur were
+consistent with our models, but could not really distinguish between
+a EUV-only or an X-ray driven scenario. This line of work was however
+used again by Pascucci et al. (2014) to show that the EUV flux
+impinging on protoplanetary discs is generally low, hence arguing
+against a EUV-only model for dispersal. 
+
+The work described here has provided the basis for many theoretical
+and observational investigations, which cannot all be described
+here. We will only finally mention our most recent application where
+we were able to use our model to argue that the inner-most gap imaged
+with ALMA by Andrews et al. (2016) in the disc around TW Hya, is
+likely photoevaporative in origin (Ercolano et al. 2017). 
+
+\subsection{\Tcol Preliminary work}
+
+The determination of gas temperatures in a photoionised gas, in a
+photodissociation region (PDR) or in an X-ray dissociated region (XDR)
+is computationally expensive. It requires, first of all 
+performing a radiative transfer (RT) calculation in order to determine the
+radiation field at each point of the region. Then matrices of thermal and
+ionisation balance and/or rate equations have to be solved. The RT and
+the balance/rate equation are often coupled through the
+temperature-dependent gas opacities, and one needs to iterate to
+obtain a solution. There is a host of microphysics
+that needs to be taken into account, last but not least the thermal
+coupling of the gas and the dust phase. Even a extremely simplified
+version of the above has large computational costs if it needs to be performed at
+every time-step of a hydrodynamical calculation. 
+
+In such cases it is convenient to look for parameterisations of the
+gas temperature in terms of quantities that are easy to determine in
+the hydrodynamics code (e.g. gas properties and/or column density). 
+Indeed using such a temperature paremeterisation,
+determined via detailed X-ray photoevaporation models using the
+MOCASSIN code (Ercolano et al. 2008, 2009) we have performed the
+only existing radiation hydrodynamic 
+calculations of X-ray + EUV driven photoevaporative winds to date (Owen et
+al. 2010, 2011, 2012), as was described in the previous section. The models were run with a version of the {\sc
+  zeus2d} code which was modified by us to include a temperature
+scheme derived from the detailed X-ray and EUV photoionisation
+calculations of protoplanetary discs of Ercolano et al. (2008,
+2009). In that work it was shown that, within the
+penetration depth of $\sim$1keV X-rays ($\sim 10^{22}cm^{-2}$), the
+temperature of a parcel of gas with hydrogen number density, $n_H$, at
+distance $r$ from the central star, could be roughly approximated by a
+function of the ionisation parameter, defined as $L_X/(r^2 n_H)$,
+where$L_X$ is the stellar X-ray luminosity. The error on the
+temperature was found to be small for high ionisation parameter values, but it
+becomes systematically larger at the low end. 
+
+
+
+\begin{figure}
+\centering
+\begin{minipage}[b]{.47\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{xite_a.pdf}
+\end{minipage}%
+\hspace{0.05\textwidth}
+\begin{minipage}[b]{.47\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{a.png}
+\end{minipage}
+\caption{The electron temperature versus ionisation parameter relation
+in the calculations of Haworth et al. (2016), left panel, compared to
+our most recent calculations Ercolano, Picogna \& Owen, (in
+preparation), right panel.}
+  \label{fig:xite}
+\end{figure}
+
+
+As the gas temperature enters the hydrodynamics via the square root
+dependance in the sound speed, the small error at high values of the
+ionisation parameter, typical for the regions where the bulk of the
+wind is driven from in primordial discs, is unlikely to produce large
+uncertainties in the mass loss rates. For more evolved objects, like
+transition discs in the phase of final dispersal, however, the ionisation
+parameter decreases dramatically as the cavity becomes larger. The
+evolution of transition discs depends thus sensitively on the temperature
+of the gas at low ionisation parameters, which is currently poorly
+represented by the parameterisation of Ercolano et al. (2008, 2009). 
+Note that the recent work of Haworth, Clarke \& Owen (2016), described
+in the previous section, presents a
+form of the temperature ionisation parameter relation which is incorrect at
+low values of the ionisation parameter. The kink at ionisation
+parameters just above $10^{-7}$ (left panel of Figure~\ref{fig:xite}) is an artefact of their implementation
+of the photoionisation models. We have recently performed new detailed
+photoionisation calculations and obtained the curve shown in the right
+panel of Figure~\ref{fig:xite} (Ercolano, Picogna \& Owen, 2017, in preparation).
+Figure~\ref{fig:xite} shows the behaviour of the temperature parameterisation at
+low ionisation parameter and for different column densities.  Our
+collaborators J. Owen and C. Clarke, have been informed of the problem
+and agree with our more recent calculations. Furthermore we have now
+found a more accurate scheme that allows us to reduce the error on the
+temperature by introducing  column density as an additional
+parameter. 
+
+As well as the major shortcoming highlighted above, the Owen et
+al. (2010) calculations which were used to make predictions on
+the ionised phase of the wind spectra (Ercolano \& Owen 2010;
+Ercolano \& Owen 2016), suffered from low spatial resolution,
+precluding us from being able to model the inner region of the bound disc, which
+may be relevant to interpret the broad wings of some of the
+wind-tracing emission lines presented in the recent
+work of Simon et al. (2016). Furthermore, a very limited
+parameter space was investigated, which included only two values for
+stellar mass, 3 values of X-ray luminosity for primordial discs and a
+single stellar mass and X-ray luminosity value for transition discs
+with 3 values for the cavity radius. This is nowhere near enough to draw any
+significant conclusions about trends in possible wind diagnostics. 
+
+In this project we aim at constructing new photoionisation models to
+remedy the shortcoming of the current models highlighted above. To
+that aim we have modified the hydrodynamical code PLUTO (Mignone et
+al. 2007, 2012) to include the
+effects of X-ray and EUV irradiation using the temperature-ionisation
+parameter from Ercolano et al. (2008,2009) also employed by Owen et
+al. (2010) for the ZEUS2D calculations. We have implemented the
+standard scheme in order to be able to compare our wind solutions to 
+those available for a 0.7 and 0.1 M$_\odot$ central
+stars (Owen et al. 2010, 2011, 2012), for similar spatial
+resolution. This will ensure that we have implemented the algorithm
+correctly in PLUTO.  This work is being carried out by Dr Picogna, who
+is employed on a LMUExcellent grant awarded to the PI to carry out
+preparatory work for the Research Unit. The grant ends in November
+2017. 
+
+Figure???? shows..... {\color{red} Insert Giovanni's figure here}
+
+
+\subsection{\Tcol Project-related publications}
+
+% Please list your own publications related to the proposed project, 
+% adhering to the rules of the DFG guidelines 1.91. In brief, please note: 
+% - Up to 10 publications
+% - The work must be published or accepted.
+% - Publications on astro-ph (arXive, SPIRES or articles with a DOI) count as published. 
+% - Any work that is only in the status ``accepted'' MUST be attached to the proposal
+%    together with the acceptance letter.
+% - All publications in this section CAN be attached to the proposal. Please limit these
+%    attachments to a minimum and please note that the reviewers may not read the attachments -
+%    the proposal has to speak for itself.
+% - The number of allowed publications refers to the sum of the publications listed
+%    in ``1.1.1 Articles published or officially accepted by publication outlets...'' and 
+%    in ``1.1.2 Other publications''. Publications which only exist on public repositories 
+%    belong into the category ``Other Publications''.
+
+%\subsubsection{\Tcol 
+%Articles published or officially accepted by publication outlets with scientific quality assurance;
+%book publications}
+
+\begin{literature}
+
+\item \textbf{Ercolano, B.},  Drake, J.; Raymond, J., Clarke, C.
+  \textit{X-Ray-Irradiated Protoplanetary Disk Atmospheres. I. Predicted Emission-Line Spectrum and Photoevaporation}, 2008, ApJ
+  688, 398. In this paper we present a first estimate of the magnitude
+  of the X-ray photoevaporation process. 
+\item \textbf{Ercolano, B.}, Clarke, C., Drake, J. \textit{X-Ray
+    Irradiated Protoplanetary Disk Atmospheres. II. Predictions from
+    Models in Hydrostatic Equilibrium}, 2009, ApJ 699, 1639. We
+  further develop our models to include the feedback of X-ray heating
+  on the disc-structure in hydrostatic equilibrium, and obtain more
+  accurate estimates of the photoevaporation rates. 
+\item Owen J., \textbf{Ercolano B.}, Clarke,
+  C. \textit{Radiation-hydrodynamic models of X-ray and EUV
+    photoevaporating protoplanetary discs}, 2010, MNRAS, 
+  401, 1415. We perform the first radiation-hydrodynamic calculations
+  of an X-ray and EUV irradiated disc in 2D. The rates obtained here
+  for the standard model still represent the state of the art and are
+  widely used in the community. 
+\item \textbf{Ercolano B.}, Owen J. {\em Theoretical spectra of
+    photoevaporating protoplanetary discs: an atlas of atomic and
+    low-ionization emission lines}, 2010, MNRAS 406,1553. We postprocess the
+  models of Owen et al. (2010) and obtain synthetic observations of
+  atomic and low-ionisation emission lines to be compared with the
+  observations. We show that our models compare favourably with the
+  observations available at the time.
+\item Owen J., \textbf{Ercolano B.}, Clarke C.  \textit{
+  Protoplanetary disc evolution and dispersal: the implications of X-ray photoevaporation}, 2011, MNRAS, 412, 13.
+  We explore the role of X-ray photoevaporation in the evolution and
+  dispersal of viscously evolving T Tauri discs. Our models confirm
+  that X-rays play a dominant role in the evolution and dispersal of
+  protoplanetary discs giving rise to the observed diverse population
+  of transition discs, including some of those with massive outer
+  discs, some of those
+  with gas in their inner holes and some of those with detectable accretion
+  signatures.  
+\item Owen J., Clarke \& \textbf{Ercolano B.}  \textit{On the theory of disc photoevaporation}
+  2012, MNRAS, 422, 1880. We derive analytical scaling relations and
+  derive estimates for the total mass-loss rates, as well as
+  discussing the existence of similarity solutions for flows from
+  primordial and transition discs. In this paper we catch a first
+  glimpse at a new process for the clearing of the very last stages,
+  which we name ``thermal sweeping''.
+\item \textbf{Ercolano B.},Rosotti G. {\em The link between disc
+    dispersal by photoevaporation and the semimajor axis distribution
+    of exoplanets}, 2015, MNRAS 450,
+  3008. We show here that details of the photoevaporation models
+  (rates and profiles), strongly affect the planetary system
+  configurations emerging from those discs. 
+\item \textbf{Ercolano B.}, Owen J.  {\em Blueshifted [O I] lines from
+    protoplanetary discs: the smoking gun of X-ray photoevaporation},
+  2016, MNRAS 460. 3472
+  We produce new synthetic observations of a particularly promising
+  diagnostic, and demonstrate that the observations available at the
+  time (before Simon et al. 2016) are consistent with the
+  photoevaporation model. We show however that this line cannot be
+  used to measure mass-loss-rates. 
+\item \textbf{Ercolano B.}, Rosotti G., Picogna G., Testi L.  {\em A photoevaporative gap in the closest planet-forming disc},
+  2017, MNRAS 464L, 95
+ In this letter we show that the innermost gap in the disc around TW
+ Hya, recently imaged by Andrews et al. (2016) with ALMA, is very
+ likely due to X-ray photoevaporation. 
+\item Keto E. and \textbf{Caselli P.}  \textit{The Different Structures of the Two Classes of Starless Cores}, 2008, ApJ
+  683, 238. In this paper we developed an extremely simplified network
+  which however we show to adequately describe CO-chemistry for the
+  examples at hand. Similar techniques will be applied in this
+  project. 
+\end{literature}
+
+
+% \subsubsection{\Tcol Other publications}
+% 
+% None 
+% \subsubsection{\Tcol Patents}
+% 
+% \paragraph{\Tcol Pending}
+% 
+% None
+% 
+% \paragraph{\Tcol Issued}
+% 
+% None
+
+\section{\Tcol Objectives and work programme}
+\renewcommand{\leftmark}{\sc Objectives and work programme}
+
+
+\subsection{\Tcol Anticipated total duration of the project}
+
+36 months
+
+\subsection{\Tcol Objectives}
+
+
+The overarching aim of this project, in common with projects B2 (PI
+Caselli \& Ercolano) and C2 (PI Ercolano),
+is to identify new wind tracers and use them to constrain mass loss rates and hence
+disc dispersal models, leading to the formation and evolution of Type 1
+transition discs. 
+
+The new comprehensive radiation-hydrodynamics photoevaporation models
+developed in this project will enable a quantitative
+spectroscopic evaluation of new diagnostics of disc winds, via
+detailed astrochemical models developed together with project B2,
+using the dust model for the wind and atmosphere from project C2. 
+
+We will perform a comparison between TDs and
+primordial disc to provide important constraints on the wind
+architecture and the mechanism driving the dispersal. 
+Type 1 TDs, are particularly interesting as the streamline architecture of their winds
+and the profiles of the lines that are produced in the wind
+differ from those of primordial discs. (e.g. Ercolano \& Owen
+2010, Ercolano \& Pascucci, 2017, in preparation). Indeed the lines
+are expected to be broader and brighter for e.g. inner cavities of a few to 10 AUs.  
+
+The immediate objective of project B1 is to produce a new set of
+X-ray+UV photoevaporation models which goes well beyond the current
+state-of-the-art, described in the previous section. 
+
+The new models will constitute the backbone for the joint
+investigation to be carried out in projects B2 and C2, as well as
+allowing us to address the following important unsolved questions in
+the formation of Type 1 transition discs and their further evolution: 
+
+\begin{enumerate}
+\item How fast do Type 1 TDs evolve/disappear after the inner disc has
+  drained?
+\item How does the formation \& evolution of Type 1 TDs scale with
+  stellar mass and stellar emission properties?
+\item What is the role of FUV heating in the late evolution of Type 1
+  transition discs? 
+\end{enumerate}
+
+%{Test whether Type 2 TDs (large holes, large accretion rates) may
+%result from radiative transfer effects on a tilted inner disc. This
+%idea stems from  the recent suggestion (e.g. Marino et al. 2015, Montesino et
+%al. 2016) that some Type 2 TDs may have a tilted inner disc. 
+%A tilted inner disc may strongly influence photoevaporation by
+%allowing radiation to reach outer disc regions and may produce the
+%large inner holes of (some) Type 2 TDs. This is certainly a worthwhile
+%new challenge requiring the development of 3D simulations.  }
+
+%{\color{red} the marino and montesino idea must also be included in
+ % the intro and also in the background section of this proposal}
+
+\subsection{\Tcol Work programme including proposed research methods}
+% for each applicant
+In this project we will construct a
+library of high resolution X-ray+EUV wind solutions for an extended grid of
+X-ray luminosities and stellar masses, covering all observed
+values. Our new calculations will make use of a new temperature
+scheme (Ercolano, Picogna \& Owen, 2017, in preparation), derived from
+new more extensive X-ray + EUV photoionisation models.  The new
+temperature scheme
+significantly reduces the error at low ionisation parameter values,
+allowing us to make solid predictions of the late evolution of
+transition discs. 
+
+Furthermore, our previous calculations (Owen et al. 2010, 2011, 2012)
+could only account for heating 
+in the ionised phase of the wind, ignoring that the region beyond the
+layer heated by the soft X-ray ($<1keV$) which could be heated by FUV
+radiation with typical PDR or XDR characteristics. While we show in
+Owen et al. (2012), that this should not affect the mass loss rates at
+around 1-10~AU, the effect of FUV heating at larger radii may be
+important. This is particularly relevant to the late evolution of
+transition discs, when the cavity becomes larger than approximately
+30~AU. Indeed one of the
+problems with current photoevaporation models is the prediction of a
+large number of non-accreting transition disc with large holes
+(e.g. Owen 2016). In this project we will be able to test the
+suggestion that FUV heating may take over the late-stage evolution of
+transition discs, speeding up their final complete erosion. 
+
+%We have recently coupled our 3D X-ray and EUV Monte Carlo photoionisation
+%code MOCASSIN to the KROME package to solve the chemistry in the
+%deeper layers of the disc (Ercolano \& Grassi, 2017, in
+%preparation). The code has been benchmarked for a simple toy network,
+%but we will need input from project B2 to include an appropriate
+%network to model this region and devise a new temperature scheme to
+%include in our radiation-hydrodynamic simulations.   
+
+
+\subsection{\Tcol Research Tools}
+
+For this project we will need the following tools: 
+\begin{enumerate}
+\item A hydrodynamical code modified to include the
+  effects of X-ray + EUV irradiation as we did in Owen et al. (2010). For
+  that we use the Pluto code, for which extensive expertise
+  exists in our team. 
+\item An efficient astrochemistry package to include a reduced
+  chemical network into PLUTO. For that we will use KROME (Grassi et
+  al. 2014) and link it with PLUTO. 
+\item An efficient radiative transfer algorithm to model the region
+  just beyond the X-ray dominated region. We can use initially the
+  implementation of radiative transfer and stellar irradiation
+for the PLUTO code (Kolb et al., 2013), developed by the group of Kley
+(PI of project D2). If insufficient the PI also has experience in the
+development of hybrid algorithms  (Owen, Ercolano \& Clarke 2014). 
+
+% A photoionisation and chemical code which includes X-ray
+ % heating and ionisation to obtain a new comprehensive temperature
+ % scheme for the radiation-hydrodynamic simulations. The PI is the
+ % author of the 3D Monte Carlo photoionisation and dust radiative
+  %transfer code MOCASSIN (Ercolano et al. 2003, 2005, 2008b),
+ % which has already been used to calculate the 
+ % emission line spectra from the ionic phase of X-ray winds (Ercolano
+ % \& Owen 2010; 2016). The code has
+ % now been coupled and benchmarked to the KROME code to perform
+ % arbitrary chemical calculations (Ercolano \& Grassi 2017, in prep)
+ % and needs now only the appropriate chemical network, which
+ % we will obtain from project B2.  
+\end{enumerate}
+
+\subsection{\Tcol Research Plan} 
+
+%We have divided the work load into two connected blocks which
+%also have self-contained immediate objectives. Preparatory work for
+%Block 1 is already being executed by Dr Picogna, employed on a
+%LMUExcellent initiative grant awarded to the PI in support of
+%this Research Unit application (End date November 2017). In case of an award Dr Picogna
+%has already agreed to continue his work for the Research Unit and will
+%take over the tasks described in Block 1. 
+
+A grid of significantly improved new photoevaporation models including
+an accurate temperature scheme which includes X-ray, EUV and FUV
+heating will be developed in this subproject, by means of
+radiation-hydrodynamic calculations. 
+
+%Block 2 will provide a new
+%temperature scheme for the hydrodynamical calculations of Block 1, by
+%performing detailed photoionisation calculations with simple chemistry
+%using the MOCASSIN+KROME code. The PI will take full responsibility of
+%the tasks described in Block 2 and will work closely with the postdoc
+%employed for project B1
+%for the implementation of the results in Block 1.  
+
+%\subsubsection{\Tcol Block 1: New state of the art radiation-hydrodynamic
+ % models of photoionised winds.}
+
+%\paragraph{\Tcol Preparatory work: present until beginning of the award}
+
+
+
+\subsubsection{\Tcol Months 1-12}
+In the preparatory work described in the previous section we have
+implemented the standard temperature scheme from Ercolano et
+al. (2008, 2009) into PLUTO and have benchmarked the results against
+the work of Owen et al. (2010). In the first 12 months of the Research
+Unit we will then proceed with the implementation of the new, more accurate
+temperature scheme described in the previous Section (Ercolano,
+Picogna \& Owen, 2017, in preparation). We will compare the resulting
+wind rates and profiles for the primordial and transition disc
+case. While we do not foresee large changes in the rates for
+primordial discs, as described in the previous section the evolution of transition discs will be most
+likely affected. 
+
+The new models will have much higher spatial
+resolution extending much closer into the star, in order to allow
+tracking profile components which may be emitted from the inner bound
+atmosphere of the disc. 
+
+This first set of models for $\sim$solar mass stars at a typical X-ray
+luminosity ($\sim 10^{30}$erg/sec) will be then passed on to projects
+C2 and B2 for the dust and detailed chemistry calculations. 
+
+\subsubsection{\Tcol Months 13-24}
+
+The parameter space of the calculations will be then
+significantly extended for the mass of the central star and its X-ray
+luminosity. Furthermore models of transitions discs at several stages
+of evolution, as tracked by the radius of their inner cavity, will be
+performed. 
+
+With the new models we will also be able to investigate how
+the process scales with stellar mass and stellar emission
+properties. This will allow us to check the
+theoretical relations for X-ray photoevaporation 
+predicted by means of semi-analytical models and ab-initio arguments
+by Owen et al. (2012). While these relations are being widely used in
+the literature, they have until now never been tested. This will allow
+us to construct accurate population synthesis calculations to match
+the demographics of Type 1 TDs with those obtained with our models.\\
+
+\subsubsection{\Tcol Months 25-36} 
+At this point a robust and well tested reduced chemical network should
+be available from subproject B2 (PI Caselli, Ercolano). 
+We will now couple our modified version of the PLUTO code to the
+KROME package to solve the chemistry using the reduced network from B2
+and obtain the temperatures of
+the gas on the fly in the regions beyond the X-ray
+dominated regions. For that we will receive help from our collaborator
+Dr Grassi, who is the main developer of the KROME code. Dr Picogna has
+already attended the KROME school this year (website??????) and a simple
+feasibility test has shown that this is a realistic task. As an
+example, KROME is already implemented in a number of hydrodynamics
+codes (e.g. {\sc ramses, enzo, flash, gasoline, gizmo}). A number of
+publications performed with these codes are listed on the KROME
+webpage (http://www.kromepackage.org/).
+
+A streamlined form of radiative transfer
+will be needed in PLUTO at this point, meaning that these calculations will
+probably be expensive to run.  This is likely necessary to estimate the value of the  FUV field
+reaching different regions of the disc atmosphere, where the optical
+depth are not high enough to justify the use of a  (grey) flux
+limited diffusion method.  Implementation of an efficient
+radiative transfer algorithm in PLUTO will be carried out together
+with the PI who has experience in the development of hybrid
+algorythms. (e.g. Owen, Clarke \& Ercolano 2014). A simple RT scheme is
+already available for PLUTO (Kolb et al. 2013), which was developed in
+the group of our Prof. Kley (PI from subproject D2). Hence there is
+a substantial body of experience within our Research Unit team to
+successfully perform this task.
+
+Note that we do not plan to run a full
+parameter space grid including the effects of the FUV heating. 
+Our simulations will be limited to a selected number of cases
+aimed at specifically testing how strongly, and for what initial
+conditions, FUV heating may affect the evolution of the outer regions
+of discs, in particular of those in transition.\\
+
+\subsubsection{\Tcol Future Outlook}
+
+A natural further step of this work is to perform a small set of 3D
+simulations to explore the effects of asymmetries in the inner
+disc and/or the presence of giant planets in the disc. We expect to
+see dramatic effects in the photoevaporation 
+profile and in the wind architecture, which may lead to the formation
+of large hole TDs. This avenue has never been explored before and,
+while these models come at severe computational costs, they are likely to provide us
+with important insights on the structure and origin of TDs. \\ 
+
+
+
+\subsection{\Tcol Data handling}
+
+A library of the hydrodynamical solutions in steady state (gas density
+and velocity)  will be shared initially amongst the Research Unit
+members only and will be made available online on the public partition
+of the Research Unit server at the end of the first funding period. 
+
+\subsection{\Tcol Other information}
+% Please use this section for any additional information you feel is
+% relevant which has not been provided elsewhere.
+
+Not Relevant
+
+\subsection{\Tcol Information on scientific and financial involvement of international cooperation partners}
+
+Not Relevant
+
+\section{\Tcol Bibliography}
+
+\todo{[Text]}
+
+\todo{Kees to Barbara: Shall I convert all your references to bibtex for
+  you? Then we get a same style in all projects and it will be easier to
+  handle.}
+
+\section{\Tcol Requested modules/funds}
+\renewcommand{\leftmark}{\sc  Requested modules/funds}
+% Explain each item for each applicant (stating last name, first name).
+
+\subsection{\Tcol Basic Module}
+
+\subsubsection{\Tcol Funding for Staff}
+% Please note that funds for your own temporary position (â€œEigene Stelleâ€)
+% are not to be included here; this belongs to the separate â€œModule Temporary Positionâ€.
+
+We require funding for one Postdoc to work at the LMU in the group of
+Prof. Ercolano. In case of an award Dr Picogna has agreed to
+take on the post. Dr Picogna is currently employed in the group of the
+PI and is performing preparatory work for the project. Dr Picogna's
+expertise in astrophysical fluid dynamics and his familiarity with the
+subject is of great advantage for the achievement of the aims of this
+project. Dr Picogna's contract ends in November 2017, 
+
+\subsubsection{\Tcol Direct Project Costs}
+
+
+\paragraph{\Tcol Equipment up to EUR 10,000, Software and Consumables}
+
+Will be provided by the host institution
+
+\paragraph{\Tcol Travel Expenses}
+
+Total: 9900 Euro Justification : Each year one national trip (meeting of Astronomical Society, national
+meetings) and one international trip (conference, visit
+collaborators). 
+During the course of the PhD 2 one week long visits to our main
+international collaborator, Dr J. Owen (currently at Princeton
+University, will move to Imperial College London in 2017). 
+
+Cost estimate: 
+\begin{itemize}
+\item National trip: 5 overnight stays, train/airfare,
+conference fee; 1000 Euro (3000 over 3 years).
+\item International trip: 6 overnight stays, airfare, conference fee;
+  1500 Euro (4500 over 3 years).
+\item Visit to/from J. Owen: airfare, 6 overnight stay 1200 Euro (2400
+  for 2 visits)
+\end{itemize}
+
+\paragraph{\Tcol Visiting Researchers (excluding Mercator Fellows)}
+
+Not Relevant 
+
+\paragraph{\Tcol Other Costs}
+
+None
+
+\paragraph{\Tcol Project-related publication expenses}
+
+We request 770 Euro py (total 2250 Euro) for publication expenses.
+
+\subsubsection{\Tcol Instrumentation}
+
+None 
+
+\paragraph{\Tcol Equipment exceeding EUR 10,000} 
+
+None
+
+\paragraph{\Tcol Major Instrumentation exceeding EUR 100,000} 
+
+None 
+
+% \subsection{\Tcol Module Temporary Position}
+% 
+% Not Relevant
+% 
+% \subsection{\Tcol Module Replacement Funding}
+% 
+% Not Relevant
+% 
+% \subsection{\Tcol Module Mercator Fellows}
+% 
+% Not Relevant
+% 
+% \subsection{\Tcol Module Public Relations Funding}
+% 
+% Not Relevant
+
+\section{\Tcol Project requirements}
+\renewcommand{\leftmark}{\sc Project requirements}
+
+\subsection{\Tcol Employment status information}
+% For each applicant, state the last name, first name, and employment
+% status (including duration of contract and funding body, if on a
+% fixed-term contract).
+
+Barbara Ercolano, Professor at the Ludwig-Maximilians-Universit\"at
+M\"unchen  (permanent)
+
+\subsection{\Tcol First-time proposal data}
+% Only if applicable: Last name, first name of first-time applicant.
+
+Not Relevant
+
+\subsection{\Tcol Composition of the project group}
+% List only those individuals who will work on the project but will not
+% be paid out of the project funds. State each personâ€™s name, academic
+% title, employment status, and type of funding.
+
+\todo{?????}
+
+
+\subsection{\Tcol Cooperation with other researchers}
+
+\subsubsection{\Tcol Planned cooperation on this project}
+
+\paragraph{\Tcol Collaborating researchers for this project within the
+  Research Unit}
+%Each proposal must be accompanied by a description of how the project
+%is integral to the Research Unit, %both in terms of subject matter
+%and organisation. This includes a description of the cooperation with
+%%others participating within the Research Unit. 
+
+
+This project will provide the radiation-hydrodynamic models of the
+wind which are needed by project B2 (PI: Prof. Caselli) for the
+chemical calculations and by project C2 (PI: Ercolano) for the dust
+entrainment. Project BI depends on input from project B2 (PI:
+Prof. Caselli)  for the reduced network and on
+project A2 for observations. Specifically project A2 can
+provide insights on the emission properties of the irradiating stars.
+
+\paragraph{\Tcol Collaborating researchers for this project outside of
+  the Research Unit}
+Dr James Owen (Princeton) will be heavily involved in the
+project. Dr Owen developed the original
+phoionisation models during his PhD project at the Institute of
+Astronomy in Cambridge, which was co-supervised by
+Prof. Ercolano. It is envisioned that Dr Owen will pay regular visit
+to our group to help with the development of the new models. 
+
+Dr Tommaso Grassi (STARplan Copenhagen, Denmark) is an expert of
+chemistry and the microphysics of the ISM coupled with hydrodynamical
+simulations of (e.g.) star-forming regions. He lead the development of the
+KROME package (http://www.kromepackage.org/) . 
+
+\subsubsection{\Tcol Researchers with whom you have collaborated scientifically within the past three years}
+% This information is important for DFG to exclude possible conflicts of interest.
+% Please mention not only the names of the cooperation partners but also their institution and city.
+% Scientists already mentioned in the previous two subsubsections do not have to be mentioned
+% again.
+
+Maite Bertran (INAF-Osservatorio Astrofisico di Arcetri), Aaron Boley (University of British Columbia), Sandra Brünken (University of Cologne), Stephanie Cazaux (University of Groningen), Cecilia Ceccarelli (Univ. Grenoble Alpes), Francesco Fontani (INAF-Osservatorio Astrofisico di Arcetri), Thomas Hartquist (University of Leeds), Izaskun Jimenez-Serra (Queen Mary University London), Eric Keto (Harvard-Smithsonian Center for Astrophysics), Marco Spaans (University of Groningen), Jonathan Tan (University of Florida), Stephan Schlemmer (University of Cologne), Charlotte Vastel (Université de Tulouse), Malcolm Walmsley (INAF-Osservatorio Astrofisico di Arcetri);
+F. Niederhofer (STSci, USA); M. Hilker (ESO, Garching); N. Bastian (U. Liverpool,
+UK); M. Guarcello (U. Palermo, Italy); M. Tazzari (U. Cambridge, UK);
+A. Natta (Florence, Italy); R. Alexander (U. Leicester); D. Hubber
+(LMU); J. Dale (U. Hertfordshire, UK); C. Koepferl (LMU); I. Bonnell
+(U. St. Andrews, UK); A. McLeod (ESO, Garching); D. Boneberg
+(U. Cambridge, UK); R. Parker (U. Liverpool, UK); R. Wesson (UCL,
+London, UK); M. Barlow (UCL, London, UK); A. Glassgold (u. Berkeley,
+USA); C. Manara (ESA, Noordwjik, Netherlands); A. Danekhar (CfA,
+Harward, USA); Q. Parker (Sidney, Australia); S. Casassus
+(U. de Chile, Santiago, Chile); I. Pascucci (U. Arizona, USA);
+A. Bevan (UCL, London, UK).
+
+\subsection{\Tcol Scientific equipment}
+% List larger instruments that will be available to you for the
+% project. These may include large computer facilities if computing
+% capacity will be needed. 
+
+
+
+The group of Prof. Ercolano has two own computer clusters comprising 
+
+\begin{itemize}
+\item 2 CPU Intel Xeon X5650 (Westmere, beginning
+2010, 2.66 GHz) 6 cores each 12 cores total (24 virtual) 74 GB ram.
+
+\item 4 CPU Intel Xeon E7-4850 (Ivy Bridge, beginning 2014, 2.30 GHz)
+12 cores each 48 cores total (96 virtual) 660 GB ram.
+
+\end{itemize}
+
+Further computational power is provided through the C2PAP facility of the Excellence Cluster to which
+the group has guaranteed time. This comprises 126 nodes, each node with 2 CPU Intel Xeon E5-2680 (Sandy
+Bridge, beginning 2012, 2.7 GHz) 8 cores each 16 cores total (32
+virtual) 64 GB ram. Note that while the future of the Excellence
+Cluster Universe is uncertain, the C2PAP facilities will be in any
+case supported by the LMU. 
+
+The CAS group of Prof. Caselli has also its own cluster: an HPC
+cluster comprising of 25 nodes with 20 cores and 128 GB memory each; 4
+nodes with 20 cores and 256 GB memory each (Infiniband, 50 TB storage,
+Login-Node, Batch-System; 2 Compute nodes, i.e. 2 nodes with 20 cores
+and 512 GB (10 TB storage).  
+
+The HPC facilities at the Leibniz Rechenzentrum (LRZ) are also
+available to us. These include iDataPlex HPC System HYDRA with Intel
+Ivy Bridge processors (~3500 nodes with 20 cores at 2.8 GHz each). 
+
+Furthermore the CAS centre led by Prof. Caselli has available computer
+facilities for visiting scientists and students. CAS has its own
+cluster: an HPC cluster comprising of 25 nodes with 20 cores and 128
+GB memory each; 4 nodes with 20 cores and 256 GB memory each
+(Infiniband, 50 TB storage, Login-Node, Batch-System; 2 Compute nodes,
+i.e. 2 nodes with 20 cores and 512 GB (10 TB storage).  
+
+
+% \subsection{\Tcol Project-relevant interests in commercial enterprises}
+% % Information on connections between the project and the production
+% % branch of the enterprise.
+% 
+% Not Relevant
+% 
+% 
+% \subsection{\Tcol Additional information}
+% % If applicable, please list proposals requesting major
+% % instrumentation and/or those previously submitted to a third party
+% % here.
+% 
+% Not Relevant
+
+
+\end{document}

@@ -1,0 +1,6 @@
+cp ../../C2.tex ./
+cp ../../bibliography.bib ./
+
+cp ../../wingnut.pdf ./
+cp ../../mrntruncation.pdf ./
+cp ../../colorinversion.pdf ./
