@@ -18,101 +18,11 @@
 
 \documentclass[10pt,fleqn,twoside]{article}
 
-%%%% USE ARIAL FONT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{helvet}
-\renewcommand\familydefault{phv}
+%%%%%%%%%%%%%%%%% GET THE STYLE STUFF %%%%%%%%%%%%%%%%%%%
 
-%%%% INCLUDE NECESSARY PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[dvipsnames]{xcolor}
-%\usepackage{babel}
-\usepackage[UKenglish]{babel}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{fancyhdr}
-\usepackage{multicol}
-\usepackage{natbib}
-\usepackage{xcolor}
-\usepackage{ae,aecompl}
-\usepackage{graphicx}
-\usepackage{palatino}
-\usepackage[T1]{fontenc}
-\usepackage{rotating}
-\usepackage{epsf}
-\usepackage{url}
-\usepackage{setspace}
-%\usepackage{sfmath}
-\setlength{\bibsep}{-0.5pt}
+\input{header.tex}
 
-%%%% CAPTION LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage[font={small}]{caption}
-
-%%%% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setlength{\textheight}{22cm}
-\setlength{\topmargin}{-1.2cm}
-\setlength{\textwidth}{15.6cm}
-\setlength{\oddsidemargin}{0.0cm}
-\setlength{\evensidemargin}{0.0cm}
-\setlength{\mathindent}{1.5cm}
-\setlength{\parindent}{0.0cm}
-\setlength{\parskip}{0.08cm}
-
-%%%% PAGE HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{fancy}
-\fancyhead[RE,RO]{}
-\fancyfoot[RO]{ \thepage}
-\fancyfoot[LE]{ \thepage}
-\fancyfoot[CE,CO]{}
-
-%%% FONTS FOR THE TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newfont{\tpfonta}{cmssbx10 scaled 1600}
-\newfont{\tpfontb}{cmssbx10 scaled 3200}
-
-%%%% EURO SIGN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand\euro{{\sffamily C%
-\makebox[0pt][l]{\kern-.70em\mbox{--}}%
-\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
-\newcommand\keuro{k{\sffamily C%
-\makebox[0pt][l]{\kern-.70em\mbox{--}}%
-\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
-
-%%%% COLOR DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\definecolor{blue} {rgb} {0.25,0.25,0.75}
-
-%%%% ADDITONAL EMPHASIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\cem}{\color{blue}}
-\newcommand{\eem}{\sl\color{blue}}
-
-%%%% SET THE COLOR OF THE (SUB-) SECTION TITLES %%%%%%%%%%% 
-\newcommand{\Tcol}{\color{blue}}
-
-%%%% CONNECTION TO OTHER PROJECTS %%%%%%
-\newcommand{\todo}[1]{\textcolor{red}{\bf #1}}
-\newcommand\connect[1]{{\color{OliveGreen} #1}}
-
-%%%% SET THE COLOR OF THE TITLE BOX BACKGROUND %%%%%%%%%%%%
-\definecolor{Background}{rgb} {0.62,0.75,0.5}
-
-%%%% REFERENCE SECTION NAME %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand\refname{\Tcol 9. Bibliography}
-
-%%%% COLOR THE SECTION NUMBERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\renewcommand\@seccntformat[1]{\color{blue} {\csname the#1\endcsname}\hspace{0.5em}}
-\makeatother
-\renewcommand\thesection{\arabic{section}.}
-\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
-
-%%%% CHANGE THE APPEARANCE OF THE \PARAGRAPH COMMAND  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
-            {-2.5ex\@plus -1ex \@minus -.25ex}%
-            {1.25ex \@plus .25ex}%
-            {\normalfont\normalsize\bfseries}}
-\makeatother
-\setcounter{secnumdepth}{4}     % how many sectioning levels to assign numbers to
-\setcounter{tocdepth}{4}        % how many sectioning levels to show in ToC
-
+%%%%%%%%%%%%%%%%% DEFINE THE HEADER TEXT %%%%%%%%%%%%%%%%
 
 \fancyhead[LE,LO]{\slshape
 %%%%  Please edit
@@ -121,50 +31,6 @@ Cornelis Dullemond and Wilhelm Kley: RU Transition Discs Project Description}
 %
 %
 %%%%%
-
-%
-% ...A compact itemize environment
-%
-\newenvironment{compactitemize}%
- {\begin{list}{$\bullet$}{%
-   \setlength{\topsep}{0em}%
-   \setlength{\parskip}{0em}%
-   \setlength{\parsep}{0em}%
-   \setlength{\itemsep}{0.0\baselineskip}%
-   \setlength{\rightmargin}{0em}%
-   \setlength{\leftmargin}{2.0em}%
-   \setlength{\labelsep}{0.5em}%
-   \setlength{\labelwidth}{1em}%
-}}
- {\end{list}}
-
-\newcounter{qcounter}
-\newenvironment{compactenumerate}%
- {\begin{list}{\arabic{qcounter})~}{\usecounter{qcounter}%
-   \setlength{\topsep}{0em}%
-   \setlength{\parskip}{0em}%
-   \setlength{\parsep}{0em}%
-   \setlength{\itemsep}{0.0\baselineskip}%
-   \setlength{\rightmargin}{0em}%
-   \setlength{\leftmargin}{2.0em}%
-   \setlength{\labelsep}{0.5em}%
-   \setlength{\labelwidth}{1em}%
-}}
- {\end{list}}
-%
-% ...Literature list
-%
-\newenvironment{literature}%
- {\begin{list}{}{%
-   \setlength{\topsep}{0em}%
-   \setlength{\parskip}{0em}%
-   \setlength{\parsep}{0em}%
-   \setlength{\itemsep}{0em}%
-   \setlength{\rightmargin}{0em}%
-   \setlength{\leftmargin}{2em}%
-   \setlength{\itemindent}{-2em}}\normalfont\scriptsize}%
- {\end{list}}
-
 
 \begin{document}
 
@@ -185,7 +51,7 @@ Cornelis Dullemond and Wilhelm Kley: RU Transition Discs Project Description}
  Project D2:}
 \vspace{1em}
 
-\centerline{\LARGE\bf\Tcol Origin of complex non-axisymmetric structures}
+\centerline{\LARGE\bf\Tcol Origin of complex non-axisymmetric structures}\vspace{0.3em}
 \centerline{\LARGE\bf\Tcol in type 2 transition disks}
 
 %
@@ -205,6 +71,9 @@ Cornelis Dullemond and Wilhelm Kley: RU Transition Discs Project Description}
 {\textsf{Collaborations:}}     & L.~Testi (ESO), B.~Ercolano (USM), E.~van Dishoeck (MPE), T.~Henning (MPIA)\\
 \end{tabular}
 
+\todo{Check if all are part of the proposal.}
+\todo{Links to other projects.}
+
 %%%%  Please edit
 
 \vspace{1em}
@@ -219,7 +88,7 @@ our understanding of the physics of protoplanetary disks. This project aims
 to understand these structures in terms of dynamic models of disks.
 
 
-\section{\Tcol State of the art and preliminary work}
+\section{State of the art and preliminary work}
 \renewcommand{\leftmark}{\sc State of the Art and preliminary work}
 With the spectacular new capabilities of observatories in the millimeter
 wavelength range (ALMA) and at optical wavelengths (Subaru and VLT
@@ -318,13 +187,13 @@ to find out if Type 2 TDs are oddballs or not, and if they teach us
 something about the formation of planets or are too exotic to do so.
 
 
-\subsection{\Tcol Preliminary work}
+\subsection{Preliminary work}
 As a preparation for this project we have conducted several small
 preliminary investigations in the context of Bachelor projects. We are also
 involved in several collaborations involving VLT-SPHERE scattered light
 images of Type 2 TDs as well as ALMA observations.
 
-\subsubsection{\Tcol VLT-SPHERE observations of Type 2 TDs}
+\subsubsection{VLT-SPHERE observations of Type 2 TDs}
 Th.~Henning, one of the collaborators on this project, is involved in
 VLT-SPHERE scattered light image observations of Type 2 TDs. A particularly
 spectacular example, where the PI was also involved in, is the very recent
@@ -342,13 +211,13 @@ on the ring, and parameterized spiral features.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.95\textwidth]{D2Fig/Benisty.eps}}
-\caption{\label{fig-benisty} Polarized scattered light observations 
-of the Type 2 TD HD100453. Left: Actual observations with VLT-SPHERE
-in the I' band. Right: Synthetic model image made with the MCMax Monte
-Carlo code. From: \citet{2016arXiv161010089B}.}
+\caption{\label{fig-benisty} Polarized scattered light observations of the
+  Type 2 TD HD100453. \caphighlight{Left:} Actual observations with
+  VLT-SPHERE in the I' band. \caphighlight{Right:} Synthetic model image
+  made with the MCMax Monte Carlo code. From: \citet{2016arXiv161010089B}.}
 \end{figure}
 
-\subsubsection{\Tcol ALMA observations of Type 2 TDs}
+\subsubsection{ALMA observations of Type 2 TDs}
 Dr.~Akimasa Kataoka has been a postdoc at the ITA since April 2015 on his
 own JSPS-Fellowship grant. During this period he successfully applied for
 substantial ALMA time to observe the Type 2 TD source HD 142527 using the
@@ -368,10 +237,10 @@ evidence for the complex disk geometries seen in Type 2 TDs.
 \begin{figure}
 \centerline{\includegraphics[width=0.95\textwidth]{D2Fig/Kataoka.eps}}
 \caption{\label{fig-kataoka} ALMA Observations of the Type 2 TD HD 142527.
-Left: The continuum (Stokes I component) at 850 $\mu$m showing the well
-known arc-shaped structure believed to be dust trapped in a Rossby-vortex.
-Right: The polarized intensity with the polarized direction overlayed.
-From: \citet{2016ApJ...831L..12K}.}
+  \caphighlight{Left:} The continuum (Stokes I component) at 850 $\mu$m
+  showing the well known arc-shaped structure believed to be dust trapped in
+  a Rossby-vortex.  \caphighlight{Right:} The polarized intensity with the
+  polarized direction overlayed.  From: \citet{2016ApJ...831L..12K}.}
 \end{figure}
 
 The PI has also been involved in an ALMA observational study of the source
@@ -382,7 +251,7 @@ The PI and collaborators on this project are continuing involvement (and
 leading) of such observational campaigns.
 
 
-\subsubsection{\Tcol Preliminary models of out-of-plane companion-disk interaction}
+\subsubsection{Preliminary models of out-of-plane companion-disk interaction}
 Out-of-plane planet disk interaction models have been made by
 \citet{2011A&A...530A..41B} and \citet{2013A&A...555A.124B} using a fully
 3-D radiation hydrodynamics grid-based code. 
@@ -439,7 +308,7 @@ viscosity of the model.
 
 
 
-\subsubsection{\Tcol Preliminary models of secondary disk formation}
+\subsubsection{Preliminary models of secondary disk formation}
 As a proof of concept for the secondary accretion of material from a low
 mass molecular cloudlet we performed a simple set of grid-based numerical
 hydrodynamic models. The model setup is a rectangular grid of 256 $\times$
@@ -489,8 +358,8 @@ Transition Disk star AB Aurigae as imaged by \citet{1999ApJ...523L.151G}.
   small low-mass spherical Gaussian molecular cloud by a star. The star is
   at the center, the cloud moves initially from left to right. The star is
   kept fixed, i.e.~the cloud mass is small compared to the star mass. Time
-  snapshots (from left to right, top to bottom) are with $4.8\times 10^3$
-  years intervals. The color bar is surface density in
+  snapshots (\caphighlight{from left to right, top to bottom}) are with
+  $4.8\times 10^3$ years intervals. The color bar is surface density in
   $\mathrm{g}\,\mathrm{cm}^{-2}$. The star mass is 1.4 $M_{\odot}$, the Mach
   number of the cloud velocity with respect to the star. From: Bachelor
   Thesis by Manuel Kramer, Heidelberg University, 2016.}
@@ -500,12 +369,13 @@ Transition Disk star AB Aurigae as imaged by \citet{1999ApJ...523L.151G}.
 \centerline{\includegraphics[width=0.5\textwidth]{D2Fig/Kramer_Fig4.12.eps}
 \hspace{2em}\includegraphics[width=0.3\textwidth]{D2Fig/Kalas.eps}
 }
-\caption{\label{fig-kramer-4.12}Left: Scattered light synthetic image
-  computed for a snapshot of the simulations of an off-center accretion of a
-  small low-mass spherical Gaussian molecular cloud by a star. The color bas
-  unit is mJy/arcsec$^2$. From: Bachelor Thesis by Manuel Kramer, Heidelberg
-  University, 2016. Right: Observed scattered light image of the arc-shaped
-  envelope around the Type 2 TD star AB Aurigae by P.~Kalas
+\caption{\label{fig-kramer-4.12}\caphighlight{Left:} Scattered light
+  synthetic image computed for a snapshot of the simulations of an
+  off-center accretion of a small low-mass spherical Gaussian molecular
+  cloud by a star. The color bas unit is mJy/arcsec$^2$. From: Bachelor
+  Thesis by Manuel Kramer, Heidelberg University,
+  2016. \caphighlight{Right:} Observed scattered light image of the
+  arc-shaped envelope around the Type 2 TD star AB Aurigae by P.~Kalas
   \citep{1999ApJ...523L.151G}.}
 \end{figure}
 
@@ -513,7 +383,7 @@ Transition Disk star AB Aurigae as imaged by \citet{1999ApJ...523L.151G}.
 
 
 
-\subsection{\Tcol Project-related publications}
+\subsection{Project-related publications}
 
 % Please list your own publications related to the proposed project, 
 % adhering to the rules of the DFG guidelines 1.91. In brief, please note: 
@@ -531,11 +401,10 @@ Transition Disk star AB Aurigae as imaged by \citet{1999ApJ...523L.151G}.
 %    belong into the category ``Other Publications''.
 
 
-%\subsubsection{\Tcol 
+%\subsubsection{
 %Articles published or officially accepted by publication outlets with scientific quality assurance;
 %book publications}
 
-\begin{multicols}{2}
 \begin{literature}
 \item Birnstiel, T., {\bf Dullemond, C.P.} \& Brauer, F., {\em Gas and dust
     evolution in protoplanetary disks}, 2010, A\&A 513, 79. In this paper we
@@ -620,31 +489,30 @@ Transition Disk star AB Aurigae as imaged by \citet{1999ApJ...523L.151G}.
     Protoplanetary Disk around HD 142527}, 2016, ApJ, 831, L12. This paper
   shows the power of ALMA observations of lopsided disks.
 \end{literature}
-\end{multicols}
 
-%\subsubsection{\Tcol Other publications}
+%\subsubsection{Other publications}
 
 %--
 
-% \subsubsection{\Tcol Patents}
+% \subsubsection{Patents}
 % 
-% \paragraph{\Tcol Pending}
+% \paragraph{Pending}
 % 
 % [Text]
 % 
-% \paragraph{\Tcol Issued}
+% \paragraph{Issued}
 % 
 % [Text]
 
-\section{\Tcol Objectives and work programme}
+\section{Objectives and work programme}
 \renewcommand{\leftmark}{\sc Objectives and work programme}
 
 
-\subsection{\Tcol Anticipated total duration of the project}
+\subsection{Anticipated total duration of the project}
 
 3 years.
 
-\subsection{\Tcol Objectives}
+\subsection{Objectives}
 This project aims to study the {\em dynamics} of non-axisymmetric Type 2
 TDs, with the goal of trying to learn from these spectacular "disk dynamics
 laboratories" of Nature. The origin of these strange structures, including
@@ -718,9 +586,9 @@ Concretely, we intend to study:
 \end{compactenumerate}
 
 
-\subsection{\Tcol Work programme including proposed research methods}
+\subsection{Work programme including proposed research methods}
 
-\subsubsection{\Tcol Tools for the proposed project}
+\subsubsection{Tools for the proposed project}
 For this project we will require the following main tools:
 \begin{compactenumerate}
 \item {\bf A 3-D hydrodynamics modeling code.} Depending on which of the
@@ -789,7 +657,7 @@ For this project we will require the following main tools:
 \end{compactenumerate}
 
 
-\subsubsection{\Tcol Work plan}
+\subsubsection{Work plan}
 The work plan consists of several sub-projects that aim to explain the
 non-axisymmetric features mentioned above. In each of these sub-projects we
 will not only do the (radiation-)hydrodynamic modeling, but also compare
@@ -832,7 +700,7 @@ well as external member of the SPHERE disk consortium.
   by][]{2012A&A...546A..24R}. Can this eccentricity and these irregularities
   (deviations from a perfect keplerian ellipse) be understood in the context
   of a companion-disk interaction model? \connect{This sub-project will be
-    done in close collaboration with the postdoc of Project D1, as that
+    done in close collaboration with the postdoc of project D1, as that
     project is specialized on planets in disks. Project D1 focuses on
     multi-planet systems being responsible for the cavity in Type 2 TDs
     because single planets have not been proven to be able to explain TDs.
@@ -879,7 +747,7 @@ well as external member of the SPHERE disk consortium.
   star. Once we have these images we will study the shape of the outer edge
   of the gap, and also find out if spiral features can be seen, which may be
   similar to those found in the observations. \connect{This sub-project will
-    be done in close collaboration with the postdoc of Project D1, as that
+    be done in close collaboration with the postdoc of project D1, as that
     project is specialized on planets in disks, as well as on the radiation
   hydrodynamics of 3-D planet-disk models.}
 \item {\bf Companion inside the disk: The out-of-plane case}\\
@@ -1031,21 +899,26 @@ period of the Research Unit.
 
 \todo{TIME PLAN?}
 
-\subsubsection{\Tcol Links to the other Forschergruppe projects and international collaborators}
-The team (Dullemond, Kley, Testi, Ercolano) have all the necessary expertise
-to carry out the modeling and the comparison to observations. In addition
-collaboration with the groups of Th.~Henning (MPIA), E.~van Dishoeck
-(MPE/Leiden), M.~Benisty (Grenoble/Santiago) and C.~Dominik (Amsterdam) is
-envisioned for the comparison to observational data with ALMA and SPHERE.
-
-\todo{Maybe also link to Caselli for the chemisty in case we want to use
-molecular line data with ALMA.}
+\subsubsection{Links to the other Forschergruppe projects and international collaborators}
+A key to the success of this project will be the comparison of the models to
+observations of Type 2 TDs. Access to the latest VLT-SPHERE images in
+scattered light is guaranteed through collaboration with the group of Thomas
+Henning. Access to the latest ALMA data is guaranteed through the groups of
+Leonardo Testi \connect{(see also project A1)} and Ewine van
+Dishoeck. \connect{Direct collaboration with the PhD students from project
+  A1 is forseen to help with the comparison of our models with these ALMA
+  data.} External collaboration with M.~Benisty (Grenoble/Santiago) and
+C.~Dominik (Amsterdam) is envisioned for the task of comparison to
+observational data with ALMA and SPHERE.
 
 In addition, collaboration with M.~Fukagawa (Nagoya, Japan) and A.~Kataoka
 (NAOJ, Japan) and other Japanese colleagues involved in studies of
 transition disks, is envisioned. The PI has established strong scientific
 links with these groups, in particular recently in the study of Type 2 TDs
 with ALMA, both from a modeling perspective and from ALMA observations.
+
+\todo{Maybe also link to Caselli for the chemisty in case we want to use
+molecular line data with ALMA.}
 
 We will also strengthen ties to Dr.~Pablo Ben\'itez-Llambay (currently
 at Copenhagen) who is the lead author of the FARGO-3D public code. 
@@ -1073,21 +946,20 @@ at Copenhagen) who is the lead author of the FARGO-3D public code.
 
 
 
-
-\subsection{\Tcol Data handling}
+\subsection{Data handling}
 The model data we produce will be made immediately available online, once
 the corresponding paper is accepted. 
 
-\subsection{\Tcol Other information}
+\subsection{Other information}
 % Please use this section for any additional information you feel is
 % relevant which has not been provided elsewhere.
 
-\subsection{\Tcol Information on scientific and financial involvement of international cooperation partners}
+\subsection{Information on scientific and financial involvement of international cooperation partners}
 
 
 
 
-\section{\Tcol Bibliography}
+\section{Bibliography}
 
 \begingroup
 \renewcommand{\section}[2]{}%
@@ -1096,21 +968,21 @@ the corresponding paper is accepted.
 \endgroup
 
 
-\section{\Tcol Requested modules/funds}
+\section{Requested modules/funds}
 \renewcommand{\leftmark}{\sc Requested modules/funds}
 % Explain each item for each applicant (stating last name, first name).
 
-\subsection{\Tcol Basic Module}
+\subsection{Basic Module}
 
-\subsubsection{\Tcol Funding for Staff}
+\subsubsection{Funding for Staff}
 % Please note that funds for your own temporary position (â€œEigene Stelleâ€)
 % are not to be included here; this belongs to the separate â€œModule Temporary Positionâ€.
 
 We request 1 Postdoc E13 position for three years, to be based in Heidelberg.
 
-\subsubsection{\Tcol Direct Project Costs}
+\subsubsection{Direct Project Costs}
 
-\paragraph{\Tcol Equipment up to EUR 10,000, Software and Consumables}
+\paragraph{Equipment up to EUR 10,000, Software and Consumables}
 Theoretical numerical research can only be done when sufficient and
 appropriate computational facilities are available. While production runs
 will be done on supercomputer facilities, a substantial part of the work in
@@ -1119,7 +991,7 @@ requires a workstation -- which is beyond the standard base equipment
 (\textit{Grundausstattung}). We therefore request one workstation-grade
 desktop computer for 4000 Euro.
 
-\paragraph{\Tcol Travel Expenses}
+\paragraph{Travel Expenses}
 Participation at at least one conference per year, or similar is anticipated
 for the postdoc. In addition to travel funds for conferences for the PIs,
 regular mutual working visits at Heidelberg/T\"ubingen/M\"unchen are
@@ -1137,7 +1009,7 @@ Working visits Heidelberg/T\"ubingenM\"unchen   & 3000	& 3000 & 3000 & 9000\\
 \end{tabular}
 \end{center}
 
-\paragraph{\Tcol Visiting Researchers (excluding Mercator Fellows)}
+\paragraph{Visiting Researchers (excluding Mercator Fellows)}
 This project strongly ties to observations of Type 2 TDs in scattered light
 (with VLT-SPHERE), thermal millimeter dust emission (with ALMA) and gas
 lines (with ALMA). We collaborate internally with Prof.~Ewine van Dishoeck
@@ -1166,9 +1038,9 @@ Prof. Carsten Dominik (Amsterdam)          & 1000 & 1000 & 2000 \\
 \end{tabular}
 \end{center}
 
-\paragraph{\Tcol Other Costs}
+\paragraph{Other Costs}
 
-\paragraph{\Tcol Project-related publication expenses}
+\paragraph{Project-related publication expenses}
 Given the strong international competition in this field, it might now
 and then be necessary to publish in the Astrophysical Journal (ApJ),
 which takes page charges typically of the order of 1000 US dollar. 
@@ -1177,36 +1049,36 @@ between institute and project, we request for 1000 Euro additional
 funding for covering this.
 
 
-% \subsubsection{\Tcol Instrumentation}
+% \subsubsection{Instrumentation}
 % 
-% \paragraph{\Tcol Equipment exceeding EUR 10,000} 
-% 
-% None.
-% 
-% \paragraph{\Tcol Major Instrumentation exceeding EUR 100,000} 
+% \paragraph{Equipment exceeding EUR 10,000} 
 % 
 % None.
 % 
-% \subsection{\Tcol Module Temporary Position}
+% \paragraph{Major Instrumentation exceeding EUR 100,000} 
+% 
+% None.
+% 
+% \subsection{Module Temporary Position}
 % 
 % [Text]
 % 
-% \subsection{\Tcol Module Replacement Funding}
+% \subsection{Module Replacement Funding}
 % 
 % [Text]
 % 
-% \subsection{\Tcol Module Mercator Fellows}
+% \subsection{Module Mercator Fellows}
 % 
 % [Text]
 % 
-% \subsection{\Tcol Module Public Relations Funding}
+% \subsection{Module Public Relations Funding}
 % 
 % [Text]
 
-\section{\Tcol Project requirements}
+\section{Project requirements}
 \renewcommand{\leftmark}{\sc Project requirements}
 
-\subsection{\Tcol Employment status information}
+\subsection{Employment status information}
 % For each applicant, state the last name, first name, and employment
 % status (including duration of contract and funding body, if on a
 % fixed-term contract).
@@ -1216,21 +1088,21 @@ Prof.~Dr.~Kley, Wilhelm.
 W3 Professor (permanent) at Univerti\"at T\"ubingen.
 
 
-\subsection{\Tcol First-time proposal data}
+\subsection{First-time proposal data}
 % Only if applicable: Last name, first name of first-time applicant.
 
-\subsection{\Tcol Composition of the project group}
+\subsection{Composition of the project group}
 % List only those individuals who will work on the project but will not
 % be paid out of the project funds. State each personâ€™s name, academic
 % title, employment status, and type of funding.
 
 \todo{[Text]}
 
-\subsection{\Tcol Cooperation with other researchers}
+\subsection{Cooperation with other researchers}
 
-\subsubsection{\Tcol Planned cooperation on this project}
+\subsubsection{Planned cooperation on this project}
 
-\paragraph{\Tcol Collaborating researchers for this project within the
+\paragraph{Collaborating researchers for this project within the
   Research Unit}
 %Each proposal must be accompanied by a description of how the project
 %is integral to the Research Unit, %both in terms of subject matter
@@ -1239,39 +1111,100 @@ W3 Professor (permanent) at Univerti\"at T\"ubingen.
 
 \todo{[Text]}
 
-\paragraph{\Tcol Collaborating researchers for this project outside of
+\paragraph{Collaborating researchers for this project outside of
   the Research Unit}
 
 \todo{[Text]}
 
-\subsubsection{\Tcol Researchers with whom you have collaborated scientifically within the past three years}
+\subsubsection{Researchers with whom you have collaborated scientifically within the past three years}
 % This information is important for DFG to exclude possible conflicts of interest.
 % Please mention not only the names of the cooperation partners but also their institution and city.
 % Scientists already mentioned in the previous two subsubsections do not have to be mentioned
 % again.
 
-\todo{[Text]}
+{\small
+Close collaboration is in boldface. The rest is due to large common consortia.\\
+{\bf S.~Andrews (CfA, Harvard),}
+{\bf E.~van Dishoeck (MPE Garching, Uni Leiden),}
+{\bf C.~Dominik (UvA, Amsterdam),}
+{\bf A.~Natta (DIAS, Dublin),}
+{\bf L.~Testi (ESO, Garching),}
+J.~Carpenter (Caltech, Pasadena),
+{\bf C.~Chandler (NRAO, Socorro),}
+A.~Isella (Rice Uni, Houston),
+L.~Ricci (Caltech, Pasadena),
+N.~Calvet (Uni Michigan),
+S.~Corder (ALMA),
+J.~Greaves (Uni St.~Andrews),
+{\bf N.~Turner (JPL, Pasadena),}
+A.~Uribe (Coll.~Charlston),
+{\bf Z.~Regaly (Konkoly Obs, Budapest),}
+{\bf A.~Juhasz (Cambridge),}
+{\bf R.~Klessen (Uni-Heidelberg),}
+{\bf R.~Kuiper (Uni T\"ubingen),}
+{\bf C.~Brinch (University of Copenhagen),}
+{\bf M.~Benisty (Uni Grenoble),}
+{\bf P.~Pinilla (Tucson),}
+{\bf C.~Mordasini (Uni Bern),}
+G.~Guidi (ESO),
+{\bf M.~Tazzari (ESO),}
+{\bf L.~Perez (MPIfR, Bonn),}
+H.~Linz (MPIA),
+A.~Sargent (Caltech, Pasadena),
+L.~Mundy (University of Maryland),
+S.~Storm (University of Maryland),
+J.~Lazio (JPL, Caltech),
+W.~Kwon (Korea Astronomy and Space Science Institute),
+{\bf B.~Ercolano (Uni M\"unchen),}
+{\bf T.~Muto (Kogakuin University),}
+M.~Momose(Ibaraki University),
+{\bf T.~Tsukagoshi (Ibaraki University),}
+L.~Klarmann (Uni Amsterdam),
+{\bf H.~Klahr (MPIA, Heidelberg),}
+{\bf S.~Ataiee (Uni Bern),}
+S.~Paardekooper (Queen Mary University of London),
+M.~Fukagawa (NAOJ Japan),
+H.~Shibai (Osaka University),
+T.~Hanawa (Chiba University),
+K.~Murakawa (Osaka Sangyo University),
+{\bf J.~Ramsey (Uni Kopenhagen),}
+{\bf J.~Drazkowska (Uni Z\"urich)}
+}
 
-\subsection{\Tcol Scientific equipment}
+\subsection{Scientific equipment}
 % List larger instruments that will be available to you for the
 % project. These may include large computer facilities if computing
 % capacity will be needed. 
 
-We have access to the bwFor computer cluster for astronomy in T\"ubingen. 
+The project requires a considerable amount of CPU-time. For production runs
+we will rely on outside resources. 
+
+We have special access to computing resources supplied within the State of
+Baden-W\"urttemberg (Baden-W\"urttemberg High Performance Computing -
+Coordinated Compute Cluster Competence Centers:
+\href{https://www.bwhpc-c5.de}{bwHPC-c5}).  A part of this initiative is the
+new BinAC-system\footnote{see
+  \url{http://www.bwhpc-c5.de/wiki/index.php/Category:BwForCluster\_BinAC}
+  for a detailed description of the hardware.}  that has just gone online at
+the University of T\"ubingen and is dedicated to Astrophysics and Computer
+Science only, and is accessible for researchers from Heidelberg.  BinAC
+offers over 236 CPU nodes with dual Intel Xeon E5-2630v4 each. Additional
+resources are available with bwHPC-c5 at the ForHLR-cluster at the Steinbuch
+Centre for Computing (SCC) in Karlsruhe.  If further resources will be
+required we will apply for additional computer time at the high performance
+computing center HLRS, located in Stuttgart, and at other centers in
+Germany.
 
 
-\todo{MORE ABOUT THE COMPUTER CLUSTER}
 
-
-
-%\subsection{\Tcol Project-relevant interests in commercial enterprises}
+%\subsection{Project-relevant interests in commercial enterprises}
 %% Information on connections between the project and the production
 %% branch of the enterprise.
 %
 %[Text]
 
 
-%\subsection{\Tcol Additional information}
+%\subsection{Additional information}
 % If applicable, please list proposals requesting major
 % instrumentation and/or those previously submitted to a third party
 % here.

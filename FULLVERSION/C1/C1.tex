@@ -18,60 +18,18 @@
 
 \documentclass[10pt,fleqn,twoside]{article}
 
-%%%% USE ARIAL FONT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{helvet}
-\renewcommand\familydefault{phv}
+%%%%%%%%%%%%%%%%% GET THE STYLE STUFF %%%%%%%%%%%%%%%%%%%
 
-%%%% INCLUDE NECESSARY PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{babel}
-\usepackage[UKenglish]{babel}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{fancyhdr}
-\usepackage{natbib}
-\usepackage{ae,aecompl}
-\usepackage{graphicx}
-\usepackage{palatino}
-\usepackage[T1]{fontenc}
-\usepackage[right]{eurosym}
-\usepackage{rotating}
-\usepackage{epsf}
-\usepackage{setspace}
-\usepackage{xspace}
-\usepackage{multicol}
-\usepackage{siunitx}
-%\usepackage{caption}
+\input{header.tex}
 
-\usepackage{sfmath}
+%%%%%%%%%%%%%%%%%%%%% TO DO MACROS %%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[utf8]{inputenc}
-
-% ========= hyperref & Colors & Links ===========
-\usepackage[usenames,dvipsnames]{xcolor}
-%\usepackage[breaklinks,colorlinks,linkcolor=Maroon,citecolor=Blue]{hyperref}%removed backref
-%\usepackage[all]{hypcap} % fixes links to floats
-%    Kees to Til: Too many colors, too many popups. Since in Astronomy we
-%    anyway use named-references, it is not necessary to have the hyperref.
-%\usepackage[capitalise,nameinlink]{cleveref} %
-\usepackage{aas_macros} %
-\setlength{\bibsep}{-0.5pt}
-
-% ========= highlighting important parts of the proposal ===========
-\newenvironment{highlight}{\color{blue}\itshape}{\ignorespacesafterend}
-\newenvironment{missingenv}{\color{red}}{\ignorespacesafterend}
-
-% ========= hyperref & Colors & Links ===========
-% use option `disable` to turn off comments 
-%\usepackage[colorinlistoftodos,textsize=small,textwidth=2cm]{todonotes}
+\let\todo\undefined   % Overwrite \todo command for this project
 \usepackage[colorinlistoftodos,textwidth=2cm]{todonotes}
-%     Kees to Til: textsize does not work on my system
 \newcommand{\missing}[1]{\textcolor{red}{\textbf{XXX #1 XXX}}}
 \newcommand{\til}[1]{\todo[inline]{Til: #1}}
 \newcommand{\kees}[1]{\todo[inline,color=LimeGreen]{Kees: #1}}
 
-% strike through comments: to turn them off, uncomment the renewcommands below
-\usepackage{soul}
-\setstcolor{red}
 \newcommand{\tilchange}[2]{\textcolor{red}{(Til:)}\st{#1} \textcolor{red}{#2}}
 \newcommand{\keeschange}[2]{\textcolor{red}{(Kees:)}\st{#1} \textcolor{red}{#2}}
 \newcommand{\keesadd}[1]{\textcolor{red}{(Kees:)} \textcolor{red}{#1}}
@@ -83,99 +41,9 @@
 \newcommand{\twopoppy}{\texttt{twopoppy}\xspace}
 \newcommand{\rebound}{\texttt{REBOUND}\xspace}
 \newcommand{\pluto}{\texttt{PLUTO}\xspace}
+\newcommand{\radmc}{\texttt{RADMC-3D}\xspace}
 
-\setlength{\bibsep}{-0.5pt}
-%\newcommand{\todo}[1]{\textcolor{red}{\bf #1}}
-\newcommand\connect[1]{{\color{OliveGreen} #1}}
-
-%%%% CAPTION LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage[font={small}]{caption}
-
-%%%% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setlength{\textheight}{22cm}
-\setlength{\topmargin}{-1.2cm}
-\setlength{\textwidth}{15.6cm}
-\setlength{\oddsidemargin}{0.0cm}
-\setlength{\evensidemargin}{0.0cm}
-\setlength{\mathindent}{1.5cm}
-\setlength{\parindent}{0.0cm}
-\setlength{\parskip}{0.08cm}
-
-%%%% PAGE HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{fancy}
-\fancyhead[RE,RO]{}
-\fancyfoot[RO]{\thepage}
-\fancyfoot[LE]{\thepage}
-\fancyfoot[CE,CO]{}
-
-%%% FONTS FOR THE TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newfont{\tpfonta}{cmssbx10 scaled 1600}
-\newfont{\tpfontb}{cmssbx10 scaled 3200}
-
-%%%% COLOR DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\definecolor{blue} {rgb} {0.25,0.25,0.75}
-
-%%%% ADDITONAL EMPHASIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\cem}{\color{blue}}
-\newcommand{\eem}{\sl\color{blue}}
-
-%%%% SET THE COLOR OF THE (SUB-) SECTION TITLES %%%%%%%%%%% 
-\newcommand{\Tcol}{\color{blue}}
-
-%%%% SET THE COLOR OF THE TITLE BOX BACKGROUND %%%%%%%%%%%%
-\definecolor{Background}{rgb} {0.62,0.75,0.5}
-
-%%%%%%%%%%%%%% REFERENCE SECTION NAME %%%%%%%%%%%%%%%%%%%%
-\renewcommand\refname{\Tcol 9. Bibliography}
-
-%%%%%%%%%%%%%% NICER PROJECT REFERENCES %%%%%%%%%%%%%%%%%%%
-
-\newenvironment{literature}%
- {\begin{multicols}{2}\begin{scriptsize}\begin{list}{}{%
-   \setlength{\topsep}{0em}%
-   \setlength{\parskip}{0em}%
-   \setlength{\parsep}{0em}%
-   \setlength{\itemsep}{0em}%
-   \setlength{\rightmargin}{0em}%
-   \setlength{\leftmargin}{2em}%
-   \setlength{\itemindent}{-2em}}}%
- {\end{list}\end{scriptsize}\end{multicols}}
- 
-%%%%%%%%%%%%%%%%%% NICER REFERENCES %%%%%%%%%%%%%%%%%%%
-
-%\usepackage[capitalise,nameinlink]{cleveref}
-\newcommand{\cref}[1]{#1}
-% Kees to Til: While I like it in principle, it does not work well
-% on my machine, and it becomes too fancy (too many popups as
-% you go over the text).
-
-%%%%%%%%%%%%%%%%%% COLOR THE SECTION NUMBERS %%%%%%%%%%%%%%%%%
-
-\makeatletter
-\renewcommand\@seccntformat[1]{\color{blue} {\csname the#1\endcsname}\hspace{0.5em}}
-\makeatother
-\renewcommand\thesection{\arabic{section}.}
-\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
-
-%%%%% color sections
-\usepackage{sectsty}
-\allsectionsfont{\color{blue}}
-
-
-%%%% CHANGE THE APPEARANCE OF THE \PARAGRAPH COMMAND  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
-            {-2.5ex\@plus -1ex \@minus -.25ex}%
-            {1.25ex \@plus .25ex}%
-            {\normalfont\normalsize\bfseries}}
-\makeatother
-\setcounter{secnumdepth}{4}     % how many sectioning levels to assign numbers to
-\setcounter{tocdepth}{4}        % how many sectioning levels to show in ToC
-
-%%%%% set header
-
-\renewcommand{\sectionmark}[1]{\markright{\color{black}#1}}
+%%%%%%%%%%%%%%%%% DEFINE THE HEADER TEXT %%%%%%%%%%%%%%%%
 
 \fancyhead[LO]{\fancyplain{}{\itshape Birnstiel \& Dullemond: RU
 Transition Discs project C1}}
@@ -204,7 +72,7 @@ Transition Discs project C1}}
  Project C1:}
 \vspace{1em}
 
-\centerline{\LARGE\bf\Tcol Trapping the dust:}
+\centerline{\LARGE\bf\Tcol Trapping the dust:}\vspace{0.3em}
 \centerline{\LARGE\bf\Tcol  Planet formation `hotspots' in TDs}
 
 %
@@ -233,24 +101,31 @@ Transition Discs project C1}}
 
 \vspace{1em}
 \noindent{\bf Abstract:}\\
-The major hurdles towards forming the building blocks of planets are
-(1) the fast radial migration of solid particles and (2) forming
-accumulations of solid particles of the right particle sizes to
-trigger gravoturbulent formation. It has recently been shown that
-planets can efficiently accrete pebble sized particles, thereby
-growing on short time scales. Pebbles drifting through a swarm of
-planetesimals, however, are not efficiently swept up due to the high
-speed at which the pebbles cross the planetesimal orbits. Observations
-of transition disks suggest that they provide the environments,
-where all of these issues can be solved: trapping and growth of solid
-particles in the pressure bumps of transition disks can provide
-the large enough particles and high enough densities to trigger
-gravoturbulent planetesimal formation and the trapped particles are
-not drifting away, hence, they can be efficiently accreted onto the
-growing planetesimals. It is the goal of this proposal to investigate
-the trapping, planetesimal formation, and planetesimal growth
-processes in the apparent `hotspots' of transition disks.
+Based on our current understanding of the physics of planet formation,
+several processes seemingly prevent or stall the growth towards larger
+bodies:
+(1) collisional growth is inefficient above $\sim$meter-sizes,
+(2) fast radial migration removes solid particles on very short time
+scales,
+(3) large particles need to locally accumulate above the canonical
+dust-to-gas ratio in order to trigger gravoturbulent formation of
+planetesimals, and
+(4) radial migration of pebble-sized particles renders the accretional
+growth of planetesimals inefficient.
+Observations of transition disks suggest that they provide the
+environments, where all of these issues can be solved: trapping and
+growth of solid particles in the pressure bumps of transition disks
+can provide the large enough particles at high enough densities to
+trigger gravoturbulent planetesimal formation. Additionally, the
+trapped particles are not drifting away, meaning they can be
+efficiently accreted onto the growing planetesimals. It is the goal of
+this proposal to investigate the trapping, planetesimal formation, and
+planetesimal growth processes in these apparent `planet formation
+hotspots' in transition disks.
 
+%Pebbles drifting through a swarm of planetesimals, however, are not
+%efficiently swept up due to the high speed at which the pebbles cross
+% the planetesimal orbits.
 
 \section{State of the art and preliminary work}
 
@@ -276,7 +151,7 @@ Early imaging results of \citet{2008ApJ...675L.109B} and
 cavities in disks that were previously just suspected from the
 spectral energy distributions. These disks with holes were initially
 thought to be in the process of transitioning from a gas rich disk
-to a gas poor disk \cite[e.g.][]{2001MNRAS.328..485C} and thus termed
+to a gas poor disk \cite[e.g.,][]{2001MNRAS.328..485C} and thus termed
 \textit{transition disks} \citep[see][and references
 therein]{2014prpl.conf..497E,2014prpl.conf..475A}.
 
@@ -284,7 +159,7 @@ As statistics and theoretical models improved, it became clear that
 this cannot be the full story: some of the inner holes were found to
 be clearly too large and the disk accreting too vigorously to be
 explainable by current models of photoevaporation
-\citep[i.e. Type 2 TDs,][]{2010MNRAS.401.1415O,2011MNRAS.412...13O}.
+\citep[i.e.\ Type 2 TDs,][]{2010MNRAS.401.1415O,2011MNRAS.412...13O}.
 Other explanations were discussed, such as particle growth
 \citep{2005A&A...434..971D,2005ApJ...625..414T,2012A&A...544A..79B} or
 gap opening by planets
@@ -297,16 +172,16 @@ experience fast radial migration towards higher pressure
 \citep{1972fpp..conf..211W,1977MNRAS.180...57W,1986Icar...67..375N}.
 Already \citet{1972fpp..conf..211W} suggested that particles moving
 due to this effect can become \textit{trapped} in a pressure maximum,
-as depicted in \cref{fig:whipple} taken from his paper. One of the
-first images of such a ring-like transition disk, from
-\cite{2009ApJ...704..496B} is shown in \cref{fig:brown}.
+as depicted in \autoref{fig:whipple} taken from his paper. One of
+the first images of such a ring-like transition disk, from
+\cite{2009ApJ...704..496B} is shown in \autoref{fig:brown}.
 
 
 \begin{figure}
 \centering
 \begin{minipage}[b]{.47\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figure/Whipple1972-Fig1_traced}
+  \includegraphics[width=\linewidth]{C1fig/Whipple1972-Fig1_traced}
   \captionof{figure}{Accumulation of solid particles in pressure
   bumps. Taken from \citet{1972fpp..conf..211W}.\newline\newline}
   \label{fig:whipple}
@@ -314,7 +189,7 @@ first images of such a ring-like transition disk, from
 \hspace{0.05\textwidth}
 \begin{minipage}[b]{.47\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figure/casassus2}
+  \includegraphics[width=\linewidth]{C1fig/casassus2}
   \captionof{figure}{Early imaging of ring-like
   accumulations of dust in the transition disk SR 21N. Taken from
   \citet{2009ApJ...704..496B}. Units are in \si{Jy/beam}.
@@ -340,7 +215,7 @@ allow us to study in detail what role pressure bumps are playing in
 the formation of planets.
 
 In 2013, we proposed  that the dust trapped in a slightly lopsided gas
-disk (i.e. an azimuthal pressure bump) can become extremely
+disk (i.e.\ an azimuthal pressure bump) can become extremely
 concentrated in that azimuthal over-density
 \citep[see][]{2013A&A...550L...8B}. In the same year, we were part of
 a team that published and analyzed ALMA observations of the disk Oph
@@ -349,7 +224,7 @@ models \citep[see][]{2013Sci...340.1199V}. It is widely accepted that
 the dust accumulations in pressure bumps (whatever their formation
 mechanism may be) are prime regions -- \textit{hot spots} -- of planet
 formation: accumulation of particles in pressure bumps
-\citep[e.g.][]{2007ApJ...664L..55K} prevents them from drifting away
+\citep[e.g.,][]{2007ApJ...664L..55K} prevents them from drifting away
 and shortens the growth time scales of dust particles allowing further
 growth \citep{2008A&A...487L...1B}. Accumulation of these particles
 can trigger the streaming instability which needs particle
@@ -400,7 +275,7 @@ planetesimals or their growth at the same time. These works are mainly
 aimed at explaining the observed properties of transition disks, but
 surprisingly little work has been done to understand how transition
 disks -- or pressure bumps in general -- regulate the formation of
-planets or planetesimals. Some authors \citep[e.g.][and following
+planets or planetesimals. Some authors \citep[e.g.,][and following
 papers in that series]{2014ApJ...780...53C} have pointed out how
 pressure bumps and planet formation can trigger each other, leading to
 a inside-out planet formation scenario. This is a promising scenario
@@ -430,7 +305,7 @@ and dynamics of dust particles \citep[e..g][see
 \citealp{2016SSRv..tmp...32B} for a recent
 review]{2005A&A...434..971D, 2008A&A...480..859B, 2008A&A...489..931Z,
 2010A&A...513A..79B, 2012A&A...539A.148B, 2014A&A...572A..78D} as well
-as in disk structure and evolution \citep[e.g.][and many
+as in disk structure and evolution \citep[e.g.,][and many
 others]{2001ApJ...560..957D, 2002A&A...389..464D, 2004A&A...417..159D,
 2010ARA&A..48..205D,2015ApJ...813L..14B}. Furthermore, C.P. Dullemond
 has been supervising or contributing to several works on
@@ -439,20 +314,20 @@ planet-vortex-interaction
 \citep{2012MNRAS.419.1701R,2013A&A...553L...3A,2014A&A...572A..61A}.
 
 More recently, a collaboration between the PIs of this proposal and
-the group of Dr. Hui Li at Los Alamos National Labs (LANL), USA has
-been established. Dr. Hui Li has been pioneering the field of
+the group of Dr.\ Hui Li at Los Alamos National Labs (LANL), USA has
+been established. Dr.\ Hui Li has been pioneering the field of
 vortex formation in the context of protoplanetary disks
 \citep{2001ApJ...551..874L,2000ApJ...533.1023L}. Furthermore, the LANL
 group has extensive experience in hydrodynamical modeling and more
 recently in modeling dust dynamics via tracer fluids
 \citep[e.g.,][]{2014ApJ...795L..39F,2016ApJ...818...76J}.
 
-Dr. T. Birnstiel has worked on two-dimensional models of dust
+Dr.\ T.\ Birnstiel has worked on two-dimensional models of dust
 evolution, treating particle growth, fragmentation, turbulent mixing
 and vertical settling. Preliminary results of this are shown in
-\cref{fig:2dplot} in the left column. Similar work on this, but in the
-radial/azimuthal dimensions is ongoing as part of the collaboration
-with the LANL group. The right hand side panels in \cref{fig:2dplot}
+\autoref{fig:2dplot} in the left column. Similar work on this, but in
+the radial/azimuthal dimensions is ongoing as part of the collaboration
+with the LANL group. The right hand side panels in \autoref{fig:2dplot}
 show a proof of concept simulation where gas dynamics as well as dust
 dynamics of around 100 different particle sizes are taken into
 account. Subroutines for simulating particle growth and fragmentation
@@ -460,9 +335,9 @@ have been developed and are currently being tested.
 
 \begin{highlight}
 To continue this work on particle growth in two dimensions as well as
-work on other related topics, Dr. T. Birnstiel has recently been
+work on other related topics, Dr.\ T.\ Birnstiel has recently been
 awarded an \textit{ERC Starting Grant} which will start in March 2017
-at the LMU Munich. By becoming part of this Research Unit, Dr.
+at the LMU Munich. By becoming part of this Research Unit, Dr.\ 
 Birnstiel will share the progress and the resulting data with the
 research group wherever other projects of the Research Unit profit
 from it. This includes, but is not limited to, the dust density
@@ -473,21 +348,21 @@ and similar results from the radial/azimuthal models.
 
 \begin{figure}
 \centering
-  \includegraphics[width=\linewidth]{figure/2dplot_new}
+  \includegraphics[width=\linewidth]{C1fig/2dplot_new}
   \captionof{figure}{Proof-of-concept models for 2D dust
-  evolution simulations. The panels to the left show the
-  radial/vertical distribution of solids (top) and maximum particle
-  sizes (bottom) where both coagulation and vertical transport
+  evolution simulations. The panels to the \caphighlight{left} show the
+  radial/vertical distribution of solids (\caphighlight{top}) and maximum particle
+  sizes (\caphighlight{bottom}) where both coagulation and vertical transport
   processes are treated at each point of a 2D grid. The panels on the
-  right show radial/azimuthal results of the LA-COMPASS code (in
+  \caphighlight{right} show radial/azimuthal results of the LA-COMPASS code (in
   normalized code units, resolution of 1024$\times$1536) that is now
   able to treat 100s of particle sizes and their size evolution. The
-  top panel shows the distribution of gas surface density where a
+  \caphighlight{top} panel shows the distribution of gas surface density where a
   planet, orbiting on the dashed line, carves a gap and forms a
   pressure bump outside of its orbit. The pressure bump becomes Rossby
   unstable and the resulting vortex efficiently traps larger
   particles. The distribution of 0.09 mm sized particles is shown in
-  the lower right.\missing{Fix lower left color bar}}
+  the \caphighlight{lower right}.\missing{Fix lower left color bar}}
   \label{fig:2dplot}
 \end{figure}
 
@@ -611,7 +486,7 @@ disks. The scientific questions we want to answer are:
   Will there be observational signals of such a planet in the shape of
   the dust concentration and its polarized signature \citep[see,
   e.g.,][]{2016ApJ...831L..12K}?
-  \item How does the origin of the pressure bump (e.g. viscosity
+  \item How does the origin of the pressure bump (e.g.\ viscosity
   bump, photoevaporation, or planet) affect these scenarios?
   \item How does the situation change with various parameters such as
   the extent of the pressure bump, the turbulence strengths or
@@ -621,10 +496,52 @@ disks. The scientific questions we want to answer are:
 
 \subsection{Work programme including proposed research methods}
 
-\kees{I would start first with the general methodology that you plan
-to use. Only then talk about the detailed time plan.}
+\subsubsection{Research Methodology}
 
-\subsubsection{Phase I: Planetesimal formation and simple gas
+In this project, we will couple the evolution of small solid particles
+via recipes of gravoturbulent planetesimal formation to the growth and
+dynamical evolution of planetesimals. To do this, we will will employ
+two different methodologies: first, we will use simplified gas disk
+structure models (i.e.\ hydrostatic disks). Therefore, we will be able
+to concentrate on the dust processes and the planetesimal formation
+and dynamical evolution processes in more detail. This methodology
+will encompass phase I and II (cf. \autoref{sec:phaseI} and
+\autoref{sec:phaseII}). The second approach in phase III (cf.
+\autoref{sec:phaseIII}) will include detailed hydrodynamical processes
+but therefore necessarily simplifying other aspects such as the dust
+evolution. This simplification, however, will be based on the results
+of phase I and II (and the ERC project of Dr.\ Birnstiel) and will thus
+\textit{not} be based on ad-hoc assumptions.
+
+\subsubsection{Research Tools and Inputs}
+For this project, we will be using the following tools:
+
+\begin{itemize}
+  \item A dust evolution code, either the open-source code \twopoppy
+  \citep{2012A&A...539A.148B}, described below, or if needed, the
+  gas+dust disk evolution code of \citet{2010A&A...513A..79B}.
+  \item A N-body integrator. For this we will the open-source code
+  \rebound, which offers a wide variety of integration schemes and
+  flexible options to include additional forces or add/remove
+  particles.
+  \item A disk hydrodynamical code with Lagrangian particles. The
+  foundation of this will be the custom version of the \pluto code
+  from \citep{2015A&A...584A.110P}. We will use this code or future
+  versions of it in phase III (\autoref{sec:phaseIII}) and implement
+  the growth processes developed in phase I and phase II.
+  \item For comparison with dust continuum observations, we will
+  employ the 3D monte carlo radiative transfer code \radmc that was
+  developed by the co-PI Prof.\ Dullemond. Scripts to directly run the
+  \radmc dust radiative transfer calculation with the input from the
+  dust evolution code of co-PI Dr.\ Birnstiel are available. These
+  include opacity calculations as well as hydrostatic equilibrium
+  iteration with dust-settling-mixing solutions for each particle
+  size.
+\end{itemize}
+
+\subsubsection{Research Plan}
+
+\paragraph{Phase I: Planetesimal formation and simple gas
 structures}
 \label{sec:phaseI}
 
@@ -638,7 +555,7 @@ stationary pressure bump in our one dimensional dust/gas code
 an $\alpha$-disk evolution (already implemented in the code) where the
 pressure bump forms due to parametrized variations in the
 $\alpha$-viscosity \citep{2007ApJ...664L..55K}. This will allow us to
-look at time-dependent trapping processes, e.g. for pressure bumps
+look at time-dependent trapping processes, e.g.\ for pressure bumps
 with a finite life time. If necessary, the viscous radial evolution of
 the gas density could also be treated using 1D hydrodynamics to
 account for deviations in the rotation profile near the bump.
@@ -650,14 +567,14 @@ fulfilled. Similar methods have already been used by the PIs
 We will use Eq.~12 of \citet{2014A&A...572A..78D}, which is a fit to
 detailed numerical results of \citet{2010ApJ...722.1437B} consistent
 with other works on planetesimal formation in the context of the
-streaming instability \citep[e.g.][]{2009ApJ...704L..75J}. Based on
+streaming instability \citep[e.g.,][]{2009ApJ...704L..75J}. Based on
 the local metallicity and the resulting planetesimal formation
 efficiency, dust mass will be removed via a sink term and the
 resulting mass in planetesimals will be tracked (without further
 evolution of the planetesimals at this point). The particle size
 distribution can be reconstructed using the methods published in
 \citet{2015ApJ...813L..14B}. Should we find that the accuracy of this
-method is not sufficient (i.e. if the results are very sensitive to
+method is not sufficient (i.e.\ if the results are very sensitive to
 one of the approximations done here), then we could switch to an
 implementation of the code presented in \citet{2010A&A...513A..79B}.
 This will be more accurate and more detailed, but also significantly
@@ -678,7 +595,7 @@ research plan:
 Using the code at this stage, we will already be able to publish a
 first paper describing the methods and our results on planetesimal
 formation rates comparing to previous works in this direction
-\citep[e.g.][]{2014A&A...572A..78D, 2016A&A...586A..20K}. Some
+\citep[e.g.,][]{2014A&A...572A..78D, 2016A&A...586A..20K}. Some
 mechanisms creating pressure bumps have a finite life time, such as
 zonal flows, or pressure bumps at the edges of dead zones. Using bumps
 of finite life time will allow us to investigate the efficiency of
@@ -686,7 +603,7 @@ particle trapping in time-dependent pressure maxima and their possible
 relation to Type I transition disks, which is a significant
 improvement over previous works such as \citet{2012A&A...538A.114P}
 and \citet{2013A&A...554A..95P}. By linking this to existing
-millimeter wave radio-surveys (e.g.
+millimeter wave radio-surveys (e.g.,
 \citealp{2016ApJ...831..125P} and references therein as well as
 previous surveys such as \citealp{2010A&A...521A..66R}) we will be
 able to test which bump amplitudes, bump sizes, and life times are
@@ -696,7 +613,7 @@ constrain some of the theoretically proposed mechanisms, such as zonal
 flows \citep[e.g.,][]{2009ApJ...697.1269J, 2013ApJ...763..117D,
 2014ApJ...796...31B}.
 
-\subsubsection{Phase II: N-Body dynamics and planetesimal evolution}
+\paragraph{Phase II: N-Body dynamics and planetesimal evolution}
 \label{sec:phaseII}
 
 In Phase I, planetesimals are formed at a given rate based on
@@ -725,8 +642,8 @@ At this point of the proposal, there are two parallel directions in
 which the simulation tools will be improved, linking to two different
 scientific directions: one focuses on more detailed gas dynamics that
 has links to project \textbf{C2} and will be discussed below in
-\cref{sec:phaseIII}. In this phase II of the research plan we will
-focus on the N-body treatment of the planetesimals and related science
+\autoref{sec:phaseIII}. In this phase II of the research plan
+we will focus on the N-body treatment of the planetesimals and related science
 questions (to clarify: pebbles are treated as a fluid).
 
 Based on the dust particle sizes and the 3D distribution of dust and
@@ -790,7 +707,7 @@ involved effects, based on rate equations, can be found. Follow up
 studies can include improved collision models, effects of turbulence
 on the planetesimal distribution and many other effects.
 
-\subsubsection{Phase III: Breaking the Symmetry}
+\paragraph{Phase III: Breaking the Symmetry}
 \label{sec:phaseIII}
 
 So far the distribution of both dust and gas has been assumed to be
@@ -865,7 +782,7 @@ part of the ERC project.
 To treat the new aspects (2D hydrodynamics, 2D dust dynamics) we will
 switch to the \pluto
 code\footnote{\url{http://plutocode.ph.unito.it}}. Our collaborator,
-Prof.~Kley and his former postdoc Dr. Picogna (now in the group of
+Prof.~Kley and his former postdoc Dr.\ Picogna (now in the group of
 Prof.~Ercolano) have developed a particle integrator for the \pluto
 code \citep[see][]{2015A&A...584A.110P}. Furthermore, the treatment of
 dust as a tracer is already implemented in \pluto (although not yet
@@ -926,7 +843,7 @@ We request funding for 1 PhD position to be stationed at the
 
 \subsubsection{Direct Project Costs}
 
-\paragraph{\Tcol Equipment up to EUR 10,000, Software and Consumables}
+\paragraph{Equipment up to EUR 10,000, Software and Consumables}
 
 Theoretical numerical research can only be done when sufficient and
 appropriate computational facilities are available. While production
@@ -937,7 +854,7 @@ students -- which is beyond the standard base equipment
 (Grundausstattung). We therefore request a workstation-grade desktop
 computer for the PhD position for \EUR{4 000}.
 
-\paragraph{\Tcol Travel Expenses}
+\paragraph{Travel Expenses}
 
 Participation at at least one conference, winter school, or similar is
 anticipated for the PhD student. The last year of the PhD project
@@ -958,15 +875,15 @@ Mutual working visits HD/M & \EUR{1500} & \EUR{1500} & \EUR{1500} & \EUR{4500}\\
 \end{tabular}
 \end{center}
 
-% \paragraph{\Tcol Visiting Researchers (excluding Mercator Fellows)}
+% \paragraph{Visiting Researchers (excluding Mercator Fellows)}
 % 
 % \missing{Text}
 % 
-% \paragraph{\Tcol Other Costs}
+% \paragraph{Other Costs}
 % 
 % \missing{Text}
 
-\paragraph{\Tcol Project-related publication expenses}
+\paragraph{Project-related publication expenses}
 
 We request \EUR{750} per year (a total of \EUR{2250}) for
 publication expenses.
@@ -975,11 +892,11 @@ publication expenses.
 % 
 % None
 % 
-% \paragraph{\Tcol Equipment exceeding EUR 10,000} 
+% \paragraph{Equipment exceeding EUR 10,000} 
 % 
 % None
 % 
-% \paragraph{\Tcol Major Instrumentation exceeding EUR 100,000} 
+% \paragraph{Major Instrumentation exceeding EUR 100,000} 
 % 
 % None
 % \subsection{Module Temporary Position}
@@ -1032,19 +949,34 @@ needed.\\
 
 \subsubsection{Planned cooperation on this project}
 
-\paragraph{\Tcol Collaborating researchers for this project within the
+\paragraph{Collaborating researchers for this project within the
   Research Unit}
 %Each proposal must be accompanied by a description of how the project
 %is integral to the Research Unit, %both in terms of subject matter
 %and organisation. This includes a description of the cooperation with
-%%others participating within the Research Unit. 
+%%others participating within the Research Unit.
 
-\missing{Text}
+The student of this project, stationed in Munich, will greatly benefit
+from the numerical expertise within the Research Unit, in particular
+the hydrodynamical and N-body expertise in Tübingen and in Heidelberg.
+The simulation results and setups will also be exchanged with project
+C2 (PI Ercolano, Caselli) and the implications of the results, in
+particular, the radiative transfer model output, will be compared
+against available and upcoming observational campaigns of project A1
+(PI Testi) and our external collaborators Prof.\ van Dishoeck and Prof.\ 
+Henning. This will encompass modelled emission of both (sub-)mm
+continuum and scattered light. This project will also benefit from
+frequent exchange with projects D1 (PI Kley) and D2 (PI Dullemond)
+particularly the planet-disk interaction models and the Lagrangian
+particle modules for the \pluto code while vice-versa, D1 and D2 will
+benefit from the dust and collision models created in this project.
 
-\paragraph{\Tcol Collaborating researchers for this project outside of
+\paragraph{Collaborating researchers for this project outside of
   the Research Unit}
 
-\missing{Text}
+We will collaborate with the ERC-funded group of the PI Dr.\ Birnstiel,
+which will run parallel to the Research Unit.
+
 
 \subsubsection{Researchers with whom you have collaborated scientifically within the past three years}
 % This information is important for DFG to exclude possible conflicts of interest.

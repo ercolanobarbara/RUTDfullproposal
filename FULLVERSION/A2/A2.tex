@@ -18,76 +18,6 @@
 
 \documentclass[10pt,fleqn,twoside]{article}
 
-%%%% USE ARIAL FONT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{helvet}
-\renewcommand\familydefault{phv}
-
-%%%% INCLUDE NECESSARY PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{babel}
-\usepackage[UKenglish]{babel}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{fancyhdr}
-\usepackage{natbib}
-\usepackage{multicol}
-\usepackage{xcolor}
-\usepackage{ae,aecompl}
-\usepackage{graphicx}
-\usepackage{palatino}
-\usepackage[T1]{fontenc}
-\usepackage{rotating}
-\usepackage{epsf}
-\usepackage{setspace}
-\usepackage{sfmath}
-\usepackage{sidecap}
-\setlength{\bibsep}{-0.5pt}
-\newcommand{\todo}[1]{\textcolor{red}{\bf #1}}
-\newcommand\connect[1]{{\color{OliveGreen} #1}}
-
-%%%% CAPTION LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage[font={small}]{caption}
-
-%%%% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setlength{\textheight}{22cm}
-\setlength{\topmargin}{-1.2cm}
-\setlength{\textwidth}{15.6cm}
-\setlength{\oddsidemargin}{0.0cm}
-\setlength{\evensidemargin}{0.0cm}
-\setlength{\mathindent}{1.5cm}
-\setlength{\parindent}{0.0cm}
-\setlength{\parskip}{0.08cm}
-
-%%%% PAGE HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{fancy}
-\fancyhead[RE,RO]{}
-\fancyfoot[RO]{ \thepage}
-\fancyfoot[LE]{ \thepage}
-\fancyfoot[CE,CO]{}
-
-%%% FONTS FOR THE TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newfont{\tpfonta}{cmssbx10 scaled 1600}
-\newfont{\tpfontb}{cmssbx10 scaled 3200}
-
-%%%% EURO SIGN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand\euro{{\sffamily C%
-\makebox[0pt][l]{\kern-.70em\mbox{--}}%
-\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
-\newcommand\keuro{k{\sffamily C%
-\makebox[0pt][l]{\kern-.70em\mbox{--}}%
-\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
-
-\renewcommand{\baselinestretch}{1.07}
-
-%%%% COLOR DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\definecolor{blue} {rgb} {0.25,0.25,0.75}
-
-\renewcommand{\floatpagefraction}{0.75}
-
-
-%%%% ADDITONAL EMPHASIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\cem}{\color{blue}}
-\newcommand{\eem}{\sl\color{blue}}
 
 %%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -107,34 +37,11 @@
 \newcommand*\pasj{PASJ}
 \newcommand*\pasp{PASP}
 
-\bibpunct{(}{)}{;}{a}{}{,} % to follow the A&A style
+%%%%%%%%%%%%%%%%% GET THE STYLE STUFF %%%%%%%%%%%%%%%%%%%
 
-%%%% SET THE COLOR OF THE (SUB-) SECTION TITLES %%%%%%%%%%% 
-\newcommand{\Tcol}{\color{blue}}
+\input{header.tex}
 
-%%%% SET THE COLOR OF THE TITLE BOX BACKGROUND %%%%%%%%%%%%
-\definecolor{Background}{rgb} {0.62,0.75,0.5}
-
-%%%% REFERENCE SECTION NAME %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand\refname{\Tcol 9. Bibliography}
-
-%%%% COLOR THE SECTION NUMBERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\renewcommand\@seccntformat[1]{\color{blue} {\csname the#1\endcsname}\hspace{0.5em}}
-\makeatother
-\renewcommand\thesection{\arabic{section}.}
-\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
-
-%%%% CHANGE THE APPEARANCE OF THE \PARAGRAPH COMMAND  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
-            {-2.5ex\@plus -1ex \@minus -.25ex}%
-            {1.25ex \@plus .25ex}%
-            {\normalfont\normalsize\bfseries}}
-\makeatother
-\setcounter{secnumdepth}{4}     % how many sectioning levels to assign numbers to
-\setcounter{tocdepth}{4}        % how many sectioning levels to show in ToC
-
+%%%%%%%%%%%%%%%%% DEFINE THE HEADER TEXT %%%%%%%%%%%%%%%%
 
 \fancyhead[LE,LO]{\slshape
 %%%%  Please edit
@@ -143,20 +50,6 @@ Thomas Preibisch: RU Transition Discs Project Description}
 %
 %
 %%%%%
-
-%
-% ...Literature list
-%
-\newenvironment{literature}%
- {\begin{list}{}{%
-   \setlength{\topsep}{0em}%
-   \setlength{\parskip}{0em}%
-   \setlength{\parsep}{0em}%
-   \setlength{\itemsep}{0em}%
-   \setlength{\rightmargin}{0em}%
-   \setlength{\leftmargin}{2em}%
-   \setlength{\itemindent}{-2em}}\normalfont\scriptsize}%
- {\end{list}}
 
 \begin{document}
 
@@ -177,11 +70,8 @@ Thomas Preibisch: RU Transition Discs Project Description}
  Project A2:}
 \vspace{1em}
 
-\centerline{\LARGE\bf\Tcol New constraints on disk-dissipation}
-
-\centerline{\LARGE\bf\Tcol processes from the
-relation between}
-
+\centerline{\LARGE\bf\Tcol New constraints on disk-dissipation}\vspace{0.3em}
+\centerline{\LARGE\bf\Tcol processes from the relation between}\vspace{0.3em}
 \centerline{\LARGE\bf\Tcol  accretion and  X-ray activity}
 
 %
@@ -204,7 +94,7 @@ relation between}
 %%%%  Please edit
 
 \vspace{1em}
-\noindent{\bf Requested positions: 1PhD student} \\
+\noindent{\bf Requested positions: 1 PhD student}
 
 \vspace{1em}
 \noindent{\bf Abstract:}\\
@@ -232,11 +122,11 @@ understand the formation and residual accretion rate distribution of
 transition disks. 
 
 
-\section{\Tcol State of the art and preliminary work}
+\section{State of the art and preliminary work}
 \renewcommand{\leftmark}{\sc State of the Art and preliminary work}
 
 
-\subsection*{\Tcol a) Scientific Context: the evolution of circumstellar accretion disks}
+\subsection*{a) Scientific Context: the evolution of circumstellar accretion disks}
 
 In this project we want to study the connection between the X-ray radiation
 of young stellar objects and the properties and temporal evolution of their
@@ -302,9 +192,9 @@ and the strong optical emission lines of CTTS.
 \centering
 \includegraphics[width=9.0cm]{accretion-hartmann-scetch.eps}\hspace{1mm}
 \includegraphics[width=6.3cm,clip=true]{Mdot-hartmann.eps}
-\caption{\small \textbf{Left:} Reproduction of Fig.~1 from Hartmann et al.~(2016),
+\caption{\caphighlight{Left:} Reproduction of Fig.~1 from Hartmann et al.~(2016),
 illustrating the main features of disk accretion in YSOs.
-\textbf{Right:} Schematic illustration of the temporal evolution of the accretion rate
+\caphighlight{Right:} Schematic illustration of the temporal evolution of the accretion rate
 (adapted from Hartmann 2008). The light-brown shaded area marks the age range
 we address in this project.
 \label{hartmann.fig}}
@@ -487,7 +377,7 @@ For this, a solid understanding of the X-ray
 emission properties from YSOs is a basic requirement.
 
 
-\subsection*{\Tcol b) X-ray emission from YSOs}
+\subsection*{b) X-ray emission from YSOs}
 
 Numerous X-ray observations obtained during the last decades have clearly
 established that YSOs in all evolutionary stages from
@@ -563,7 +453,7 @@ affect the evolution of the protoplanetary accretion disks?
 
 
 
-\subsection*{\Tcol c) Previous observational results on the relation between 
+\subsection*{c) Previous observational results on the relation between 
 X-ray emission and accretion disks}
 
 About 15 years ago, 
@@ -645,18 +535,18 @@ the observed lower X-ray luminosities of accreting stars.
 
 
 %%%%%%%%%%% Figure %%%%%%%%%%
-\begin{SCfigure} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \centering
 \includegraphics[width=0.45\textwidth]{drake.ps}
 \caption{Reproduction of Fig.~3 from Drake, Ercolano, et al.~(2009),
 showing the anti-correlation between X-ray luminosity and accretion rate.
 \label{drake.fig}}
-\end{SCfigure} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{figure} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %%%%%%%%%%% Figure %%%%%%%%%%
 
 
 
-\subsection*{\Tcol d) The new model of photoevaporation-starved accretion}
+\subsection*{d) The new model of photoevaporation-starved accretion}
 
 While the previous models were based on the idea that accretion somehow
 suppresses, disrupts or obscures coronal X-ray activity,
@@ -692,7 +582,7 @@ activity and disk accretion should be tested in much more detail.
 
 
 
-\subsection*{\Tcol e) Disk Dispersal by Photoevaporation}
+\subsection*{e) Disk Dispersal by Photoevaporation}
 
 
 
@@ -781,16 +671,16 @@ driven disk wind.
 \centering
 \includegraphics[width=0.475\textwidth]{model1.ps}\hspace{5mm}
 \includegraphics[width=0.475\textwidth]{model2.ps}
-\caption{\small Illustration of the temporal evolution of photoevaporative wind
+\caption{Illustration of the temporal evolution of photoevaporative wind
 mass loss rate and accretion rate according to the scenario of
 X-ray photoevaporation-starved accretion.
-The left plot shows the case of a TTS with moderate X-ray luminosity
+The \caphighlight{left plot} shows the case of a TTS with moderate X-ray luminosity
 of $2 \times 10^{29}\,\rm erg/s$. The thick dashed green line shows the
 purely viscous accretion rate that would result if there were
 no photoevaporation. The dark blue line shows the mass loss rate resulting
 from X-ray photoevaporation, and the thick red line the actual accretion rate.
 \newline
-In the right plot, model curves for the case of a 10 times
+In the \caphighlight{right plot}, model curves for the case of a 10 times
 higher X-ray luminosity are added.
 Comparison of the curves for the accretion rate in both cases
 (dark red and orange lines) at the age of 2.5 Myr (solid vertical line)
@@ -806,7 +696,7 @@ of the high X-ray luminosity case compared to the low  X-ray luminosity case.
 
 
 
-\subsection{\Tcol Project-related publications}
+\subsection{Project-related publications}
 
 % Please list your own publications related to the proposed project, 
 % adhering to the rules of the DFG guidelines 1.91. In brief, please note: 
@@ -825,14 +715,13 @@ of the high X-ray luminosity case compared to the low  X-ray luminosity case.
 
 
 
-%\subsubsection{\Tcol 
+%\subsubsection{
 %Articles published or officially accepted by publication outlets with scientific quality assurance;
 %book publications}
 
 \todo{Kees to Thomas: Please add some text in each of the 10 publications
 below to argue what their relevance is to this project.}
 
-\begin{multicols}{2}
 \begin{literature}
 \item
 \textbf{Th.~Preibisch}, Y.-C.~Kim, F.~Favata, E.D.~Feigelson, E.~Flaccomio,
@@ -875,31 +764,32 @@ C.F.~Manara, \textbf{L.~Testi}, 2014,
 {\em The imprint of accretion on the UV spectrum of young stellar objects: an X-Shooter view,}
 Astrophysics and Space Science, 354, 35-39  
 \item
-\todo{ONE MORE HERE FROM LEONARDO!!}
+C.F.~Manara, G.~Rosotti, \textbf{L.~Testi}, et al., 2016,
+{\em Evidence for a correlation between mass accretion rates onto young stars and the mass of their protoplanetary disks,}
+Astronomy \& Astrophysics, 591, L3
 \end{literature}
-\end{multicols}
 
 
-%\subsubsection{\Tcol Other publications}  \vspace{-1mm}
+%\subsubsection{Other publications}  \vspace{-1mm}
 
-%\subsubsection{\Tcol Patents} \vspace{-3mm}
+%\subsubsection{Patents} \vspace{-3mm}
 
 %none \vspace{-3mm}
 
-\section{\Tcol Objectives and work programme}
+\section{Objectives and work programme}
 \renewcommand{\leftmark}{\sc Objectives and work programme}
 
 
-\subsection{\Tcol Anticipated total duration of the project}
+\subsection{Anticipated total duration of the project}
 
 3 years
 
-\subsection{\Tcol Objectives}
+\subsection{Objectives}
 
 \textbf{The main objective of this project is to establish the role played by
-stellar X-ray adiation in shaping the accretion rate distributions of
+stellar X-ray radiation in shaping the accretion rate distributions of
 Type I transition discs.}
-
+%
 The model of photoevaporation-starved accretion makes quite specific
 predictions on the temporal evolution of the disk accretion rate
 as a function of the strength of the X-ray irradiation \citep{Drake09,Owen11}.
@@ -936,7 +826,7 @@ of new, high-quality data, which can be exploited now
 
 
 
-\subsection{\Tcol Work programme including proposed research methods}
+\subsection{Work programme including proposed research methods}
 
 
 
@@ -1050,7 +940,7 @@ by photoevaporation and allow us to
 draw conclusions on the expected accretion rate distributions of 
 young stars.
 
-\subsubsection{\Tcol Work programme including proposed research methods}
+\subsubsection{Work programme including proposed research methods}
 
 The work programme consists of three blocks in which high-quality data
 on the accretion rates and X-ray luminosities of young stars are collected,
@@ -1097,7 +987,7 @@ all these data will be statistically analyzed and
 used to test the theoretical models.
 
 
-\subsubsection*{\Tcol Project Part 1: Orion Nebula Cluster}
+\subsubsection*{Project Part 1: Orion Nebula Cluster}
 
 
 
@@ -1105,7 +995,7 @@ The first target for this study will be the Orion Nebula Cluster,
 for which the COUP data provide the most sensitive and complete
 X-ray data set on a sample of about 1000 young stars.
 
-\subsubsection*{\Tcol Part 1a: Correlation analysis of the existing X-ray and accretion data}
+\subsubsection*{Part 1a: Correlation analysis of the existing X-ray and accretion data}
 
 The first step in the work will be to use the new accretion rates
 that have been  determined for $\sim 700$ young stars
@@ -1130,7 +1020,7 @@ than possible before.
 
 
 
-\subsubsection*{\Tcol Part 1b: Investigating the effects of variability}
+\subsubsection*{Part 1b: Investigating the effects of variability}
 
 The known variability of the X-ray emission as well as the 
 temporal variability of the accretion rates is a potential 
@@ -1178,8 +1068,8 @@ very young phases.
 %
 An important quantification of the typical accretion variability of T Tauri stars
 was recently
-provided by the detailed monitoring study of the young cluster NGC~2264
-presented by \citet{Venuti14} and \citet{Venuti15}.
+provided by the detailed monitoring study of 
+\citet{Venuti14} and \citet{Venuti15}.
  They found that the variability of the accretion luminosity, as traced
 by UV excesses, 
 typically amounts to a factor of $\sim 2-3$ on timescales
@@ -1290,7 +1180,7 @@ between X-ray emission and accretion.
 
 
 %%%%%%%%%%% Figure %%%%%%%%%%
-\begin{SCfigure} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \centering
 \includegraphics[width=0.5\textwidth]{onc-coupfield-2.ps}
 \caption{Optical image of the ONC obtained with the WWFI camera
@@ -1300,7 +1190,7 @@ The image is a three-color composite of $g$-band (blue), $r$-band
 The cyan rectangle shows the $17' \times 17'$
 field of the COUP X-ray observation.
 \label{onc-wwfi.fig}}
-\end{SCfigure} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{figure} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %%%%%%%%%%% Figure %%%%%%%%%%
 
 
@@ -1308,14 +1198,11 @@ field of the COUP X-ray observation.
 
 \bigskip
 
-\subsubsection*{\Tcol Part 1c: New accretion rates for ONC}
+\subsubsection*{Part 1c: New accretion rates for ONC}
 
 
-\todo{The young stars in the Orion Nebula cluster have also been
-observed with X-SHOOTER data available ??? }
- 
-\todo{TO BE DETERMINED:  HOW MANY OBSERVED STARS.}
-
+Nineteen young stars in the Orion Nebula cluster have already been
+observed with X-SHOOTER.
 We will use these data to derive accretion rates for these stars.
 This will allow a detailed comparison with the above mentioned accretion rate
 determinations and increase the size of the sample, for which we
@@ -1365,7 +1252,7 @@ on time variability of the accretion rates.
 
 
 
-\subsubsection*{\Tcol Part 2: New accretion rates for other star forming regions}
+\subsubsection*{Part 2: New accretion rates for other star forming regions}
 
 In the second part of the project, we will extend the analysis to young stars in other
 star forming regions, for which either reliable accretion rate determinations
@@ -1430,7 +1317,7 @@ X-SHOOTER spectra for 17 YSOs from \citet{Manara15})
 8) the TW Hya association (X-SHOOTER spectra  for 15 stars)
 \smallskip
 
-9) the Taurus region (X-SHOOTER spectra  for $\sim 15$ stars)
+9) the Taurus region (X-SHOOTER spectra  for $\sim 15$ stars).
 \medskip
 
 
@@ -1457,7 +1344,7 @@ accretion rates were determined from X-Shooter spectra in
 the recent study of \citet{Fairlamb16}.
 
 
-\subsubsection*{\Tcol Part 3:  New X-SHOOTER observations}
+\subsubsection*{Part 3:  New X-SHOOTER observations}
 
 In the course of the project, we also plan to perform new
 observations with X-SHOOTER in order to extend the
@@ -1465,7 +1352,7 @@ spectroscopic sample and to optimize the overlap with the X-ray observations.
 
 
 
-\subsubsection*{\Tcol Part 4:  Statistical analysis}
+\subsubsection*{Part 4:  Statistical analysis}
 
 
 The final aim of the observational part of this project is to get as many and as reliable as 
@@ -1491,8 +1378,10 @@ scatter in the relations between the X-ray properties and accretion properties.
 The Drake, Ercolano, et al.~(2009) model, however, makes a rather clear
 prediction that the observed accretion rate for stars at a given age
 should scale inversely proportional to the X-ray luminosity.
-This direct relation between accretion and X-ray luminosity can be tested with
-the observational data in different mass and age regimes.
+This direct relation between accretion and X-ray luminosity for stars of a given
+age can be tested with
+the observational data in different stellar mass and age regimes.
+
 
 
 
@@ -1505,11 +1394,11 @@ added above.}
 
 
 
-\subsection{\Tcol Data handling}
+\subsection{Data handling}
 
 All required tools for analyzing the X-ray and optical data are available.
 
-\subsection{\Tcol Other information}
+\subsection{Other information}
 % Please use this section for any additional information you feel is
 % relevant which has not been provided elsewhere.
 \vspace{-2mm}
@@ -1517,13 +1406,13 @@ All required tools for analyzing the X-ray and optical data are available.
 none
 \vspace{-2mm}
 
-\subsection{\Tcol Information on scientific and financial involvement of international cooperation partners}
+\subsection{Information on scientific and financial involvement of international cooperation partners}
 \vspace{-2mm}
 
 none
 \vspace{-2mm}
 
-\section{\Tcol Bibliography}
+\section{Bibliography}
 \vspace{-2mm}
 
 %%%%% Bibliography of all papers cites throughout the proposal %%%%%%%%%%%%%%
@@ -1562,8 +1451,7 @@ none
 %On the lifetime of discs around late-type stars
 \bibitem[Ercolano et al.(2015)]{Ercolano15} Ercolano, B., Koepferl, C., Owen, J., \& Robitaille, T.\ 2015, \mnras, 452, 3689 
 %Far-infrared signatures and inner hole sizes of protoplanetary discs undergoing inside-out dust dispersal
-\bibitem[Fairlamb et al.(2016)]{Fairlamb16} Fairlamb, J.~R, Oudmaijer, R.~D, Mendigutia, I., et al.\ 2016, 
-\mnras, in press [arXiv:1610.09636]
+\bibitem[Fairlamb et al.(2017)]{Fairlamb16} Fairlamb, J.~R., Oudmaijer, R.~D., Mendigutia, I., Ilee, J.~D., \& van den Ancker, M.~E.\ 2017, \mnras, 464, 4721
 \bibitem[Feigelson \& Montmerle(1999)]{FM99} Feigelson, E.~D., \& Montmerle, T.\ 1999, \araa, 37, 363 
 %\bibitem[Flaherty et al.(2016)]{Flaherty16} Flaherty, K.~M., DeMarchi, L., Muzerolle, J., et al.\ 2016, ApJ, in press [arXiv:1609.09100]
 %\vspace{-2mm}
@@ -1673,76 +1561,76 @@ Kim, Y.-C., Favata, F., et al.\ 2005, \apjs, 160, 401
 
 
 
-\section{\Tcol Requested modules/funds}
+\section{Requested modules/funds}
 \renewcommand{\leftmark}{\sc  Requested modules/funds}
 % Explain each item for each applicant (stating last name, first name).
 
-\subsection{\Tcol Basic Module}
+\subsection{Basic Module}
 
-\subsubsection{\Tcol Funding for Staff}
+\subsubsection{Funding for Staff}
 % Please note that funds for your own temporary position (â€œEigene Stelleâ€)
 % are not to be included here; this belongs to the separate â€œModule Temporary Positionâ€.
 
+We ask for one PhD position for three years.
+
+\subsubsection{Direct Project Costs}
+
 \todo{[Text]}
 
-\subsubsection{\Tcol Direct Project Costs}
-
-\todo{[Text]}
-
-\paragraph{\Tcol Equipment up to EUR 10,000, Software and Consumables}
+\paragraph{Equipment up to EUR 10,000, Software and Consumables}
 
 none
 
-\paragraph{\Tcol Travel Expenses}
+\paragraph{Travel Expenses}
 
 \todo{[Text]}
 
-\paragraph{\Tcol Visiting Researchers (excluding Mercator Fellows)}
+\paragraph{Visiting Researchers (excluding Mercator Fellows)}
 
 \todo{[Text]}
 
-\paragraph{\Tcol Other Costs}
+\paragraph{Other Costs}
 
 \todo{[Text]}
 
-\paragraph{\Tcol Project-related publication expenses}
+\paragraph{Project-related publication expenses}
 
 \todo{[Text]}
 
-\subsubsection{\Tcol Instrumentation}
+\subsubsection{Instrumentation}
 
 none
 
-\paragraph{\Tcol Equipment exceeding EUR 10,000} 
+\paragraph{Equipment exceeding EUR 10,000} 
 
 none
 
-\paragraph{\Tcol Major Instrumentation exceeding EUR 100,000} 
+\paragraph{Major Instrumentation exceeding EUR 100,000} 
 
 none
 
-\subsection{\Tcol Module Temporary Position}
+\subsection{Module Temporary Position}
 
-\todo{[Text]}
+not relevant
 
-\subsection{\Tcol Module Replacement Funding}
-
-none
-
-\subsection{\Tcol Module Mercator Fellows}
+\subsection{Module Replacement Funding}
 
 none
 
-\subsection{\Tcol Module Public Relations Funding}
+\subsection{Module Mercator Fellows}
+
+none
+
+\subsection{Module Public Relations Funding}
 
 \todo{Kees to Barbara: I think public relations should go into the main part of the Forschergruppe proposal.}
 
 %[Text]
 
-\section{\Tcol Project requirements}
+\section{Project requirements}
 \renewcommand{\leftmark}{\sc Project requirements}
 
-\subsection{\Tcol Employment status information}
+\subsection{Employment status information}
 % For each applicant, state the last name, first name, and employment
 % status (including duration of contract and funding body, if on a
 % fixed-term contract).
@@ -1753,24 +1641,24 @@ Barbara Ercolano, Professor at the Ludwig-Maximilians-Universit\"at M\"unchen  (
 
 Leonardo Testi, Faculty Member at the European Southern Observatory  (permanent)
 
-\subsection{\Tcol First-time proposal data}
+\subsection{First-time proposal data}
 % Only if applicable: Last name, first name of first-time applicant.
 
 not applicable
 \vspace{-2mm}
 
-\subsection{\Tcol Composition of the project group}
+\subsection{Composition of the project group}
 % List only those individuals who will work on the project but will not
 % be paid out of the project funds. State each personâ€™s name, academic
 % title, employment status, and type of funding.
 
 \todo{[Text]}
 
-\subsection{\Tcol Cooperation with other researchers}
+\subsection{Cooperation with other researchers}
 
-\subsubsection{\Tcol Planned cooperation on this project}
+\subsubsection{Planned cooperation on this project}
 
-\paragraph{\Tcol Collaborating researchers for this project within the
+\paragraph{Collaborating researchers for this project within the
   Research Unit}
 %Each proposal must be accompanied by a description of how the project
 %is integral to the Research Unit, %both in terms of subject matter
@@ -1779,12 +1667,12 @@ not applicable
 
 \todo{[Text]}
 
-\paragraph{\Tcol Collaborating researchers for this project outside of
+\paragraph{Collaborating researchers for this project outside of
   the Research Unit}
 
 \todo{[Text]}
 
-\subsubsection{\Tcol Researchers with whom you have collaborated scientifically within the past three years}
+\subsubsection{Researchers with whom you have collaborated scientifically within the past three years}
 % This information is important for DFG to exclude possible conflicts of interest.
 % Please mention not only the names of the cooperation partners but also their institution and city.
 % Scientists already mentioned in the previous two subsubsections do not have to be mentioned
@@ -1792,21 +1680,21 @@ not applicable
 
 \todo{[Text]}
 
-\subsection{\Tcol Scientific equipment}
+\subsection{Scientific equipment}
 % List larger instruments that will be available to you for the
 % project. These may include large computer facilities if computing
 % capacity will be needed. 
 
 none
 
-\subsection{\Tcol Project-relevant interests in commercial enterprises}
+\subsection{Project-relevant interests in commercial enterprises}
 % Information on connections between the project and the production
 % branch of the enterprise.
 
 none
 
 
-\subsection{\Tcol Additional information}
+\subsection{Additional information}
 % If applicable, please list proposals requesting major
 % instrumentation and/or those previously submitted to a third party
 % here.

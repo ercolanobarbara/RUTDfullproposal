@@ -1,0 +1,8 @@
+* Style for each project
+- Check i.e. e.g. Dr. Prof. et al.
+- Caption \caphighlight
+- subproject --> project
+- Euro
+- Check undefined and multiply defined labels
+- Tcol
+- link text green
