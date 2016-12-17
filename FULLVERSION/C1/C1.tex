@@ -41,6 +41,7 @@
 \newcommand{\twopoppy}{\texttt{twopoppy}\xspace}
 \newcommand{\rebound}{\texttt{REBOUND}\xspace}
 \newcommand{\pluto}{\texttt{PLUTO}\xspace}
+\newcommand{\radmc}{\texttt{RADMC-3D}\xspace}
 
 %%%%%%%%%%%%%%%%% DEFINE THE HEADER TEXT %%%%%%%%%%%%%%%%
 
@@ -48,6 +49,8 @@
 Transition Discs project C1}}
 \fancyhead[RE]{\fancyplain{}{\itshape \rightmark}}
 \fancyhead[LE]{}
+
+%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
@@ -98,24 +101,31 @@ Transition Discs project C1}}
 
 \vspace{1em}
 \noindent{\bf Abstract:}\\
-The major hurdles towards forming the building blocks of planets are
-(1) the fast radial migration of solid particles and (2) forming
-accumulations of solid particles of the right particle sizes to
-trigger gravoturbulent formation. It has recently been shown that
-planets can efficiently accrete pebble sized particles, thereby
-growing on short time scales. Pebbles drifting through a swarm of
-planetesimals, however, are not efficiently swept up due to the high
-speed at which the pebbles cross the planetesimal orbits. Observations
-of transition disks suggest that they provide the environments,
-where all of these issues can be solved: trapping and growth of solid
-particles in the pressure bumps of transition disks can provide
-the large enough particles and high enough densities to trigger
-gravoturbulent planetesimal formation and the trapped particles are
-not drifting away, hence, they can be efficiently accreted onto the
-growing planetesimals. It is the goal of this proposal to investigate
-the trapping, planetesimal formation, and planetesimal growth
-processes in the apparent `hotspots' of transition disks.
+Based on our current understanding of the physics of planet formation,
+several processes seemingly prevent or stall the growth towards larger
+bodies:
+(1) collisional growth is inefficient above $\sim$meter-sizes,
+(2) fast radial migration removes solid particles on very short time
+scales,
+(3) large particles need to locally accumulate above the canonical
+dust-to-gas ratio in order to trigger gravoturbulent formation of
+planetesimals, and
+(4) radial migration of pebble-sized particles renders the accretional
+growth of planetesimals inefficient.
+Observations of transition disks suggest that they provide the
+environments, where all of these issues can be solved: trapping and
+growth of solid particles in the pressure bumps of transition disks
+can provide the large enough particles at high enough densities to
+trigger gravoturbulent planetesimal formation. Additionally, the
+trapped particles are not drifting away, meaning they can be
+efficiently accreted onto the growing planetesimals. It is the goal of
+this proposal to investigate the trapping, planetesimal formation, and
+planetesimal growth processes in these apparent `planet formation
+hotspots' in transition disks.
 
+%Pebbles drifting through a swarm of planetesimals, however, are not
+%efficiently swept up due to the high speed at which the pebbles cross
+% the planetesimal orbits.
 
 \section{State of the art and preliminary work}
 
@@ -162,16 +172,16 @@ experience fast radial migration towards higher pressure
 \citep{1972fpp..conf..211W,1977MNRAS.180...57W,1986Icar...67..375N}.
 Already \citet{1972fpp..conf..211W} suggested that particles moving
 due to this effect can become \textit{trapped} in a pressure maximum,
-as depicted in \cref{fig:whipple} taken from his paper. One of the
-first images of such a ring-like transition disk, from
-\cite{2009ApJ...704..496B} is shown in \cref{fig:brown}.
+as depicted in \autoref{fig:whipple} taken from his paper. One of
+the first images of such a ring-like transition disk, from
+\cite{2009ApJ...704..496B} is shown in \autoref{fig:brown}.
 
 
 \begin{figure}
 \centering
 \begin{minipage}[b]{.47\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figure/Whipple1972-Fig1_traced}
+  \includegraphics[width=\linewidth]{C1fig/Whipple1972-Fig1_traced}
   \captionof{figure}{Accumulation of solid particles in pressure
   bumps. Taken from \citet{1972fpp..conf..211W}.\newline\newline}
   \label{fig:whipple}
@@ -179,7 +189,7 @@ first images of such a ring-like transition disk, from
 \hspace{0.05\textwidth}
 \begin{minipage}[b]{.47\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figure/casassus2}
+  \includegraphics[width=\linewidth]{C1fig/casassus2}
   \captionof{figure}{Early imaging of ring-like
   accumulations of dust in the transition disk SR 21N. Taken from
   \citet{2009ApJ...704..496B}. Units are in \si{Jy/beam}.
@@ -315,9 +325,9 @@ recently in modeling dust dynamics via tracer fluids
 Dr.\ T.\ Birnstiel has worked on two-dimensional models of dust
 evolution, treating particle growth, fragmentation, turbulent mixing
 and vertical settling. Preliminary results of this are shown in
-\cref{fig:2dplot} in the left column. Similar work on this, but in the
-radial/azimuthal dimensions is ongoing as part of the collaboration
-with the LANL group. The right hand side panels in \cref{fig:2dplot}
+\autoref{fig:2dplot} in the left column. Similar work on this, but in
+the radial/azimuthal dimensions is ongoing as part of the collaboration
+with the LANL group. The right hand side panels in \autoref{fig:2dplot}
 show a proof of concept simulation where gas dynamics as well as dust
 dynamics of around 100 different particle sizes are taken into
 account. Subroutines for simulating particle growth and fragmentation
@@ -338,7 +348,7 @@ and similar results from the radial/azimuthal models.
 
 \begin{figure}
 \centering
-  \includegraphics[width=\linewidth]{figure/2dplot_new}
+  \includegraphics[width=\linewidth]{C1fig/2dplot_new}
   \captionof{figure}{Proof-of-concept models for 2D dust
   evolution simulations. The panels to the \caphighlight{left} show the
   radial/vertical distribution of solids (\caphighlight{top}) and maximum particle
@@ -486,10 +496,52 @@ disks. The scientific questions we want to answer are:
 
 \subsection{Work programme including proposed research methods}
 
-\kees{I would start first with the general methodology that you plan
-to use. Only then talk about the detailed time plan.}
+\subsubsection{Research Methodology}
 
-\subsubsection{Phase I: Planetesimal formation and simple gas
+In this project, we will couple the evolution of small solid particles
+via recipes of gravoturbulent planetesimal formation to the growth and
+dynamical evolution of planetesimals. To do this, we will will employ
+two different methodologies: first, we will use simplified gas disk
+structure models (i.e.\ hydrostatic disks). Therefore, we will be able
+to concentrate on the dust processes and the planetesimal formation
+and dynamical evolution processes in more detail. This methodology
+will encompass phase I and II (cf. \autoref{sec:phaseI} and
+\autoref{sec:phaseII}). The second approach in phase III (cf.
+\autoref{sec:phaseIII}) will include detailed hydrodynamical processes
+but therefore necessarily simplifying other aspects such as the dust
+evolution. This simplification, however, will be based on the results
+of phase I and II (and the ERC project of Dr.\ Birnstiel) and will thus
+\textit{not} be based on ad-hoc assumptions.
+
+\subsubsection{Research Tools and Inputs}
+For this project, we will be using the following tools:
+
+\begin{itemize}
+  \item A dust evolution code, either the open-source code \twopoppy
+  \citep{2012A&A...539A.148B}, described below, or if needed, the
+  gas+dust disk evolution code of \citet{2010A&A...513A..79B}.
+  \item A N-body integrator. For this we will the open-source code
+  \rebound, which offers a wide variety of integration schemes and
+  flexible options to include additional forces or add/remove
+  particles.
+  \item A disk hydrodynamical code with Lagrangian particles. The
+  foundation of this will be the custom version of the \pluto code
+  from \citep{2015A&A...584A.110P}. We will use this code or future
+  versions of it in phase III (\autoref{sec:phaseIII}) and implement
+  the growth processes developed in phase I and phase II.
+  \item For comparison with dust continuum observations, we will
+  employ the 3D monte carlo radiative transfer code \radmc that was
+  developed by the co-PI Prof.\ Dullemond. Scripts to directly run the
+  \radmc dust radiative transfer calculation with the input from the
+  dust evolution code of co-PI Dr.\ Birnstiel are available. These
+  include opacity calculations as well as hydrostatic equilibrium
+  iteration with dust-settling-mixing solutions for each particle
+  size.
+\end{itemize}
+
+\subsubsection{Research Plan}
+
+\paragraph{Phase I: Planetesimal formation and simple gas
 structures}
 \label{sec:phaseI}
 
@@ -561,7 +613,7 @@ constrain some of the theoretically proposed mechanisms, such as zonal
 flows \citep[e.g.,][]{2009ApJ...697.1269J, 2013ApJ...763..117D,
 2014ApJ...796...31B}.
 
-\subsubsection{Phase II: N-Body dynamics and planetesimal evolution}
+\paragraph{Phase II: N-Body dynamics and planetesimal evolution}
 \label{sec:phaseII}
 
 In Phase I, planetesimals are formed at a given rate based on
@@ -590,8 +642,8 @@ At this point of the proposal, there are two parallel directions in
 which the simulation tools will be improved, linking to two different
 scientific directions: one focuses on more detailed gas dynamics that
 has links to project \textbf{C2} and will be discussed below in
-\cref{sec:phaseIII}. In this phase II of the research plan we will
-focus on the N-body treatment of the planetesimals and related science
+\autoref{sec:phaseIII}. In this phase II of the research plan
+we will focus on the N-body treatment of the planetesimals and related science
 questions (to clarify: pebbles are treated as a fluid).
 
 Based on the dust particle sizes and the 3D distribution of dust and
@@ -655,7 +707,7 @@ involved effects, based on rate equations, can be found. Follow up
 studies can include improved collision models, effects of turbulence
 on the planetesimal distribution and many other effects.
 
-\subsubsection{Phase III: Breaking the Symmetry}
+\paragraph{Phase III: Breaking the Symmetry}
 \label{sec:phaseIII}
 
 So far the distribution of both dust and gas has been assumed to be
@@ -791,7 +843,7 @@ We request funding for 1 PhD position to be stationed at the
 
 \subsubsection{Direct Project Costs}
 
-\paragraph{\Tcol Equipment up to EUR 10,000, Software and Consumables}
+\paragraph{Equipment up to EUR 10,000, Software and Consumables}
 
 Theoretical numerical research can only be done when sufficient and
 appropriate computational facilities are available. While production
@@ -802,7 +854,7 @@ students -- which is beyond the standard base equipment
 (Grundausstattung). We therefore request a workstation-grade desktop
 computer for the PhD position for \EUR{4 000}.
 
-\paragraph{\Tcol Travel Expenses}
+\paragraph{Travel Expenses}
 
 Participation at at least one conference, winter school, or similar is
 anticipated for the PhD student. The last year of the PhD project
@@ -823,15 +875,15 @@ Mutual working visits HD/M & \EUR{1500} & \EUR{1500} & \EUR{1500} & \EUR{4500}\\
 \end{tabular}
 \end{center}
 
-% \paragraph{\Tcol Visiting Researchers (excluding Mercator Fellows)}
+% \paragraph{Visiting Researchers (excluding Mercator Fellows)}
 % 
 % \missing{Text}
 % 
-% \paragraph{\Tcol Other Costs}
+% \paragraph{Other Costs}
 % 
 % \missing{Text}
 
-\paragraph{\Tcol Project-related publication expenses}
+\paragraph{Project-related publication expenses}
 
 We request \EUR{750} per year (a total of \EUR{2250}) for
 publication expenses.
@@ -840,11 +892,11 @@ publication expenses.
 % 
 % None
 % 
-% \paragraph{\Tcol Equipment exceeding EUR 10,000} 
+% \paragraph{Equipment exceeding EUR 10,000} 
 % 
 % None
 % 
-% \paragraph{\Tcol Major Instrumentation exceeding EUR 100,000} 
+% \paragraph{Major Instrumentation exceeding EUR 100,000} 
 % 
 % None
 % \subsection{Module Temporary Position}
@@ -897,19 +949,34 @@ needed.\\
 
 \subsubsection{Planned cooperation on this project}
 
-\paragraph{\Tcol Collaborating researchers for this project within the
+\paragraph{Collaborating researchers for this project within the
   Research Unit}
 %Each proposal must be accompanied by a description of how the project
 %is integral to the Research Unit, %both in terms of subject matter
 %and organisation. This includes a description of the cooperation with
-%%others participating within the Research Unit. 
+%%others participating within the Research Unit.
 
-\missing{Text}
+The student of this project, stationed in Munich, will greatly benefit
+from the numerical expertise within the Research Unit, in particular
+the hydrodynamical and N-body expertise in Tübingen and in Heidelberg.
+The simulation results and setups will also be exchanged with project
+C2 (PI Ercolano, Caselli) and the implications of the results, in
+particular, the radiative transfer model output, will be compared
+against available and upcoming observational campaigns of project A1
+(PI Testi) and our external collaborators Prof.\ van Dishoeck and Prof.\ 
+Henning. This will encompass modelled emission of both (sub-)mm
+continuum and scattered light. This project will also benefit from
+frequent exchange with projects D1 (PI Kley) and D2 (PI Dullemond)
+particularly the planet-disk interaction models and the Lagrangian
+particle modules for the \pluto code while vice-versa, D1 and D2 will
+benefit from the dust and collision models created in this project.
 
-\paragraph{\Tcol Collaborating researchers for this project outside of
+\paragraph{Collaborating researchers for this project outside of
   the Research Unit}
 
-\missing{Text}
+We will collaborate with the ERC-funded group of the PI Dr.\ Birnstiel,
+which will run parallel to the Research Unit.
+
 
 \subsubsection{Researchers with whom you have collaborated scientifically within the past three years}
 % This information is important for DFG to exclude possible conflicts of interest.
