@@ -18,96 +18,25 @@
 
 \documentclass[10pt,fleqn,twoside]{article}
 
-%%%% USE ARIAL FONT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{helvet}
-\renewcommand\familydefault{phv}
+%%%%%%%%%%
+%% Packages (Kley)
+\usepackage{journals}
+\usepackage[breaklinks,unicode,colorlinks,linktocpage,pdftex,citecolor=black,linkcolor=black,urlcolor=blue,backref,pagebackref,bookmarks,bookmarksnumbered]{hyperref}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\sub}[1]{_{\rm #1}}
+\newcommand{\PLUTO}{{\it PLUTO}}
+\newcommand{\FARGO}{{\it FARGO}}
+\newcommand{\PLATO}{{\it PLATO}}
+\newcommand{\Gaia}{{\it Gaia}}
+\newcommand{\BinAC}{{\it BinAC}}
+%%  End Packages Kley
 
-%%%% INCLUDE NECESSARY PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{babel}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[UKenglish]{babel}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{fancyhdr}
-\usepackage{natbib}
-\usepackage{multicol}
-\usepackage{xcolor}
-\usepackage{ae,aecompl}
-\usepackage{graphicx}
-\usepackage{palatino}
-\usepackage[T1]{fontenc}
-\usepackage{rotating}
-\usepackage{epsf}
-\usepackage{url}
-\usepackage{setspace}
-%\usepackage{sfmath}
+%%%%%%%%%%%%%%%%% GET THE STYLE STUFF %%%%%%%%%%%%%%%%%%%
 
-%%%% CAPTION LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{header.tex}
 
-\usepackage[font={small}]{caption}
-
-%%%% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setlength{\textheight}{22cm}
-\setlength{\topmargin}{-1.2cm}
-\setlength{\textwidth}{15.6cm}
-\setlength{\oddsidemargin}{0.0cm}
-\setlength{\evensidemargin}{0.0cm}
-\setlength{\mathindent}{1.5cm}
-\setlength{\parindent}{0.0cm}
-\setlength{\parskip}{0.08cm}
-
-%%%% PAGE HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{fancy}
-\fancyhead[RE,RO]{}
-\fancyfoot[RO]{ \thepage}
-\fancyfoot[LE]{ \thepage}
-\fancyfoot[CE,CO]{}
-
-%%% FONTS FOR THE TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newfont{\tpfonta}{cmssbx10 scaled 1600}
-\newfont{\tpfontb}{cmssbx10 scaled 3200}
-
-%%%% EURO SIGN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand\euro{{\sffamily C%
-\makebox[0pt][l]{\kern-.70em\mbox{--}}%
-\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
-\newcommand\keuro{k{\sffamily C%
-\makebox[0pt][l]{\kern-.70em\mbox{--}}%
-\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
-
-%%%% COLOR DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\definecolor{blue} {rgb} {0.25,0.25,0.75}
-
-%%%% ADDITONAL EMPHASIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\cem}{\color{blue}}
-\newcommand{\eem}{\sl\color{blue}}
-
-%%%% SET THE COLOR OF THE (SUB-) SECTION TITLES %%%%%%%%%%% 
-\newcommand{\Tcol}{\color{blue}}
-
-%%%% SET THE COLOR OF THE TITLE BOX BACKGROUND %%%%%%%%%%%%
-\definecolor{Background}{rgb} {0.62,0.75,0.5}
-
-%%%% REFERENCE SECTION NAME %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand\refname{\Tcol 9. Bibliography}
-
-%%%% COLOR THE SECTION NUMBERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\renewcommand\@seccntformat[1]{\color{blue} {\csname the#1\endcsname}\hspace{0.5em}}
-\makeatother
-\renewcommand\thesection{\arabic{section}.}
-\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
-
-%%%% CHANGE THE APPEARANCE OF THE \PARAGRAPH COMMAND  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
-            {-2.5ex\@plus -1ex \@minus -.25ex}%
-            {1.25ex \@plus .25ex}%
-            {\normalfont\normalsize\bfseries}}
-\makeatother
-\setcounter{secnumdepth}{4}     % how many sectioning levels to assign numbers to
-\setcounter{tocdepth}{4}        % how many sectioning levels to show in ToC
-
+%%%%%%%%%%%%%%%%% DEFINE THE HEADER TEXT %%%%%%%%%%%%%%%%
 
 \fancyhead[LE,LO]{\slshape
 %%%%  Please edit
@@ -117,69 +46,7 @@ Wilhelm Kley and Cornelis Dullemond: RU Transition Discs Project Description}
 %
 %%%%%
 
-%
-% ...A compact itemize environment
-%
-\newenvironment{compactitemize}%
- {\begin{list}{$\bullet$}{%
-   \setlength{\topsep}{0em}%
-   \setlength{\parskip}{0em}%
-   \setlength{\parsep}{0em}%
-   \setlength{\itemsep}{0.0\baselineskip}%
-   \setlength{\rightmargin}{0em}%
-   \setlength{\leftmargin}{2.0em}%
-   \setlength{\labelsep}{0.5em}%
-   \setlength{\labelwidth}{1em}%
-}}
- {\end{list}}
 
-\newcounter{qcounter}
-\newenvironment{compactenumerate}%
- {\begin{list}{\arabic{qcounter})~}{\usecounter{qcounter}%
-   \setlength{\topsep}{0em}%
-   \setlength{\parskip}{0em}%
-   \setlength{\parsep}{0em}%
-   \setlength{\itemsep}{0.0\baselineskip}%
-   \setlength{\rightmargin}{0em}%
-   \setlength{\leftmargin}{2.0em}%
-   \setlength{\labelsep}{0.5em}%
-   \setlength{\labelwidth}{1em}%
-}}
- {\end{list}}
-
-% ...Literature list
-%
-\newenvironment{literature}%
- {\begin{list}{}{%
-   \setlength{\topsep}{0em}%
-   \setlength{\parskip}{0em}%
-   \setlength{\parsep}{0em}%
-   \setlength{\itemsep}{0em}%
-   \setlength{\rightmargin}{0em}%
-   \setlength{\leftmargin}{2em}%
-   \setlength{\itemindent}{-2em}}\normalfont\scriptsize}%
- {\end{list}}
-
-
-
-%%%%%%%%%%
-%%  More packages (Kley)
-\usepackage{eurosym}
-\usepackage{journals}
-\usepackage[breaklinks,unicode,colorlinks,linktocpage,pdftex,citecolor=black,linkcolor=black,urlcolor=blue,backref,pagebackref,bookmarks,bookmarksnumbered]{hyperref}
-%\usepackage{xrefs}
-\setlength{\bibsep}{-0.5pt}
-\newcommand{\beq}{\begin{equation}}
-\newcommand{\eeq}{\end{equation}}
-\newcommand{\sub}[1]{_{\rm #1}}
-\newcommand{\todo}[1]{\textcolor{red}{\bf #1}}
-\newcommand\connect[1]{{\color{OliveGreen} #1}}
-\newcommand{\PLUTO}{{\it PLUTO}}
-\newcommand{\FARGO}{{\it FARGO}}
-\newcommand{\PLATO}{{\it PLATO}}
-\newcommand{\Gaia}{{\it Gaia}}
-\newcommand{\BinAC}{{\it BinAC}}
-%%  End Packages Kley
 
 \begin{document}
 
@@ -238,7 +105,7 @@ to clarify the dynamical impact of planets on TDs in order to prove (or disprove
 The studies will include gas dynamics, dust particles, embedded planets, radiation transport
 and irradiation from the central star.
 
-\section{\Tcol State of the art and preliminary work}
+\section{State of the art and preliminary work}
 \renewcommand{\leftmark}{\sc State of the Art and preliminary work}
 Observationally, transition disks are characterized by a lack of
 flux in the few $\mu$-meter (near/mid IR) range as seen in the spectral energy distributions
@@ -344,7 +211,7 @@ of particle size. Thirdly, we will perform simulations in full 3D that allows us
 across the planets in detail and makes the stellar irradiation more realistic. 
 The results of the simulations will be used to calculate emission properties to be compared to the observations.
 
-\subsection{\Tcol Preliminary work}
+\subsection{Preliminary work}
 The PI of this project has ample experience in modeling accretion disks with embedded planets, starting from single
 embedded planets to a system of planets evolving into a resonant configuration. Initially two-dimensional (2D) studies
 in the isothermal approximation were performed and later full 3D studies including full radiative transfer. 
@@ -360,7 +227,7 @@ and recently hydrodynamical simulations with embedded dust particles have
 been performed \citet{2015A&A...584A.110P,2016A&A...594A..57S}. 
 Here, we list some of our recent work relevant to this project.
 
-\subsubsection{\Tcol On the accretion flow in Transitional Disks}
+\subsubsection{On the accretion flow in Transitional Disks}
 In \citet{2013A&A...560A..40M} two-dimensional hydrodynamical simulations using the grid-based code 
 FARGO for disks with a single embedded planet were performed. 
 In addition to the standard isothermal models we constructed models that include 
@@ -390,14 +257,15 @@ and that the disk thermodynamics plays indeed a decisive role in determining the
 \begin{figure}[t]
 \centerline{\includegraphics[width=0.75\textwidth]{pics/mueller-kley-2013-fig29.jpg}}
 \centerline{\includegraphics[width=0.77\textwidth]{pics/mdot-time-4MJup.jpg}}
-\caption{\label{fig:ecc-mdot-time} Radial density distribution 
-({\bf top panel}) and time evolution of the mass accretion rate ({\bf bottom panel}) into the inner
-hole of the disk for a $4 M_{Jup}$ planet located at 5.2au in a transitional disk.
-Shown are curves for different thermodynamic treatments of the disk physics.
-Taken from: \citet{2013A&A...560A..40M}} 
+\caption{\label{fig:ecc-mdot-time} Radial density distribution (\caphighlight{top
+    panel}) and time evolution of the mass accretion rate (\caphighlight{bottom
+    panel}) into the inner hole of the disk for a $4 M_{Jup}$ planet located
+  at 5.2au in a transitional disk.  Shown are curves for different
+  thermodynamic treatments of the disk physics.  Taken from:
+  \citet{2013A&A...560A..40M}}
 \end{figure}
 %
-\subsubsection{\Tcol On the dust distribution in the disk around HL Tau}
+\subsubsection{On the dust distribution in the disk around HL Tau}
 %
 Upon publication of the spectacular image of the ring system in the HL~Tau disk by the ALMA Partnership
 \citep{2015ApJ...808L...3A}, we
@@ -410,7 +278,7 @@ We found that the outer planet plays a major role in removing the dust particles
 inner planet and in forming a particle ring which has a steeper density gradient 
 close to the gap edge with respect to the single-planet scenario, which promotes the development of vortices. 
 The ring and gap width depend strongly on the planetary mass and particle stopping times of the particles,
-i.e. how well they couple to the gas motion.
+i.e.\ how well they couple to the gas motion.
 For the more massive cores the ring clumps into few points that are able to collect a high mass fraction.
 In summary we found that the features observed in the HL Tau system can be explained
 through the presence of two massive cores that shape the dust disk where the inner planet
@@ -428,15 +296,16 @@ Obviously this filtering effect will play a major role in determining the dust d
 
 \begin{figure}[t]
 \centerline{\includegraphics[width=0.75\textwidth]{pics/particles.jpg}}
-\caption{\label{fig:particles} 
-Particle distribution near the inner low mass planetary core location for mm- (top left), cm- (top right),
-dm- (bottom left), and m-sized (bottom right) particles at the end of the simulation. 
-The velocity vectors of the particles with respect to the planet are shown and the colour
-scale shows the relative radial velocity.
-Taken from: \citet{2015A&A...584A.110P}} 
+\caption{\label{fig:particles} Particle distribution near the inner low mass
+  planetary core location for mm- (\caphighlight{top left}), cm-
+  (\caphighlight{top right}), dm- (\caphighlight{bottom left}), and m-sized
+  (\caphighlight{bottom right}) particles at the end of the simulation.  The
+  velocity vectors of the particles with respect to the planet are shown and
+  the colour scale shows the relative radial velocity.  Taken from:
+  \citet{2015A&A...584A.110P}}
 \end{figure}
 
-\subsubsection{\Tcol Circumbinary disks and GPU-computing}
+\subsubsection{Circumbinary disks and GPU-computing}
 In a closely related project we studied the evolution of disks around a central
 binary star (circumbinary disks, CBs) and followed the migration process of embedded planets
 \citep{2014A&A...564A..72K,2015A&A...581A..20K}. This work is conceptually similar to the  
@@ -448,7 +317,7 @@ the Kepler-38 and Kepler-34 system. In addition to locally isothermal runs we in
 in some models viscous heating, and radiative cooling \citep{2008A&A...487L...9K}. 
 
 To run such CB-disk and TD models as mentioned above \citep{2013A&A...560A..40M}
-takes typically several 1000 dynamical timescales (e.g. orbit of the binary/planets) to bring the system
+takes typically several 1000 dynamical timescales (e.g.\ orbit of the binary/planets) to bring the system
 into quasi-equilibrium. For standard codes, even using the FARGO-algorithm, this requires considerable
 computer time, see also the comments in \citet{2011ApJ...729...47Z}. Hence, within the
 framework of a Diploma/PhD-Thesis, we have recently
@@ -463,15 +332,16 @@ In this project we plan to use this code in addition to the publicly available v
 
 \begin{figure}[t]
 \centerline{\includegraphics[width=0.75\textwidth]{pics/sedov2d_scaling.pdf}}
-\caption{\label{fig:cpu} Computational time used for simulations using our new GPU-PLUTO code
-on the 2D Sedov testproblem using $4096 \times 4096$ gridcells.
-In red the values for the GPU-runs are displayed where multiple GPUs are connected via
-MPI. Each node of the system has 4 GPUs, so the results for 16 and 32 GPUs includes MPI communication
-between different nodes. The blue column refers to an MPI simulation on 5 nodes with 28 cores each.
-} 
+\caption{\label{fig:cpu} Computational time used for simulations using our
+  new GPU-PLUTO code on the 2D Sedov testproblem using $4096 \times 4096$
+  gridcells.  In red the values for the GPU-runs are displayed where
+  multiple GPUs are connected via MPI. Each node of the system has 4 GPUs,
+  so the results for 16 and 32 GPUs includes MPI communication between
+  different nodes. The blue column refers to an MPI simulation on 5 nodes
+  with 28 cores each.}
 \end{figure}
 %
-\subsection{\Tcol Project-related publications}
+\subsection{Project-related publications}
 
 % Please list your own publications related to the proposed project, 
 % adhering to the rules of the DFG guidelines 1.91. In brief, please note: 
@@ -489,14 +359,13 @@ between different nodes. The blue column refers to an MPI simulation on 5 nodes 
 %    belong into the category ``Other Publications''.
 
 
-%\subsubsection{\Tcol 
+%\subsubsection{
 %A chronological list of selected relevant articles published or officially accepted by 
 %publication outlets with scientific quality assurance.
 
 \todo{Kees to Willy: Please add some text in each of the 10 publications
 below to argue what their relevance is to this project.}
 
-\begin{multicols}{2}
 \begin{literature}
 \item
  {\bf Kley}, W. \& {Crida}, A. (2008) \, {\it Migration of protoplanets in radiative disks},
@@ -528,33 +397,32 @@ below to argue what their relevance is to this project.}
   {\it Particle dynamics in discs with turbulence generated by the vertical shear instability},
   Astronomy \& Astrophysics, 594, A57.
 \end{literature}
-\end{multicols}
 
-%% \subsubsection{\Tcol Other publications}
+%% \subsubsection{Other publications}
 %%  [Text]
 
-% \subsubsection{\Tcol Patents}
+% \subsubsection{Patents}
 % 
-% \paragraph{\Tcol Pending}
+% \paragraph{Pending}
 % 
 % [Text]
 % 
-% \paragraph{\Tcol Issued}
+% \paragraph{Issued}
 % 
 % [Text]
 
-\section{\Tcol Objectives and work programme}
+\section{Objectives and work programme}
 \renewcommand{\leftmark}{\sc Objectives and work programme}
 
 
-\subsection{\Tcol Anticipated total duration of the project}
+\subsection{Anticipated total duration of the project}
 
 3 years.
 
-\subsection{\Tcol Objectives}
+\subsection{Objectives}
 
 The ultimate goal of this project is to investigate whether Type 2 TDs 
-are the birthplaces of planets: i.e. can the observed features of these disks
+are the birthplaces of planets: i.e.\ can the observed features of these disks
 be explained by an ensemble of embedded planets and what can we learn in this case about the nature
 of the planets?
 Earlier models have tried to explain TD holes with multi-planet systems, but their
@@ -571,7 +439,7 @@ across the planets in detail and makes the stellar irradiation more realistic.
 The results of the simulations will be used to calculate emission properties to be compared to the observations.
 
 
-\subsection{\Tcol Work programme including proposed research methods}
+\subsection{Work programme including proposed research methods}
 
 %
 The hydrodynamical simulations will make use of the FARGO- and {PLUTO}-codes.
@@ -614,7 +482,7 @@ To connect to existing multi-planet simulations of \citet{2011ApJ...729...47Z}
 \end{compactenumerate}
 
 
-\subsubsection{\Tcol Tools for the proposed project}
+\subsubsection{Tools for the proposed project}
 \label{subsec:tools}
 As the projects includes complex numerical hydrodynamical simulations we plan to
 perform simulations with different numerical tools (codes) in order to crosscheck
@@ -659,7 +527,7 @@ within the bwHPC initiative of the state of Baden-W\"urttemberg, see Sect.~\ref{
 
 \end{description}
 
-\subsubsection{\Tcol Work plan}
+\subsubsection{Work plan}
 %
 The work plan consists of several sub-projects that follow the general outline of the
 overall project goals. It consists of multi-dimensional hydrodynamical simulations with 
@@ -829,7 +697,7 @@ with single embedded planet.
 \end{description}
 
 
-\subsubsection{\Tcol Links to the other Forschergruppe projects and international collaborators}
+\subsubsection{Links to the other Forschergruppe projects and international collaborators}
 The team (Kley, Dullemond, Ercolano) have all the necessary expertise
 to carry out the hydrodynamical numerical modeling and calculating observational implications
 to compare to existing observations. 
@@ -840,7 +708,7 @@ envisioned for the comparison to observational data with ALMA and SPHERE.
 
 As these simulations will require intensive computational effort and efficient codes,
 we plan to collaborate closely with Andrea Mignone (Torino, I) who is the developer of the PLUTO code.
-We will also strengthen ties to Dr. Pablo Ben\'itez-Llambay (currently at Copenhagen, DK) 
+We will also strengthen ties to Dr.\ Pablo Ben\'itez-Llambay (currently at Copenhagen, DK) 
 who is the lead author of the FARGO-3D public code.
 
 \connect{A strong collaboration within this Forschergruppe will be carried out with the postdoc of project D2.
@@ -856,19 +724,19 @@ eccentric. Finally, D2 aims at explaining the extremely tilted inner disks of se
 is not a goal of D1.
 }
 
-\subsection{\Tcol Data handling}
+\subsection{Data handling}
 The model data we produce will be made immediately available online, once
 the corresponding paper is accepted. 
 
-\subsection{\Tcol Other information}
+\subsection{Other information}
 % Please use this section for any additional information you feel is
 % relevant which has not been provided elsewhere.
 Not relevant.
 
-\subsection{\Tcol Information on scientific and financial involvement of international cooperation partners}
+\subsection{Information on scientific and financial involvement of international cooperation partners}
 Not relevant.
 
-\section{\Tcol Bibliography}
+\section{Bibliography}
 
 \begingroup
 \renewcommand{\section}[2]{}%
@@ -878,22 +746,22 @@ Not relevant.
 \endgroup
 
 
-\section{\Tcol Requested modules/funds}
+\section{Requested modules/funds}
 \renewcommand{\leftmark}{\sc Requested modules/funds}
 % Explain each item for each applicant (stating last name, first name).
 
-\subsection{\Tcol Basic Module}
+\subsection{Basic Module}
 
-\subsubsection{\Tcol Funding for Staff}
+\subsubsection{Funding for Staff}
 % Please note that funds for your own temporary position (Eigene Stelle)
 % are not to be included here; this belongs to the separate Module Temporary Position.
 
 We request 1 Postdoc E13 position for three years, to be based at the Institute of Astronomy
 and Astrophysics at the University of T\"ubingen.
 
-\subsubsection{\Tcol Direct Project Costs}
+\subsubsection{Direct Project Costs}
 
-\paragraph{\Tcol Equipment up to EUR 10,000, Software and Consumables}
+\paragraph{Equipment up to EUR 10,000, Software and Consumables}
 Theoretical numerical research on multi-dimensional hydrodynamics can only be done when sufficient and
 appropriate computational facilities are available. While production runs
 will be done on supercomputer facilities, a substantial part of the work in
@@ -904,7 +772,7 @@ GPU computing. Here we apply for a NVIDIA TESLA K40 card together with the works
 This is beyond the standard base equipment (\textit{Grundausstattung}).
 We therefore request one workstation-GPU desktop computer for 6000 Euro.
 
-\paragraph{\Tcol Travel Expenses}
+\paragraph{Travel Expenses}
 Participation at at least one conference per year, or similar is anticipated
 for the postdoc. In addition to travel funds for conferences for the PIs,
 regular mutual working visits at Heidelberg/T\"ubingen/M\"unchen are
@@ -922,69 +790,69 @@ Working visits Heidelberg/T\"ubingenM\"unchen   & 3000	& 3000 & 3000 & 9000\\
 \end{tabular}
 \end{center}
 
-\paragraph{\Tcol Visiting Researchers (excluding Mercator Fellows)}
+\paragraph{Visiting Researchers (excluding Mercator Fellows)}
 
 \begin{center}
 \begin{tabular}{l|r|r|r}
 & Visit 1 & Visit 2 & Sum \\
 \hline\hline
-Dr. Zsolt Regaly (Konkoly Observatory, Hungary)  & 1000 & 1000 & 2000 \\
-Prof. Andrea Mignone (University Torino, Italy)  & 1000 & 1000 & 2000 \\
+Dr.\ Zsolt Regaly (Konkoly Observatory, Hungary)  & 1000 & 1000 & 2000 \\
+Prof.\ Andrea Mignone (University Torino, Italy)  & 1000 & 1000 & 2000 \\
 \hline
   & 2000 & 2000 & {\bf 4000}\\
 \end{tabular}
 \end{center}
 
-\paragraph{\Tcol Other Costs}
+\paragraph{Other Costs}
 
-\paragraph{\Tcol Project-related publication expenses}
+\paragraph{Project-related publication expenses}
 We will publish in the {\bf free European Journals} Astronomy \& Astrophysics and Monthly Notices of the Royal Ast. Society.
 
 
-% \subsubsection{\Tcol Instrumentation}
+% \subsubsection{Instrumentation}
 % 
-% \paragraph{\Tcol Equipment exceeding EUR 10,000} 
-% 
-% None.
-% 
-% \paragraph{\Tcol Major Instrumentation exceeding EUR 100,000} 
+% \paragraph{Equipment exceeding EUR 10,000} 
 % 
 % None.
 % 
-% \subsection{\Tcol Module Temporary Position}
+% \paragraph{Major Instrumentation exceeding EUR 100,000} 
+% 
+% None.
+% 
+% \subsection{Module Temporary Position}
 % 
 % [Text]
 % 
-% \subsection{\Tcol Module Replacement Funding}
+% \subsection{Module Replacement Funding}
 % 
 % [Text]
 % 
-% \subsection{\Tcol Module Mercator Fellows}
+% \subsection{Module Mercator Fellows}
 % 
 % [Text]
 % 
-% \subsection{\Tcol Module Public Relations Funding}
+% \subsection{Module Public Relations Funding}
 % 
 % [Text]
 
-\section{\Tcol Project requirements}
+\section{Project requirements}
 \renewcommand{\leftmark}{\sc Project requirements}
 
-\subsection{\Tcol Employment status information}
+\subsection{Employment status information}
 % For each applicant, state the last name, first name, and employment
 % status (including duration of contract and funding body, if on a
 % fixed-term contract).
 
-{\bf Kley, Wilhelm}: \, Prof. Dr., full Professor with tenure at the University of T\"ubingen,
+{\bf Kley, Wilhelm}: \, Prof.\ Dr., full Professor with tenure at the University of T\"ubingen,
 Institute for Astronomy \& Astrophysics
 
-{\bf Dullemond, Cornelis P.}: \, Prof. Dr., full Professor with tenure at the University of Heidelberg,
+{\bf Dullemond, Cornelis P.}: \, Prof.\ Dr., full Professor with tenure at the University of Heidelberg,
 Institute for Theoretical Astrophysics
 
-\subsection{\Tcol First-time proposal data}
+\subsection{First-time proposal data}
 % Only if applicable: Last name, first name of first-time applicant.
 
-\subsection{\Tcol Composition of the project group}
+\subsection{Composition of the project group}
 % List only those individuals who will work on the project but will not
 % be paid out of the project funds. State each personâ€™s name, academic
 % title, employment status, and type of funding.
@@ -997,10 +865,10 @@ Within their groups at  the IAAT and ITA the following scientists work presently
 
 \begin{center}
 \begin{tabular}{cp{0.9\textwidth}}
-- & Kley, Wilhelm; Prof.~Dr. \hfill {\it \small  Professor, IAAT (CPT)} \\[0.1cm]
+- & Kley, Wilhelm, Prof.~Dr. \hfill {\it \small  Professor, IAAT (CPT)} \\[0.1cm]
 - & Dullemond, Cornelis P., Prof.~Dr. \hfill {\it \small  Professor, ITA (ZAH)} \\[0.1cm]
 - & Kuiper, Rolf, Dr. \hfill {\it \small  Emmy Noether Group Leader, IAAT (CPT, DFG)} \\[0.1cm]
-- & Sch\"afer, Christoph; Dr. \hfill {\it \small  Research Assistant, IAAT (CPT)} \\[0.1cm]
+- & Sch\"afer, Christoph, Dr. \hfill {\it \small  Research Assistant, IAAT (CPT)} \\[0.1cm]
 - & Thun, Daniel, Dipl.Phys. \hfill {\it \small  PhD student, IAAT (CPT, DFG)} \\[0.1cm]
 %%  & Stoll, Moritz, Dipl.Phys. \hfill {\it \small  PhD student, IAAT (CPT)} \\[0.1cm]
 \end{tabular}
@@ -1012,11 +880,11 @@ They both can give helpful advice to the Postdoc.
 The PhD student Daniel Thun has developed the GPU version of the \PLUTO-code and can give helpful advice on related questions.
 
 
-\subsection{\Tcol Cooperation with other researchers}
+\subsection{Cooperation with other researchers}
 
-\subsubsection{\Tcol Planned cooperation on this project}
+\subsubsection{Planned cooperation on this project}
 
-\paragraph{\Tcol Collaborating researchers for this project within the
+\paragraph{Collaborating researchers for this project within the
   Research Unit}
 %Each proposal must be accompanied by a description of how the project
 %is integral to the Research Unit, %both in terms of subject matter
@@ -1026,7 +894,7 @@ The PhD student Daniel Thun has developed the GPU version of the \PLUTO-code and
 \todo{(Part of this has been done already in section 2.3.3.  Shall we repeat here or just enter Names?
 possible exchanges, etc...)}
 
-\paragraph{\Tcol Collaborating researchers for this project outside of
+\paragraph{Collaborating researchers for this project outside of
   the Research Unit}
 The following external researchers will be involved to some degree in the work on this project:
 \begin{center}
@@ -1044,7 +912,7 @@ proposed research field in all relevant aspects: planet formation, celestial mec
 We plan to continue the collaboration with them in this project.
 
 
-\subsubsection{\Tcol Researchers with whom you have collaborated scientifically within the past three years}
+\subsubsection{Researchers with whom you have collaborated scientifically within the past three years}
 % This information is important for DFG to exclude possible conflicts of interest.
 % Please mention not only the names of the cooperation partners but also their institution and city.
 % Scientists already mentioned in the previous two subsubsections do not have to be mentioned
@@ -1113,38 +981,44 @@ J.~Ramsey (Uni Kopenhagen),
 J.~Drazkowska (Uni Z\"urich)
 
 
-\subsection{\Tcol Scientific equipment}
+\subsection{Scientific equipment}
 \label{sec:computers}
 % List larger instruments that will be available to you for the
 % project. These may include large computer facilities if computing
 % capacity will be needed. 
-The project requires, at least for the full hydrodynamical simulations, a considerable amount of CPU-time.
-For this we rely on own as well as outside resources.
-For testing purpose computing time will be available on local PC clusters (institute and university clusters).
-Here we have dedicated GPU-systems available as well as smaller clusters.
+The project requires, at least for the full hydrodynamical simulations, a
+considerable amount of CPU-time.  For this we rely on own as well as outside
+resources.  For testing purpose computing time will be available on local PC
+clusters (institute and university clusters).  Here we have dedicated
+GPU-systems available as well as smaller clusters.
 
-We have special access to computing resources supplied within the State of Baden-W\"urttemberg
-(Baden-W\"urttemberg High Performance Computing - Coordinated Compute Cluster Competence Centers: \href{https://www.bwhpc-c5.de}{bwHPC-c5}).
-A part of this initiative is the new
-BinAC-system\footnote{see \url{http://www.bwhpc-c5.de/wiki/index.php/Category:BwForCluster\_BinAC} for a detailed
-description of the hardware.}
-that has just gone online at the University of T\"ubingen and is dedicated to Astrophysics and Computer Science only.
-BinAC offers over 236 CPU nodes with dual Intel Xeon E5-2630v4 each. Moreover (and especially suited for our GPU-\PLUTO-code)
-the cluster also offers 60 GPU nodes with dual Nvidia Tesla K80 (with two GK210 GPU chips each).
-Additional resources are available with bwHPC-c5 at the ForHLR-cluster at the Steinbuch Centre for Computing (SCC) in Karlsruhe.
-If further resources will be required we will apply for additional computer time at the high performance computing
-center HLRS, located in Stuttgart, and at other centers in Germany.
+We have special access to computing resources supplied within the State of
+Baden-W\"urttemberg (Baden-W\"urttemberg High Performance Computing -
+Coordinated Compute Cluster Competence Centers:
+\href{https://www.bwhpc-c5.de}{bwHPC-c5}).  A part of this initiative is the
+new BinAC-system\footnote{see
+  \url{http://www.bwhpc-c5.de/wiki/index.php/Category:BwForCluster\_BinAC}
+  for a detailed description of the hardware.}  that has just gone online at
+the University of T\"ubingen and is dedicated to Astrophysics and Computer
+Science only.  BinAC offers over 236 CPU nodes with dual Intel Xeon
+E5-2630v4 each. Moreover (and especially suited for our GPU-\PLUTO-code) the
+cluster also offers 60 GPU nodes with dual Nvidia Tesla K80 (with two GK210
+GPU chips each).  Additional resources are available with bwHPC-c5 at the
+ForHLR-cluster at the Steinbuch Centre for Computing (SCC) in Karlsruhe.  If
+further resources will be required we will apply for additional computer
+time at the high performance computing center HLRS, located in Stuttgart,
+and at other centers in Germany.
 
 
 
-%\subsection{\Tcol Project-relevant interests in commercial enterprises}
+%\subsection{Project-relevant interests in commercial enterprises}
 % Information on connections between the project and the production
 % branch of the enterprise.
 %
 %[Text]
 
 
-%\subsection{\Tcol Additional information}
+%\subsection{Additional information}
 % If applicable, please list proposals requesting major
 % instrumentation and/or those previously submitted to a third party
 % here.
