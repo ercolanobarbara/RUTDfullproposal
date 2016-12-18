@@ -1,0 +1,27 @@
+\subsubsection{\Tcol Links to the other Forschergruppe projects and international collaborators}
+\label{subsec:links}
+The team (Kley, Dullemond, Ercolano) have all the necessary expertise
+to carry out the hydrodynamical numerical modeling and calculating observational implications
+to compare to existing observations. 
+In addition
+collaboration with the groups of Th.~Henning (MPIA), E.~van Dishoeck
+(MPE/Leiden), M.~Benisty (Grenoble/Santiago) and C.~Dominik (Amsterdam) is
+envisioned for the comparison to observational data with ALMA and SPHERE.
+
+As these simulations will require intensive computational effort and efficient codes,
+we plan to collaborate closely with Andrea Mignone (Torino, I) who is the developer of the PLUTO code.
+We will also strengthen ties to Dr. Pablo Ben\'itez-Llambay (currently at Copenhagen, DK) 
+who is the lead author of the FARGO-3D public code.
+
+\connect{A strong collaboration within this Forschergruppe will be carried out with the postdoc of project D2.
+Projects D1 and D2 have several methods in common, in particular both employing 2-D and 3-D
+(radiation-)hydrodynamics of protoplanetary disks. 
+On the technical side both postdocs are envisioned to collaborate closely. 
+The first two sub-projects of D2 are also topically somewhat overlapping with project D1:
+focusing on planet-disk interaction as an explanation for Type 2 TDs. 
+The differences are: in D2 we focus on single massive companions, presumably low mass stars rather than planets,
+while project D1 focuses more on multiple planet-mass companions. Secondly, D2 focuses on finding
+the origin of strong deviations from circular symmetry, in part by making the companion's orbit strongly
+eccentric. Finally, D2 aims at explaining the extremely tilted inner disks of several Type 2 TDs, which
+is not a goal of D1.
+}

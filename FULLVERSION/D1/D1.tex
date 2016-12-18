@@ -324,7 +324,7 @@ framework of a Diploma/PhD-Thesis, we have recently
 developed a completely new implementation of the PLUTO-code to run on Graphics Processor Units (GPUs).
 Presently, full 3D viscous hydrodynamics is included and for 2D disks we have implemented
 radiative effects as well. In a first application we studied the dynamical friction process
-\citep{2016A&A...589A..10T} \todo{and will submit a new paper on the dynamics of circumbinary disks}.
+\citep{2016A&A...589A..10T} and have just submitted a new paper on the dynamics of circumbinary disks.
 The CPU time used by this new code is shown in Fig.~\ref{fig:cpu} for a standard test-problem.
 As can be inferred from the plot, the new GPU-code runs on one GPU card in our new cluster (see Sect.~\ref{sec:computers})
 as fast as the pure MPI-version on about 60 cores.
@@ -332,13 +332,12 @@ In this project we plan to use this code in addition to the publicly available v
 
 \begin{figure}[t]
 \centerline{\includegraphics[width=0.75\textwidth]{pics/sedov2d_scaling.pdf}}
-\caption{\label{fig:cpu} Computational time used for simulations using our
-  new GPU-PLUTO code on the 2D Sedov testproblem using $4096 \times 4096$
-  gridcells.  In red the values for the GPU-runs are displayed where
-  multiple GPUs are connected via MPI. Each node of the system has 4 GPUs,
-  so the results for 16 and 32 GPUs includes MPI communication between
-  different nodes. The blue column refers to an MPI simulation on 5 nodes
-  with 28 cores each.}
+\caption{\label{fig:cpu} Computational time used for simulations using our new GPU-PLUTO code
+on the 2D Sedov testproblem using $4096 \times 4096$ gridcells.
+In red the values for the GPU-runs are displayed where multiple GPUs are connected via
+MPI. Each node of the system has 4 GPUs, so the results for 16 and 32 GPUs includes MPI communication
+between different nodes. The blue column refers to an MPI simulation on 5 nodes with 28 cores each.
+} 
 \end{figure}
 %
 \subsection{Project-related publications}
@@ -363,39 +362,74 @@ In this project we plan to use this code in addition to the publicly available v
 %A chronological list of selected relevant articles published or officially accepted by 
 %publication outlets with scientific quality assurance.
 
-\todo{Kees to Willy: Please add some text in each of the 10 publications
-below to argue what their relevance is to this project.}
-
 \begin{literature}
+\item {\bf Kley, W.}, \& Dirksen, G., {\em Disk eccentricity and embedded
+    planets}, 2006, A\&A, 447, 369. In this paper we
+  demonstrate how a massive planetary companion can make an outer disk eccentric. The applied
+  methods and results are relevant at least for Task 1 of the project.
 \item
  {\bf Kley}, W. \& {Crida}, A. (2008) \, {\it Migration of protoplanets in radiative disks},
    Astronomy \& Astrophysics, 487, 9.
+  In this paper we present a detailed study of the importance of an improved thermodynamical
+  treatment on the migration problem. The presented methods are directly relevant to the
+  first Task of the project that deals with 2D disks including radiative transport and cooling.
 \item {Gorti}, U., {\bf Dullemond}, C.~P. \& {Hollenbach}, D. (2009) \,
-  {\it Time Evolution of Viscous Circumstellar Disks due to Photoevaporation by Far-Ultraviolet, Extreme-Ultraviolet, and X-ray Radiation from the Central Star},
+  {\it Time Evolution of Viscous Circumstellar Disks due to Photoevaporation by Far-Ultraviolet, 
+   Extreme-Ultraviolet, and X-ray Radiation from the Central Star},
   Astrophysical Journal, 705, 1237.
+  In this paper we describe a method on how to evolve viscous disks with photoevaporation
+  due to high energy radiation. This porcess is important to clear out in inner regions particularly
+  for type I TDs but may play a role for type II disks as well.
 \item
   {\bf Kley}, W., {Bitsch}, B. \& {Klahr}, H. (2009) \,
   {\it Planet migration in three-dimensional radiative discs},
-  Astronomy \& Astrophysics, 506, 971.
+  Astronomy \& Astrophysics, 506, 971. 
+  In this paper we study the interaction of an embedded planet with the disk in full 3D including radiative
+  transport. This paper is relevant as demonstrate the importance of radiative transport on 
+  planet disk interaction and we introduce here the treatment of radiative transport and the Fargo-algorithm
+  in 3D hydrodynamics.  
+\item
+  {Kolb}, S.~M.; {Stute}, M.; {Kley}, W. \& {Mignone}, A., 
+  {\it Radiation hydrodynamics integrated in the PLUTO code},
+   Astronomy \& Astrophysics, 559, A80. In this paper we describe the implementation of a new
+   full 3D radiation module to the PLUTO-code using flux-limited diffusion including irradiation
+   from the central star via ray-tracing. The new modules have been made available via webserver to
+   the computational astrophysics community and are relevant for this project in particular Task 3.
 \item
   {M{\"u}ller}, T.~W.~A. \& {\bf Kley}, W. (2013) {\it Modelling accretion in transitional disks}
    Astronomy \& Astrophysics, 572, A61.
+  This paper shows our experience with modeling the dynamics of transition disks. In this paper
+  the gas flow through the planet-induced gap is studied using various treatments of the disks thermodynamics.
+  This is very relevant for the type 2 TDs which usually still have substantial accretion
+  onto the star and have inner disks.
 \item
  {Ataiee}, S., {Pinilla}, P., {Zsom}, A., {\bf Dullemond}, C.P., {Dominik}, C. \& {Ghanbari}, J. (2013)
    {\it Asymmetric transition disks: Vorticity or eccentricity?},
    Astronomy \& Astrophysics, 553, L3.
+   This paper shows our work on how a
+  massive planet can make the disk asymmetric (lopsided) in two independent
+  ways: by making the disk eccentric or by creating a vortex. We show how to
+  distinguish observationally between these two scenarios. It is 
+  relevant with respect to the consideration of dust and hydrodynamics and is an example
+  of how we make a link between modeling and observations.
 \item
   {Picogna}, G. \& {\bf Kley}, W. (2015) \,
   {\it How do giant planetary cores shape the dust disk?. HL Tauri system},
-  Astronomy \& Astrophysics, 584, A110.
+  Astronomy \& Astrophysics, 584, A110. In this paper we present 2D disk simulations that simultanously
+  evolve the disk, embedded planets and dust particles. It shows very clearly the different behaviour of gas
+  and dust and the importance of incorporating both at the same time.
 \item
   {\bf Kley}, W. \& {Haghighipour}, N. (2014) \,
   {\it Modeling circumbinary planets: The case of Kepler-38},
-  Astronomy \& Astrophysics, 564, 72.
+  Astronomy \& Astrophysics, 564, 72. The dynamical evolution of circumbinary disks with embedded planets 
+  is calculated. We show that a migrating planet can naturally be stopped at the inner disk gap 
+  close to the observed position. The paper is relevant as the overall dynamics of the system 
+  (i.e. several bodies interacting with a disk) is similar to the problems to be treated here.
 \item
   {Stoll}, M.H.R. \& {\bf Kley}, W. (2016) \,
   {\it Particle dynamics in discs with turbulence generated by the vertical shear instability},
-  Astronomy \& Astrophysics, 594, A57.
+  Astronomy \& Astrophysics, 594, A57. In this paper we describe the evolution of dust and gas for 3D
+  accretion disks. The methodology applied here is important for the Task 3 of this project.
 \end{literature}
 
 %% \subsubsection{Other publications}
@@ -696,6 +730,21 @@ with single embedded planet.
 
 \end{description}
 
+\subsubsection{Time frame}
+The project is devided into 3 Tasks with increasing complexity. To become
+familiar with the whole topis the first task starts initially with isothermal disks that are extended 
+to the radiative case including irradiation. In this task the irradiation and radiative transfer within the disk
+need to be added to the GPU-PLUTO-code while simulations using the FARGO-code could be started basically 
+from the beginning. In the second Task dust particles will need to be added to the GPU-PLUTO-code,
+while our availlable FARGO has particle motion already implemted its performance and accuracy need to be
+checked. The third Task is the most advanced as the radiative transport would have to be included into
+our GPU-PLUTO code but simulations with FARGO-3D can be started more or less directly after the 
+applicability of the implemented radiation module for our purposed has been thoroughly tested.
+Knowing about the difficulties that may occur with multidimensional hydrodynamical simulations we estimate
+for each Task a minimum of one year. Hence, the proposed work will definitely fill the 3 year funding period
+and part of the work, particularly from Task 3 might even have to be taken over into the next year.
+
+
 
 \subsection{Data handling}
 The model data we produce will be made immediately available online, once
@@ -729,8 +778,8 @@ Not relevant.
 % Please note that funds for your own temporary position (Eigene Stelle)
 % are not to be included here; this belongs to the separate Module Temporary Position.
 
-We request 1 Postdoc E13 position for three years, to be based at the Institute of Astronomy
-and Astrophysics at the University of T\"ubingen.
+Given by the complexity of the project we request 1 Postdoc E13 position for three years,
+to be based at the Institute of Astronomy and Astrophysics at the University of T\"ubingen.
 
 \subsubsection{Direct Project Costs}
 
@@ -777,6 +826,8 @@ Prof.\ Andrea Mignone (University Torino, Italy)  & 1000 & 1000 & 2000 \\
 \end{center}
 
 \paragraph{Other Costs}
+
+Not applicable.
 
 \paragraph{Project-related publication expenses}
 We will publish in the {\bf free European Journals} Astronomy \& Astrophysics and Monthly Notices of the Royal Ast. Society.
@@ -892,8 +943,7 @@ The PhD student Daniel Thun has developed the GPU version of the \PLUTO-code and
 
 \paragraph{Collaborating researchers for this project outside of
   the Research Unit}
-The following external researchers will be involved to some degree in the
-work on this project:
+The following external researchers will be involved to some degree in the work on this project:
 \begin{center}
 \begin{tabular}{cp{0.90\textwidth}}
  - & Ben\'itez-Llambay, Pablo \hfill {\em \small Niels Bohr Institute Copenhagen (DK)} \\[0.1cm]
@@ -902,22 +952,20 @@ work on this project:
  - & Regaly, Zsolt \hfill {\em \small Konkoly Observatory, Budapest (HU)} \\[0.1cm]
 \end{tabular}
 \end{center}
-Former PhD student Bertram Bitsch is now a postdoctoral researcher in Lund
-(Sweden). His expertise in planet-disk simulations and torque-formulae for
-migration will be helpful for the project.  With Zsolt Regaly from Budapest
-both PIs have long standing successful collaborations in the proposed
-research field in all relevant aspects: planet formation, celestial
-mechanics and computational astrophysics. We plan to continue the
-collaboration with them in this project. As these simulations will require
-intensive computational effort and efficient codes, we plan to collaborate
-closely with Andrea Mignone (Torino, I) who is the developer of the PLUTO
-code.  We will also strengthen ties to Dr.\ Pablo Ben\'itez-Llambay
-(currently at Copenhagen, DK) who is the lead author of the FARGO-3D public
-code. In addition collaboration with the groups of M.~Benisty
+Pablo Ben\'itez-Llambay (currently at Copenhagen, DK) 
+is the co-developer of the FARGO-3D code and we plan to collaborate with him
+on numerical and physical aspects using this code. 
+Former PhD student Bertram Bitsch is now a postdoctoral researcher in Lund (Sweden). His expertise in planet-disk
+simulations and torque-formulae for migration will be helpful for the project.
+We have already collaborated with Andrea Mignone when adding a new radiation module to the PLUTO-code.
+Andrea Mignone (Torino, I) is the developer of the PLUTO code.
+His expertise will be useful in further extending our 3D GPU-PLUTO code.
+With Zsolt Regaly from Budapest both PIs have long standing successful collaborations in the
+proposed research field in all relevant aspects: planet formation, celestial mechanics and computational astrophysics.
+We plan to continue the collaboration with them in this project.
+In addition collaboration with the groups of M.~Benisty
 (Grenoble/Santiago) and C.~Dominik (Amsterdam) is envisioned for the
 comparison to observational data with ALMA and SPHERE.
-
-
 
 \subsubsection{Researchers with whom you have collaborated scientifically within the past three years}
 % This information is important for DFG to exclude possible conflicts of interest.
@@ -993,28 +1041,22 @@ J.~Drazkowska (Uni Z\"urich)
 % List larger instruments that will be available to you for the
 % project. These may include large computer facilities if computing
 % capacity will be needed. 
-The project requires, at least for the full hydrodynamical simulations, a
-considerable amount of CPU-time.  For this we rely on own as well as outside
-resources.  For testing purpose computing time will be available on local PC
-clusters (institute and university clusters).  Here we have dedicated
-GPU-systems available as well as smaller clusters.
+The project requires, at least for the full hydrodynamical simulations, a considerable amount of CPU-time.
+For this we rely on own as well as outside resources.
+For testing purpose computing time will be available on local PC clusters (institute and university clusters).
+Here we have dedicated GPU-systems available as well as smaller clusters.
 
-We have special access to computing resources supplied within the State of
-Baden-W\"urttemberg (Baden-W\"urttemberg High Performance Computing -
-Coordinated Compute Cluster Competence Centers:
-\href{https://www.bwhpc-c5.de}{bwHPC-c5}).  A part of this initiative is the
-new BinAC-system\footnote{see
-  \url{http://www.bwhpc-c5.de/wiki/index.php/Category:BwForCluster\_BinAC}
-  for a detailed description of the hardware.}  that has just gone online at
-the University of T\"ubingen and is dedicated to Astrophysics and Computer
-Science only.  BinAC offers over 236 CPU nodes with dual Intel Xeon
-E5-2630v4 each. Moreover (and especially suited for our GPU-\PLUTO-code) the
-cluster also offers 60 GPU nodes with dual Nvidia Tesla K80 (with two GK210
-GPU chips each).  Additional resources are available with bwHPC-c5 at the
-ForHLR-cluster at the Steinbuch Centre for Computing (SCC) in Karlsruhe.  If
-further resources will be required we will apply for additional computer
-time at the high performance computing center HLRS, located in Stuttgart,
-and at other centers in Germany.
+We have special access to computing resources supplied within the State of Baden-W\"urttemberg
+(Baden-W\"urttemberg High Performance Computing - Coordinated Compute Cluster Competence Centers: \href{https://www.bwhpc-c5.de}{bwHPC-c5}).
+A part of this initiative is the new
+BinAC-system\footnote{see \url{http://www.bwhpc-c5.de/wiki/index.php/Category:BwForCluster\_BinAC} for a detailed
+description of the hardware.}
+that has just gone online at the University of T\"ubingen and is dedicated to Astrophysics and Computer Science only.
+BinAC offers over 236 CPU nodes with dual Intel Xeon E5-2630v4 each. Moreover (and especially suited for our GPU-\PLUTO-code)
+the cluster also offers 60 GPU nodes with dual Nvidia Tesla K80 (with two GK210 GPU chips each).
+Additional resources are available with bwHPC-c5 at the ForHLR-cluster at the Steinbuch Centre for Computing (SCC) in Karlsruhe.
+If further resources will be required we will apply for additional computer time at the high performance computing
+center HLRS, located in Stuttgart, and at other centers in Germany.
 
 
 

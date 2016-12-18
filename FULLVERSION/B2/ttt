@@ -1,0 +1,105 @@
+%%%% USE ARIAL FONT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{helvet}
+\renewcommand\familydefault{phv}
+
+%%%% INCLUDE NECESSARY PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{babel}
+\usepackage[UKenglish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{ae,aecompl}
+\usepackage{graphicx}
+\usepackage{palatino}
+\usepackage[T1]{fontenc}
+\usepackage{rotating}
+\usepackage{epsf}
+\usepackage{setspace}
+\usepackage{multicol}
+%\usepackage{sfmath}
+
+\setlength{\bibsep}{-0.5pt}
+\newcommand{\todo}[1]{\textcolor{red}{\bf #1}}
+\newcommand\connect[1]{{\color{OliveGreen} #1}}
+
+%%%% CAPTION LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[font={small}]{caption}
+
+%%%% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\textheight}{22cm}
+\setlength{\topmargin}{-1.2cm}
+\setlength{\textwidth}{15.6cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+\setlength{\mathindent}{1.5cm}
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.08cm}
+
+%%%% PAGE HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhead[RE,RO]{}
+\fancyfoot[RO]{ \thepage}
+\fancyfoot[LE]{ \thepage}
+\fancyfoot[CE,CO]{}
+
+%%% FONTS FOR THE TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newfont{\tpfonta}{cmssbx10 scaled 1600}
+\newfont{\tpfontb}{cmssbx10 scaled 3200}
+
+%%%% EURO SIGN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\euro{{\sffamily C%
+\makebox[0pt][l]{\kern-.70em\mbox{--}}%
+\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
+\newcommand\keuro{k{\sffamily C%
+\makebox[0pt][l]{\kern-.70em\mbox{--}}%
+\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
+
+%%%% COLOR DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{blue} {rgb} {0.25,0.25,0.75}
+
+%%%%%%%%%%%%%% NICER PROJECT REFERENCES %%%%%%%%%%%%%%%%%%%
+
+\newenvironment{literature}%
+ {\begin{list}{}{%
+   \setlength{\topsep}{0em}%
+   \setlength{\parskip}{0em}%
+   \setlength{\parsep}{0em}%
+   \setlength{\itemsep}{0em}%
+   \setlength{\rightmargin}{0em}%
+   \setlength{\leftmargin}{2em}%
+   \setlength{\itemindent}{-2em}}\normalfont\scriptsize}%
+ {\end{list}}
+
+%%%% ADDITONAL EMPHASIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cem}{\color{blue}}
+\newcommand{\eem}{\sl\color{blue}}
+
+%%%% SET THE COLOR OF THE (SUB-) SECTION TITLES %%%%%%%%%%% 
+\newcommand{\Tcol}{\color{blue}}
+
+%%%% SET THE COLOR OF THE TITLE BOX BACKGROUND %%%%%%%%%%%%
+\definecolor{Background}{rgb} {0.62,0.75,0.5}
+
+%%%% REFERENCE SECTION NAME %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\refname{\Tcol 9. Bibliography}
+
+%%%% COLOR THE SECTION NUMBERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand\@seccntformat[1]{\color{blue} {\csname the#1\endcsname}\hspace{0.5em}}
+\makeatother
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+
+%%%% CHANGE THE APPEARANCE OF THE \PARAGRAPH COMMAND  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4}     % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}        % how many sectioning levels to show in ToC
+
