@@ -6,3 +6,6 @@
 - Check undefined and multiply defined labels
 - Tcol
 - link text green
+* Finances
+** Check the travel: special travel in project, general travel in Z
+** 
