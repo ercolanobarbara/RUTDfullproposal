@@ -1,0 +1,13 @@
+/*.aux
+/*.log
+/*.pdf
+/*.synctex.gz
+/*.bbl
+/*.blg
+/*.out
+/tmp/
+*-eps-converted-to.pdf
+.project
+.texlipse
+*.upa
+*.upb
