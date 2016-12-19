@@ -2,47 +2,49 @@ This is BibTeX, Version 0.99c (Web2C 7.5.7)
 The top-level auxiliary file: D2.aux
 The style file: aa.bst
 Database file #1: D2.bib
-Warning--string name "n/a" is undefined
---line 694 of file D2.bib
+Repeated entry---line 459 of file D2.bib
+ : @article{2013A&A...553L...3A
+ :                             ,
+I'm skipping whatever remains of this entry
 You've used 46 entries,
             2947 wiz_defined-function locations,
-            947 strings with 16049 characters,
-and the built_in function-call counts, 29861 in all, are:
-= -- 2352
-> -- 3116
+            942 strings with 16173 characters,
+and the built_in function-call counts, 29432 in all, are:
+= -- 2312
+> -- 3119
 < -- 14
-+ -- 1037
-- -- 990
-* -- 2699
-:= -- 5546
++ -- 1050
+- -- 991
+* -- 2652
+:= -- 5506
 add.period$ -- 46
 call.type$ -- 46
 change.case$ -- 514
 chr.to.int$ -- 45
 cite$ -- 46
-duplicate$ -- 850
-empty$ -- 1239
-format.name$ -- 1122
-if$ -- 5865
+duplicate$ -- 854
+empty$ -- 1198
+format.name$ -- 1123
+if$ -- 5741
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 46
+missing$ -- 44
 newline$ -- 142
-num.names$ -- 184
-pop$ -- 525
+num.names$ -- 185
+pop$ -- 524
 preamble$ -- 1
 purify$ -- 514
 quote$ -- 0
-skip$ -- 768
+skip$ -- 732
 stack$ -- 0
-substring$ -- 1092
-swap$ -- 2
+substring$ -- 965
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 414
 warning$ -- 0
-while$ -- 184
+while$ -- 182
 width$ -- 0
-write$ -- 459
-(There was 1 warning)
+write$ -- 461
+(There was 1 error message)
