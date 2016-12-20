@@ -1,4 +1,5 @@
-\documentclass[12pt]{article}
+%\documentclass[12pt]{article}
+\documentclass[10pt,fleqn,twoside]{article}
 
 \usepackage{epsfig}
 \usepackage{float}
@@ -10,37 +11,55 @@
 \def\coll#1{{#1\/}}
 %\def\remark#1{{\bf [#1]}}
 \def\remark#1{}
+\newcommand{\Titlecol}{\color{Black}}
+\newcommand{\AreacolA}{\color{blue}}
+\newcommand{\AreacolB}{\color{Green}}
+\newcommand{\AreacolC}{\color{YellowOrange}}
+\newcommand{\AreacolD}{\color{Red}}
 
 \begin{document}
 
+\pagestyle{empty}
 \mbox{}
-\vspace{4cm}\\
+\vspace{1cm}\\
 
-\centerline{\huge \bf Planet Formation Witnesses and Probes:}
+\centerline{\Titlecol\huge \bf Planet Formation Witnesses and Probes:}
 \vspace{0.5cm}
-\centerline{\huge \bf Transition Discs}
-\vspace{3cm}
-\centerline{\Large \bf Proposal for funding a Research Unit}
-\vspace{6cm}
+\centerline{\Titlecol\huge \bf Transition Discs}
+\vspace{2cm}
+\centerline{\Titlecol\Large \bf Proposal for funding a DFG Research Unit}
+\vspace{2cm}
+\centerline{\includegraphics[width=0.6\textwidth]{HD100453.png}}
+\vspace{1cm}
 \centerline{\Large Speaker: Barbara~Ercolano}
 \vspace{0.5cm}
 \centerline{\Large Co-speaker: Cornelis Dullemond}
-\vspace{1.5cm}
+
+
+\pagebreak[4]
+
+\mbox{}
+\vfill
+Cover image: The Transition Disk HD 100453 as seen with the VLT-SPHERE 
+instrument in scattered polarized light. From: Benisty et al.~2017,
+A\&A in press.
+
+\todo{NOTE: We have to ask permission from the main author (Myriam
+Benisty) and the SPHERE consortium to use this image. We can also
+use another image, or use a theoretical model.}
 
 \pagebreak[4]
 
 
 \section{Participating institutes and 
 principle investigators
-%\footnote{Only PIs and Co-PIs listed. Co-investigators and 
-%collaborators are listed in individual projects.}
 }\label{app-institutes}
 \begin{itemize}
 \item {\bf Ludwig Maximilians University Munich (LMU):}
  \begin{itemize}
   \item University Observatory\\    
          {\em (Prof.~Dr.~Barbara~Ercolano, Prof.~Dr.~Thomas~Preibisch,
-           Prof.~Dr.~Tilman Birnstiel)}
+           Dr.~Tilman Birnstiel)}
   \end{itemize} 
 \item {\bf European Southern Observatory, Garching:}
  \begin{itemize} 
@@ -64,16 +83,16 @@ principle investigators
 \end{itemize}
 \end{itemize}
 %
-\mbox{}\vspace{0.2em}\\
+\vfill
 
 \noindent {\bf Speaker:}\\
-\noindent Prof.~Dr.~Barbara~Ercolano \hfill Tel.: 089-2180-6974\\
+Prof.~Dr.~Barbara~Ercolano \hfill Tel.: 089-2180-6974\\
 University Observatory  \\
 Ludwig Maximilians University Munich \hfill e-mail ercolano@usm.lmu.de\\
 Scheinerstr 1, D-81679 M\"unchen\\
 
 \noindent {\bf Co-speaker:}\\
-\noindent Prof.~Dr.~Cornelis~P.~Dullemond \hfill Tel.: 06221-544815\\
+Prof.~Dr.~Cornelis~P.~Dullemond \hfill Tel.: 06221-544815\\
 Institute for Theoretical Astrophysics\\
  Heidelberg University\hfill e-mail dullemond@uni-heidelberg.de\\
 Albert Ueberle Str.\ 2, D-69120 Heidelberg\\
@@ -87,13 +106,14 @@ Albert Ueberle Str.\ 2, D-69120 Heidelberg\\
 %about half a  page
 
 Recent surveys have shown an overwhelming diversity of extrasolar
-planetary systems, prompting the question of how did they form haw some may end up
+planetary systems, prompting the question of how did they form,
+and whether some may end up
 looking like our own and being able to sustain life. Hints to answer
 such fundamental questions may be hidden in the many trends that are
 slowly emerging from the data. An example are the deserts and peaks in the distribution of
 giant exoplanets, with clear implications for habitability of systems,
 given the role played by giants on the delivery of volatiles to
-terrestrial planets (e.g. Quintana \& Lissaeur 2014). 
+terrestrial planets (e.g.\ Quintana \& Lissauer 2014). 
 
 The environment
 in which planets form plays a major role in understanding both exoplanet
@@ -117,10 +137,10 @@ evacuated inner dust hole, are in reality a diverse class of
 objects. Some TDs have relatively small dust holes (a few AUs) and are
 weakly accreting, if at all. On the other hand an apparently distinct
 population of TDs show evidence for much larger inner dust cavities
-(up to several tens of AU) and vigorous accretion, signifying that a
+(several to many tens of AU) and vigorous accretion, signifying that a
 large amount of gas is present inside the dust cavity. Different
 physical processes may be at play for the formation of different TD
-types (e.g. photoevaporation, MHD processes, dust evolution, planet-disc interactions),
+types (e.g.\ photoevaporation, MHD processes, dust evolution, planet-disc interactions),
 each being a piece of the complex planet formation puzzle. 
 
 Until recently, observations of protoplanetary discs provided very few
@@ -162,7 +182,7 @@ particularly of the surface layers and winds of discs in (or just
 before) the transition phase. This is the motivation for the proposed Research Unit.
 
 
-\section*{Introduction and motivation}
+\section{Introduction and motivation}
 
 The question of whether the Earth may be a unique and special place for life
 in our Universe has been the prime motivation for exoplanet finding missions
@@ -177,7 +197,7 @@ initial conditions may lead to the formation of planets. To answer
 this question many more aspects of the planet formation process and of their
 subsequent evolution must be understood.
 
-Planets form from the dust and gas contained in the circumstellar discs surrounding all young low- to intermediate-mass stars. These planet-forming discs are a by-product of the star-formation process, meaning that all stars have the potential to host a planetary system.
+Planets form from the dust and gas contained in the circumstellar discs surrounding nearly all young low- to intermediate-mass stars. These planet-forming discs are a by-product of the star-formation process, meaning that all stars have the potential to host a planetary system.
 Circumstellar discs are observed to evolve and finally disperse over a
 timescale of a few Myr, which is comparable to
 the timescales for planet formation by the core accretion process
@@ -186,10 +206,11 @@ the timescales for planet formation by the core accretion process
 evolution and dispersal of discs play a crucial role in shaping new
 planetary systems and likely contribute to the observed exo-planets
 diversity (see e.g. Alexander \& Pascucci 2012; Ercolano \& Rosotti
-2015).  
+2015).  \todo{Careful with using the words ``exoplanet diversity'' because
+these are the title of the SPP.}
 
 For the largest part
-of their lives, the evolution of the surface density of discs is well
+of their lives, the evolution of the surface density of discs seems to be well
 described by simple viscous theory (e.g.\ Hartmann et al.\ 1998; Lynden-Bell
 \& Pringle 1974). This predicts a slow, homogeneous dispersal of the
 disc. Observations, however, show that the dispersal is not a
@@ -209,13 +230,17 @@ identified observationally as having reduced near- to mid-infrared
 emission,  are in reality a diverse class of objects. Some of them may
 not actually be short-lived objects caught in the act of dispersing
 their discs, but rather produced by a different rarer and longer lived
-phenomenon (see e.g Owen 2015, Dong \& Dawson, 2016). {\bf  It is of prime
+phenomenon (see e.g Owen 2015, Dong \& Dawson, 2016). 
+\begin{highlight}
+It is of prime
 importance to understand the physical processes leading to the
 formation of gaps and holes in planet forming discs, if these are to
-be used as probes of disc dispersal and/or  planet formation}. This is
+be used as probes of disc dispersal and/or  planet formation. This is
 the overarching goal of this Research Unit. 
+\end{highlight}
 
-A number of theoretical models have been proposed for the formation of
+
+A number of theoretical models have been proposed for the origin of
 transition discs, some of which are true disc-dispersal processes
 (e.g. Photoevaporation: Clarke, Gendrin \& Sotomayor 2001; MRI-driven
 winds: Suzuki \& Inutzuka 2009; MHD winds: Bai 2016), while others
@@ -229,7 +254,7 @@ Photoevaporation by energetic radiation from the central star is currently accep
 the main players in the late evolution of discs and has seen several
 dedicated theoretical efforts (e.g. Clarke et al. 2001, Alexander et
 al. 2006, Ercolano et al. 2008a, 2009, Owen, Ercolano \& Clarke 2010, 2011a,
-2012, Gorti, Dullemond and Hollenbach 2009, 2015). Photoevaporation is
+2012, Gorti, et al.\ 2009a, 2009b, 2015). Photoevaporation is
 successful in reproducing the observed dispersal timescales, the
 inside-out mode of disc dispersal, and can reproduce a subset
 ($\sim$50\%) of the TD demographics around T-Tauri stars.
@@ -238,23 +263,28 @@ However, disc dispersal by photoevaporation, while certainly an important piece 
 puzzle, does not tell the whole story behind the formation of TDs. It
 has recently become apparent that TDs are a very diverse
 class of objects. 
-Amongst the TD zoology, at least two separate classes seems
+\begin{highlight}
+Amongst the TD zoology, at least two separate classes seem
 to have emerged, which we will refer to in this proposal as Type 1 and
 Type 2 TDs. Type 1 TDs have small (a few AU) inner dust holes and show weak or no accretion of
 gas onto the central star. Conversely, Type
 2 TDs have much larger inner dust cavities (tens of AU) and show evidence of vigorous accretion ($\sim$10$^{-8}$
 M$_{\odot}$/yr), with rates not too dissimilar from those measured
-on primordial discs (e.g. Manara et al. 2014). Type 2 TDs also tend to have high mm flux levels, meaning that
+on primordial discs (e.g. Manara et al. 2014). 
+Type 2 TDs also tend to have high mm flux levels, meaning that
 they still contain large amounts of material in their outer
-regions. Owen \& Clarke (2012) showed that it is statistically
+regions. 
+\end{highlight}
+Owen \& Clarke (2012) showed that it is statistically
 unlikely that these two groups of objects may be drawn from the same
 underlying population. When talking about TD demographics it is then
 important to draw the distinction between the two types, as the
-dominant formation mechanism is probably different.  
+dominant formation mechanism is probably different. 
 
 \begin{figure}
 \centerline{\includegraphics[width=0.75\textwidth]{Macc_Rhole_Mdisk.pdf}}
-\caption{Mass accretion rate versus hole size for known transition
+\caption{\label{fig-macc-rhole-mdisk}
+  Mass accretion rate versus hole size for known transition
   discs (Ercolano \& Pascucci 2017, in preparation). Circles are for
   observed star-disk systems. The color-coding shows total disk masses
   estimated from SED fitting. Sources surrounded by a
@@ -265,7 +295,7 @@ dominant formation mechanism is probably different.
   et al. 2013).} 
 \end{figure}
 
-Figure~1 shows a collection of known accretion rates versus inner hole
+Figure~\ref{fig-macc-rhole-mdisk} shows a collection of known accretion rates versus inner hole
 radii for known TDs (Ercolano \& Pascucci, 2017, in preparation),
 represented by circles. These are compared to photoevaporation model tracks from
 Owen et al. (2011), grey squares, and the photoevaporation models plus giant planet
@@ -275,8 +305,8 @@ blue circle in the figure) are excluded, about half of the global TD population 
 discs. The formation of Type 1 TDs is generally well reproduced by
 photoevaporation models (e.g. Owen et al. 2010, 2011a). The large accretion rates and large hole
 radii of Type 2 TDs, on the other hand, are problematic for all 
-photoevaporation (e.g. Rosotti, Ercolano et al. 2013, 2015) or grain
-growth (Birnstiel, Andrews \& Ercolano 2012) models to date, and the classical explanation is that
+photoevaporation models (e.g. Rosotti, Ercolano et al. 2013, 2015) or grain
+growth models (Birnstiel, Andrews \& Ercolano 2012) to date, and the classical explanation is that
 these objects may have instead been carved by dynamical interactions
 with forming giant planets (e.g. Zhu et al. 2011). However, since the
 current models based on the classic planet scenario also generally
@@ -285,6 +315,14 @@ their demographics (e.g. see Dong \& Dawson 2016),
 a number of alternatives have recently been proposed which include magnetohydrodynamics
 effects (e.g. Wang \& Goodman, 2016), dust evolution (Pinilla et
 al. 2016) and inner disc asymmetries (Montesino et al 2016). 
+
+\begin{figure}
+\centerline{\includegraphics[width=0.75\textwidth]{Type2TD_Scat.png}}
+\caption{\label{fig-type2-scat}
+  A gallery of scattered light images of Type 2 Transition Disks. 
+\caphighlight{From left to right, top to bottom:} HD 100453, HD 135344b,
+MWC 758, LkH$\alpha$ 330, HD 142527 and AB Aurigae.} 
+\end{figure}
 
 ALMA allows to measure the bulk of the molecular gas {\it
   directly}, showing than many Type 2 TDs have dense gas inside the
@@ -302,7 +340,7 @@ not generally seen in primordial disks. For instance, they
   understood, and trying to understand their physics may teach us about
 important processes taking place in these discs. One interesting new
 scenario, for example, was proposed to explain the bright ring of scattered light of
-HD 142527 which has two dark spots on roughly opposite sides. Marino
+HD 142527 which has two dark spots on roughly opposite sides (see Fig.~\ref{fig-type2-scat}). Marino
 et al. (2015) suggest that the shadows cast by an inclined small inner
 disk could explain the location of the spots, implying that HD 142527
 is an "inclined disc inside a disk". In that case, Montesinos et
@@ -312,7 +350,8 @@ m = 2 spiral waves. If confirmed this scenario opens a pandora of new
 physical questions as to how could the inner disc have a different
 rotation axis as the outer one?  \\
 
-{\bf What can we learn about Planet Formation from TDs? }\\
+%{\bf What can we learn about Planet Formation from TDs? }\\
+\subsection{What can we learn about Planet Formation from TDs? }
 
 Both types of TDs can provide complementary information about the
 planet formation process, if the observations can be interpreted
@@ -344,11 +383,11 @@ formation process plays a part in the final dispersal of the discs
 
 
 \begin{figure}
-\includegraphics[width=0.30\textwidth, angle = 270]{twhya.jpg}
-\includegraphics[width=0.45\textwidth]{vanboekel.pdf}
-\caption{Left. Right: ALMA image of the disk around the young,
+\centerline{\includegraphics[width=0.45\textwidth]{twhya.jpg}
+\includegraphics[width=0.5\textwidth]{vanboekel.pdf}}
+\caption{\caphighlight{Left:} ALMA image of the disk around the young,
   Sun-like star TW Hydrae. The inset image (upper right) zooms in on
-  the gap at 1~AU . Right: Comparison between the derived radial surface density
+  the gap at 1~AU . \caphighlight{Right:} Comparison between the derived radial surface density
 depletion factor (f(R), black curve) from van Boekel et al. (2016) and an implementation
 of the model of Duffell (2015) with three planets, approximately
 matching the depth of the gaps (grey curve). The innermost disk
@@ -388,8 +427,9 @@ stopping further planet migration (e.g.\ Alexander \& Pascucci 2012; Ercolano \&
 2015).
 
  %
-\vspace{1em}
-\noindent {\bf Why is a Research Unit on TDs needed Now?}\\
+%\vspace{1em}
+%\noindent {\bf Why is a Research Unit on TDs needed Now?}\\
+\subsection{Why is a Research Unit on TDs needed Now?}
 %
  From the above argumentation it becomes clear that TDs are
   unique laboratory experiments created by Nature that allow us to test and
@@ -432,7 +472,7 @@ conditions inherent to uncertain disc physics.
   group we propose here.
 
 
-\section*{Contribution of this team to the field }
+\section{Contribution of this team to the field }
 %
 %The process of planet formation cannot be observed directly and
 %therefore theories of planet formation theories are built using the
@@ -461,7 +501,7 @@ committed to exploit the synergies of the team to provide a holistic
 approach to understanding planet formation and disc evolution, via the
 study of TDs and their formation. \\
 
-{\it Speaker: }{\bf Prof. Ercolano (LMU)} has been studying the link between high
+{\it Speaker: }{\bf Prof.\ Barbara Ercolano (LMU)} has been studying the link between high
 energy radiation from the central star and disc evolution and
 dispersal (e.g. Ercolano et al. 2008a, 2009; Owen, Ercolano et
 al. 2010, 2011, 2012). Before Ercolano et al. (2009), the importance
@@ -493,7 +533,8 @@ and was recently ported to Voronoi grids (Hubber, Ercolano \& Dale,
 2016) For the development of {\sc
   mocassin} Prof. Ercolano received the Royal Astronomical Society
 Fowler Prize for early career achievements in 2010 (https://www.ras.org.uk/news-and-press/157-news2010/1713-ras-honours-outstanding-astronomers-and-geophysicists). \\
-{\it Co-Speaker:} {\bf Prof. Dullemond (ZAH)} is an expert in modeling the radiative transfer in protoplanetary
+
+{\it Co-Speaker:} {\bf Prof.\ Cornelis Dullemond (ZAH)} is an expert in modeling the radiative transfer in protoplanetary
 disks, to compute the (vertical) disc structure and the disk's appearance as seen
 by observational facilities. He is the author of the popular open source RADMC-3D 
 radiative transfer modeling package, which he and his team employ to study
@@ -510,7 +551,8 @@ of physical processes and how we can constrain them with observations. The
 group often develops its own methods of computation and own codes to implement
 the new physics in existing models, and thereby opening new
 directions. \\
-{\it Co-PI:} {\bf Prof. Kley (University of T\"ubingen}) is an expert in computational astrophysics with emphasis on the
+
+{\it Co-PI:} {\bf Prof.\ Wilhelm Kley (University of T\"ubingen}) is an expert in computational astrophysics with emphasis on the
 planet formation process, starting from the growth of small dust grains all the way
 to full grown planets. The numerical methods developed and used in his group range 
 from molecular dynamics, smoothed particle hydrodynamics (SPH) and grid-based 
@@ -529,7 +571,8 @@ the planet into the inner hole as a function of the planet mass, disc
 parameter and stellar irradiation. With Picogna \& Kley (2016)
 significant advances were made in the understanding of the dust phase
 response to planet-disc interactions. \\
-{\it Co-PI:} {\bf Prof. Caselli (MPE)} 
+
+{\it Co-PI:} {\bf Prof.\ Paola Caselli (MPE)} 
 % moved to MPE as Director of the new Centre
 %for Astrochemical Studies in April 2014, after spending almost seven
 %years as Professor of Astronomy at the School of Physics and Astronomy
@@ -579,7 +622,8 @@ Using non-ideal MHD simulations of contracting dense cloud cores, she recently f
 Her expertise on basic astrochemical
 processes will be applied to the available and future dynamical models
 of transition disks. \\
-\textit{Co-PI:} \textbf{Dr. Tilman Birnstiel (LMU starting in 02/2017)} has been
+
+\textit{Co-PI:} \textbf{Dr.\ Tilman Birnstiel (LMU starting in 02/2017)} has been
 studying the crucial early stages of planet formation by simulating growth,
 destruction, and global transport processes in disk
 \citep[e.g.][]{2010A&A...513A..79B}. While some of the transport processes have
@@ -615,10 +659,10 @@ the goals and work plan of this research group proposal.
  observations of young stellar objects, transition discs, initial stages of
  planet formation and planet disc interactions. Our observational
  team is experienced with state-of-the art observational facilities
- including 
+ including \todo{sentence ends abruptly}.\\
 
-
-{\it Co-PI:} {\bf Prof. Testi (ESO)}, has accumulated years of expertise
+{\it Co-PI:} {\bf Prof.\ Leonardo Testi (ESO)}, \todo{Check Prof.~Title (I don't
+mind but in Germany they are pretty touchy when it comes to titles.} has accumulated years of expertise
 in the observation and analysis of young stars and their protoplanetary
 discs at infrared and millimetre wavelengths. He has investigated the initial stages of planet formation via
 extensive studies of properties and evolution of dust in discs (e.g. Testi et
@@ -633,7 +677,8 @@ the models. The new observational
 campaigns that we foresee for phase 2 of the Research Unit will also
 strongly 
 benefit from his guidance. \\
-{\it Co-PI:} {\bf Prof. Thomas Preibisch (LMU)}  has many years of experience in the
+
+{\it Co-PI:} {\bf Prof.\ Thomas Preibisch (LMU)}  has many years of experience in the
 fields of stellar X-ray astronomy and infrared observations
 of young stellar clusters.
 He was deeply involved in the
@@ -649,7 +694,8 @@ Preibisch et al. 2014)
 and far-infrared regime (e.g, Preibisch et al. 2012)
 with the aim to identify protostars and study disk-bearing young
 stellar objects.\\
-{\it External Collaborator: } {\bf Prof. T. Henning (MPIA)}  is co-I
+
+{\it Collaborator:} {\bf Prof.\ Thomas Henning (MPIA)}  is co-I
 on the VLT SPHERE disk programme and therefore has prime access to
 high-contrast high-resolution scattered light images of Transition
 Discs. He has been involved in many protoplanetary disc projects, both
@@ -659,7 +705,8 @@ in protoplanetary disks, something which has recently beensie
 observationally confirmed in transition disks. His involvement in this
 Research Unit will be through discussions/collaboration on the
 modeling and through comparison with the observations. \\
-{\it External Collaborator: } {\bf Prof. E. van Dishoeck (MPE/Leiden)}
+
+{\it Collaborator:} {\bf Prof.\ Ewine van Dishoeck (MPE/Leiden)}
 is one of the founders of ALMA observatory. In recent years her group
 has focussed on studying Transition Disks with ALMA. In 2013 her team
 published the first strong evidence, based on ALMA data, for a
@@ -671,7 +718,7 @@ will be through discussions/collaboration on the modeling and through comparison
  observations of the gas surface density structure.\\
 
 
-\section*{Scientific Objectives}
+\section{Scientific Objectives}
 
 Planet formation and disc evolution feed back on each other. Indeed
 the formation and migration of planets in protoplanetary discs is
@@ -696,7 +743,7 @@ Some of the key questions that will be addressed in the proposed
 Research Unit and the immediate objectives which relate to them are
 described in what follows. 
 
-\paragraph{First Main Question: How can we use TDs as direct witnesses of the planet
+\subsection{First Main Question: How can we use TDs as direct witnesses of the planet
   formation process?}
 Which TDs are carved by planets and which are a result of disc evolution? \\ What do the complex shapes of TDs (rings, blobs, spirals) teach us about the physical and
 dynamical processes taking place in protoplanetary disks?\\ How does
@@ -719,7 +766,7 @@ observations of (mainly) Type 2 TDs, including their accretion properties, to pi
 
 
 
-\paragraph {Second Main Question: How can we use TDs to learn about the disc dispersal
+\subsection{Second Main Question: How can we use TDs to learn about the disc dispersal
     mechanism?}
  What are the mass loss rates of the disc wind and
   what parameter space in the TD demographics can thus be reproduced
@@ -753,10 +800,11 @@ art simulations and a homogeneous sample of accretion rates and central
 star properties including X-ray data. 
 \end{itemize}
 
-\section*{Work plan}
+\section{Work plan}
 %\vspace{1em}\\
 
-\noindent{\bf \em Overview over the Research Unit}\vspace{0.8em}\\
+%\noindent{\bf \em Overview over the Research Unit}\vspace{0.8em}\\
+\subsection{Overview over the Research Unit}
 %
 The main goal of this Research Unit is to understand the morphology,
 spectroscopy and demographics of TDs, in order to answer
@@ -780,18 +828,18 @@ of the team are summarised in the table below.
 \noindent
 \begin{tabular}{p{1cm}p{8cm}p{2.0cm}p{3.9cm}}
 \hline
-{\bf A} & {\bf Observations} & & \\ 
+{\bf\AreacolA A} & {\bf\AreacolA Observations} & & \\ 
 A1 & ``Solids and gas evolution in disks: observational constraints'' & 2 PhD & {\em Testi, Ercolano, Preibisch}\\
 A2 & ``New constraints about disc-dissipation processes from the relation between accretion and X-ray activity'' & 1 PhD & {\em Preibisch, Ercolano, Testi}\\
 \hline
-{\bf B} & {\bf Disc dissipation and chemistry} & & \\ 
+{\bf\AreacolB B} & {\bf\AreacolB Disc dissipation and chemistry} & & \\ 
 B1 & ``The radiation-hydrodynamics of photoevaporative winds with chemistry'' & 1 Postdoc & {\em Ercolano, Caselli}\\
 B2 & ``Astrochemistry in the atmosphere and winds of photoevaporating discs '' & 1 Postdoc & {\em
                                                               Caselli,
                                                               Ercolano,
                                                               Ivlev}\\
 \hline
-{\bf C} & {\bf Dust physics} & & \\ 
+{\bf\AreacolC C} & {\bf\AreacolC Dust physics} & & \\ 
 C1 & ``Trapping the dust: Planet formation 'hotspots' in TDs'' & 1 PhD
                                & {\em Birnstiel, Dullemond, Kley}\\
 C2 & ``Gone with the wind: Dust entrainment in photoevaporative winds
@@ -800,7 +848,7 @@ C2 & ``Gone with the wind: Dust entrainment in photoevaporative winds
                                                               Birnstiel,
                                                               Dullemond}\\
 \hline
-{\bf D} & {\bf Planet-disc interactions} & & \\ 
+{\bf\AreacolD D} & {\bf\AreacolD Planet-disc interactions} & & \\ 
 D1 & ``Transition disks and planetary systems''' & 1 Postdoc & {\em Kley, Dullemond}\\
 D2 & ``Origin of complex non-axisymmetric structures in type 2
      Transition Disks "& 1 Postdoc & {\em Dullemond, Kley}\\
@@ -827,7 +875,7 @@ projects. See text for detail.}
 
 
 %
-\noindent\underline{{\bf Area A: Observations}}\\
+\noindent\underline{{\bf\AreacolA Area A: Observations}}\\
 \noindent The projects in this area both aim at obtaining
 observational constraints on the dust and gas properties of
 protoplanetary discs and their central stars. Project A1 focusses on
@@ -856,8 +904,7 @@ groups.
 
 \
 \mbox{}\vspace{1em}\\
-\noindent\underline{\bf Area B: Disc dissipation and chemistry }\\
-
+\noindent\underline{\bf\AreacolB Area B: Disc dissipation and chemistry }\\
 \noindent The main objective of the projects in this area is to
 determine the mass loss rates in disc winds, and constrain once and
 for all the disc dissipation mechanism, leading to the formation of
@@ -892,7 +939,7 @@ architectures (see e.g. Rosotti et al 2013, 2015).\\
 
 %
 \mbox{}\vspace{1em}\\
-\noindent\underline{\bf Area C: Dust Physics}\\
+\noindent\underline{\bf\AreacolC Area C: Dust Physics}\\
 \noindent The dynamics and evolution of dust grains in discs is the
 main subjects of this area. In project C1 we will study the growth and
 trapping of dust grains at hotspots in TDs that may lead
@@ -919,7 +966,7 @@ in the more detailed models of Area D.\\
 
 
 \mbox{}\vspace{1em}\\
-\noindent\underline{\bf Area D: Planet-disc interactions}\\
+\noindent\underline{\bf\AreacolD Area D: Planet-disc interactions}\\
 \noindent Projects in this area aim at constructing realistic
 simulations of planet-disc interactions and studying the dynamical processes
 leading to non-axisymmetric features in order to explain the wealth of new
@@ -942,8 +989,9 @@ C1. Studying the intriguing nature of these objects is likely to
 provide important insights on planet-disc interaction processes, thus
 enabling us to use these discs as proxies for planet formation.  \\ 
 
-\mbox{}\vspace{1em}\\
-\noindent{\bf \em Future perspectives}\\
+%\mbox{}\vspace{1em}\\
+%\noindent{\bf \em Future perspectives}\\
+\subsection{Future perspectives}
 %
 While all sub-projects presented here are self-contained and will
 provide specific intermediate science products, the major strength of this program is the collaborative
@@ -1002,7 +1050,8 @@ including the large variety of minerals and organics found in comets
 and meteorites. 
 \vspace{0.8em}
 
-\noindent{\bf \em Research Environment of the Research Unit}\\
+%\noindent{\bf \em Research Environment of the Research Unit}\\
+\subsection{Research Environment of the Research Unit}
 
 The new young Research Unit members will be welcomed in a stimulating
 environment, where complementary research programs are being carried
@@ -1033,7 +1082,7 @@ networks and solvers exists.
 
  ESO, the European Southern Observatory (or formally the European Organisation for Astronomical Research in the Southern Hemisphere), is the leading intergovernmental astronomy organisation in Europe, supported by 16 Member States, along with the host state of Chile. Its approximately 110 staff astronomers, 40 fellows and 40 PhD students conduct frontline research in fields ranging from exoplanets to cosmology. ESO’s Star and Planet Formation group currently has a total of 19 staff members, 9 post-doctoral fellows, and 4 PhD students, producing over 300 publications since 2015. One of Leonardo Testi main areas of expertise is in infrared and submillimetre observations of protoplanetary disks. He is currently supervising the work of 4 postdoctoral fellows and one student in this scientific area. Young researchers and students at ESO enjoy full access to the Garching campus scientific life and infrastructure, including a rich portfolio of seminar series, direct access to state of the art computing facilities and expertise for the data reduction of millimetre and infrared observations. Leonardo Testi’s group at ESO meets weekly on Thursday to discuss progress on internal projects and on Fridays, jointly with Paola Caselli’s group at MPE, to review literature and discuss common interest projects.
 
-{\color{red} At Heidelberg .... Kees - Heidelberg??}
+\todo{At Heidelberg .... Kees - Heidelberg?? Yes, I will do that.}
 
 % Research Environment Tuebingen
 % 
@@ -1064,9 +1113,10 @@ laboratory work, and other adjacent fields. The proposed Research Unit
 will obtain high visibility through the workshop, which will also help
 find the best candidates for the available positions. 
 
-\mbox{}\vspace{1em}\\
-\noindent{\bf \em Interactions between projects and
-  institutions.}\\
+%\mbox{}\vspace{1em}\\
+%\noindent{\bf \em Interactions between projects and institutions.}\\
+\subsection{Interactions between projects and institutions}
+
 \noindent The projects planned are not only collaborative amongst institutions,
 but also present strong dependancies from each other, which is the
 motivation for setting up a Research Unit. Several members of the
@@ -1093,9 +1143,10 @@ concise summary of the meeting will then be compiled on a rotation
 basis by the students/postdocs in the area and then distributed to
 all members. (4) Collaboration meetings between individual projects.
 
-\mbox{}\vspace{1em}\\
-\noindent{\bf \em Promotion of Early career researchers}\\
-%
+%\mbox{}\vspace{1em}\\
+%\noindent{\bf \em Promotion of Early career researchers}\\
+\subsection{Promotion of Early career researchers}
+
 \noindent We have requested a mix of PhD and Postdoc positions, the
 latter because of the complex computational aspects of some of the
 projects in this building phase of the Research Unit. We are very
@@ -1113,26 +1164,32 @@ PhD students and academically young postdocs. The postdocs will be
 encouraged and supported to develop independence, which will set them
 up on a career path to individual fellowships. 
 
-\mbox{}\vspace{1em}\\
-\noindent{\bf \em Gender Equality Measures}\\
+%\mbox{}\vspace{1em}\\
+%\noindent{\bf \em Gender Equality Measures}\\
+\subsection{Gender Equality Measures}
+
 Our PI team is already relatively balanced in terms of gender. We will
 continue to work towards creating a still
 more balanced team of female and male PhDs and Postdocs in this
 Research Unit. We will also particularly stimulate women to apply for the theoretical research positions of our Forschergruppe, to amend the relative paucity of women in theoretical areas of (astro)physics.
 
-\mbox{}\vspace{1em}\\
-\noindent{\bf \em Family Support Measures}\\
+%\mbox{}\vspace{1em}\\
+%\noindent{\bf \em Family Support Measures}\\
+\subsection{Family Support Measures}
+
 Family support is of prime importance in our Research Unit, and we are
 aware of the complicated issues of work/family balance. In particular
 care will be taken in the scheduling of the biannual Research Unit
 meetings, which will necessarily involve traveling, in order to
 minimise disruption to family life. When possible we will use
-video-conferencing (e.g. for the regular monthly meetings), and will
-provide financial support to members who wish to travel with their
-families for the face-to-face meetings, which we foresee to be at
+video-conferencing (e.g.\ for the regular monthly meetings), and will
+provide financial support to members who wish to travel with a
+caretaker for their small children
+for the face-to-face meetings, which we foresee to be at
 least twice a year (on top of the Phase 1 kick-off and wrap-up
 meetings), and for the longer collaboration visits. 
 
+\vfill
 \pagebreak[4]
 
 
@@ -1313,8 +1370,8 @@ Ruprecht-Karls-University Heidelberg\\
 \noindent Munich, December 30th, 2016\\[1em]
 
 \noindent\begin{tabular}{p{5.5cm}p{5.5cm}}
-\epsfig{file=signature_erc.eps,width=50mm} & 
-\epsfig{file=signature_dul.eps,width=50mm} \\
+%\epsfig{file=signature_erc.eps,width=50mm} & 
+%\epsfig{file=signature_dul.eps,width=50mm} \\
 \vspace{1em} & \\
 Barbara Ercolano & Cornelis P. Dullemond \\
 \end{tabular}
