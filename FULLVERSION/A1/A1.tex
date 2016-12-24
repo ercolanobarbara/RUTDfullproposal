@@ -633,34 +633,60 @@ analysis of the gas in disks with the measurements of the $M_{acc}$ as derived f
 \subsubsection{Evolution of the detailed physical properties of disks with embedded planets}
 
 {\Tcol\bf Months 1-12}\\
-In this first phase we will collect and reprocess the ALMA and VLA high angular resolution observations of CQ~Tauri amd HD163296 (the HL~Tau continuum data are already available). The expert postdoctoral Fellow at ESO and collaborator on this project (Baobab Liu) will support this data calibration effort.
+In this first phase we will collect and reprocess the ALMA and VLA high angular resolution observations of CQ~Tauri and HD163296 (the HL~Tau continuum data are already available). The expert postdoctoral Fellow at ESO and collaborator on this project (Baobab Liu) will support this data calibration effort. 
 
-The most significant part of the time will be used to modify the model part of the multi-wavelength analysis tool to incorporate a fast (parametric) computation of the line emission. We have already developed a parametric model to describe line emission for our recent work on HD163296 \citep{Isella2016}, and we plan to incorporate an optimized version of this model in the analysis tool. 
+As the reprocessing will be completed, we will perform the multi-wavelength continuum analysis of one of the disks HD163296 or CQTauri, for both the data is available, or in the process of being delivered to us. The analysis method that we plan to apply will be similar to the one that we already adopted with HL~Tau \citep{2016ApJ...821L..16C}, as part of a collaboration between the ESO group and the group of Prof.Dr.~Th. Henning in Heidelberg. The results will be compared against the models of dust growth, confinement and migration developed as part of project~C1, D1 and~D2.
+
+The most significant part of the time for this first year will be used to modify the model part of the multi-wavelength analysis tool to incorporate a fast (parametric) computation of the line emission. We have already developed a parametric model to describe line emission for our recent work on HD163296 \citep{Isella2016}, and we plan to incorporate an optimized version of this model in the analysis tool. 
 We will develop this as part of the multi-CPU/multi-GPU version of the analysis code.  The main modifications that we will implement in the model are a parametric description of the position of gaps and holes in the disk and the associated gas and dust depletion factors; a version that allows for an analysis of gaps and rings in the dust emission is already working \citep[e.g.\ ][]{2016A&A...588A.112G}, but we need to add the modifications required for the analysis of the gas.
+
+In this phase we also plan to submit additional proposals to extend the ALMA observations to more disks. These additional data are not essential for the success of the project, but will be incorporated in the program if the proposals are successful.
 
 \smallskip
 {\bf Products:} 
 \begin{itemize}
+\item One publication with the application of the continuum analysis tool to one of the disks observed at high angular resolution with ALMA
 \item New version of the analysis code with incorporated the model required to perform a parametric analysis of the dust and gas emission in disks with gaps and holes
 %\item One publication on the detailed analysis of the comparative properties at high angular resoltion of the disks HL~Tau, HD163296 and CQ Tauri
-\item One publication describing the application of the analysis tool to one disk observed at high angular resolution with ALMA
 \end{itemize}
 
 {\Tcol\bf Months 13-24}\\
-%The analysis of the disks observed at high angular resolution and high sensitivity multi-wavelength ALMA observations and complementary high-contrast near infrared imaging will be completed, applying the modeling tool modified in the first phase of the project. We will also incorporate the results of the analysis
-%methods for the gas to derive a reliable measurement of the gas surface density in these disks. 
-%The data will be compared with models developed as 
-%part of other projects in the RU to understand if the different dust 
-%and gas properties and the potential detection of planetary mass companions are consistent with an evolutionary scenario. The data will constrain the model predictions for the development of gaps (in dust and gas) in the two full disks, and the hole and dust/gas properties in the TD.
+The second year will be dedicated to the extensive use of the molecular line analysis tool to
+the line observations of the disks. We will start by benchmarking the tool against the results of previous lower resolution observations of disks or disks that we have already been analysed with less sophisticated techniques \citep[e.g.][]{Isella2016}. This approach was successfully used to develop and test the continuum analysis tool by \citet{2016A&A...588A..53T}, and we will extend it to the line analysis. 
 
-Depending on the progress of the high-contrast imaging survey and the quality of the data for resolved disks in the ALMA archive and our own programmes, we may expand the study to additional disks observed at high angular resolution. 
+One key additional aspect for the line analysis tool will be to benchmark its results against the results of the more computationally intensive detailed chemical models for the molecular abundance and excitation in disks. Hence one key benchmark of our analysis tool will be against the results obtained by the detailed modeling using the DALI code of transition disks with holes \citep{2016A&A...585A..58V}. For this purpose the collaboration with the group of Prof.Dr.~Ewine van Dishoeck and A. Miotello will be essential. 
+
+During the course of the second year, we do expect to complete the benckmarking of the analysis code against previous observational results and against detailed model simulations with DALI. 
+We will also complete the analysis of the continuum data of the disk that was not completed in the first year and start to apply the line analysis tool.
+
+If the ALMA proposals submitted in the first year will be successful, the ALMA data will be collected and delivered during the second year. In this case, one of the collaborators in the project will support checking and calibration of the data and the preparation for the subsequent analysis. 
+
+\smallskip
+{\bf Products:} 
+\begin{itemize}
+\item One publication with the benchmarking of the line analysis tool
+\item One publication on the analysis of the continuum data for the remaining disk in the original sample and comparative analysis: completion of objective {\bf O4}
+\item Inital application of the analysis tool to the high resolution line data for one of the disks in the original sample
+%\item One publication on the detailed analysis of the comparative properties at high angular resoltion of the disks HL~Tau, HD163296 and CQ Tauri
+\end{itemize}
 
 \vspace{1em}{\Tcol\bf Months 25-36}\\
-The analysis of the disks observed at high angular resolution and high sensitivity multi-wavelength ALMA observations and complementary high-contrast near infrared imaging will be completed, applying the modeling tool modified in the first phase of the project. We will also incorporate the results of the analysis
+The analysis of the disks observed at high angular resolution and high sensitivity multi-wavelength ALMA observations and complementary high-contrast near infrared imaging will be completed in this final year, applying the modeling tool modified in the first phase of the project. Including the results of the analysis
 methods for the gas to derive a reliable measurement of the gas surface density in these disks. 
 The data will be compared with models developed as 
 part of other projects in the RU to understand if the different dust 
-and gas properties and the potential detection of planetary mass companions are consistent with an evolutionary scenario. The data will constrain the model predictions for the development of gaps (in dust and gas) in the two full disks, and the hole and dust/gas properties in the TD.
+and gas properties and the potential detection of planetary mass companions are consistent with an evolutionary scenario. In particular this will be relevant for projects C2, D1 and~D2 of the RU. The data will constrain the model predictions for the development of gaps (in dust and gas) in the two full disks, and the hole and dust/gas properties in the TD.
+
+In particular we aim at a full comparative analysis between (at least) the three disks of: dust distribution and grain properties and the gas surface densities. We will also focus on the characterization of the mm-size dust and molecular gas depletion factors in rings and holes, and the comparison with constraints form the complementary NIR high-contrast observations on the potential planetary mass companions. This challenging work will be possible by combining the strengths and expertises of the observational/analysis groups of Testi, Henning and van Dishoeck. The theoretical/modeling groups in the RU will provide the essential link with the theoretical disk-planet interaction expertise.
+
+\smallskip
+{\bf Products:} 
+\begin{itemize}
+\item One summary pubblication with the comparative high angular resolution analysis of gas in disks in different evolutionary stages (objective {\bf O5})
+\item One publication on the detailed comparison of the gas kinematics with models (objective {\bf O6})
+%\item One publication on the detailed analysis of the comparative properties at high angular resoltion of the disks HL~Tau, HD163296 and CQ Tauri
+\end{itemize}
+
 
 \subsection{Data handling}
 
@@ -886,7 +912,8 @@ For running intensive computing applications we have access to the C2PAP
 infrastructure and to the multi-CPU/multi-GPU Hydra cluster at the
 local Max Planck (through the collaboration with Paola Caselli group).
 
-ESO is in the process of expanding the ALMA data reduction capabilities by
+ESO is in the process of expanding the ALMA data reduction capabilities for 
+the science staff by
 cloning the ALMA Regional Center processing cluster architecture. The new
 cluster will initially be composed by a Lustre file system and three computing 
 nodes each with $\ge$512Gb RAM and 24-48 cores. The new cluster is expected to be installed 
