@@ -1,0 +1,39 @@
+git rm --cached A1/A1.pdf
+git rm --cached A2/A2.pdf
+git rm --cached B1/B1.pdf
+git rm --cached B2/B2.pdf
+git rm --cached C1/C1.pdf
+git rm --cached C2/C2.pdf
+git rm --cached D1/D1.pdf
+git rm --cached D2/D2.pdf
+git rm --cached Main/Main.pdf
+git rm --cached Z/Z.pdf
+
+git rm --cached A1/*.bbl
+git rm --cached A2/*.bbl
+git rm --cached B1/*.bbl
+git rm --cached B2/*.bbl
+git rm --cached C1/*.bbl
+git rm --cached C2/*.bbl
+git rm --cached D1/*.bbl
+git rm --cached D2/*.bbl
+
+git rm --cached A1/*.blg
+git rm --cached A2/*.blg
+git rm --cached B1/*.blg
+git rm --cached B2/*.blg
+git rm --cached C1/*.blg
+git rm --cached C2/*.blg
+git rm --cached D1/*.blg
+git rm --cached D2/*.blg
+
+git rm --cached A1/*.dvi
+git rm --cached A2/*.dvi
+git rm --cached B1/*.dvi
+git rm --cached B2/*.dvi
+git rm --cached C1/*.dvi
+git rm --cached C2/*.dvi
+git rm --cached D1/*.dvi
+git rm --cached D2/*.dvi
+
+git rm --cached */*.dvi

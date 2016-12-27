@@ -9,3 +9,6 @@
 * Finances
 ** Check the travel: special travel in project, general travel in Z
 ** 
+* Small things
+** Discs vs Disks
+** Mention that TDs are NOT part of the SPP Exoplanets
