@@ -133,7 +133,7 @@ Detailed studies of a few TDs exist on all the aspects above (see Fig.~\ref{f_ex
 In the following four subsections, we summarize the state-of-the-art of our observational constraints on the four main properties outlined above and point out one key question in each area that we will address as part of this project and in collaboration with the rest of the RU teams.
 
 \subsection{Dust properties and distribution} 
-The properties of the dust distribution is the main observable quantity that sets the TDs class apart form the rest of the disk population. The presence of a hole in the dust distribution can be inferred from the SED, and the hole size roughly constrained through modeling, but only direct imaging at (sub-)millimetre imaging.
+The properties of the dust distribution is the main observable quantity that sets the TDs class apart form the rest of the disk population. The presence of a hole in the dust distribution can be inferred from the SED, and the hole size roughly constrained through modeling, but only direct, high-angular resolution imaging at (sub-)millimetre wavelengths can provide an accurate measure of the inner hole size and dust depletion factor.
 Grain growth is a stage of planet formation that can be directly observed due to the effects on particle emissivity. Planetesimals and early planetary cores formation are difficult to probe observationally, while growing planetary bodies can be studied through their influence on the disc structure or directly imaged in the outer disc, when sufficiently young and large.
 
 Submillimetre and centimetre wave observations over the last decade have established that grain growth occurs very early in the protoplanetary discs lifetime, large grains and pebbles are present in discs throughout their lifetime. This is at odds with simple grain evolution theories in gaseous discs, and several ideas have been put forward to explain this fact. Modern theoretical models require large grains confinement in specific regions of the disc associated with local pressure maxima in the gas phase transitions of abundant molecules (snowlines), or regions with very low gas to dust ratio. The new ALMA high angular resolution observations of the protoplanetary discs suggest that small rocky proto-planets may form early and help trapping millimetre and centimetre-size grains in discs \citep[HL~Tau,][]{2015ApJ...808L...3A}, in other cases there is compelling evidence for more massive planets affecting the disk dust and gas distribution \citep{Isella2016,2016Sci...353.1519P}.  
@@ -201,7 +201,7 @@ flow of disk material, which eventually accretes onto the star. The initial inte
 rate ($M_{acc}>10^{-6}$~M$_\odot$/yr)
 slows down on timescales of $\sim 1$~Myr to $M_{acc}\le 10^{-8}$~M$_\odot$/yr,
 and the circumstellar disk then slowly evolves until it 
-becomes optically thin on timescales $\sim$10~Myr \citep[e.g.\ ][]{1998apsf.book.....H}. Viscous 
+becomes optically thin on timescales $\ge$10~Myr \citep[e.g.\ ][]{1998apsf.book.....H,2011MNRAS.410..671E}. Viscous 
 evolution is able to explain the general evolution of disks, and we have recently found observational
 evidence confirming a basic prediction of this theory \citep[e.g.\ ][]{2006ApJ...645L..69D}: the existence of a correlation between $M_{acc}$ 
 and the disk mass \citep{2016A&A...591L...3M}, as measured through the {\it dust} emission. This 
@@ -209,7 +209,7 @@ finding supports the idea that viscous evolution may be the main ingredient of e
 Nevertheless, there are still some major caveats that need to be understood:
 the correlation between  M$_{dust}$ vs. $M_{acc}$ is {\it not} the expected one, as it is the gas,
 not the dust, that is supposed to be viscously evolving, in addition
-the timescale for the disk dispersal predicted from this theory is not in agreement with 
+the timescale for the disk dispersal predicted from this theory is much too long to be in agreement with 
 observations, and the origin of the turbulence in disks is still unclear 
 \citep[e.g.\ ][]{2014prpl.conf..411T}. In addition, resolved disk observations with ALMA or 
 near-infrared high-resolution imaging (e.g., SPHERE) show structures, such as holes and 
@@ -548,7 +548,7 @@ The tool has three basic modules: a disk model, with parameters that describe th
 We already tested the code modular approach by using different disk models \citep[e.g.\ ][]{2016A&A...588A.112G,2016A&A...588A..53T,TazzariPhD}, and we have made a considerable effort (in collaboration with the Excellence Cluster `Universe' C2PAP in Munich and with the support of NVIDIA) to structure the likelyhood calculation and the MCMC sampler to fully use a multi-CPU/multi-GPU architecture (developed on our data analysis server at ESO and fully tested on the HYDRA cluster as part of the collaboration with Prof. Dr. P. Caselli group at MPE). This effort allows to run effective multi-wavelength analysis on large samples (typical full analysis time is currently 24hrs/disk with observations at four wavelengths), and opens the possibility of expanding the analysis to the fit of multiple velocity channels for simple line emission models. 
 
 \vspace{1em}{\Tcol\bf Disk gas masses from ALMA observations}\\
-As part of her PhD thesis at the University of Leiden (to be completed in 2017) and under the supervision of project collaborator Prof. Dr. E. van Dishoeck, A. Miotello is developing an accurate method to measure the amount of molecular gas protoplanetary disks from CO and isotopologues millimetre observations. To overcome some of the difficulties in in deriving reliable gas surface densities from observations of line intensities, the method relies on a detailed chemical-physical computation of the disk dust and gas structure, including selective effects on the CO isotopologues. \citet{2016A&A...594A..85M} have used this method to derive measurements of the molecular gas content in disks using a combination of line luminosities in different CO isotopologues, improving on the method of \citet{2014ApJ...788...59W}.
+As part of her PhD thesis at the University of Leiden (to be completed in 2017) and under the supervision of project collaborator Prof. Dr. E. van Dishoeck, A. Miotello is developing an accurate method to measure the amount of molecular gas protoplanetary disks from CO and isotopologues millimetre observations. To overcome some of the difficulties in in deriving reliable gas surface densities from observations of line intensities, the method relies on a detailed chemical-physical computation of the disk dust and gas structure based on the infrastructure provided by the DALI code \citep{2012A&A...541A..91B}, including selective effects on the CO isotopologues. \citet{2016A&A...594A..85M} have used this method to derive measurements of the molecular gas content in disks using a combination of line luminosities in different CO isotopologues, improving on the method of \citet{2014ApJ...788...59W}.
 
 The application of this method to the Lupus ALMA disks survey \citet[][see also Fig.~\ref{f_LADS}]{2016arXiv161201538M} has shown a significant inconsistency between the disk masses measured using dust or CO as tracers. This inconsistency could be related to a real deficit of the gas content in the Lupus disks, or to unexpected chemical depletion of CO and isotopologues. In collaboration with the Lupus team, and as part of the last part of A. Miotello PhD, we are exploring which of these two possibilities is correct using multi-transition CO and isotopologues data coming from approved ALMA programmes. This new analysis will be used to improve the method in the course of 2017. In collaboration with the group of J. Williams in Hawaii, we also plan to expand the method to derive gas surface densities for spatially resolved observations of gaseous disks.
 
@@ -557,17 +557,17 @@ The application of this method to the Lupus ALMA disks survey \citet[][see also 
 \label{s_work}
 
 
-\todo{Kees to Leonardo: Please add into the text something about the role of
-  the co-Is and other RU collaborators. Thomas Henning and Ewine van
-  Dishoeck have of course loads of exciting data from SPHERE (Thomas) and
-  ALMA (Ewine). It would be perhaps nice to see if you can find a way to
-  link their expertise somehow (at least a bit) into this project. And what
-  about adding Til, since his expertise may be useful to interpret the
-  observations? Link to project C1 perhaps? For the gas phase tracers maybe
-  you can refer to the expertise of Paola's group and Ewine's group on the
-  chemistry of the gas in the disk, and link to project B2?}
-
-
+%\todo{Kees to Leonardo: Please add into the text something about the role of
+%  the co-Is and other RU collaborators. Thomas Henning and Ewine van
+%  Dishoeck have of course loads of exciting data from SPHERE (Thomas) and
+%  ALMA (Ewine). It would be perhaps nice to see if you can find a way to
+%  link their expertise somehow (at least a bit) into this project. And what
+%  about adding Til, since his expertise may be useful to interpret the
+%  observations? Link to project C1 perhaps? For the gas phase tracers maybe
+%  you can refer to the expertise of Paola's group and Ewine's group on the
+%  chemistry of the gas in the disk, and link to project B2?}
+%
+%
 
 The two PhD students hired for this project will each be responsible for one of the two main sub-project:
 evolution of the demographics of disk properties and evolution of the detailed physical properties of disks with embedded planets. The workplan for the two sub-projects is detailed below.
