@@ -179,12 +179,19 @@ seems that with Type 2 TDs we now see evidence for their existence. Given
 that dust tends to get trapped in these vortices, an exciting question is
 whether these vortices are the birthplaces of new planets.
 
-{\bf The goal of this proposal is to attemp to understand the non-axisymmetric
-features in Type 2 TDs from the perspective of gas dynamics}. Particular
+\begin{highlight}
+The goal of this proposal is to attemp to understand the non-axisymmetric
+features in Type 2 TDs from the perspective of gas dynamics.
+\end{highlight}
+Particular
 emphasis will be put on ``non-standard'' dynamics such as out-of-plane
-companions, secondary infall and shadow-driven dynamics. {\bf Ultimately we wish
-to find out if Type 2 TDs are oddballs or not, and if they teach us
-something about the formation of planets or are too exotic to do so.}
+companions, secondary infall and shadow-driven dynamics. 
+\begin{highlight}
+Ultimately we wish
+to find out if Type 2 TDs are rare outliers or not, and if they teach us
+something about the formation of planets or are too exotic to do so.
+\end{highlight}
+
 
 
 \subsection{Preliminary work}
@@ -210,7 +217,7 @@ the setup involved in tilted inner disk that produced the shadow features
 on the ring, and parameterized spiral features.
 
 \begin{figure}
-\centerline{\includegraphics[width=0.95\textwidth]{D2Fig/Benisty.eps}}
+\centerline{\includegraphics[width=0.95\textwidth]{D2Fig/Benisty-eps-converted-to.pdf}}
 \caption{\label{fig-benisty} Polarized scattered light observations of the
   Type 2 TD HD100453. \caphighlight{Left:} Actual observations with
   VLT-SPHERE in the I' band. \caphighlight{Right:} Synthetic model image
@@ -235,7 +242,7 @@ addition to published data from other groups) serve as observational
 evidence for the complex disk geometries seen in Type 2 TDs.
 
 \begin{figure}
-\centerline{\includegraphics[width=0.95\textwidth]{D2Fig/Kataoka.eps}}
+\centerline{\includegraphics[width=0.95\textwidth]{D2Fig/Kataoka-eps-converted-to.pdf}}
 \caption{\label{fig-kataoka} ALMA Observations of the Type 2 TD HD 142527.
   \caphighlight{Left:} The continuum (Stokes I component) at 850 $\mu$m
   showing the well known arc-shaped structure believed to be dust trapped in
@@ -292,7 +299,7 @@ higher resolution models have to be made, with more careful testing of the
 viscosity of the model.
 
 \begin{figure}
-\centerline{\includegraphics[width=0.8\textwidth]{D2Fig/Herbst_Fig6.eps}}
+\centerline{\includegraphics[width=0.8\textwidth]{D2Fig/Herbst_Fig6-eps-converted-to.pdf}}
 \caption{\label{fig-herbst-6}Time snapshots of the shape of a circumstellar
   disk disrupted by an inclined planetary companion passing through the disk
   twice each orbit. The star is blue, the planet is purple. The gas SPH
@@ -353,7 +360,7 @@ image bears resemblance to the arc-shaped envelope around the disk of the
 Transition Disk star AB Aurigae as imaged by \citet{1999ApJ...523L.151G}.
 
 \begin{figure}
-\centerline{\includegraphics[width=0.9\textwidth]{D2Fig/Kramer_Fig4.1.eps}}
+\centerline{\includegraphics[width=0.9\textwidth]{D2Fig/Kramer_Fig4-1-eps-converted-to.pdf}}
 \caption{\label{fig-kramer-4.1}Time sequence of off-center accretion of a
   small low-mass spherical Gaussian molecular cloud by a star. The star is
   at the center, the cloud moves initially from left to right. The star is
@@ -366,8 +373,8 @@ Transition Disk star AB Aurigae as imaged by \citet{1999ApJ...523L.151G}.
 \end{figure}
 
 \begin{figure}
-\centerline{\includegraphics[width=0.5\textwidth]{D2Fig/Kramer_Fig4.12.eps}
-\hspace{2em}\includegraphics[width=0.3\textwidth]{D2Fig/Kalas.eps}
+\centerline{\includegraphics[width=0.5\textwidth]{D2Fig/Kramer_Fig4-12-eps-converted-to.pdf}
+\hspace{2em}\includegraphics[width=0.3\textwidth]{D2Fig/Kalas-eps-converted-to.pdf}
 }
 \caption{\label{fig-kramer-4.12}\caphighlight{Left:} Scattered light
   synthetic image computed for a snapshot of the simulations of an
@@ -668,7 +675,7 @@ data will be in part through public data, and in part through collaboration
 with observational teams. The PI is member of several ALMA consortia, as
 well as external member of the SPHERE disk consortium.
 \begin{enumerate}
-\item {\bf Companion inside the disk: The in-plane 2-D case}\\
+\item {\bf Companion inside the disk: The in-plane 2-D case}\label{subproj-inplane-2d}\\
   The first project will be a ``simple'' start up project. We will use the
   FARGO-3D code to model the effect of a single, massive companion, either
   on a circular or eccentric, but always in-plane, orbit on the
@@ -706,51 +713,50 @@ well as external member of the SPHERE disk consortium.
     because single planets have not been proven to be able to explain TDs.
     Here we focus on Brown Dwarf or M star companions, possibly on strongly
     eccentric orbits. Yet, technically there are several similarities,
-    making a strong collaboration beneficial\footexplainconnect.}
-\item {\bf Companion inside the disk: The in-plane 3-D case}\\
-  Next we will go more into detail in the comparison of our in-plane models
-  with observations: we will employ the RADMC-3D code to make detailed
-  scattered-light Monte Carlo calculations to predict what the scatted-light
-  images should look like, and compare those to the observed scattered light
-  observations in optical and near-infrared.  At first we will use the 2-D
-  models mentioned above, and turn them into 3-D by using a suitable
-  vertical structure model. But eventually it will be necessary to go to
-  full 3-D. Fortunately the FARGO-3D code is perfectly suitable for this
-  kind of modelling. We can alternatively also apply the PLUTO code, using
-  spherical coordinates, depending on which turns out to be more suitable.
-  To obtain the correct scattered light images, the vertical structure of
-  the disk is essential to get right. This is because a small increase of
-  the vertical height of the surface of the disk (the $\tau\simeq 1$
-  location of the disk) may cause strong effects of shadowing, because of
-  the grazing incidence of the stellar light onto the disk's surface. The
-  problem is that in order to get the vertical structure right, we need to
-  get the temperature right. This requires us to treat the heating and
-  cooling of the disk correctly. Since we are mostly interested in the outer
-  regions of the disk (may tens of AU) the internally produced viscous
-  heating can be ignored. Instead, the disk is heated entirely due to the
-  irradiation by the star. While at first we will employ simple estimates of
-  the resulting temperature structure (e.g.\ simply assuming a power law
-  with radius), we will eventually be forced to include radiative transfer
-  and do a proper {\em radiation hydrodynamics} simulation. A two-phase
-  procedure to do this correctly for irradiated disks and other
-  circumstellar nebulae was described by us \citep{2010A&A...511A..81K}, and
-  similar procedures have since been adopted by many other codes as
-  well. The FARGO-3D code has this built in and we have our own module for
-  the PLUTO code. We will then insert snapshots of these self-consistent 3-D
-  models into the RADMC-3D code and compute scattered-light images to
-  compare to observations. In doing this we must use the full polarization
-  mode of RADMC-3D, and we must use realistic dust models with properly
-  calculated scattering matrices.  This is because many of these scattered
-  light observations in the optical and near-infrared employ {\em
-    polarimetric differential imaging}, in order to better separate the
-  scattered light from the disk from the point spread function of the
-  star. Once we have these images we will study the shape of the outer edge
-  of the gap, and also find out if spiral features can be seen, which may be
-  similar to those found in the observations. \connect{This sub-project will
-    be done in close collaboration with the postdoc of project D1, as that
-    project is specialized on planets in disks, as well as on the radiation
-  hydrodynamics of 3-D planet-disk models.}
-\item {\bf Companion inside the disk: The out-of-plane case}\\
+    making a strong collaboration beneficial\footexplainconnect.}  To make
+  the connection to the observations, in particular the scattered-light
+  images of Type 2 TDs, we will make use of our RADMC-3D code. We will have
+  to turn the 2-D models into 3-D using a gaussian vertical structure model
+  as in \citet{2015MNRAS.451.1147J}. It will be critical to treat the 
+  thermodynamics, in particular near the shocks of the spiral waves caused
+  by the companion, as the sudden heating by a shock will puff up the disk
+  and thus increase the intercepted stellar light
+  \citep[see][]{2015ApJ...809L...5D}. We will employ a simple recipe for
+  the heating/cooling in our 2-D hydrodynamics models following 
+  \citet{2013A&A...560A..40M} and \citet{2015MNRAS.453.1768P}. Near the
+  shock the assumption of vertical hydrostatic equilibrium may not be warranted,
+  but the differences may not be too large \citep[see discussion 
+  for the case of planetary companions by][]{2015ApJ...809L...5D}.
+  \connect{Once these predicted scattered light images are made, their
+  comparison to actual observed images will be done through our collaboration
+  with project A1, as well as with the MPIA (through Prof.~Henning).}
+  \connect{At this point the comparison with ALMA observations would focus mostly
+  on the observed gas inside of the dust hole 
+  \citep[such as e.g.,][]{2016A&A...585A..58V}, again in collaboration 
+  with project A1 as well as with Prof.~van Dishoeck, but detailed comparisons
+  will not be done as these would require us to delve into the CO chemistry
+  which we wish to avoid, to save time for the following sub-projects.}
+\item {\bf Companion inside the disk: The in-plane 3-D case}\label{subproj-inplane-3d}\\
+  One of our prime interests is to study the strongly warped disks (or more
+  precisely: the strongly inclined inner disks) that appear to be
+  responsible for the strange shadows in some Type 2 TDs. This will be
+  the task of the next sub-project. But as a warm-up, the postdoc will gain
+  some experience with 3-D disk modelling in a slightly less challenging
+  setting.  So in this sub-project we will redo some of the models of the
+  previous sub-project in full 3-D. For the heating/cooling we will attempt
+  to convert the simple recipe to a form that can be used in these 3-D
+  settings as well.  With these 3-D models will then be able to see if the
+  hydrolic shock-bore effect of \citep{2006ApJ...641..534B} \citep[and
+  discussed in the context of observability of spiral waves
+  in][]{2015ApJ...809L...5D} significantly affects the predicted observed
+  scattered light images from the first sub-project. This might well be the
+  case, since in this project we will study massive companions that are
+  expected to create strong perturbations in the disk.  \connect{We will,
+    also here, collaborate strongly with project D1. While D1 will
+    concentrate more on improving the realism and accuracy of the 3-D
+    simulations, our project here will focus on extending them to more
+    extreme cases (strong eccentricities of a massive companion).}
+\item {\bf Companion inside the disk: The out-of-plane case}\label{subproj-inclined-3d}\\
   Since we know by now that many TDs are warped, it is entirely natural to
   investigate what happens to the disk if the star has a companion
   (planetary or stellar) that has orbital elements carrying it out of the
@@ -782,12 +788,16 @@ well as external member of the SPHERE disk consortium.
   again use RADMC-3D. The Arepo grid is, however, a Voronoi grid. This is
   not yet built in into RADMC-3D. We will therefore instead regrid a
   snapshot from Arepo on an oct-tree cartesian adaptive mesh before
-  inserting this into RADMC-3D. \connect{In Project D1 mild inclinations of
+  inserting this into RADMC-3D. Alternatively we might use the recently 
+  Voronoi-enabled MOCASSIN code of Prof.~Ercolano. 
+  \connect{In Project D1 mild inclinations of
     planetary mass companions are modelled, while here we focus on extreme
     inclinations of stellar mass companions. In the latter case the star,
     being too massive, is unlikely to be forced back into the plane of the
-    disk; instead the disk is likely to be torqued by the companion.}
-\item {\bf Tilted disks: The effect of Photoevaporation}\\
+    disk; instead the disk is likely to be torqued by the companion. 
+  Like in the previous sub-projects, we will collaborate with project A1
+  when comparing our simulations with observed Type 2 TDs.}
+\item {\bf Tilted disks: The effect of Photoevaporation}\label{subproj-inclined-photev}\\
   The UV and X-ray photons from the star may photoevaporate the disk (see
   projects B1 and B2). It is known from model calculations that, once the
   stellar radiation can impinge directly onto the inner edge of the disk,
@@ -820,7 +830,7 @@ well as external member of the SPHERE disk consortium.
     will work with hydrodynamic models of photoevaporative
     winds. In particular the 2-D axisymmetric approximation model can
     presumably be set up quite easily by the postdoc of project B1.}
-\item {\bf Exploring the possibility of shadow-induced spirals}\\
+\item {\bf Exploring the possibility of shadow-induced spirals}\label{subproj-spirals}\\
   \citet{2016ApJ...823L...8M} suggest that the two shadow spots cast by the
   tilted inner disk in HD 142527 and HD 100453 could cause the gas of the
   disk that passes through these shadows to briefly lose pressure and start
@@ -845,7 +855,7 @@ well as external member of the SPHERE disk consortium.
   hydrodynamically. This would, for fixed shadows, lead to {\em leading}
   spiral wave patterns. We intend to investigate the feasibility of this
   scenario using FARGO-3D with radiation-hydrodynamics. 
-\item {\bf Secondary infall of a low-mass molecular cloudlet}\\
+\item {\bf Secondary infall of a low-mass molecular cloudlet}\label{subproj-infall}\\
   Next we will explore the idea that the tilted disk geometry seen in HD
   142527 and HD 100453 could be as a result of late infall of fresh envelope
   material with a different angular momentum axis than the earlier
@@ -877,7 +887,7 @@ well as external member of the SPHERE disk consortium.
   rotational periods than the outer disk for the same time span, we will
   adjust the system such that the inner disk is aligned with the grid, while
   the outer disk is not.
-\item {\bf Revisit the Rossby-wave instability}\\
+\item {\bf Revisit the Rossby-wave instability}\label{subproj-rossby}\\
   Finally, if we still have time, we will (in strong collaboration with D1)
   revisit the the Rossby-wave instability origin of the observed vortices,
   comparing the different scenarios of inner hole formation against each
@@ -892,22 +902,42 @@ well as external member of the SPHERE disk consortium.
     postdoc of D1 or by the postdoc of this project.}
 \end{enumerate}
 
+\subsubsection{Time plan}
 We are aware that this is an ambitious set of projects. It is likely that
 some of these projects will have to be carried over to the second funding
-period of the Research Unit.
-
-\todo{TIME PLAN?}
+period of the Research Unit. Some subprojects may also become obsolete,
+given that this is a very fast evolving and somewhat unpredictable field,
+with new data appearing regularly. A slight overbooking of sub-projects is
+therefore part of the plan. Nevertheless, a rough time plan would look as
+follows:
+\begin{itemize}
+\item {\bf Year 1:}\\
+  Sub-project \ref{subproj-inplane-2d} and \ref{subproj-inplane-3d} will both
+  be based on relatively state of the art techniques and methods, and with
+  close collaboration with project D1 we estimate that both together will
+  take about 1 year.
+\item {\bf Year 2:}\\
+  Sub-project \ref{subproj-inclined-3d} will be challenging, especially if a
+  new code (Arepo) has to be learned and applied to a problem that has not yet
+  been modeled with Arepo before. We can expect the unexpected. It could take
+  the whole year. If, however, time permits, then we will attempt to also 
+  start with sub-project \ref{subproj-inclined-photev}. This project, being at a
+  slightly less high priority, will be done as a side project, and may spill into
+  phase 2 of the Research Unit.
+\item {\bf Year 3:}\\
+  By this time the data from observations will probably be so much advanced
+  that we may already be able to estimate which of the sub-projects
+  \ref{subproj-spirals}, \ref{subproj-infall} and \ref{subproj-rossby}
+  should gain priority at this point. We may then either focus entirely on
+  that single sub-project during this last year, or we pick 2 of them and
+  work on them half a year each. The remaining sub-project(s) will then, if
+  still current, spill over into phase 2 of the Research Unit.
+\end{itemize}
 
 
 \subsection{Data handling}
 The model data we produce will be made immediately available online, once
 the corresponding paper is accepted. 
-
-\subsection{Other information}
-% Please use this section for any additional information you feel is
-% relevant which has not been provided elsewhere.
-
-\subsection{Information on scientific and financial involvement of international cooperation partners}
 
 
 
@@ -924,13 +954,13 @@ the corresponding paper is accepted.
 \section{Requested modules/funds}
 \renewcommand{\leftmark}{\sc Requested modules/funds}
 % Explain each item for each applicant (stating last name, first name).
-
+%
 \subsection{Basic Module}
-
+%
 \subsubsection{Funding for Staff}
 % Please note that funds for your own temporary position (â€œEigene Stelleâ€)
 % are not to be included here; this belongs to the separate â€œModule Temporary Positionâ€.
-
+%
 We request 1 Postdoc E13 position for three years, to be based in Heidelberg.
 
 \subsubsection{Direct Project Costs}
@@ -961,6 +991,9 @@ Working visits Heidelberg/T\"ubingenM\"unchen   & 3000	& 3000 & 3000 & 9000\\
   & 6500 & 6500 & 6500 & {\bf 19500}\\
 \end{tabular}
 \end{center}
+
+\todo{Conferences will be centralized in Z, right? If so, then I'll scrap these.}
+
 
 \paragraph{Visiting Researchers (excluding Mercator Fellows)}
 This project strongly ties to observations of Type 2 TDs in scattered light
@@ -998,6 +1031,8 @@ Given the strong international competition in this field, it might now
 and then be necessary to publish in the Astrophysical Journal (ApJ),
 which takes page charges. 
 We request 750 \EUR{}/year (total 2250 \EUR{}) for publication expenses.
+
+\todo{This will be centralized in Z, right? If so, then I'll scrap this.}
 
 % typically of the order of 1000 US dollar. 
 %Assuming two such papers, and sharing the page charge cost 50/50 
@@ -1052,7 +1087,10 @@ W3 Professor (permanent) at Univerti\"at T\"ubingen.
 % be paid out of the project funds. State each personâ€™s name, academic
 % title, employment status, and type of funding.
 
-\todo{[Text]}
+The main work will be done by the requested postdoc, in close collaboration
+with the PI C.~Dullemond and co-PI W.~Kley. When it comes to comparison with
+observations, close collaboration with the teams of Th.~Henning and E.~van
+Dishoeck will occur. 
 
 \subsection{Cooperation with other researchers}
 
