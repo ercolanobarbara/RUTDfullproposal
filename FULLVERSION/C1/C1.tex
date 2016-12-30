@@ -73,7 +73,7 @@ Transition Discs project C1}}
 \vspace{1em}
 
 \centerline{\LARGE\bf\Tcol Trapping the dust:}\vspace{0.3em}
-\centerline{\LARGE\bf\Tcol  Planet formation `hotspots' in TDs}
+\centerline{\LARGE\bf\Tcol  Planet formation `hotspots' in Transition Disks}
 
 %
 %%%%
@@ -101,7 +101,10 @@ Transition Discs project C1}}
 
 \vspace{1em}
 \noindent{\bf Abstract:}\\
-Based on our current understanding of the physics of planet formation,
+In the core accretion scenario of planet formation dust grains must
+grow many orders of magnitude in size from micron sizes to thousands
+of kilometres. However, based on our current understanding of the
+physics of planet formation, 
 several processes seemingly prevent or stall the growth towards larger
 bodies:
 (1) collisional growth is inefficient above $\sim$meter-sizes,
@@ -114,7 +117,8 @@ planetesimals, and
 growth of planetesimals inefficient.
 Observations of transition disks suggest that they provide the
 environments, where all of these issues can be solved: trapping and
-growth of solid particles in the pressure bumps of transition disks
+growth of solid particles in the pressure bumps in the gas
+distribution of transition disks
 can provide the large enough particles at high enough densities to
 trigger gravoturbulent planetesimal formation. Additionally, the
 trapped particles are not drifting away, meaning they can be
@@ -166,9 +170,10 @@ gap opening by planets
 \citep{2004A&A...425L...9P,2006A&A...453.1129P,2006MNRAS.373.1619R,
 2012A&A...545A..81P,2012ApJ...755....6Z}. Most of these models have in
 common that some mechanism (e.g., photoevaporation,
-planet-disk-interaction, or others) produce a pressure maximum.
+planet-disk-interaction, or others) produce a pressure maximum in the
+distribution of the gas.
 Solid particles that have collisionally grown to macroscopic sizes
-experience fast radial migration towards higher pressure
+experience fast radial migration towards higher gas pressure
 \citep{1972fpp..conf..211W,1977MNRAS.180...57W,1986Icar...67..375N}.
 Already \citet{1972fpp..conf..211W} suggested that particles moving
 due to this effect can become \textit{trapped} in a pressure maximum,
@@ -203,7 +208,8 @@ transition disks suggested that there are two families of transition
 disks: a family of small accretion rate / small hole sizes / small
 disk mass and another family of larger hole sizes accompanied by
 larger disk masses and higher accretion rates
-\citep{2012MNRAS.426L..96O}. While the possibly diverse
+\citep{2012MNRAS.426L..96O}. In this proposal we refer to the former
+as Type 1 Transition Disks and the latter as Type 2. While the possibly diverse
 \textit{origins} of transition disks are still obscure, the
 observations at face value already show us something even more
 interesting: large fractions of the solid contents of the disks can be
@@ -524,7 +530,7 @@ For this project, we will be using the following tools:
   \citep{2012A&A...539A.148B}, described below, or if needed, the
   gas+dust disk evolution code of \citet{2010A&A...513A..79B}.
   \item A N-body integrator. For this we will use the open-source code
-  \rebound, which offers a wide variety of integration schemes and
+  \rebound \citep{2012A&A...537A.128R}, which offers a wide variety of integration schemes and
   flexible options to include additional forces or add/remove
   particles.
   \item A disk hydrodynamical code with Lagrangian particles. The
@@ -605,13 +611,13 @@ of finite life time will allow us to investigate the efficiency of
 particle trapping in time-dependent pressure maxima and their possible
 relation to Type I transition disks, which is a significant
 improvement over previous works such as \citet{2012A&A...538A.114P}
-and \citet{2013A&A...554A..95P}. By linking this to existing
+and \citet{2013A&A...554A..95P}. \connect{By linking this to existing
 millimeter wave radio-surveys (e.g., \citealp{2016ApJ...831..125P} and
 references therein as well as previous surveys such as
-\citealp{2010A&A...521A..66R}) \connect{in collaboration with project
-A1} we will be able to test which bump amplitudes, bump sizes, and
+\citealp{2010A&A...521A..66R}) in collaboration with project
+A1 we will be able to test which bump amplitudes, bump sizes, and
 life times are producing results consistent with (1) dust continuum
-observations and (2) dust disk life times. This way, we will be able
+observations and (2) dust disk life times.} This way, we will be able
 to exclude or constrain some of the theoretically proposed mechanisms,
 such as zonal flows \citep[e.g.,][]{2009ApJ...697.1269J,
 2013ApJ...763..117D, 2014ApJ...796...31B} based on their life times or
@@ -739,10 +745,10 @@ involved effects, based on rate equations, can be found. Follow up
 studies can include improved collision models, effects of turbulence
 on the planetesimal distribution and many other effects. At the same
 time, we can use the existing links to the radiative transfer code
-\radmc to investigate the observability of the simulated pressure
+\radmc to \connect{investigate the observability of the simulated pressure
 bumps, for example to see if the presence or absence of planetesimal
 formation causes observationally distinct signatures and compare
-against current or upcoming observations \connect{in collaborations
+against current or upcoming observations in collaborations
 with project A1}.
 
 \paragraph{Phase III: Breaking the Symmetry}
@@ -761,7 +767,7 @@ the dust continuum emission \citep[e.g.,][]{2013Natur.493..191C,
 2013Sci...340.1199V} or even offset asymmetries when comparing sub-mm
 continuum to polarized intensity \cite[see][]{2016ApJ...831L..12K}.
 It is suspected that these asymmetries arise from a strong pressure
-bump which can become unstable to the Rossby instability
+bumps which can become unstable to the Rossby instability
 \citep[e.g.,][]{2001ApJ...551..874L,2009A&A...493.1125L}.
 The resulting vortex then represents an azimuthal pressure maximum and
 is therefore able to azimuthally trap particles, further concentrating
@@ -790,7 +796,9 @@ can make a difference:
   \item How does the gravitational forcing of a giant planet influence
   the dynamics of either the dust or the planetesimals?
   \item Is a pressure bump caused by photoevaporation more closely
-  resembling item 1 or 2 or entirely different?
+  resembling item 1 or 2 or entirely different? \connect{The
+    hydrodynamical models developed in project B1 (PI Ercolano) will
+    be used to tackle this question.}
 \end{enumerate}
 Can we find structural differences that allow us to observationally
 distinguish between the possible causes of a pressure bump?
@@ -804,7 +812,9 @@ the project. However, we would like to stress, that the thesis of the
 PhD student is not decisively dependent on this part of the project.
 Even if this phase III turns out to be numerically too challenging or
 cannot be finished within the duration of the PhD program, phase I and
-II offer plenty of applications and publications for a PhD thesis.
+II offer plenty of applications and publications for a PhD
+thesis. Some of the aims of phase III may be then carried over
+to the second funding period of the Research Unit. 
 
 The addition of hydrodynamics cannot be easily added on top of the
 python code that employs \rebound and \twopoppy. Furthermore, long
@@ -830,9 +840,15 @@ officially supported, some testing will be needed). This part of the
 proposal will therefore be done in \connect{close collaboration with
 the Tübingen group and with members of the ERC group at Munich}. It is
 anticipated that the three setups will (due to their increasing
-complexity) be done in the order as itemized above. The setups and
-results produced in \connect{projects C2 and D} by that point will
-guide this work. It is envisioned that this phase of the project (and
+complexity) be done in the order as itemized above. \connect{The setups and
+results produced in projects C2 (PI Ercolano), D1 (PI Kley) and D2 (PI
+Dullemond) by that point will
+guide this work}. Project C2 deals with dust entrainment in a
+photoeavporative wind, while projects D1 and D2 focus respectively on
+planet-disc interactions and non-axysymmentric features in transition
+disks. 
+
+It is envisioned that this phase of the project (and 
 to some extend also phase II) will lay the foundation for future
 studies in this Research Unit as it gives rise to several follow-up
 studies where several aspects can be improved upon beyond this
@@ -889,7 +905,7 @@ None
 
 We request funding for 1 PhD position (75\% E13) to be stationed at the
 LMU Munich and be supervised by Dr.\ Birnstiel and co-supervised by
-Prof.\ Dullemond, Prof. Dullemond.
+Prof.\ Dullemond.
 
 \subsubsection{Direct Project Costs}
 
@@ -1010,7 +1026,7 @@ needed.\\
 from the numerical expertise within the Research Unit, in particular
 the hydrodynamical and N-body expertise in Tübingen and in Heidelberg.
 The simulation results and setups will also be exchanged with project
-C2 (PI Ercolano, Caselli) and the implications of the results, in
+C2 (PI Ercolano) and the implications of the results, in
 particular, the radiative transfer model output, will be compared
 against available and upcoming observational campaigns of project A1
 (PI Testi) and our external collaborators Prof.\ van Dishoeck and Prof.\ 
@@ -1019,7 +1035,10 @@ continuum and scattered light. This project will also benefit from
 frequent exchange with projects D1 (PI Kley) and D2 (PI Dullemond)
 particularly the planet-disk interaction models and the Lagrangian
 particle modules for the \pluto code. Vice-versa, D1 in particular will
-benefit from the dust and collision models created in this project.}
+benefit from the dust and collision models created in this
+project. Project B1 will provide us with the hydrodynamical models for
+photoevaporating disks, to allow us to investigate dust growth in
+pressure bumps formed at the inner edge of the outer disk.}
 
 \paragraph{Collaborating researchers for this project outside of
   the Research Unit}
