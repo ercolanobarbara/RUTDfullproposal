@@ -1,0 +1,242 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTex Template for proposals within the              %
+% DFG Research Unit Program                            %         
+%Planet Formation Witnesses and Probes: Transition Discs
+% August 2016                                            %                           
+%                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\documentclass[10pt,fleqn,twoside]{article}
+
+%%%%%%%%%%%%%%%%% GET THE STYLE STUFF %%%%%%%%%%%%%%%%%%%
+
+\input{header.tex}
+
+%%%%%%%%%%%%%%%%% DEFINE THE HEADER TEXT %%%%%%%%%%%%%%%%
+
+\fancyhead[LE,LO]{\slshape
+%%%%  Please edit
+%
+Barbara Ercolano: RU Transition Discs: Coordination Project}
+%
+%
+%%%%%
+
+\begin{document}
+
+
+\newpage
+
+%%%% PROJECT DESCRIPTION STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{1}
+
+\centerline{\huge\bf\Tcol
+%
+%
+%
+%
+%%%%  Please edit
+%
+ Project Z:}
+\vspace{1em}
+
+\centerline{\LARGE\bf\Tcol Coordination of the Research Unit}
+
+%
+%%%%
+%
+%
+%
+%
+\vskip1.0cm
+
+%%%%  Please edit
+
+\noindent{\bf Coordinators:}\\
+\begin{tabular}{ll}
+{\textsf{Main Speaker:}}   & Prof.\ Dr.\ Barbara Ercolano (USM)\\
+{\textsf{Vice Speaker:}}   & Prof.\ Dr.\ Cornelis P.~Dullemond (Uni Heidelberg)
+\end{tabular}
+
+%%%%  Please edit
+
+\vspace{1em}
+\noindent{\bf Requested positions: 50\% secretary position} \\
+
+
+\section{General}
+%
+As outlined in the main part of the proposal, in this Research Unit (RU) we
+plan several measures to strengthen collaboration and interaction between
+the different nodes.  Among these are frequent visits between partner
+institutes and the participating nodes, regular Video-conferences, regular
+(twice a year) meetings of the members of the RU, and joint invitations of
+guests/visitors. Additionally, we plan to organize an international meeting
+and invite review speakers from outside, and we plan for a summerschool for
+students and interested young scientists within the first year of the RU
+funding period.
+
+Within the RU we intend to homogenize the expenditures for travel,
+conferences, and guests, to the extent that they are general-purpose for the
+RU. Hence, we plan to have a general, central budget from which conference
+visits, workshops, short term visits to partner institutes and some visits
+to external collaborators are payed. Also guests can be payed out of this
+fund. Specialized travel will still be coordinated within each project
+separately (as described in each project proposal).
+
+The organization and (financial) management of all these activities requires
+a dedicated person dealing with these duties. This person can at the same
+time organize the official web-pages for the RU.  For this purpose we apply
+for a half-time secretary position at the LMU working with the speaker of
+the RU.
+%
+\section{Funding Request}
+%
+To estimate our requested funds as listed below we have assumed the
+following personnel involved in the RU: 5 PhD students, 4 Postdocs, 7
+Principle investigators (PIs), 2 senior collaborators, in total 18 people.
+
+\subsection{Networking}
+In the individual project descriptions we have only included travel funds
+for direct collaboration between or within (if two nodes are involved in one
+project) the individual projects, referring primarily to longer term visits
+of approximately a week.
+
+Additionally, we plan here for {\bf occasional short term visits}
+(collaboration) between scientists, which we plan to organize through this
+central budget. Funds for regular meetings of the RU are also organized
+centrally. 
+
+For travel within Germany we assume on average 200 Euro per train return ticket
+per person and 100 Euro per day for lodging and food. 
+
+We estimate the following amounts (which are totals over 3 years):
+\begin{itemize}
+\item
+\begin{Emphasize}
+{\bf Full network meetings.}
+\end{Emphasize}\\
+We plan for two two-day meetings per year for the whole RU (in total 18
+participants; 400~\EUR\ per person and meeting). On average we plan to 
+invite one international guest per meeting (800~\EUR\ travel, 2$\times$100~\EUR\ 
+lodging and food).\vspace{0.2em}\\
+( 400 \EUR $\times$ 18 +  1000 \EUR ) $\times$ 2 $\times$ 3  \hfill 49,200~\EUR
+\item
+\begin{Emphasize}
+{\bf Tutorials and Lectures.}
+\end{Emphasize}\\
+As an extension to the first two full network meetings during the first year, we
+intend to add two more days or tutorials and lectures. This means that the
+students and postdocs will stay for two more days, as well as two of the PIs
+(in addition to the local PI(s)) as lecturers.
+\vspace{0.2em}\\
+( 200 \EUR $\times$ 9 + 200 \EUR $\times$ 2 ) $\times$ 2  \hfill 4,400~\EUR
+\item 
+\begin{Emphasize}
+{\bf Collaboration:} Short term visits to other nodes within the RU.
+\end{Emphasize}\\
+We plan on average 2 visits for about 2 days per person and year
+(i.e.\ in total 400 EUR per person and visit).
+\vspace{0.2em}\\
+400~\EUR $\times$ 2 $\times$ 18 $\times$ 3    \hfill 43,200~\EUR
+\item 
+\begin{Emphasize}
+{\bf External travel:} Collaboration with non-RU-scientists and visits to conferences.
+\end{Emphasize}\\
+We plan for the participants of the RU to attend national and
+international conferences to present and discuss scientific results.
+Successful scientific work requires additional (international) collaborations, and
+personal visits between individual scientists.
+Therefore, members of the RU will have to visit locations outside the RU. 
+For these external activities we estimate on average expenses of (3000~\EUR)
+per project and year.
+\vspace{0.2em}\\
+3000~\EUR $\times$ 8 $\times$ 3    \hfill 72,000~\EUR
+\item 
+\begin{Emphasize}
+{\bf Guests}: Inviting external (non-RU) scientists for working visits.
+\end{Emphasize}\\
+We request an average amount for each project per year (in total 3000~\EUR) to
+be able to invite (international) external collaborators.
+\vspace{0.2em}\\
+3000~\EUR $\times$ 8 $\times$ 3    \hfill 72,000~\EUR
+\item 
+\begin{Emphasize}
+{\bf International school:} An international summer / winter school on disk physics.
+\end{Emphasize}\\
+We intend to organize an international summer / winter school on disk physics
+during the second year,
+with an emphasis on, but not limited to, TDs. We will apply for the Bad Honnef
+programme, which would give funding. But to provide additional support for
+external international students with little means, we apply for 10,000~\EUR. 
+\vspace{0.2em}\\
+10,000~\EUR $\times$ 1              \hfill 10,000~\EUR
+\item 
+\begin{Emphasize}
+{\bf International conference:} An international conference on TDs.
+\end{Emphasize}\\
+We intend to wrap up the RU with an international small size conference
+on the topic (roughly 60 participants). We apply for 30,000~\EUR for this.
+\vspace{0.2em}\\
+30,000~\EUR $\times$ 1              \hfill 30,000~\EUR
+\item 
+\begin{Emphasize}
+{\bf Consumables.}
+\end{Emphasize}\\
+For regular expenses of the management (printing costs, postal services, toner,
+viewgraphs, copying materials, etc..) we request 1000~\EUR per year.
+\vspace{0.2em}\\
+1000~\EUR $\times$ 3              \hfill 3,000~\EUR
+\item 
+\begin{Emphasize}
+{\bf Publication costs.}
+\end{Emphasize}\\
+In general we plan to publish our scientific results in journals without
+page charge.  However, we would like to stimulate our members to pay 
+the additional 700~\EUR fee per publication to make the articles 
+open access forever. Therefore we ask for 700~\EUR per project per
+year.
+\vspace{0.2em}\\
+700~\EUR $\times$ 8 $\times$ 3              \hfill 16,800~\EUR
+\item 
+\begin{Emphasize}
+{\bf Management:} A 50\% part-time secretary position based at the LMU.
+\end{Emphasize}\\
+For managing the organization and financial matters of the RU, 
+organize the web-pages of the RU, as
+well as organize the meetings, school and conference, we apply for
+a half-time secretary. This position has the following requirements:
+Work relatively independently, English language skills and 
+basic computer skills. We apply for a E9 position for 50\% part-time.
+\vspace{0.2em}\\
+53,100~\EUR $\times$ 0.5 $\times$ 3
+700~\EUR $\times$ 8 $\times$ 3              \hfill 79,650~\EUR
+\end{itemize}
+ 
+%%
+%\section{Overview of Funding}
+%%
+%$~$\\[0.3cm]
+%The total funds requested for Project Z are summarized in the following table
+%(all amounts in \EUR):
+%\\[0.2cm]
+%\centerline{\begin{tabular}{||l|r|r|r||}
+%\hline \hline & Year 1 & Year 2 & Year 3 \\ \hline %
+%Networking                  & 24.800  & 41,800  & 41,800  \\
+%External Travels            & 30.000  & 30.000  & 30.000  \\
+%External Guests             & 30.000  & 30.000  & 30.000  \\
+%Conference/Summerschool     & 20.000  &   -     & 20.000  \\
+%Consumables                 &  1.000  &  1.000  &  1.000  \\
+%Publications                &  5.000  &  5.000  &  5.000  \\
+%Management                  & 21.000  & 21.000  & 21.000  \\
+%\hline
+%{\bf Total:} (EUR)          & 131.800  & 128.800 & 148.800 \\
+%\hline \hline
+%\end{tabular}
+%}
+
+
+%
+
