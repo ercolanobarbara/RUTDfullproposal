@@ -886,7 +886,17 @@ well as external member of the SPHERE disk consortium.
   of disks, and given that the inner disk will have to perform many more
   rotational periods than the outer disk for the same time span, we will
   adjust the system such that the inner disk is aligned with the grid, while
-  the outer disk is not.
+  the outer disk is not. We must keep in mind that the secondary infall may
+  not just simply {\em create} a new ``outer disk'', but collide onto
+  a {\em previously existing} outer disk with a completely different angular
+  momentum direction. This would lead to violent hydrodynamic effects,
+  and might torque the rotation axis of the pre-existing disk initially to
+  a third direction (neither parallel to the initial disk, nor to the
+  angular momentum axis of the infalling material). A calculation of this
+  process is challenging, and grid codes such as RAMSES and PLUTO may not
+  be the most suitable. SPH codes or Arepo might be better suited. We 
+  may try out some models if we have the time, but this may also be
+  a task for the second phase of this RU.
 \item {\bf Revisit the Rossby-wave instability}\label{subproj-rossby}\\
   Finally, if we still have time, we will (in strong collaboration with D1)
   revisit the the Rossby-wave instability origin of the observed vortices,
