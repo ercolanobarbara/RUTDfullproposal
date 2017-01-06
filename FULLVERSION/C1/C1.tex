@@ -6,7 +6,7 @@
 % August 2016                                            %                           
 %                                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+% 
 % 
 %
 % This template may be used to prepare proposals in latex.
@@ -24,19 +24,19 @@
 
 %%%%%%%%%%%%%%%%%%%%% TO DO MACROS %%%%%%%%%%%%%%%%%%%%%%
 
-\let\todo\undefined   % Overwrite \todo command for this project
-\usepackage[colorinlistoftodos,textwidth=2cm]{todonotes}
-\newcommand{\missing}[1]{\textcolor{red}{\textbf{XXX #1 XXX}}}
-\newcommand{\til}[1]{\todo[inline]{Til: #1}}
-\newcommand{\kees}[1]{\todo[inline,color=LimeGreen]{Kees: #1}}
+%\let\todo\undefined   % Overwrite \todo command for this project
+%\usepackage[colorinlistoftodos,textwidth=2cm]{todonotes}
+%\newcommand{\missing}[1]{\textcolor{red}{\textbf{XXX #1 XXX}}}
+%\newcommand{\til}[1]{\todo[inline]{Til: #1}}
+%\newcommand{\kees}[1]{\todo[inline,color=LimeGreen]{Kees: #1}}
 
-\newcommand{\tilchange}[2]{\textcolor{red}{(Til:)}\st{#1} \textcolor{red}{#2}}
-\newcommand{\keeschange}[2]{\textcolor{red}{(Kees:)}\st{#1} \textcolor{red}{#2}}
-\newcommand{\keesadd}[1]{\textcolor{red}{(Kees:)} \textcolor{red}{#1}}
+%\newcommand{\tilchange}[2]{\textcolor{red}{(Til:)}\st{#1} \textcolor{red}{#2}}
+%\newcommand{\keeschange}[2]{\textcolor{red}{(Kees:)}\st{#1} \textcolor{red}{#2}}
+%\newcommand{\keesadd}[1]{\textcolor{red}{(Kees:)} \textcolor{red}{#1}}
 
-\renewcommand{\tilchange}[2]{#2\xspace}
-\renewcommand{\keeschange}[2]{#2\xspace}
-\renewcommand{\keesadd}[1]{#1}
+%\renewcommand{\tilchange}[2]{#2\xspace}
+%\renewcommand{\keeschange}[2]{#2\xspace}
+%\renewcommand{\keesadd}[1]{#1}
 
 \newcommand{\twopoppy}{\texttt{twopoppy}\xspace}
 \newcommand{\rebound}{\texttt{REBOUND}\xspace}
@@ -623,33 +623,47 @@ such as zonal flows \citep[e.g.,][]{2009ApJ...697.1269J,
 2013ApJ...763..117D, 2014ApJ...796...31B} based on their life times or
 amplitudes.
 
-\todo{Kees to Til and Barbara: What about coupling to C2 at this point?  I
-  mean: if the wind removes the gas, but the dust has grown to large enough
-  sizes that they are not dragged along (because they have settled below the
-  base of the wind) then the dust-to-gas ratio in the disk will be
-  increased, possibly triggering the streaming instability, and thus
-  possible planet formation, albeit in a somewhat later stage of disk
-  evolution. Just an idea... I think there is already literature on
-  this. The first idea of this kind was by Throop \& Bally 2005, but there
-  is also later work. }
+\connect{ At this point, we can connect to project C2: the results of
+this project C1 provide the evolution of the dust-to-gas ratio and the
+particle sizes in the pressure bump. In the case of a pressure bump
+created via photoevaporation, these two quantities define how much
+dust and of what particle sizes will reach the base of the evaporative
+flow and can hence be entrained in the wind.
+At the same time, the models of photoevaporative mass loss rates
+resulting from project C2 can be used in this project: the gas flowing
+off the disk surface will have a substantially lower dust content due
+to vertical settling of the dust particles. By removing mostly gas,
+the photoevaporation process increases the dust-to-gas ratio in the
+pressure bump, hence possibly triggering the planetesimal formation
+process. As part of this project, we will test to what extend
+photoevaporation can modify the planetesimal formation rates during
+the late stages of disk evolution.}
 
-\todo{Barbara to Kees and Til: I find it a very good idea! in C2 I
-  have the following : 
-
-At this stage we will also connect with project C1,
-where models of disks with dust traps are to be developed. The question to
-be asked is  ``What is the effect of dust traps in the underlying disk
-on the grain entrainment? Can one expect signatures of this process to
-be observed either in the continuum emission in the wind or in the
-molecular lines observations?''. The reverse question is also
-interesting:''What is the effect of photoevaporation on the evolution
-of the underlying dust grains?''.  If the wind removes the gas, but the dust has
-  grown to large enough sizes that they are not dragged along (because they
-  have settled below the base of the wind) then the dust-to-gas ratio in the
-  disk will be increased, possibly triggering the streaming instability, and
-  thus possible planet formation, albeit in a somewhat later stage of disk
-  evolution \citep[e.g.]{2005ApJ...623L.149T}.
- }
+% \todo{Kees to Til and Barbara: What about coupling to C2 at this point?  I
+%   mean: if the wind removes the gas, but the dust has grown to large enough
+%   sizes that they are not dragged along (because they have settled below the
+%   base of the wind) then the dust-to-gas ratio in the disk will be
+%   increased, possibly triggering the streaming instability, and thus
+%   possible planet formation, albeit in a somewhat later stage of disk
+%   evolution. Just an idea... I think there is already literature on
+%   this. The first idea of this kind was by Throop \& Bally 2005, but there
+%   is also later work. }
+% 
+% \todo{Barbara to Kees and Til: I find it a very good idea! in C2 I
+%   have the following : 
+% At this stage we will also connect with project C1,
+% where models of disks with dust traps are to be developed. The question to
+% be asked is  ``What is the effect of dust traps in the underlying disk
+% on the grain entrainment? Can one expect signatures of this process to
+% be observed either in the continuum emission in the wind or in the
+% molecular lines observations?''. The reverse question is also
+% interesting:''What is the effect of photoevaporation on the evolution
+% of the underlying dust grains?''.  If the wind removes the gas, but the dust has
+%   grown to large enough sizes that they are not dragged along (because they
+%   have settled below the base of the wind) then the dust-to-gas ratio in the
+%   disk will be increased, possibly triggering the streaming instability, and
+%   thus possible planet formation, albeit in a somewhat later stage of disk
+%   evolution \citep[e.g.][]{2005ApJ...623L.149T}.}
 
 \paragraph{Phase II: N-Body dynamics and planetesimal evolution}
 \label{sec:phaseII}
