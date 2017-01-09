@@ -204,8 +204,7 @@ In this project we aim exactly at this twofold goal: We will construct new self-
 for Type II TDs that contain a system of embedded planets that will allow us to determine
 the role that planets play in shaping TDs in general, and obtain at the same time a deeper understanding of the planet
 formation process.
-\todo{Kees to Willy: I added something on ringed disks here. Please check and then remove this
-todo.} Given that many of the above issues, as well as our modeling techniques, 
+Given that many of the above issues, as well as our modeling techniques, 
 may also apply to the newly emerging class of ``Multi-Ringed Disks'' (such as HL Tau,
 TW Hydra, HD 163296, BP Piscium, etc., see Introduction text of this Research
 Unit), we will also include these objects in our scope.
@@ -334,7 +333,7 @@ framework of a Diploma/PhD-Thesis, we have recently
 developed a completely new implementation of the PLUTO-code to run on Graphics Processor Units (GPUs).
 Presently, full 3D viscous hydrodynamics is included and for 2D disks we have implemented
 radiative effects as well. In a first application we studied the dynamical friction process
-\citep{2016A&A...589A..10T} and have just submitted a new paper on the dynamics of circumbinary disks.
+\citep{2016A&A...589A..10T} and will submit a new paper on the dynamics of circumbinary disks shortly.
 The CPU time used by this new code is shown in Fig.~\ref{fig:cpu} for a standard test-problem.
 As can be inferred from the plot, the new GPU-code runs on one GPU card in our new cluster (see Sect.~\ref{sec:computers})
 as fast as the pure MPI-version on about 60 cores.
@@ -465,11 +464,8 @@ between different nodes. The blue column refers to an MPI simulation on 5 nodes 
 
 \subsection{Objectives}
 
-\todo{Kees to Willy: I added Multi-Ringed Disks here. Please check if ok.}
-\begin{highlight}
 The ultimate goal of this project is to investigate whether Type 2 TDs 
 and/or Multi-Ringed Disks are signposts of (multiple) planet formation: 
-\end{highlight}
 i.e.\ can the observed features of these disks
 be explained by an ensemble of embedded planets and what can we learn in this case about the nature
 of the planets?
@@ -633,7 +629,6 @@ The disk self-gravity will most likely not be important but its influence on the
 
 For the obtained density structures we will calculate synthetic images and spectra using our RADMC-3D code.
 For this we will expand our 2D density distribution by a vertical structure in hydrostatic equilibrium.
-\todo{Kees to Willy: Check if you agree with the following addition:}
 \connect{The resulting observables (images, position-velocity maps and spectra) will be 
 compared with VLT-SPHERE and ALMA data of real Type II TDs and Multi-Ringed Disks
 through collaboration with project A1. This comparison will also include new ALMA data from the 
@@ -760,7 +755,6 @@ As indicated already in \citet{2013A&A...560A..40M} we expect significant differ
 isothermal and fully radiative cases, as indicated in Fig.~\ref{fig:ecc-mdot-time} for the 2D case and
 with single embedded planet.
 
-\todo{Kees to Willy: Please check this addition:}
 \connect{Obviously in Tasks 2 and 3 we will also, like in Task 1, compare our results with
 observed objects -- see Task 1 for the procedure.}
 
@@ -776,9 +770,11 @@ while our availlable FARGO has particle motion already implemted its performance
 checked. The third Task is the most advanced as the radiative transport would have to be included into
 our GPU-PLUTO code but simulations with FARGO-3D can be started more or less directly after the 
 applicability of the implemented radiation module for our purposed has been thoroughly tested.
+
 Knowing about the difficulties that may occur with multidimensional hydrodynamical simulations we estimate
 for each Task a minimum of one year. Hence, the proposed work will definitely fill the 3 year funding period
-and part of the work, particularly from Task 3 might even have to be taken over into the next year.
+and part of the work, particularly from Task 3 might even have to be taken over into the next 
+funding period.
 
 
 
