@@ -1,0 +1,67 @@
+#!/bin/csh
+
+cd Main/
+pdflatex Main
+bibtex Main
+pdflatex Main
+pdflatex Main
+cd ../
+
+cd A1/
+pdflatex A1
+bibtex A1
+pdflatex A1
+pdflatex A1
+cd ../
+
+cd A2/
+latex A2
+latex A2
+dvipdf A2.dvi
+cd ../
+
+cd B1/
+pdflatex B1
+bibtex B1
+pdflatex B1
+pdflatex B1
+cd ../
+
+cd B2/
+pdflatex B2
+pdflatex B2
+cd ../
+
+cd C1/
+pdflatex C1
+bibtex C1
+pdflatex C1
+pdflatex C1
+cd ../
+
+cd C2/
+pdflatex C2
+bibtex C2
+pdflatex C2
+pdflatex C2
+cd ../
+
+cd D1/
+pdflatex D1
+bibtex D1
+pdflatex D1
+pdflatex D1
+cd ../
+
+cd D2/
+pdflatex D2
+bibtex D2
+pdflatex D2
+pdflatex D2
+cd ../
+
+cd Z/
+pdflatex Z
+pdflatex Z
+cd ../
+
