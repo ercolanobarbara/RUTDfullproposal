@@ -67,15 +67,15 @@ Leonardo Testi: Solids and gas in disks (A1)
 
 \noindent{\bf Authors:}\\
 \begin{tabular}{ll}
-{\textsf{PI:}}                   & L.~Testi (ESO)\\
+{\textsf{Applicants:}}          & L.~Testi (ESO)\\
 %{\textsf{Co-I:}}                & B.~Ercolano (LMU), T.~Preibisch (LMU), T.~Henning (MPIA), E. van Dishoeck (Leiden, MPE)\\
 %{\textsf{Collaborations:}}      & H.~Baobab~Liu (ESO),  J.M.~Carpenter (ALMA), G.~Guidi (INAF/UniFi)\\
 %                                & A. Miotello (Leiden),  I.~Pascucci (Arizona), A.~Natta (DIAS/INAF),\\
 %                                &  M.~Tazzari (IoA), J.P.~Williams (Hawaii), Hsi-Wei Yen (ESO)\\
-{\textsf{Co-I:}}                & B.~Ercolano (LMU), T.~Preibisch (LMU)\\
-{\textsf{Collaborations:}}      & H.~Baobab~Liu (ESO),  J.M.~Carpenter (ALMA), T.~Henning (MPIA),\\
-                                & A. Miotello (Leiden),  I.~Pascucci (Arizona), M.~Tazzari (IoA),\\
-                                & E. van Dishoeck (Leiden, MPE), J.P.~Williams (Hawaii)\\
+{\textsf{Co-Applicants:}}       & B.~Ercolano (LMU), T.~Preibisch (LMU), T.~Henning (MPIA), E. van Dishoeck (Leiden, MPE)\\
+{\textsf{Cooperation Partners:}}  & H.~Baobab~Liu (ESO),  J.M.~Carpenter (ALMA), \\
+                                  & A. Miotello (Leiden),  I.~Pascucci (Arizona), M.~Tazzari (IoA),\\
+                                  & J.P.~Williams (Hawaii)\\
 \end{tabular}
 
 \vspace{1em}
@@ -547,7 +547,7 @@ disk cavity in CQ~Tau (Testi et al., in preparation); HD163296 will be observed 
 In the last few years, our group has been developing and testing new tools to analyse planet forming disk observations and derive the properties of the dust and gas components. The two main tools that we expect to use and improve as part of this project are described below. The tools have been developed as part of two PhD Thesis at LMU and Leiden University.
 
 \vspace{1em}{\Tcol\bf Dust properties and surface density as a function of radius}\\
-As part of the PhD thesis of M. Tazzari at LMU (completed at the end of 2016), under the supervision of the project PI Dr. L. Testi and the Co-I Prof.Dr. B. Ercolano, we developed an effective analysis tool that can be used to derive the dust properties and surface density as a function of radius. The novel modeling toolkit, allows to efficiently model multi-wavelength continuum observations of disks at millimetre and radio wavelengths to self-consistently derive the disk physical parameters (including the dust surface density distribution) and the level of grain growth as a function of radius in the disk. This tool has been verified and successfully applied to observations of planet forming disks, allowing for a direct comparison with global dust evolution models in disks \citep[][Tazzari et al. in prep.]{2016A&A...588A..53T}.  
+As part of the PhD thesis of M. Tazzari at LMU (completed at the end of 2016), under the supervision of the project Applicant Dr. L. Testi and the Co-I Prof.Dr. B. Ercolano, we developed an effective analysis tool that can be used to derive the dust properties and surface density as a function of radius. The novel modeling toolkit, allows to efficiently model multi-wavelength continuum observations of disks at millimetre and radio wavelengths to self-consistently derive the disk physical parameters (including the dust surface density distribution) and the level of grain growth as a function of radius in the disk. This tool has been verified and successfully applied to observations of planet forming disks, allowing for a direct comparison with global dust evolution models in disks \citep[][Tazzari et al. in prep.]{2016A&A...588A..53T}.  
 
 The tool has three basic modules: a disk model, with parameters that describe the physical structure of the disk and of the dust population; an likelyhood calculator, which computes proper interferometric model visibilities and compares them with the data; and a highly efficient Markov Chain Monte Carlo sampler.
 We already tested the code modular approach by using different disk models \citep[e.g.\ ][]{2016A&A...588A.112G,2016A&A...588A..53T,TazzariPhD}, and we have made a considerable effort (in collaboration with the Excellence Cluster `Universe' C2PAP in Munich and with the support of NVIDIA) to structure the likelyhood calculation and the MCMC sampler to fully use a multi-CPU/multi-GPU architecture (developed on our data analysis server at ESO and fully tested on the HYDRA cluster as part of the collaboration with Prof. Dr. P. Caselli group at MPE). This effort allows to run effective multi-wavelength analysis on large samples (typical full analysis time is currently 24hrs/disk with observations at four wavelengths), and opens the possibility of expanding the analysis to the fit of multiple velocity channels for simple line emission models. 
@@ -768,21 +768,30 @@ Total equipment cost: 10k\EUR{}
 
 \paragraph{Travel Expenses}
 
-During the project we expect an average of 1 intercontinental and 2 european
-trips per year to work with the collaborators, plus 1 intercontinental and 2
-european trips to present results at conferences and meetings. The expected
-cost is 3k\EUR{} for each intercontinental trip (note that one of the
-collaborators is in Hawaii and one in Santiago de Chile, implying relatively
-expensive airfares) and 1k\EUR{} for each european trip. So for a total of
-4 intercontinental and 8 european trips, we expect a total of 20k\EUR{}.  \smallskip
+% During the project we expect an average of 1 intercontinental and 2 european
+% trips per year to work with the collaborators, plus 1 intercontinental and 2
+% european trips to present results at conferences and meetings. The expected
+% cost is 3k\EUR{} for each intercontinental trip (note that one of the
+% collaborators is in Hawaii and one in Santiago de Chile, implying relatively
+% expensive airfares) and 1k\EUR{} for each european trip. So for a total of
+% 4 intercontinental and 8 european trips, we expect a total of 20k\EUR{}.  \smallskip
+% 
+% \smallskip
+% 
+% Total travel expenses: 20k\EUR{}
 
-\smallskip
+Travel within the Research Unit is handled in project Z. In addition we
+request funding for conference travel for the personnel and one Applicant.
+This includes one national (1.000 \EUR{}) and one international (1.500 \EUR{})
+conference trip per year, totalling 2.500 \EUR{} per person per year. 
 
-Total travel expenses: 20k\EUR{}
+For this project this totals 7.500 \EUR{} per year for the two PhD students
+and one Applicant, which is in total 22.500 \EUR{}.
+
 
 
 \paragraph{Visiting Researchers (excluding Mercator Fellows)}
-Given the distributed nature of the collaboration, including collaborators in USA and Chile, we expect to host 2 1-week visits per year. Typically, we expect each visit to cost 0.5-1k\EUR{}, depending on the trip details and assuming that these visits will be connected to other trips to Europe for the overseas visitors (which would then require just an intra-european trip extension). We thus estimate a total expense of 5k\EUR{} for the visits.
+Given the distributed nature of the collaboration, including collaborators in USA and Chile, we expect to host 2 1-week visits per year. Typically, we expect each visit to cost 0.5-1k\EUR{}, depending on the trip details and assuming that these visits will be connected to other trips to Europe for the overseas visitors (which would then require just an intra-european trip extension). We thus estimate a total expense of 5.000 \EUR{} for the visits.
 
 
 \paragraph{Other Costs}
@@ -852,14 +861,14 @@ M\"unchen (permanent)
 % be paid out of the project funds. State each personâ€™s name, academic
 % title, employment status, and type of funding.
 
-Dr. H.~Baobab~Liu, Postdoctoral Fellow at ESO, he is an expert in ALMA data calibration and PI of one of the major surveys that will be used in this project\\
-Dr. J.M.~Carpenter, ALMA Observatory Scientist at the Joint ALMA Observatory in Santiago de Chile (permanent NRAO staff member), he is an expert of ALMA observations in general and of millimetre continuum observations of disks in particular, he is PI and Co-I of some of the ALMA surveys that will be used for this project\\
-Prof. Dr. Th.~Henning, Director of MPIA (permanent), he is an expert of disk, dust and gas physics, his department at MPIA is heavily involved in disk surveys with high-contrast imagers at LBT and VLT and also with ALMA and VLA observations of planet forming disks, he is Co-I of ALMA and VLA surveys as well as key complementary data used for this project\\
-A. Miotello, currently student at Leiden University, has been offered a 3-yr ESO postdoctoral Fellowship starting Fall 2017, she has been developing the analysis tool to derive the disk gas content from CO and isotopologues ALMA measurements that will be refined and used for this project\\
-Dr. M.~Tazzari, postdoc at the Institute of Astronomy in Cambridge (UK), he has been developing the analysis tool to derive the dust properties from multi-wavelength observations of disks, this tool will be further developed and used for this project\\
-Prof. I.~Pascucci, University of Arizona (permanent), she is an expert of disk physics and planet formation, she is PI of ALMA surveys used for this project\\
-Prof. Dr. E. van Dishoeck, University of Leiden and MPE (permanent), she is an expert of astrochemistry and disk physics, her expertise is critical for the measurements of the gas properties in disks and she is Co-I of many of the ALMA surveys used in this project\\
-Prof. J.P.~Williams, University of Hawaii (permanent), he is an expert of continuum and gas emission from planet forming disks and is PI of some of the ALMA surveys that will be used for this project.
+Dr.~H.~Baobab~Liu, Postdoctoral Fellow at ESO, he is an expert in ALMA data calibration and PI of one of the major surveys that will be used in this project\\
+Dr.~J.M.~Carpenter, ALMA Observatory Scientist at the Joint ALMA Observatory in Santiago de Chile (permanent NRAO staff member), he is an expert of ALMA observations in general and of millimetre continuum observations of disks in particular, he is PI and Co-I of some of the ALMA surveys that will be used for this project\\
+Prof.~Dr. Th.~Henning, Director of MPIA (permanent), he is an expert of disk, dust and gas physics, his department at MPIA is heavily involved in disk surveys with high-contrast imagers at LBT and VLT and also with ALMA and VLA observations of planet forming disks, he is Co-I of ALMA and VLA surveys as well as key complementary data used for this project\\
+A.~Miotello, currently student at Leiden University, has been offered a 3-yr ESO postdoctoral Fellowship starting Fall 2017, she has been developing the analysis tool to derive the disk gas content from CO and isotopologues ALMA measurements that will be refined and used for this project\\
+Dr.~M.~Tazzari, postdoc at the Institute of Astronomy in Cambridge (UK), he has been developing the analysis tool to derive the dust properties from multi-wavelength observations of disks, this tool will be further developed and used for this project\\
+Prof.~I.~Pascucci, University of Arizona (permanent), she is an expert of disk physics and planet formation, she is PI of ALMA surveys used for this project\\
+Prof.~Dr. E. van Dishoeck, University of Leiden and MPE (permanent), she is an expert of astrochemistry and disk physics, her expertise is critical for the measurements of the gas properties in disks and she is Co-I of many of the ALMA surveys used in this project\\
+Prof.~J.P.~Williams, University of Hawaii (permanent), he is an expert of continuum and gas emission from planet forming disks and is PI of some of the ALMA surveys that will be used for this project.
 
 \subsection{Cooperation with other researchers}
 
