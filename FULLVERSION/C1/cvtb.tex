@@ -1,0 +1,156 @@
+
+\documentclass[10pt,fleqn,twoside]{article}
+
+%%%% USE ARIAL FONT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{helvet}
+\renewcommand\familydefault{phv}
+
+%%%% INCLUDE NECESSARY PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{german}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{color}
+\usepackage{ae,aecompl}
+\usepackage[dvips]{graphicx}
+\usepackage{palatino}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{rotating}
+\usepackage{epsf}
+\usepackage{sfmath}
+
+%%%% PAGE LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\textheight}{24cm}
+\setlength{\topmargin}{-1.2cm}
+\setlength{\textwidth}{15.6cm}
+\setlength{\oddsidemargin}{0.5cm}
+\setlength{\evensidemargin}{0.0cm}
+\setlength{\mathindent}{1.5cm}
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.08cm}
+
+%\addtolength{\headheight}{14pt}
+
+%%%% PAGE HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhead[RE,RO]{\Tcol\slshape \leftmark}
+\fancyhead[LE,LO]{\slshape  \hspace{0.13cm}
+}
+\fancyfoot[RO]{ \Tcol\thepage}
+\fancyfoot[LE]{ \Tcol\thepage}
+\fancyfoot[CE,CO]{}
+
+%%% FONTS FOR THE TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newfont{\tpfonta}{cmssbx10 scaled 1600}
+\newfont{\tpfontb}{cmssbx10 scaled 3600}
+
+%%%% EURO SIGN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\euro{{\sffamily C%
+\makebox[0pt][l]{\kern-.70em\mbox{--}}%
+\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
+\newcommand\keuro{k{\sffamily C%
+\makebox[0pt][l]{\kern-.70em\mbox{--}}%
+\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}}}
+
+%%%% COLOR DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{blue} {rgb} {0.25,0.25,0.75}
+
+%%%% ADDITIONAL EMPHASIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cem}{\color{blue}}
+\newcommand{\eem}{\sl\color{blue}}
+
+%%%% SET THE COLOR OF THE (SUB-) SECTION TITLES %%%%%%%%%%% 
+\newcommand{\Tcol}{\color{blue}}
+
+%%%% SET THE COLOR OF THE TITLE BOX BACKGROUND %%%%%%%%%%%%
+\definecolor{Background}{rgb} {0.62,0.75,0.88}
+
+%%%% REFERENCE SECTION NAME %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\refname{\Tcol 9. Bibliography}
+
+
+\newcommand{\litanf}{\begin{list}{}{\leftmargin=1.0cm \rightmargin=0cm
+\itemindent=-1.0cm \parsep=0cm \itemsep=0cm }}
+\newcommand{\litend}{\end{list}}
+\newcommand{\sga}{\raisebox{-0.10em}{$\stackrel{>}{{\mbox{\tiny $\sim$}}}$}}
+\newcommand{\sla}{\raisebox{-0.10em}{$\stackrel{<}{{\mbox{\tiny $\sim$}}}$}}
+\newcommand{\lsv}{LS\,V\,$+4621$}
+\newcommand{\pnsh}{Sh\,2$-$216}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\noindent
+
+{\bf\large Tilman Birnstiel: Curriculum Vitae}
+
+\begin{table}[h!]
+\small
+\begin{tabular}{lll}
+
+{\sc date of birth}      & \multicolumn{2}{l}{December  13, 1982} \\
+& & \\
+{\sc place of birth}     & \multicolumn{2}{l}{Miltenberg, Germany} \\
+& & \\
+{\sc education}          & 2007       & MS, State Univ. of New York, USA\\
+                         		& 2010       & PhD astrophysics, Heidelberg Univ., Germany \\
+& & \\
+{\sc positions}   & February 2017 (anticipated) & Professor of Theoretical Astrophysics \\
+                         &            & Ludwig-Maximilians Universit\"at M\"unchen   \\
+                         & September 2015 - today  & Research Associate,\\
+                         &            & Harvard / Smithsonian, Cambridge MA (USA)\\
+                         & September 2015 - January 2017  & Postdoctoral Researcher,\\
+                         &            & MPIA, Heidelberg, Germany\\
+                         & January 2013 - August 2015  & Postdoctoral Fellow \\
+                         &            & Harvard / Smithsonian, Cambridge MA (USA)\\
+                         & July 2011 - December 2012  & Postdoctoral Researcher \\
+                         &            & Ludwig-Maximilians Universit\"at M\"unchen   \\
+                         & October 2010 - June 2011  & Postdoctoral Researcher\\
+                         &            & MPIA, Heidelberg, Germany\\
+& & \\
+{\sc awards}        & \multicolumn{2}{l}{ERC Starting Grant (2016) }\\
+& \multicolumn{2}{l}{Study Abroad Scholarship, Würzburg Univ.}\\
+ & & \\
+{\sc research interests} & \multicolumn{2}{p{11.7cm}}{
+Star and planet formation and related theoretical astrophysics, laboratory studies, and astrochemistry; meteoritics; data analysis and MCMC methods; high performance computing;
+} \\
+\end{tabular}
+\end{table}
+
+\small
+\noindent
+\textsc{Ten most important publications}:
+\litanf
+\item Andrews, Wilner, Zhu, Birnstiel, Carpenter, Pérez, Bai, Öberg, Hughes, Isella, Ricci 2016: \textit{Ringed substructure and a gap at 1 au in the nearest protoplanetary disk}, ApJ 820, L40.
+%\\
+%\item Pinilla, Benisty, Birnstiel, Ricci, Isella, Natta, Dullemond, Quiroga-Nuñez, Henning, Testi 2014: \textit{Millimetre spectral indices of transition disks and their relation to the cavity radius}, A\&A 564, A51.
+\\
+\item Testi, Birnstiel, Ricci, Andrews, Blum, Carpenter, Dominik, Isella, Natta, Williams, Wilner 2014: \textit{Dust Evolution in Protoplanetary Disks}, PPVI.
+\\
+\item Birnstiel and Andrews 2014: \textit{On the Outer Edges of Protoplanetary Dust Disks}, ApJ 780, 153.
+\\
+%\item de Juan Ovelar, Min, Dominik, Thalmann, Pinilla, Benisty, and Birnstiel 2013: \textit{Imaging diagnostics for transitional discs}, A\&A 560, A111.
+\item van der Marel, van Dishoeck, Bruderer, Birnstiel, Pinilla, Dullemond, van Kempen, Schmalzl, Brown, Herczeg, Mathews, Geers 2013: \textit{A Major Asymmetric Dust Trap in a Transition Disk}, Science 340, 1199.
+\\
+\item Birnstiel, Dullemond, Pinilla 2013: \textit{Lopsided dust rings in transition disks}, A\&A 550, L8.
+\\
+\item Pinilla, Benisty, Birnstiel 2012: \textit{Ring shaped dust accumulation in transition disks}, A\&A 545, A81.
+\\
+\item Birnstiel, Andrews, Ercolano 2012: \textit{Can grain growth explain transition disks?}, A\&A 544, A79.
+\\
+\item Birnstiel, Klahr, Ercolano 2012: \textit{A simple model for the evolution of the dust population in protoplanetary disks}, A\&A 539, A148.
+\\
+\item Pinilla, Birnstiel, Ricci, Dullemond, Uribe, Testi, Natta 2012: \textit{Trapping dust particles in the outer regions of protoplanetary disks}, A\&A 538, A114.
+\\
+%\item Birnstiel, Ormel, Dullemond 2011: \textit{Dust size distributions in coagulation/fragmentation equilibrium: numerical solutions and analytical fits}, A\&A 525, A11.
+\item Birnstiel, Dullemond, and Brauer: \textit{Gas- and dust evolution in protoplanetary disks}, A\&A (2010), vol. 513, A79.
+
+\litend
+\normalsize
+\vspace{5mm}
+
+\end{document}
+
